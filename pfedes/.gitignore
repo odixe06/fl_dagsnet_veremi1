@@ -1,0 +1,10 @@
+# Local MCP configs carry a Kaggle bearer token — never commit.
+.mcp.json
+.vscode/mcp.json
+
+# Notebooks may carry an embedded W&B key (private Kaggle notebooks only).
+papers/**/notebook/**/*.ipynb
+
+# Pulled run artifacts: gigabytes of weights, not source.
+papers/**/runs/
+__pycache__/

@@ -1,0 +1,5 @@
+[c1e-3] r01 lr=1.0e-03 f1=0.2980 (min 0.142 max 0.368) acc=0.3555 ce_orig=0.3158 loss_th=0.3262 skips=1 train=257s eval=28s
+[c1e-3] r02 lr=1.0e-03 f1=0.2990 (min 0.155 max 0.362) acc=0.3348 ce_orig=0.1166 loss_th=0.1898 skips=1 train=249s eval=27s
+[c1e-3] r03 lr=1.0e-03 f1=0.2941 (min 0.152 max 0.386) acc=0.3263 ce_orig=0.0765 loss_th=0.1175 skips=0 train=240s eval=27s
+[c1e-3] r04 lr=1.0e-03 f1=0.2897 (min 0.160 max 0.373) acc=0.3297 ce_orig=0.0576 loss_th=0.0864 skips=0 train=251s eval=27s
+[c1e-3] r05 lr=1.0e-03 f1=0.2844 (min 0.147 max 0.337) acc=0.3242 ce_orig=0.0463 loss_th=0.0687 skips=0 train=246s eval=27s

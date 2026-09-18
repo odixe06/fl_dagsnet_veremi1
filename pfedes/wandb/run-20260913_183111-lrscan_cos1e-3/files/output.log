@@ -1,0 +1,10 @@
+[cos1e-3] r01 lr=1.0e-03 f1=0.3055 (min 0.139 max 0.375) acc=0.3599 ce_orig=0.3155 loss_th=0.3315 skips=2 train=249s eval=29s
+[cos1e-3] r02 lr=9.7e-04 f1=0.3039 (min 0.147 max 0.351) acc=0.3461 ce_orig=0.1149 loss_th=0.1889 skips=4 train=240s eval=28s
+[cos1e-3] r03 lr=8.8e-04 f1=0.2906 (min 0.164 max 0.364) acc=0.3276 ce_orig=0.0740 loss_th=0.1145 skips=0 train=230s eval=27s
+[cos1e-3] r04 lr=7.5e-04 f1=0.2891 (min 0.157 max 0.363) acc=0.3344 ce_orig=0.0516 loss_th=0.0798 skips=0 train=238s eval=27s
+[cos1e-3] r05 lr=5.9e-04 f1=0.2947 (min 0.163 max 0.377) acc=0.3294 ce_orig=0.0356 loss_th=0.0580 skips=0 train=233s eval=27s
+[cos1e-3] r06 lr=4.2e-04 f1=0.2892 (min 0.157 max 0.355) acc=0.3240 ce_orig=0.0240 loss_th=0.0430 skips=0 train=234s eval=27s
+[cos1e-3] r07 lr=2.6e-04 f1=0.2910 (min 0.161 max 0.348) acc=0.3236 ce_orig=0.0158 loss_th=0.0327 skips=0 train=225s eval=27s
+[cos1e-3] r08 lr=1.3e-04 f1=0.2879 (min 0.162 max 0.344) acc=0.3206 ce_orig=0.0105 loss_th=0.0260 skips=0 train=236s eval=27s
+[cos1e-3] r09 lr=4.0e-05 f1=0.2891 (min 0.161 max 0.345) acc=0.3213 ce_orig=0.0078 loss_th=0.0242 skips=0 train=242s eval=27s
+[cos1e-3] r10 lr=1.0e-05 f1=0.2893 (min 0.160 max 0.343) acc=0.3225 ce_orig=0.0068 loss_th=0.0256 skips=0 train=236s eval=27s

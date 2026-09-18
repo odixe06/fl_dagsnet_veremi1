@@ -1,0 +1,55 @@
+# Project-scoped Codex configuration. Codex loads this only for trusted projects.
+# Header helper reads the MCP token of the active CLI account; no environment export needed.
+[mcp_servers.kaggle]
+http_headers_helper = "/home/odixe/miniforge3/envs/nckh/bin/python /home/odixe/nckh/veremi/pfedes/scripts/kaggle_mcp_headers.py"
+url = "https://www.kaggle.com/mcp"
+enabled = true
+required = false
+startup_timeout_sec = 30
+tool_timeout_sec = 600
+default_tools_approval_mode = "writes"
+
+# Kaggle currently omits read-only annotations on these operations, so the
+# generic `writes` policy would prompt for harmless status/metadata reads.
+# Keep mutating and large-download operations on the server default above.
+[mcp_servers.kaggle.tools.get_accelerator_quota]
+approval_mode = "approve"
+
+[mcp_servers.kaggle.tools.get_user_profile]
+approval_mode = "approve"
+
+[mcp_servers.kaggle.tools.get_dataset_info]
+approval_mode = "approve"
+
+[mcp_servers.kaggle.tools.get_dataset_status]
+approval_mode = "approve"
+
+[mcp_servers.kaggle.tools.get_dataset_metadata]
+approval_mode = "approve"
+
+[mcp_servers.kaggle.tools.get_dataset_files_summary]
+approval_mode = "approve"
+
+[mcp_servers.kaggle.tools.list_dataset_files]
+approval_mode = "approve"
+
+[mcp_servers.kaggle.tools.list_dataset_tree_files]
+approval_mode = "approve"
+
+[mcp_servers.kaggle.tools.search_datasets]
+approval_mode = "approve"
+
+[mcp_servers.kaggle.tools.get_notebook_info]
+approval_mode = "approve"
+
+[mcp_servers.kaggle.tools.get_notebook_session_status]
+approval_mode = "approve"
+
+[mcp_servers.kaggle.tools.list_notebook_session_output]
+approval_mode = "approve"
+
+[mcp_servers.kaggle.tools.list_notebook_files]
+approval_mode = "approve"
+
+[mcp_servers.kaggle.tools.search_notebooks]
+approval_mode = "approve"

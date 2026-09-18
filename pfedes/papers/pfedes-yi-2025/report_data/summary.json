@@ -1,0 +1,668 @@
+{
+ "20c": {
+  "run_dir": "papers/pfedes-yi-2025/runs/merged/pfedes_20c_cos",
+  "run_name": "pfedes_20c_cos",
+  "fingerprint": "3b90a02e92ab425d",
+  "n_clients": 20,
+  "rounds_completed": 50,
+  "rounds_planned": 50,
+  "complete": true,
+  "config": {
+   "lr": 0.001,
+   "lr_schedule": "cosine",
+   "lr_min": 1e-05,
+   "weight_decay": 0.0001,
+   "mu": 0.5,
+   "local_epochs": 1,
+   "proxy_epochs": 1,
+   "participation": 1.0,
+   "rounds": 50,
+   "batch": 512,
+   "eval_batch": 16384,
+   "seed": 42,
+   "clip": 1.0
+  },
+  "n_test": 10761343,
+  "final_round": 50,
+  "final": {
+   "accuracy": {
+    "mean": 0.5276089982449217,
+    "std": 0.10616142545595371,
+    "min": 0.34839945162978264,
+    "max": 0.7118736016499055
+   },
+   "precision_macro": {
+    "mean": 0.5920922583050702,
+    "std": 0.057205321243628156,
+    "min": 0.4987212863265117,
+    "max": 0.6854825499943488
+   },
+   "precision_micro": {
+    "mean": 0.5276089982449217,
+    "std": 0.10616142545595371,
+    "min": 0.34839945162978264,
+    "max": 0.7118736016499055
+   },
+   "precision_weighted": {
+    "mean": 0.6804773515094019,
+    "std": 0.04102124629755985,
+    "min": 0.5856617005838208,
+    "max": 0.7355958271546762
+   },
+   "recall_macro": {
+    "mean": 0.5656382799840114,
+    "std": 0.0783544745677846,
+    "min": 0.37290772844608855,
+    "max": 0.6812930254167185
+   },
+   "recall_micro": {
+    "mean": 0.5276089982449217,
+    "std": 0.10616142545595371,
+    "min": 0.34839945162978264,
+    "max": 0.7118736016499055
+   },
+   "recall_weighted": {
+    "mean": 0.5276089982449217,
+    "std": 0.10616142545595372,
+    "min": 0.34839945162978264,
+    "max": 0.7118736016499057
+   },
+   "f1_macro": {
+    "mean": 0.4855629380324468,
+    "std": 0.09472641768860464,
+    "min": 0.28174950380993036,
+    "max": 0.6450230750432289
+   },
+   "f1_micro": {
+    "mean": 0.5276089982449217,
+    "std": 0.10616142545595371,
+    "min": 0.34839945162978264,
+    "max": 0.7118736016499055
+   },
+   "f1_weighted": {
+    "mean": 0.505408668181214,
+    "std": 0.12556572217402878,
+    "min": 0.2729512561425662,
+    "max": 0.7118821625826262
+   }
+  },
+  "round1": {
+   "accuracy": 0.561476049039604,
+   "precision_macro": 0.6029932462524826,
+   "precision_micro": 0.561476049039604,
+   "precision_weighted": 0.6708055542307231,
+   "recall_macro": 0.543072443710795,
+   "recall_micro": 0.561476049039604,
+   "recall_weighted": 0.561476049039604,
+   "f1_macro": 0.4850677980639994,
+   "f1_micro": 0.561476049039604,
+   "f1_weighted": 0.5382418750215644
+  },
+  "peak_f1_macro_posthoc": {
+   "round": 5,
+   "f1_macro": 0.5009732424595675,
+   "accuracy": 0.5541260556419398
+  },
+  "drop_from_peak_pct": 3.0760733550284267,
+  "timing": {
+   "round_sec_median": 1320.357668017501,
+   "train_sec_median": 1046.031682901501,
+   "eval_sec_median": 273.41977639399556,
+   "round_sec_max": 1448.1552921799998,
+   "total_round_hours": 18.200004959465556,
+   "total_train_hours": 14.413885451371664,
+   "total_eval_hours": 3.776673392586943
+  },
+  "backend": [
+   "compiled"
+  ],
+  "cache_mismatch_total": 0,
+  "evaluated_always_N": true,
+  "sessions": [
+   {
+    "session": 1,
+    "pull": "papers/pfedes-yi-2025/runs/pulls/20c_cos_s1",
+    "kernel_logs": [
+     "pfedes-veremi-20-clients-cos.log"
+    ],
+    "rounds_present": [
+     1,
+     28
+    ],
+    "n_rounds": 28,
+    "rounds_produced": [
+     1,
+     2,
+     3,
+     4,
+     5,
+     6,
+     7,
+     8,
+     9,
+     10,
+     11,
+     12,
+     13,
+     14,
+     15,
+     16,
+     17,
+     18,
+     19,
+     20,
+     21,
+     22,
+     23,
+     24,
+     25,
+     26,
+     27,
+     28
+    ]
+   },
+   {
+    "session": 2,
+    "pull": "papers/pfedes-yi-2025/runs/pulls/20c_cos_s2",
+    "kernel_logs": [
+     "pfedes-veremi-20-clients-cos-s2.log"
+    ],
+    "rounds_present": [
+     1,
+     50
+    ],
+    "n_rounds": 50,
+    "rounds_produced": [
+     29,
+     30,
+     31,
+     32,
+     33,
+     34,
+     35,
+     36,
+     37,
+     38,
+     39,
+     40,
+     41,
+     42,
+     43,
+     44,
+     45,
+     46,
+     47,
+     48,
+     49,
+     50
+    ]
+   }
+  ],
+  "worst_client_final": {
+   "cid": 12,
+   "f1_macro": 0.28174950380993036
+  },
+  "best_client_final": {
+   "cid": 6,
+   "f1_macro": 0.6450230750432289
+  }
+ },
+ "50c": {
+  "run_dir": "papers/pfedes-yi-2025/runs/merged/pfedes_50c_cos",
+  "run_name": "pfedes_50c_cos",
+  "fingerprint": "42af8af8cc4d38af",
+  "n_clients": 50,
+  "rounds_completed": 50,
+  "rounds_planned": 50,
+  "complete": true,
+  "config": {
+   "lr": 0.001,
+   "lr_schedule": "cosine",
+   "lr_min": 1e-05,
+   "weight_decay": 0.0001,
+   "mu": 0.5,
+   "local_epochs": 1,
+   "proxy_epochs": 1,
+   "participation": 1.0,
+   "rounds": 50,
+   "batch": 512,
+   "eval_batch": 16384,
+   "seed": 42,
+   "clip": 1.0
+  },
+  "n_test": 10761343,
+  "final_round": 50,
+  "final": {
+   "accuracy": {
+    "mean": 0.43346323781334717,
+    "std": 0.08684253208484081,
+    "min": 0.20854599653593422,
+    "max": 0.5595566464148574
+   },
+   "precision_macro": {
+    "mean": 0.48820442540938935,
+    "std": 0.04882903075567313,
+    "min": 0.36181066577931087,
+    "max": 0.5826572706860274
+   },
+   "precision_micro": {
+    "mean": 0.43346323781334717,
+    "std": 0.08684253208484081,
+    "min": 0.20854599653593422,
+    "max": 0.5595566464148574
+   },
+   "precision_weighted": {
+    "mean": 0.6171547569019327,
+    "std": 0.034797432181488716,
+    "min": 0.5120594417477377,
+    "max": 0.6697012276012204
+   },
+   "recall_macro": {
+    "mean": 0.44805730223924006,
+    "std": 0.06296892020588166,
+    "min": 0.3232202681135572,
+    "max": 0.5877086927614382
+   },
+   "recall_micro": {
+    "mean": 0.43346323781334717,
+    "std": 0.08684253208484081,
+    "min": 0.20854599653593422,
+    "max": 0.5595566464148574
+   },
+   "recall_weighted": {
+    "mean": 0.4334632378133472,
+    "std": 0.08684253208484083,
+    "min": 0.2085459965359342,
+    "max": 0.5595566464148574
+   },
+   "f1_macro": {
+    "mean": 0.3652232904344007,
+    "std": 0.06325809728998182,
+    "min": 0.2298415967576467,
+    "max": 0.5022005388628104
+   },
+   "f1_micro": {
+    "mean": 0.43346323781334717,
+    "std": 0.08684253208484081,
+    "min": 0.20854599653593422,
+    "max": 0.5595566464148574
+   },
+   "f1_weighted": {
+    "mean": 0.4171149832225478,
+    "std": 0.09709761285308588,
+    "min": 0.1779190390632531,
+    "max": 0.5619330992564336
+   }
+  },
+  "round1": {
+   "accuracy": 0.48260707608706455,
+   "precision_macro": 0.5042196835309858,
+   "precision_micro": 0.48260707608706455,
+   "precision_weighted": 0.616150055876291,
+   "recall_macro": 0.451765243173073,
+   "recall_micro": 0.48260707608706455,
+   "recall_weighted": 0.48260707608706455,
+   "f1_macro": 0.3893159185750654,
+   "f1_micro": 0.48260707608706455,
+   "f1_weighted": 0.4685800422854646
+  },
+  "peak_f1_macro_posthoc": {
+   "round": 1,
+   "f1_macro": 0.3893159185750654,
+   "accuracy": 0.48260707608706455
+  },
+  "drop_from_peak_pct": 6.188451843645669,
+  "timing": {
+   "round_sec_median": 1715.8520346149999,
+   "train_sec_median": 1013.1426482375,
+   "eval_sec_median": 687.0703792149993,
+   "round_sec_max": 1967.82355408,
+   "total_round_hours": 23.896942435174164,
+   "total_train_hours": 14.26261118994722,
+   "total_eval_hours": 9.61206705329
+  },
+  "backend": [
+   "compiled"
+  ],
+  "cache_mismatch_total": 0,
+  "evaluated_always_N": true,
+  "sessions": [
+   {
+    "session": 1,
+    "pull": "runs/pulls/50c_cos_s1",
+    "kernel_logs": [
+     "pfedes-veremi-50-clients-cos.log"
+    ],
+    "rounds_present": [
+     1,
+     21
+    ],
+    "n_rounds": 21,
+    "rounds_produced": [
+     1,
+     2,
+     3,
+     4,
+     5,
+     6,
+     7,
+     8,
+     9,
+     10,
+     11,
+     12,
+     13,
+     14,
+     15,
+     16,
+     17,
+     18,
+     19,
+     20,
+     21
+    ]
+   },
+   {
+    "session": 2,
+    "pull": "runs/pulls/50c_cos_s2",
+    "kernel_logs": [
+     "pfedes-veremi-50-clients-cos-s2.log"
+    ],
+    "rounds_present": [
+     1,
+     42
+    ],
+    "n_rounds": 42,
+    "rounds_produced": [
+     22,
+     23,
+     24,
+     25,
+     26,
+     27,
+     28,
+     29,
+     30,
+     31,
+     32,
+     33,
+     34,
+     35,
+     36,
+     37,
+     38,
+     39,
+     40,
+     41,
+     42
+    ]
+   },
+   {
+    "session": 3,
+    "pull": "runs/pulls/50c_cos_s3",
+    "kernel_logs": [
+     "pfedes-veremi-50-clients-cos-s3.log"
+    ],
+    "rounds_present": [
+     1,
+     50
+    ],
+    "n_rounds": 50,
+    "rounds_produced": [
+     43,
+     44,
+     45,
+     46,
+     47,
+     48,
+     49,
+     50
+    ]
+   }
+  ],
+  "worst_client_final": {
+   "cid": 15,
+   "f1_macro": 0.2298415967576467
+  },
+  "best_client_final": {
+   "cid": 11,
+   "f1_macro": 0.5022005388628104
+  }
+ },
+ "100c": {
+  "run_dir": "papers/pfedes-yi-2025/runs/merged/pfedes_100c_cos",
+  "run_name": "pfedes_100c_cos",
+  "fingerprint": "f7c3d21a510cf7dc",
+  "n_clients": 100,
+  "rounds_completed": 50,
+  "rounds_planned": 50,
+  "complete": true,
+  "config": {
+   "lr": 0.001,
+   "lr_schedule": "cosine",
+   "lr_min": 1e-05,
+   "weight_decay": 0.0001,
+   "mu": 0.5,
+   "local_epochs": 1,
+   "proxy_epochs": 1,
+   "participation": 1.0,
+   "rounds": 50,
+   "batch": 256,
+   "eval_batch": 16384,
+   "seed": 42,
+   "clip": 1.0
+  },
+  "n_test": 10761343,
+  "final_round": 50,
+  "final": {
+   "accuracy": {
+    "mean": 0.3692338075275549,
+    "std": 0.07888164407251122,
+    "min": 0.15029694713754593,
+    "max": 0.508145498196647
+   },
+   "precision_macro": {
+    "mean": 0.3986974434533643,
+    "std": 0.041465815013511285,
+    "min": 0.2640870360448847,
+    "max": 0.47837326021843174
+   },
+   "precision_micro": {
+    "mean": 0.3692338075275549,
+    "std": 0.07888164407251122,
+    "min": 0.15029694713754593,
+    "max": 0.508145498196647
+   },
+   "precision_weighted": {
+    "mean": 0.5575952722357818,
+    "std": 0.047019815910574844,
+    "min": 0.3005529133131153,
+    "max": 0.6272246588505543
+   },
+   "recall_macro": {
+    "mean": 0.37086229348788113,
+    "std": 0.04723923192140247,
+    "min": 0.23557342537017117,
+    "max": 0.4668399164195599
+   },
+   "recall_micro": {
+    "mean": 0.3692338075275549,
+    "std": 0.07888164407251122,
+    "min": 0.15029694713754593,
+    "max": 0.508145498196647
+   },
+   "recall_weighted": {
+    "mean": 0.3692338075275549,
+    "std": 0.07888164407251122,
+    "min": 0.15029694713754593,
+    "max": 0.5081454981966471
+   },
+   "f1_macro": {
+    "mean": 0.2899829620402866,
+    "std": 0.048933446583020436,
+    "min": 0.14239917955785103,
+    "max": 0.3854782176069336
+   },
+   "f1_micro": {
+    "mean": 0.3692338075275549,
+    "std": 0.07888164407251122,
+    "min": 0.15029694713754593,
+    "max": 0.508145498196647
+   },
+   "f1_weighted": {
+    "mean": 0.3556140034230541,
+    "std": 0.09170623455998037,
+    "min": 0.10297326196359663,
+    "max": 0.5069679672322822
+   }
+  },
+  "round1": {
+   "accuracy": 0.42483993308270174,
+   "precision_macro": 0.43367809421052606,
+   "precision_micro": 0.42483993308270174,
+   "precision_weighted": 0.5818034528761636,
+   "recall_macro": 0.3923920675625609,
+   "recall_micro": 0.42483993308270174,
+   "recall_weighted": 0.42483993308270174,
+   "f1_macro": 0.3238482682727499,
+   "f1_micro": 0.42483993308270174,
+   "f1_weighted": 0.41100324507256375
+  },
+  "peak_f1_macro_posthoc": {
+   "round": 1,
+   "f1_macro": 0.3238482682727499,
+   "accuracy": 0.42483993308270174
+  },
+  "drop_from_peak_pct": 10.457152175950926,
+  "timing": {
+   "round_sec_median": 2649.4512486575004,
+   "train_sec_median": 1317.993921031,
+   "eval_sec_median": 1290.4179226600004,
+   "round_sec_max": 3114.400483544003,
+   "total_round_hours": 37.555878749304156,
+   "total_train_hours": 19.051445081284715,
+   "total_eval_hours": 18.459497216201388
+  },
+  "backend": [
+   "compiled"
+  ],
+  "cache_mismatch_total": 0,
+  "evaluated_always_N": true,
+  "sessions": [
+   {
+    "session": 1,
+    "pull": "runs/pulls/100c_cos_s1",
+    "kernel_logs": [
+     "pfedes-veremi-100-clients-cos.log"
+    ],
+    "rounds_present": [
+     1,
+     13
+    ],
+    "n_rounds": 13,
+    "rounds_produced": [
+     1,
+     2,
+     3,
+     4,
+     5,
+     6,
+     7,
+     8,
+     9,
+     10,
+     11,
+     12,
+     13
+    ]
+   },
+   {
+    "session": 2,
+    "pull": "runs/pulls/100c_cos_s2",
+    "kernel_logs": [
+     "pfedes-veremi-100-clients-cos-s2.log"
+    ],
+    "rounds_present": [
+     1,
+     25
+    ],
+    "n_rounds": 25,
+    "rounds_produced": [
+     14,
+     15,
+     16,
+     17,
+     18,
+     19,
+     20,
+     21,
+     22,
+     23,
+     24,
+     25
+    ]
+   },
+   {
+    "session": 3,
+    "pull": "runs/pulls/100c_cos_s3",
+    "kernel_logs": [
+     "pfedes-veremi-100-clients-cos-s3.log"
+    ],
+    "rounds_present": [
+     1,
+     39
+    ],
+    "n_rounds": 39,
+    "rounds_produced": [
+     26,
+     27,
+     28,
+     29,
+     30,
+     31,
+     32,
+     33,
+     34,
+     35,
+     36,
+     37,
+     38,
+     39
+    ]
+   },
+   {
+    "session": 4,
+    "pull": "runs/pulls/100c_cos_s4",
+    "kernel_logs": [
+     "pfedes-veremi-100-clients-cos-s4.log"
+    ],
+    "rounds_present": [
+     1,
+     50
+    ],
+    "n_rounds": 50,
+    "rounds_produced": [
+     40,
+     41,
+     42,
+     43,
+     44,
+     45,
+     46,
+     47,
+     48,
+     49,
+     50
+    ]
+   }
+  ],
+  "worst_client_final": {
+   "cid": 14,
+   "f1_macro": 0.14239917955785103
+  },
+  "best_client_final": {
+   "cid": 57,
+   "f1_macro": 0.3854782176069336
+  }
+ }
+}

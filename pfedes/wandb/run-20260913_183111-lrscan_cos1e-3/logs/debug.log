@@ -1,0 +1,24 @@
+2026-09-13 18:31:11,914 INFO    MainThread:40471 [wandb_setup.py:_flush():81] Current SDK version is 0.29.0
+2026-09-13 18:31:11,914 INFO    MainThread:40471 [wandb_setup.py:_flush():81] Configure stats pid to 40471
+2026-09-13 18:31:11,914 INFO    MainThread:40471 [wandb_setup.py:_flush():81] Loading settings from environment variables
+2026-09-13 18:31:11,914 INFO    MainThread:40471 [wandb_init.py:setup_run_log_directory():739] Logging user logs to /home/odixe/nckh/pfedes/wandb/run-20260913_183111-lrscan_cos1e-3/logs/debug.log
+2026-09-13 18:31:11,914 INFO    MainThread:40471 [wandb_init.py:setup_run_log_directory():740] Logging internal logs to /home/odixe/nckh/pfedes/wandb/run-20260913_183111-lrscan_cos1e-3/logs/debug-internal.log
+2026-09-13 18:31:11,914 INFO    MainThread:40471 [wandb_init.py:init():783] calling init triggers
+2026-09-13 18:31:11,914 INFO    MainThread:40471 [wandb_init.py:init():788] wandb.init called with sweep_config: {}
+config: {'patch_len': 6, 'stem_ch': 96, 'dense_growth': 32, 'dense_layers': 3, 'incep_modules': 2, 'fire_modules': 3, 'dropout': 0.1, 'num_classes': 16, 'n_features': 66, 'device': 'cuda', 'batch': 512, 'eval_batch': 8192, 'lr': 0.001, 'lr_schedule': 'cosine', 'lr_min': 1e-05, 'weight_decay': 0.0001, 'mu': 0.5, 'clip': 1.0, 'seed': 42, 'rounds': 10, 'local_epochs': 1, 'proxy_epochs': 1, 'participation': 1.0, 'n_clients': 6, '_wandb': {}}
+2026-09-13 18:31:11,914 INFO    MainThread:40471 [wandb_init.py:init():831] starting backend
+2026-09-13 18:31:11,914 INFO    MainThread:40471 [wandb_init.py:init():846] sending inform_init request
+2026-09-13 18:31:12,446 INFO    MainThread:40471 [wandb_init.py:init():851] backend started and connected
+2026-09-13 18:31:12,455 INFO    MainThread:40471 [wandb_init.py:init():921] updated telemetry
+2026-09-13 18:31:12,457 INFO    MainThread:40471 [wandb_init.py:init():944] communicating run to backend with 90.0 second timeout
+2026-09-13 18:31:13,798 INFO    MainThread:40471 [wandb_init.py:init():981] starting run threads in backend
+2026-09-13 18:31:13,855 INFO    MainThread:40471 [wandb_run.py:_console_start():2545] atexit reg
+2026-09-13 18:31:13,855 INFO    MainThread:40471 [wandb_run.py:_redirect():2395] redirect: wrap_raw
+2026-09-13 18:31:13,855 INFO    MainThread:40471 [wandb_run.py:_redirect():2464] Wrapping output streams.
+2026-09-13 18:31:13,855 INFO    MainThread:40471 [wandb_run.py:_redirect():2487] Redirects installed.
+2026-09-13 18:31:13,857 INFO    MainThread:40471 [wandb_init.py:init():1019] run started, returning control to user process
+2026-09-13 19:15:08,953 INFO    MainThread:40471 [wandb_run.py:_finish():2316] finishing run 21522798-uit/pfedes-veremi/lrscan_cos1e-3
+2026-09-13 19:15:08,953 INFO    MainThread:40471 [wandb_run.py:_atexit_cleanup():2512] got exitcode: 0
+2026-09-13 19:15:08,954 INFO    MainThread:40471 [wandb_run.py:_restore():2494] restore
+2026-09-13 19:15:08,954 INFO    MainThread:40471 [wandb_run.py:_restore():2500] restore done
+2026-09-13 19:15:11,819 INFO    MainThread:40471 [wandb_run.py:_footer_sync_info():3917] logging synced files
