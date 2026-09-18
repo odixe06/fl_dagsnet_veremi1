@@ -1,0 +1,73 @@
+{
+  "num_clients": 20,
+  "batch": 512,
+  "run_name": "afpha-dagsnet-20client",
+  "rounds": 50,
+  "fingerprint": "878eebf74cd0a279",
+  "train_root": "/kaggle/input/datasets/odixe0502/veremi-fl-20client/20_client",
+  "test_root": "/kaggle/input/datasets/odixe0502/veremi-nextgen2026-centralized/upload",
+  "rows_per_client": [
+    3352748,
+    1783872,
+    2652819,
+    1455566,
+    1864534,
+    1932238,
+    3372587,
+    1472203,
+    2845626,
+    1240841,
+    2671366,
+    1851046,
+    1495960,
+    1779645,
+    3063594,
+    1212957,
+    870217,
+    5890990,
+    1063458,
+    1173148
+  ],
+  "steps_per_round": 84083,
+  "n_test": 10761343,
+  "eval_batch": 16384,
+  "imported_rounds": 0,
+  "max_skip_pct": 5.0,
+  "compile_mode_requested": "reduce-overhead",
+  "max_hours": 6.0,
+  "schema_fingerprint": "ba5fd14a91d3b3ff",
+  "clusters": [
+    [
+      7,
+      9,
+      12,
+      14,
+      15
+    ],
+    [
+      0,
+      3,
+      6,
+      10,
+      19
+    ],
+    [
+      2,
+      5,
+      11,
+      16,
+      18
+    ],
+    [
+      1,
+      4,
+      8,
+      13,
+      17
+    ]
+  ],
+  "data_digests": {
+    "train": "4c07ce0557c2ab8c",
+    "test": "3289bacdad8cd3e0"
+  }
+}

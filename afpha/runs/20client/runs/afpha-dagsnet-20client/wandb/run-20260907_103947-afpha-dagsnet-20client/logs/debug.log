@@ -1,0 +1,24 @@
+2026-09-07 10:39:47,505 INFO    MainThread:56 [wandb_setup.py:_flush():81] Current SDK version is 0.26.1
+2026-09-07 10:39:47,505 INFO    MainThread:56 [wandb_setup.py:_flush():81] Configure stats pid to 56
+2026-09-07 10:39:47,505 INFO    MainThread:56 [wandb_setup.py:_flush():81] Loading settings from environment variables
+2026-09-07 10:39:47,505 INFO    MainThread:56 [wandb_init.py:setup_run_log_directory():723] Logging user logs to /kaggle/working/runs/afpha-dagsnet-20client/wandb/run-20260907_103947-afpha-dagsnet-20client/logs/debug.log
+2026-09-07 10:39:47,505 INFO    MainThread:56 [wandb_init.py:setup_run_log_directory():724] Logging internal logs to /kaggle/working/runs/afpha-dagsnet-20client/wandb/run-20260907_103947-afpha-dagsnet-20client/logs/debug-internal.log
+2026-09-07 10:39:47,505 INFO    MainThread:56 [wandb_init.py:init():850] calling init triggers
+2026-09-07 10:39:47,505 INFO    MainThread:56 [wandb_init.py:init():855] wandb.init called with sweep_config: {}
+config: {'num_clients': 20, 'batch': 512, 'run_name': 'afpha-dagsnet-20client', 'rounds': 50, 'model': {'patch_len': 6, 'stem_ch': 96, 'dense_growth': 32, 'dense_layers': 3, 'incep_modules': 2, 'fire_modules': 3, 'dropout': 0.1, 'num_classes': 16}, 'n_params': 395024, 'spec': 'rebuild.md Proposal A', 'cluster_size': 5, 'mu_base': 0.01, 'lr_max': 0.001, 'lr_min': 1e-05, 'grad_clip': 1.0, 'eval_batch': 16384, 'compile_mode_requested': 'reduce-overhead', '_wandb': {}}
+2026-09-07 10:39:47,505 INFO    MainThread:56 [wandb_init.py:init():898] starting backend
+2026-09-07 10:39:48,407 INFO    MainThread:56 [wandb_init.py:init():913] sending inform_init request
+2026-09-07 10:39:48,793 INFO    MainThread:56 [wandb_init.py:init():918] backend started and connected
+2026-09-07 10:39:48,811 INFO    MainThread:56 [wandb_init.py:init():988] updated telemetry
+2026-09-07 10:39:48,812 INFO    MainThread:56 [wandb_init.py:init():1011] communicating run to backend with 90.0 second timeout
+2026-09-07 10:39:49,261 INFO    MainThread:56 [wandb_init.py:init():1056] starting run threads in backend
+2026-09-07 10:39:51,473 INFO    MainThread:56 [wandb_run.py:_console_start():2554] atexit reg
+2026-09-07 10:39:51,473 INFO    MainThread:56 [wandb_run.py:_redirect():2403] redirect: wrap_raw
+2026-09-07 10:39:51,473 INFO    MainThread:56 [wandb_run.py:_redirect():2472] Wrapping output streams.
+2026-09-07 10:39:51,473 INFO    MainThread:56 [wandb_run.py:_redirect():2495] Redirects installed.
+2026-09-07 10:39:51,493 INFO    MainThread:56 [wandb_init.py:init():1094] run started, returning control to user process
+2026-09-07 10:44:41,957 INFO    MainThread:56 [wandb_run.py:_config_callback():1415] config_cb None None {'workers': {1: {'compile_mode': 'reduce-overhead', 'device_name': 'Tesla T4', 'capability': [7, 5], 'free_GiB': 7.489013671875, 'total_GiB': 14.56219482421875, 'resident_GiB': 6.316218852996826}, 0: {'compile_mode': 'reduce-overhead', 'device_name': 'Tesla T4', 'capability': [7, 5], 'free_GiB': 7.489013671875, 'total_GiB': 14.56219482421875, 'resident_GiB': 6.316218852996826}}}
+2026-09-07 15:30:48,759 INFO    MainThread:56 [wandb_run.py:_finish():2321] finishing run 21522798-uit/afpha-dagsnet-veremi/afpha-dagsnet-20client
+2026-09-07 15:30:48,760 INFO    MainThread:56 [wandb_run.py:_atexit_cleanup():2520] got exitcode: 0
+2026-09-07 15:30:48,761 INFO    MainThread:56 [wandb_run.py:_restore():2502] restore
+2026-09-07 15:30:48,761 INFO    MainThread:56 [wandb_run.py:_restore():2508] restore done

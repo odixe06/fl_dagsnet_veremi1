@@ -1,0 +1,15 @@
+{
+  "cfg": {
+    "patch_len": 6,
+    "stem_ch": 96,
+    "dense_growth": 32,
+    "dense_layers": 3,
+    "incep_modules": 2,
+    "fire_modules": 3,
+    "dropout": 0.1,
+    "num_classes": 16
+  },
+  "n_features": 66,
+  "n_params": 395024,
+  "load": "build_dagsnet(); load_state_dict(torch.load(w, weights_only=True), strict=True)"
+}

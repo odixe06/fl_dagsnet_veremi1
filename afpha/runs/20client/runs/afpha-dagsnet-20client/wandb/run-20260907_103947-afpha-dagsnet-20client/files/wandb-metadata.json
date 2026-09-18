@@ -1,0 +1,68 @@
+{
+  "os":  "Linux-6.12.90+-x86_64-with-glibc2.35",
+  "python":  "CPython 3.12.13",
+  "startedAt":  "2026-09-07T10:39:47.503502Z",
+  "args":  [
+    "--clients",
+    "20",
+    "--out",
+    "/kaggle/working/runs/afpha-dagsnet-20client",
+    "--scratch",
+    "/kaggle/temp/prepack",
+    "--arch",
+    "/kaggle/working/src",
+    "--data-search",
+    "/kaggle/input",
+    "--test-search",
+    "/kaggle/input",
+    "--rounds",
+    "50",
+    "--eval-batch",
+    "16384",
+    "--compile-mode",
+    "reduce-overhead",
+    "--max-hours",
+    "6.0",
+    "--wandb-project",
+    "afpha-dagsnet-veremi",
+    "--resume-search",
+    "/kaggle/input"
+  ],
+  "program":  "/kaggle/working/src/fl_train.py",
+  "codePath":  "src/fl_train.py",
+  "codePathLocal":  "src/fl_train.py",
+  "root":  "/kaggle/working/runs/afpha-dagsnet-20client",
+  "host":  "25f0f995f4fb",
+  "executable":  "/usr/bin/python3",
+  "cpu_count":  2,
+  "cpu_count_logical":  4,
+  "gpu":  "Tesla T4",
+  "gpu_count":  2,
+  "disk":  {
+    "/":  {
+      "total":  "8656922775552",
+      "used":  "7554383364096"
+    }
+  },
+  "memory":  {
+    "total":  "33659383808"
+  },
+  "gpu_nvidia":  [
+    {
+      "name":  "Tesla T4",
+      "memoryTotal":  "16106127360",
+      "cudaCores":  2560,
+      "architecture":  "Turing",
+      "uuid":  "GPU-ec0b26d2-467a-535e-59c0-666cc1d5f609"
+    },
+    {
+      "name":  "Tesla T4",
+      "memoryTotal":  "16106127360",
+      "cudaCores":  2560,
+      "architecture":  "Turing",
+      "uuid":  "GPU-ece71a75-65ed-5e73-ddf6-7e5738518ce4"
+    }
+  ],
+  "cudaVersion":  "13.0",
+  "writerId":  "dk6vsbkttztaozauw0b3c7yytds6t6d2"
+}

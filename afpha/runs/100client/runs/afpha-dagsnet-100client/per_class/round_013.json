@@ -1,0 +1,146 @@
+[
+  {
+    "class_index": 0,
+    "class_name": "benign",
+    "precision": 0.6397477347611202,
+    "recall": 0.2598442748551316,
+    "f1": 0.36957817422173156,
+    "support": 2391136,
+    "predicted": 971200
+  },
+  {
+    "class_index": 1,
+    "class_name": "accelerationMultiplication",
+    "precision": 0.9435357256788286,
+    "recall": 0.9578004952695409,
+    "f1": 0.9506145997775405,
+    "support": 157490,
+    "predicted": 159871
+  },
+  {
+    "class_index": 2,
+    "class_name": "constantPositionOffset",
+    "precision": 0.6241832161154934,
+    "recall": 0.7918729871744167,
+    "f1": 0.6980991668849987,
+    "support": 442475,
+    "predicted": 561348
+  },
+  {
+    "class_index": 3,
+    "class_name": "constantSpeedOffset",
+    "precision": 0.5584044906840248,
+    "recall": 0.7050166560089756,
+    "f1": 0.6232038584329759,
+    "support": 433177,
+    "predicted": 546910
+  },
+  {
+    "class_index": 4,
+    "class_name": "dataReplay",
+    "precision": 0.17610308624304646,
+    "recall": 0.670286699901138,
+    "f1": 0.2789248132541826,
+    "support": 475410,
+    "predicted": 1809514
+  },
+  {
+    "class_index": 5,
+    "class_name": "dosAttack",
+    "precision": 0.9880683693248415,
+    "recall": 0.9928841425839692,
+    "f1": 0.9904704022875598,
+    "support": 1574090,
+    "predicted": 1581762
+  },
+  {
+    "class_index": 6,
+    "class_name": "feignedBraking",
+    "precision": 0.9209805924412666,
+    "recall": 0.9502550482694658,
+    "f1": 0.9353888289484604,
+    "support": 118605,
+    "predicted": 122375
+  },
+  {
+    "class_index": 7,
+    "class_name": "positionMirroring",
+    "precision": 0.14143570148817142,
+    "recall": 0.06625643133803948,
+    "f1": 0.09023957447863279,
+    "support": 467049,
+    "predicted": 218792
+  },
+  {
+    "class_index": 8,
+    "class_name": "randomPositionOffset",
+    "precision": 0.9626175766624262,
+    "recall": 0.9638129705983044,
+    "f1": 0.963214902745813,
+    "support": 470279,
+    "predicted": 470863
+  },
+  {
+    "class_index": 9,
+    "class_name": "randomSpeedOffset",
+    "precision": 0.9532194221256924,
+    "recall": 0.9074540313521948,
+    "f1": 0.9297739006856306,
+    "support": 542163,
+    "predicted": 516133
+  },
+  {
+    "class_index": 10,
+    "class_name": "reversedHeading",
+    "precision": 0.891667786688171,
+    "recall": 0.8845773502864825,
+    "f1": 0.888108416643271,
+    "support": 269999,
+    "predicted": 267852
+  },
+  {
+    "class_index": 11,
+    "class_name": "suddenConstantSpeed",
+    "precision": 0.5255550808126943,
+    "recall": 0.6176047924926849,
+    "f1": 0.5678739154660511,
+    "support": 57757,
+    "predicted": 67873
+  },
+  {
+    "class_index": 12,
+    "class_name": "suddenStop",
+    "precision": 0.8376089343706923,
+    "recall": 0.6782000047293623,
+    "f1": 0.7495224082644931,
+    "support": 211445,
+    "predicted": 171204
+  },
+  {
+    "class_index": 13,
+    "class_name": "timeDelayAttack",
+    "precision": 0.1336204363789381,
+    "recall": 0.14369697537986115,
+    "f1": 0.13847563652649972,
+    "support": 490574,
+    "predicted": 527569
+  },
+  {
+    "class_index": 14,
+    "class_name": "trafficCongestionSybil",
+    "precision": 0.9503846135443298,
+    "recall": 0.9959065488115956,
+    "f1": 0.9726132233708273,
+    "support": 2393335,
+    "predicted": 2507972
+  },
+  {
+    "class_index": 15,
+    "class_name": "zeroSpeedReport",
+    "precision": 0.9014820937698237,
+    "recall": 0.8803156641975679,
+    "f1": 0.8907731582786287,
+    "support": 266359,
+    "predicted": 260105
+  }
+]

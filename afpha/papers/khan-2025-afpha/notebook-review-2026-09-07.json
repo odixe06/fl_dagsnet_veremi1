@@ -1,0 +1,327 @@
+{
+  "date": "2026-09-07",
+  "scope": "review only; no notebook launch; credentials excluded",
+  "notebooks": {
+    "afpha-dagsnet-calibration": {
+      "nbformat_valid": true,
+      "code_cells_compile": 9,
+      "source_mismatch": [],
+      "calibration_source_mismatch": [],
+      "kernelspec": "python3",
+      "machine_shape": "NvidiaTeslaT4",
+      "private": true,
+      "metadata_code_file_exists": true,
+      "config": {},
+      "dataset_sources": [
+        "odixe0502/veremi-fl-20client",
+        "odixe0502/veremi-fl-50client",
+        "odixe0502/veremi-fl-100client",
+        "odixe0502/veremi-nextgen2026-centralized"
+      ],
+      "kernel_sources": []
+    },
+    "afpha-dagsnet-train-100client": {
+      "nbformat_valid": true,
+      "code_cells_compile": 7,
+      "source_mismatch": [],
+      "calibration_source_mismatch": [],
+      "kernelspec": "python3",
+      "machine_shape": "NvidiaTeslaT4",
+      "private": true,
+      "metadata_code_file_exists": true,
+      "config": {
+        "NUM_CLIENTS": 100,
+        "BATCH": 256,
+        "ROUNDS": 50,
+        "MAX_HOURS": 9.5,
+        "REQUIRE_RESUME": false
+      },
+      "dataset_sources": [
+        "odixe0502/veremi-fl-100client",
+        "odixe0502/veremi-nextgen2026-centralized"
+      ],
+      "kernel_sources": []
+    },
+    "afpha-dagsnet-train-20client": {
+      "nbformat_valid": true,
+      "code_cells_compile": 7,
+      "source_mismatch": [],
+      "calibration_source_mismatch": [],
+      "kernelspec": "python3",
+      "machine_shape": "NvidiaTeslaT4",
+      "private": true,
+      "metadata_code_file_exists": true,
+      "config": {
+        "NUM_CLIENTS": 20,
+        "BATCH": 512,
+        "ROUNDS": 50,
+        "MAX_HOURS": 6.0,
+        "REQUIRE_RESUME": false
+      },
+      "dataset_sources": [
+        "odixe0502/veremi-fl-20client",
+        "odixe0502/veremi-nextgen2026-centralized"
+      ],
+      "kernel_sources": []
+    },
+    "afpha-dagsnet-train-50client": {
+      "nbformat_valid": true,
+      "code_cells_compile": 7,
+      "source_mismatch": [],
+      "calibration_source_mismatch": [],
+      "kernelspec": "python3",
+      "machine_shape": "NvidiaTeslaT4",
+      "private": true,
+      "metadata_code_file_exists": true,
+      "config": {
+        "NUM_CLIENTS": 50,
+        "BATCH": 512,
+        "ROUNDS": 50,
+        "MAX_HOURS": 6.0,
+        "REQUIRE_RESUME": false
+      },
+      "dataset_sources": [
+        "odixe0502/veremi-fl-50client",
+        "odixe0502/veremi-nextgen2026-centralized"
+      ],
+      "kernel_sources": []
+    }
+  },
+  "source_sha256": {
+    "dagsnet.py": "f45d68b156cb0fcef149c61cdeda4e7ba1419bf7448af1cf399fdd5178378af1",
+    "metrics.py": "573ef800b46d9de549944865bf0574d10bed13a89359af073b6f04dcba2ab74d",
+    "flatpack.py": "2c359181c0ce155ee672fc4f8210640b3ef0aa01d81e8b6c1e4750eafe9dcbe2",
+    "afpha.py": "c33fb0149cdb9b78eb81de58ffb2383d7e4d95ae2db5ba0d81f827f6608553b0",
+    "fldata.py": "ebdc5166df51f9a8bcd2faf3b222fe4595a8acd55661a1627387654d74b5e9e2",
+    "worker.py": "11165500ea6ea023322cd1c6c08ecbd53946a4ab1e27597fcd808d571444ba81",
+    "fl_train.py": "1134c1715e9e87af5e4a19b582f64f5998a81684635638bc79c63388c8a6f9f5",
+    "meta.json": "1aeb0c9156c1f7d77694ffbee6f24a3f6abeec0c0dad48c1a45741cdb85fbff4",
+    "scaler.json": "1b07ea714eee74d18f1304d3f18c50b1d025a6accfca5aa9b036c18164c02a37"
+  },
+  "review_tools_sha256": {
+    "build_notebooks.py": "5be7429f602c5085c358a0c91165895b23a83b39dc4c438b0ef7da6c95f7bef8",
+    "verify_run.py": "cc145fbde338f73448535a69812486e47fe3b036f1f5d9ee155e42bd1aae2fba"
+  },
+  "calibration": {
+    "config_rounds": 3,
+    "actual_lr_rounds_1_3": [
+      [
+        0.001
+      ],
+      [
+        0.000505
+      ],
+      [
+        1e-05
+      ]
+    ],
+    "production_lr_rounds_1_3": [
+      0.001,
+      0.0009989829694114164,
+      0.0009959360568425068
+    ],
+    "compile_modes": [
+      "reduce-overhead"
+    ],
+    "history": [
+      {
+        "round": "1",
+        "accuracy": "0.452001",
+        "precision_macro": "0.419328",
+        "precision_micro": "0.452001",
+        "precision_weighted": "0.518022",
+        "recall_macro": "0.224344",
+        "recall_micro": "0.452001",
+        "recall_weighted": "0.452001",
+        "f1_macro": "0.202941",
+        "f1_micro": "0.452001",
+        "f1_weighted": "0.396097",
+        "t_train_s": "340.1",
+        "t_aggregate_s": "0.0",
+        "t_eval_s": "35.5",
+        "t_round_s": "375.6"
+      },
+      {
+        "round": "2",
+        "accuracy": "0.770118",
+        "precision_macro": "0.694632",
+        "precision_micro": "0.770118",
+        "precision_weighted": "0.731341",
+        "recall_macro": "0.596849",
+        "recall_micro": "0.770118",
+        "recall_weighted": "0.770118",
+        "f1_macro": "0.605268",
+        "f1_micro": "0.770118",
+        "f1_weighted": "0.729527",
+        "t_train_s": "304.6",
+        "t_aggregate_s": "0.0",
+        "t_eval_s": "15.1",
+        "t_round_s": "319.7"
+      },
+      {
+        "round": "3",
+        "accuracy": "0.807165",
+        "precision_macro": "0.758297",
+        "precision_micro": "0.807165",
+        "precision_weighted": "0.780860",
+        "recall_macro": "0.693951",
+        "recall_micro": "0.807165",
+        "recall_weighted": "0.807165",
+        "f1_macro": "0.710131",
+        "f1_micro": "0.807165",
+        "f1_weighted": "0.782831",
+        "t_train_s": "301.4",
+        "t_aggregate_s": "0.0",
+        "t_eval_s": "16.1",
+        "t_round_s": "317.5"
+      }
+    ],
+    "projection": {
+      "20": {
+        "clients": 20,
+        "rows": 43045415,
+        "steps_per_round": 84083,
+        "ms_per_step": 7.245,
+        "train_h": 4.23,
+        "other_h": 0.21,
+        "total_h": 4.44,
+        "resident_GiB": 5.29,
+        "suggested_max_hours": 4.9
+      },
+      "50": {
+        "clients": 50,
+        "rows": 43045415,
+        "steps_per_round": 84098,
+        "ms_per_step": 7.245,
+        "train_h": 4.23,
+        "other_h": 0.21,
+        "total_h": 4.44,
+        "resident_GiB": 5.29,
+        "suggested_max_hours": 4.9
+      },
+      "100": {
+        "clients": 100,
+        "rows": 43045415,
+        "steps_per_round": 168200,
+        "ms_per_step": 6.733,
+        "train_h": 7.86,
+        "other_h": 0.21,
+        "total_h": 8.07,
+        "resident_GiB": 5.29,
+        "suggested_max_hours": 8.6
+      }
+    },
+    "independent_artifact_checks": [
+      {
+        "round": 1,
+        "weights_all_finite": true,
+        "clients_unique_complete": true,
+        "per_client_rows_steps_lr_mu_valid": true,
+        "resume_mu_matches_adaptive_rule": true
+      },
+      {
+        "round": 2,
+        "weights_all_finite": true,
+        "clients_unique_complete": true,
+        "per_client_rows_steps_lr_mu_valid": true,
+        "resume_mu_matches_adaptive_rule": true
+      },
+      {
+        "round": 3,
+        "weights_all_finite": true,
+        "clients_unique_complete": true,
+        "per_client_rows_steps_lr_mu_valid": true,
+        "resume_mu_matches_adaptive_rule": true
+      }
+    ],
+    "existing_verifier_result": {
+      "returncode": 0,
+      "summary": "9 passed, 0 failed; all 3 rounds; 10,761,343 test rows"
+    }
+  },
+  "dataset_identity": {
+    "fingerprint_unchanged_after_feature_and_label_change": true,
+    "cache_hit_after_data_change": true,
+    "cached_features_unchanged": true,
+    "cached_labels_unchanged": true
+  },
+  "history_crash": {
+    "last_committed_before_retry": 1,
+    "rounds_in_history_after_retry": [
+      2
+    ],
+    "round_1_json_still_present": true
+  },
+  "ambiguous_resume": {
+    "eligible_runs": 2,
+    "import_return_round": 2,
+    "selected_weight_marker": "b",
+    "rejected_ambiguity": false
+  },
+  "import_crash": {
+    "marker_round_after_interrupted_copy": 1,
+    "retry_return": 0,
+    "weights_exist_after_retry": false
+  },
+  "fixture_verification": {
+    "r20": {
+      "returncode": 0,
+      "summary": [
+        "9 passed, 0 failed"
+      ]
+    },
+    "r50": {
+      "returncode": 0,
+      "summary": [
+        "9 passed, 0 failed"
+      ]
+    },
+    "r100": {
+      "returncode": 0,
+      "summary": [
+        "9 passed, 0 failed"
+      ]
+    }
+  },
+  "verifier_corruption_tests": {
+    "history_wrong": {
+      "returncode": 0,
+      "summary": [
+        "9 passed, 0 failed"
+      ]
+    },
+    "mu_wrong": {
+      "returncode": 0,
+      "summary": [
+        "9 passed, 0 failed"
+      ]
+    },
+    "early_weights_nan": {
+      "returncode": 0,
+      "summary": [
+        "9 passed, 0 failed"
+      ]
+    },
+    "client_duplicate": {
+      "returncode": 0,
+      "summary": [
+        "9 passed, 0 failed"
+      ]
+    },
+    "configured_50_only_3_complete": {
+      "returncode": 0,
+      "summary": [
+        "9 passed, 0 failed"
+      ]
+    }
+  },
+  "mcp_observation": {
+    "calibration_kernel": "minhtran0601/afpha-dagsnet-calibration",
+    "status": "COMPLETE",
+    "gpu_used_seconds": 1489.116,
+    "gpu_reserved_seconds": 0,
+    "gpu_allowed_seconds": 108000,
+    "refresh_utc": "2026-09-12T00:00:00Z"
+  },
+  "syntax_check_limit": "Python source cells compiled; IPython shell/magic lines excluded; notebook cells not executed"
+}

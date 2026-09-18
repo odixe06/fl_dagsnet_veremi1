@@ -1,0 +1,129 @@
+{
+  "scope": "local review; no Kaggle launch",
+  "notebooks": {
+    "afpha_calibration.ipynb": {
+      "nbformat_valid": true,
+      "embedded_source_mismatches": [],
+      "machine_shape": null,
+      "private": true,
+      "dataset_sources": [
+        "odixe0502/veremi-fl-20client",
+        "odixe0502/veremi-nextgen2026-centralized"
+      ],
+      "executed_cells": 0
+    },
+    "afpha_train_100client.ipynb": {
+      "nbformat_valid": true,
+      "embedded_source_mismatches": [],
+      "machine_shape": null,
+      "private": true,
+      "dataset_sources": [
+        "odixe0502/veremi-fl-100client",
+        "odixe0502/veremi-nextgen2026-centralized"
+      ],
+      "executed_cells": 0
+    },
+    "afpha_train_20client.ipynb": {
+      "nbformat_valid": true,
+      "embedded_source_mismatches": [],
+      "machine_shape": null,
+      "private": true,
+      "dataset_sources": [
+        "odixe0502/veremi-fl-20client",
+        "odixe0502/veremi-nextgen2026-centralized"
+      ],
+      "executed_cells": 0
+    },
+    "afpha_train_50client.ipynb": {
+      "nbformat_valid": true,
+      "embedded_source_mismatches": [],
+      "machine_shape": null,
+      "private": true,
+      "dataset_sources": [
+        "odixe0502/veremi-fl-50client",
+        "odixe0502/veremi-nextgen2026-centralized"
+      ],
+      "executed_cells": 0
+    }
+  },
+  "reviewed_source_sha256": {
+    "dagsnet.py": "f45d68b156cb0fcef149c61cdeda4e7ba1419bf7448af1cf399fdd5178378af1",
+    "metrics.py": "573ef800b46d9de549944865bf0574d10bed13a89359af073b6f04dcba2ab74d",
+    "flatpack.py": "2c359181c0ce155ee672fc4f8210640b3ef0aa01d81e8b6c1e4750eafe9dcbe2",
+    "afpha.py": "7db7e181425ada2c297b2bae875660e53b8d123e9e25aea0963b257505747b83",
+    "fldata.py": "47a8a0692dc7f0cddbe4b1dc4fe1c1bc8ef5eb766390a362f04096ef76da66d6",
+    "worker.py": "e3e45afa7ddeb42154693b6c66691fc70e4fd6da08e638d00a6ee28e6ddfa7c2",
+    "fl_train.py": "ef16253d7778cfba59e121c66dafa617ea855541c5af3e6f9362e29496881258",
+    "meta.json": "1aeb0c9156c1f7d77694ffbee6f24a3f6abeec0c0dad48c1a45741cdb85fbff4",
+    "scaler.json": "1b07ea714eee74d18f1304d3f18c50b1d025a6accfca5aa9b036c18164c02a37"
+  },
+  "nested_test_mount": {
+    "relative_root": "datasets/odixe0502/veremi-nextgen2026-centralized/upload",
+    "default_result": "FileNotFoundError"
+  },
+  "new_session_resume": {
+    "prior_markers": 3,
+    "new_working_start_round": 0
+  },
+  "real_data_sample": {
+    "source": "/home/odixe/nckh/dataset/fl_client/alpha05/20_client/train/client_id=000/part-00000.parquet",
+    "rows": 513,
+    "classes_present": [
+      1
+    ]
+  },
+  "model": {
+    "parameters": 395024,
+    "buffers": 3295,
+    "shape": [
+      4,
+      16
+    ]
+  },
+  "core_checks": {
+    "state_dict_roundtrip": true,
+    "metric_max_error": 5.551115123125783e-17
+  },
+  "scenario_steps": {
+    "20": 84083,
+    "50": 84098,
+    "100": 168200
+  },
+  "real_client_tail": {
+    "client_id": 0,
+    "rows": 513,
+    "steps": 2,
+    "skipped": 1,
+    "ce_mean": 2.477987289428711,
+    "grad_norm_mean": "NaN",
+    "lr": 0.001,
+    "mu": 0.01,
+    "finite": true,
+    "seconds": 2.6551788560000205,
+    "device": "cuda:0"
+  },
+  "all_steps_skipped_injection": {
+    "client_id": 0,
+    "rows": 512,
+    "steps": 1,
+    "skipped": 1,
+    "ce_mean": "Infinity",
+    "grad_norm_mean": "NaN",
+    "lr": 0.001,
+    "mu": 0.01,
+    "finite": true,
+    "seconds": 0.03749218800021481,
+    "device": "cuda:0",
+    "parameter_max_change": 0.0,
+    "driver_accepts_update": true
+  },
+  "verify_50_client_run": {
+    "returncode": 1,
+    "stderr_tail": [
+      "  File \"/home/odixe/nckh/afpha/scripts/verify_run.py\", line 91, in <module>",
+      "    assert len(cl3[\"clients\"]) == 20",
+      "           ^^^^^^^^^^^^^^^^^^^^^^^^^",
+      "AssertionError"
+    ]
+  }
+}

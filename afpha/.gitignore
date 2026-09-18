@@ -1,0 +1,8 @@
+# Generated notebooks carry an inline W&B API key (owner-authorized 2026-09-07 for
+# private Kaggle notebooks only). They are rebuilt from src/ by
+# scripts/build_notebooks.py, so there is nothing to lose by not tracking them --
+# and committing them would leak a live credential.
+notebooks/
+
+__pycache__/
+*.pyc
