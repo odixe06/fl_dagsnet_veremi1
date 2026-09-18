@@ -1,0 +1,15 @@
+{
+  "hooks": {
+    "SessionStart": [
+      {
+        "hooks": [
+          {
+            "type": "command",
+            "command": "bash -lc 'source ~/miniforge3/etc/profile.d/conda.sh && conda activate nckh && H=\"$CLAUDE_PROJECT_DIR/.claude/skills/kaggle-training-notebook/scripts/kaggle_account.py\" && python3 \"$H\" refresh; python3 \"$H\" health --quiet' 2>&1 | tail -5",
+            "timeout": 90
+          }
+        ]
+      }
+    ]
+  }
+}

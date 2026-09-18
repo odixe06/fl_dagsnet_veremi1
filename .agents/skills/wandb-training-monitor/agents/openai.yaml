@@ -1,0 +1,4 @@
+interface:
+  display_name: "W&B Training Monitor"
+  short_description: "Monitor training progress and health in W&B"
+  default_prompt: "Use $wandb-training-monitor to inspect this W&B run without modifying it, report timestamped progress and health, and check all 10 evaluation metrics for completed rounds."

@@ -1,0 +1,15 @@
+interface:
+  display_name: "Kaggle Training Notebook"
+  short_description: "Kaggle notebooks and reports with all 10 metrics"
+  default_prompt: "Use $kaggle-training-notebook to build or update a resumable Kaggle notebook and its report with all 10 required metrics, following CONTEXT.md."
+
+dependencies:
+  tools:
+    - type: "mcp"
+      value: "kaggle"
+      description: "Official Kaggle MCP server for notebooks, datasets, logs, quota, and outputs"
+      transport: "streamable_http"
+      url: "https://www.kaggle.com/mcp"
+
+policy:
+  allow_implicit_invocation: true
