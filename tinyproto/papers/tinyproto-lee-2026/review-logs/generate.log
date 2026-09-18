@@ -1,0 +1,11 @@
+Local memory guard: tree RSS <= 3000 MiB; keep 1536 MiB available.
+  /home/odixe/nckh/tinyproto/papers/tinyproto-lee-2026/notebook/tinyproto-fp-calibration  ->  khanhngoc0304/tinyproto-fp-calibration  (tinyproto-fp-calibration.ipynb)
+  /home/odixe/nckh/tinyproto/papers/tinyproto-lee-2026/notebook/tinyproto-fp-mu-sweep  ->  khanhngoc0304/tinyproto-fp-mu-sweep  (tinyproto-fp-mu-sweep.ipynb)
+  /home/odixe/nckh/tinyproto/papers/tinyproto-lee-2026/notebook/tinyproto-fp-mu-sweep-50client  ->  khanhngoc0304/tinyproto-fp-mu-sweep-50client  (tinyproto-fp-mu-sweep-50client.ipynb)
+  /home/odixe/nckh/tinyproto/papers/tinyproto-lee-2026/notebook/tinyproto-fp-mu-sweep-100client  ->  khanhngoc0304/tinyproto-fp-mu-sweep-100client  (tinyproto-fp-mu-sweep-100client.ipynb)
+  /home/odixe/nckh/tinyproto/papers/tinyproto-lee-2026/notebook/tinyproto-fp-train-20client  ->  khanhngoc0304/tinyproto-fp-train-20client  (tinyproto-fp-train-20client.ipynb)
+  /home/odixe/nckh/tinyproto/papers/tinyproto-lee-2026/notebook/tinyproto-fp-train-50client  ->  khanhngoc0304/tinyproto-fp-train-50client  (tinyproto-fp-train-50client.ipynb)
+  /home/odixe/nckh/tinyproto/papers/tinyproto-lee-2026/notebook/tinyproto-fp-train-100client  ->  khanhngoc0304/tinyproto-fp-train-100client  (tinyproto-fp-train-100client.ipynb)
+
+7 notebooks written to /home/odixe/nckh/tinyproto/papers/tinyproto-lee-2026/notebook
+Peak test-tree RSS: 5 MiB; exit 0

@@ -1,0 +1,3 @@
+Local memory guard: tree RSS <= 3000 MiB; keep 1536 MiB available.
+Server-confirmed CLI OAuth account: khanhngoc0304
+Peak test-tree RSS: 45 MiB; exit 0

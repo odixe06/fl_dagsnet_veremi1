@@ -1,0 +1,222 @@
+[{"stream_name":"stderr","time":5.980686253,"data":"0.00s - Debugger warning: It seems that frozen modules are being used, which may\n"}
+,{"stream_name":"stderr","time":5.980762702,"data":"0.00s - make the debugger miss breakpoints. Please pass -Xfrozen_modules=off\n"}
+,{"stream_name":"stderr","time":5.980767749,"data":"0.00s - to python to disable frozen modules.\n"}
+,{"stream_name":"stderr","time":5.980770583,"data":"0.00s - Note: Debugging will proceed. Set PYDEVD_DISABLE_FILE_VALIDATION=1 to disable this validation.\n"}
+,{"stream_name":"stderr","time":6.550589897,"data":"0.00s - Debugger warning: It seems that frozen modules are being used, which may\n"}
+,{"stream_name":"stderr","time":6.550620556,"data":"0.00s - make the debugger miss breakpoints. Please pass -Xfrozen_modules=off\n"}
+,{"stream_name":"stderr","time":6.550625705,"data":"0.00s - to python to disable frozen modules.\n"}
+,{"stream_name":"stderr","time":6.550629657,"data":"0.00s - Note: Debugging will proceed. Set PYDEVD_DISABLE_FILE_VALIDATION=1 to disable this validation.\n"}
+,{"stream_name":"stdout","time":11.540905451,"data":"python 3.12.13 | torch 2.10.0+cu128 | cuda 12.8\n"}
+,{"stream_name":"stdout","time":11.540962591,"data":"GPU 0: Tesla T4 (UUID: GPU-aab12329-4478-38ac-e960-24fef8c149db)\n"}
+,{"stream_name":"stdout","time":11.540982804,"data":"GPU 1: Tesla T4 (UUID: GPU-1467f64d-c1bb-3cd2-d169-7876060036bb)\n"}
+,{"stream_name":"stdout","time":11.540988571,"data":"\n"}
+,{"stream_name":"stdout","time":11.54934172,"data":"  cuda:0 Tesla T4 14.6 GB sm_75 SMs 40\n"}
+,{"stream_name":"stdout","time":11.549364697,"data":"  cuda:1 Tesla T4 14.6 GB sm_75 SMs 40\n"}
+,{"stream_name":"stdout","time":11.549370292999999,"data":"cpu: 4 | RAM GB: 31.3 | free on /kaggle/working GB: 19.5\n"}
+,{"stream_name":"stdout","time":11.549375246,"data":"free on /kaggle/temp GB: n/a\n"}
+,{"stream_name":"stdout","time":11.54939276,"data":"\n"}
+,{"stream_name":"stdout","time":11.54939785,"data":"OK: 2 x Tesla T4 (sm_75) confirmed before any training.\n"}
+,{"stream_name":"stdout","time":11.568119192,"data":"package dir: /kaggle/working/proj\n"}
+,{"stream_name":"stdout","time":11.592031468,"data":"Writing /kaggle/working/proj/model.py\n"}
+,{"stream_name":"stdout","time":11.611773185,"data":"Writing /kaggle/working/proj/cps.py\n"}
+,{"stream_name":"stdout","time":11.63373529,"data":"Writing /kaggle/working/proj/protos.py\n"}
+,{"stream_name":"stdout","time":11.654615955,"data":"Writing /kaggle/working/proj/metrics.py\n"}
+,{"stream_name":"stdout","time":11.678888501,"data":"Writing /kaggle/working/proj/data.py\n"}
+,{"stream_name":"stdout","time":11.704150883,"data":"Writing /kaggle/working/proj/ckpt.py\n"}
+,{"stream_name":"stdout","time":11.730374615,"data":"Writing /kaggle/working/proj/evaluate.py\n"}
+,{"stream_name":"stdout","time":11.763764076,"data":"Writing /kaggle/working/proj/fl_worker.py\n"}
+,{"stream_name":"stdout","time":11.794220691,"data":"Writing /kaggle/working/proj/driver.py\n"}
+,{"stream_name":"stdout","time":11.816850164,"data":"Writing /kaggle/working/proj/sweep.py\n"}
+,{"stream_name":"stdout","time":11.871144729,"data":"Writing /kaggle/working/tests/run_e2e.py\n"}
+,{"stream_name":"stdout","time":11.896472773,"data":"Writing /kaggle/working/scripts/verify_run.py\n"}
+,{"stream_name":"stdout","time":11.917071796,"data":"Writing /kaggle/working/tests/remote_smoke.py\n"}
+,{"stream_name":"stdout","time":41.988254891,"data":"REAL-DATA SAMPLE 20 source clients [0, 6, 13, 19] test rows 1024\n"}
+,{"stream_name":"stdout","time":42.123939632,"data":"[cps] {'d': 256, 'K': 16, 's': 50, 'compression_rate': 0.8046875, 'overlap_min': 0, 'overlap_max': 10, 'overlap_mean': 7.275, 'overlap_random_expectation': 9.765625, 'overlap_search_target': 10, 'hamming_min': 80, 'hamming_max': 100, 'hamming_mean': 85.45, 'dims_used': 256, 'dim_usage_min': 2, 'dim_usage_max': 4}\n"}
+,{"stream_name":"stdout","time":42.123980992,"data":"[resume] starting at round 1 of 3 (fingerprint 21e033e51dad0417)\n"}
+,{"stream_name":"stdout","time":42.205629819,"data":"REAL-DATA SAMPLE 20 source clients [0, 6, 13, 19] test rows 1024\n"}
+,{"stream_name":"stdout","time":42.205659231,"data":"[cps] {'d': 256, 'K': 16, 's': 50, 'compression_rate': 0.8046875, 'overlap_min': 0, 'overlap_max': 10, 'overlap_mean': 7.275, 'overlap_random_expectation': 9.765625, 'overlap_search_target': 10, 'hamming_min': 80, 'hamming_max': 100, 'hamming_mean': 85.45, 'dims_used': 256, 'dim_usage_min': 2, 'dim_usage_max': 4}\n"}
+,{"stream_name":"stdout","time":42.205665787,"data":"[resume] starting at round 1 of 3 (fingerprint 21e033e51dad0417)\n"}
+,{"stream_name":"stdout","time":44.892435275,"data":"[r0]    decoded 1/2 clients, 8,192 rows, 0s\n"}
+,{"stream_name":"stdout","time":44.892470897,"data":"[r1]    decoded 1/2 clients, 8,192 rows, 0s\n"}
+,{"stream_name":"stdout","time":44.91022971,"data":"[r0]    decoded 2/2 clients, 16,384 rows, 0s\n"}
+,{"stream_name":"stdout","time":44.911161115,"data":"[r1]    decoded 2/2 clients, 16,384 rows, 0s\n"}
+,{"stream_name":"stdout","time":45.031730529,"data":"[r1] data resident: train (16384, 66) test (1024, 66) (0.00 GiB) in 0s\n"}
+,{"stream_name":"stdout","time":45.031760003,"data":"[r0] data resident: train (16384, 66) test (1024, 66) (0.00 GiB) in 0s\n"}
+,{"stream_name":"stdout","time":45.095251914,"data":"[r0]    decoded 1/2 clients, 8,192 rows, 0s\n"}
+,{"stream_name":"stdout","time":45.095278159,"data":"[r1]    decoded 1/2 clients, 8,192 rows, 0s\n"}
+,{"stream_name":"stdout","time":45.095283781,"data":"[r0]    decoded 2/2 clients, 16,384 rows, 0s\n"}
+,{"stream_name":"stdout","time":45.095287843,"data":"[r1]    decoded 2/2 clients, 16,384 rows, 0s\n"}
+,{"stream_name":"stdout","time":45.095291574,"data":"[r1] data resident: train (16384, 66) test (1024, 66) (0.00 GiB) in 0s\n"}
+,{"stream_name":"stdout","time":45.095295147,"data":"[r0] data resident: train (16384, 66) test (1024, 66) (0.00 GiB) in 0s\n"}
+,{"stream_name":"stderr","time":64.518871273,"data":"W0908 12:50:36.051000 61 torch/_inductor/utils.py:1679] [0/0] Not enough SMs to use max_autotune_gemm mode\n"}
+,{"stream_name":"stderr","time":64.519511021,"data":"W0908 12:50:36.051000 62 torch/_inductor/utils.py:1679] [0/0] Not enough SMs to use max_autotune_gemm mode\n"}
+,{"stream_name":"stderr","time":64.721807342,"data":"W0908 12:50:36.051000 61 torch/_inductor/utils.py:1679] [0/0] Not enough SMs to use max_autotune_gemm mode\n"}
+,{"stream_name":"stderr","time":64.721846922,"data":"W0908 12:50:36.051000 62 torch/_inductor/utils.py:1679] [0/0] Not enough SMs to use max_autotune_gemm mode\n"}
+,{"stream_name":"stderr","time":64.721853113,"data":"\n"}
+,{"stream_name":"stderr","time":64.721857502,"data":"W0908 12:50:36.051000 61 torch/_inductor/utils.py:1679] [0/0] Not enough SMs to use max_autotune_gemm mode\n"}
+,{"stream_name":"stderr","time":64.72186251,"data":"W0908 12:50:36.051000 62 torch/_inductor/utils.py:1679] [0/0] Not enough SMs to use max_autotune_gemm mode\n"}
+,{"stream_name":"stdout","time":154.296051975,"data":"[r0] compile: {'enabled': True, 'max_abs_dlogit': 3.5762786865234375e-07, 'decisive_rows': 489, 'disagreements': 0, 'decisive_frac': 0.9551, 'amp_max_abs_dlogit': 0.000732421875, 'amp_decisive_rows': 489, 'amp_disagreements': 0, 'amp_decisive_frac': 0.9551}\n"}
+,{"stream_name":"stdout","time":154.507587462,"data":"[r1] compile: {'enabled': True, 'max_abs_dlogit': 3.5762786865234375e-07, 'decisive_rows': 471, 'disagreements': 0, 'decisive_frac': 0.9199, 'amp_max_abs_dlogit': 0.00054931640625, 'amp_decisive_rows': 471, 'amp_disagreements': 0, 'amp_decisive_frac': 0.9199}\n"}
+,{"stream_name":"stdout","time":154.511215916,"data":"[r0] compile: {'enabled': True, 'max_abs_dlogit': 3.5762786865234375e-07, 'decisive_rows': 489, 'disagreements': 0, 'decisive_frac': 0.9551, 'amp_max_abs_dlogit': 0.000732421875, 'amp_decisive_rows': 489, 'amp_disagreements': 0, 'amp_decisive_frac': 0.9551}\n"}
+,{"stream_name":"stdout","time":154.710276304,"data":"[r1] compile: {'enabled': True, 'max_abs_dlogit': 3.5762786865234375e-07, 'decisive_rows': 471, 'disagreements': 0, 'decisive_frac': 0.9199, 'amp_max_abs_dlogit': 0.00054931640625, 'amp_decisive_rows': 471, 'amp_disagreements': 0, 'amp_decisive_frac': 0.9199}\n"}
+,{"stream_name":"stdout","time":160.074887069,"data":"[setup] workers ready; compile: [{'enabled': True, 'max_abs_dlogit': 3.5762786865234375e-07, 'decisive_rows': 489, 'disagreements': 0, 'decisive_frac': 0.9551, 'amp_max_abs_dlogit': 0.000732421875, 'amp_decisive_rows': 489, 'amp_disagreements': 0, 'amp_decisive_frac': 0.9551}, {'enabled': True, 'max_abs_dlogit': 3.5762786865234375e-07, 'decisive_rows': 471, 'disagreements': 0, 'decisive_frac': 0.9199, 'amp_max_abs_dlogit': 0.00054931640625, 'amp_decisive_rows': 471, 'amp_disagreements': 0, 'amp_decisive_frac': 0.9199}]\n"}
+,{"stream_name":"stdout","time":160.074923078,"data":"[aps] mu[inv_mean_nij] = [0.0001220703125, 0.0001220703125, 0.0001220703125, 0.0001220703125] ...\n"}
+,{"stream_name":"stdout","time":160.074930388,"data":"[comm] 3,400 params/round (0.0034 M), 5.1x below dense FedProto\n"}
+,{"stream_name":"stdout","time":160.074935459,"data":"[round 001] ce 0.5134 reg 0.0000 | proto acc 0.0107 F1m 0.0013 | clf acc 0.0107 F1m 0.0013 | 0.9s (train 0.6s eval 0.1s) peak 0.34GB\n"}
+,{"stream_name":"stdout","time":160.074940606,"data":"[round 002] ce 0.0005 reg 0.7915 | proto acc 0.0107 F1m 0.0013 | clf acc 0.0107 F1m 0.0013 | 0.4s (train 0.3s eval 0.0s) peak 0.34GB\n"}
+,{"stream_name":"stdout","time":160.074945651,"data":"[stop] session cap of 2 rounds reached after round 2; resume the next session from round 3\n"}
+,{"stream_name":"stdout","time":160.074950468,"data":"[cps] {'d': 256, 'K': 16, 's': 50, 'compression_rate': 0.8046875, 'overlap_min': 0, 'overlap_max': 10, 'overlap_mean': 7.275, 'overlap_random_expectation': 9.765625, 'overlap_search_target': 10, 'hamming_min': 80, 'hamming_max': 100, 'hamming_mean': 85.45, 'dims_used': 256, 'dim_usage_min': 2, 'dim_usage_max': 4}\n"}
+,{"stream_name":"stdout","time":160.074956163,"data":"[resume] starting at round 3 of 3 (fingerprint 21e033e51dad0417)\n"}
+,{"stream_name":"stdout","time":160.282700571,"data":"[setup] workers ready; compile: [{'enabled': True, 'max_abs_dlogit': 3.5762786865234375e-07, 'decisive_rows': 489, 'disagreements': 0, 'decisive_frac': 0.9551, 'amp_max_abs_dlogit': 0.000732421875, 'amp_decisive_rows': 489, 'amp_disagreements': 0, 'amp_decisive_frac': 0.9551}, {'enabled': True, 'max_abs_dlogit': 3.5762786865234375e-07, 'decisive_rows': 471, 'disagreements': 0, 'decisive_frac': 0.9199, 'amp_max_abs_dlogit': 0.00054931640625, 'amp_decisive_rows': 471, 'amp_disagreements': 0, 'amp_decisive_frac': 0.9199}]\n"}
+,{"stream_name":"stdout","time":160.282736472,"data":"[aps] mu[inv_mean_nij] = [0.0001220703125, 0.0001220703125, 0.0001220703125, 0.0001220703125] ...\n"}
+,{"stream_name":"stdout","time":160.282742376,"data":"[comm] 3,400 params/round (0.0034 M), 5.1x below dense FedProto\n"}
+,{"stream_name":"stdout","time":160.282747162,"data":"[round 001] ce 0.5134 reg 0.0000 | proto acc 0.0107 F1m 0.0013 | clf acc 0.0107 F1m 0.0013 | 0.9s (train 0.6s eval 0.1s) peak 0.34GB\n"}
+,{"stream_name":"stdout","time":160.282752219,"data":"[round 002] ce 0.0005 reg 0.7915 | proto acc 0.0107 F1m 0.0013 | clf acc 0.0107 F1m 0.0013 | 0.4s (train 0.3s eval 0.0s) peak 0.34GB\n"}
+,{"stream_name":"stdout","time":160.282770651,"data":"[stop] session cap of 2 rounds reached after round 2; resume the next session from round 3\n"}
+,{"stream_name":"stdout","time":160.282774945,"data":"[cps] {'d': 256, 'K': 16, 's': 50, 'compression_rate': 0.8046875, 'overlap_min': 0, 'overlap_max': 10, 'overlap_mean': 7.275, 'overlap_random_expectation': 9.765625, 'overlap_search_target': 10, 'hamming_min': 80, 'hamming_max': 100, 'hamming_mean': 85.45, 'dims_used': 256, 'dim_usage_min': 2, 'dim_usage_max': 4}\n"}
+,{"stream_name":"stdout","time":160.282779432,"data":"[resume] starting at round 3 of 3 (fingerprint 21e033e51dad0417)\n"}
+,{"stream_name":"stdout","time":162.987682801,"data":"[r1]    decoded 1/2 clients, 8,192 rows, 0s\n"}
+,{"stream_name":"stdout","time":163.002313918,"data":"[r1]    decoded 2/2 clients, 16,384 rows, 0s\n"}
+,{"stream_name":"stdout","time":163.013778351,"data":"[r0]    decoded 1/2 clients, 8,192 rows, 0s\n"}
+,{"stream_name":"stdout","time":163.031470199,"data":"[r0]    decoded 2/2 clients, 16,384 rows, 0s\n"}
+,{"stream_name":"stdout","time":163.065499879,"data":"[r1] data resident: train (16384, 66) test (1024, 66) (0.00 GiB) in 0s\n"}
+,{"stream_name":"stdout","time":163.096316364,"data":"[r0] data resident: train (16384, 66) test (1024, 66) (0.00 GiB) in 0s\n"}
+,{"stream_name":"stdout","time":163.19054473,"data":"[r1]    decoded 1/2 clients, 8,192 rows, 0s\n"}
+,{"stream_name":"stdout","time":163.190572322,"data":"[r1]    decoded 2/2 clients, 16,384 rows, 0s\n"}
+,{"stream_name":"stdout","time":163.190577269,"data":"[r0]    decoded 1/2 clients, 8,192 rows, 0s\n"}
+,{"stream_name":"stdout","time":163.190580902,"data":"[r0]    decoded 2/2 clients, 16,384 rows, 0s\n"}
+,{"stream_name":"stdout","time":163.190584692,"data":"[r1] data resident: train (16384, 66) test (1024, 66) (0.00 GiB) in 0s\n"}
+,{"stream_name":"stdout","time":163.190588595,"data":"[r0] data resident: train (16384, 66) test (1024, 66) (0.00 GiB) in 0s\n"}
+,{"stream_name":"stdout","time":177.222268463,"data":"[r0] compile: {'enabled': True, 'max_abs_dlogit': 3.5762786865234375e-07, 'decisive_rows': 489, 'disagreements': 0, 'decisive_frac': 0.9551, 'amp_max_abs_dlogit': 0.000732421875, 'amp_decisive_rows': 489, 'amp_disagreements': 0, 'amp_decisive_frac': 0.9551}\n"}
+,{"stream_name":"stdout","time":177.324705134,"data":"[r1] compile: {'enabled': True, 'max_abs_dlogit': 3.2782554626464844e-07, 'decisive_rows': 471, 'disagreements': 0, 'decisive_frac': 0.9199, 'amp_max_abs_dlogit': 0.00048828125, 'amp_decisive_rows': 472, 'amp_disagreements': 0, 'amp_decisive_frac': 0.9219}\n"}
+,{"stream_name":"stdout","time":177.424484174,"data":"[r0] compile: {'enabled': True, 'max_abs_dlogit': 3.5762786865234375e-07, 'decisive_rows': 489, 'disagreements': 0, 'decisive_frac': 0.9551, 'amp_max_abs_dlogit': 0.000732421875, 'amp_decisive_rows': 489, 'amp_disagreements': 0, 'amp_decisive_frac': 0.9551}\n"}
+,{"stream_name":"stdout","time":177.424554969,"data":"[r1] compile: {'enabled': True, 'max_abs_dlogit': 3.2782554626464844e-07, 'decisive_rows': 471, 'disagreements': 0, 'decisive_frac': 0.9199, 'amp_max_abs_dlogit': 0.00048828125, 'amp_decisive_rows': 472, 'amp_disagreements': 0, 'amp_decisive_frac': 0.9219}\n"}
+,{"stream_name":"stdout","time":198.657782984,"data":"[setup] workers ready; compile: [{'enabled': True, 'max_abs_dlogit': 3.5762786865234375e-07, 'decisive_rows': 489, 'disagreements': 0, 'decisive_frac': 0.9551, 'amp_max_abs_dlogit': 0.000732421875, 'amp_decisive_rows': 489, 'amp_disagreements': 0, 'amp_decisive_frac': 0.9551}, {'enabled': True, 'max_abs_dlogit': 3.2782554626464844e-07, 'decisive_rows': 471, 'disagreements': 0, 'decisive_frac': 0.9199, 'amp_max_abs_dlogit': 0.00048828125, 'amp_decisive_rows': 472, 'amp_disagreements': 0, 'amp_decisive_frac': 0.9219}]\n"}
+,{"stream_name":"stdout","time":198.657829707,"data":"[aps] mu[inv_mean_nij] = [0.0001220703125, 0.0001220703125, 0.0001220703125, 0.0001220703125] ...\n"}
+,{"stream_name":"stdout","time":198.65783593,"data":"[comm] 3,400 params/round (0.0034 M), 5.1x below dense FedProto\n"}
+,{"stream_name":"stdout","time":198.657840073,"data":"[resume] client state restored from round 2\n"}
+,{"stream_name":"stdout","time":198.657843518,"data":"[budget] worst observed round so far 1s\n"}
+,{"stream_name":"stdout","time":198.657846933,"data":"[round 003] ce 0.0001 reg 0.1757 | proto acc 0.0107 F1m 0.0013 | clf acc 0.0107 F1m 0.0013 | 1.1s (train 0.7s eval 0.1s) peak 0.34GB\n"}
+,{"stream_name":"stdout","time":198.65785054,"data":"run       : /kaggle/working/runs/review_real_20\n"}
+,{"stream_name":"stdout","time":198.657853844,"data":"scenario  : 20client-sample  clients=4  s=50  d=256  rounds=3\n"}
+,{"stream_name":"stdout","time":198.657857526,"data":"completed : 3 rounds [1, 2, 3]\n"}
+,{"stream_name":"stdout","time":198.657862381,"data":"\n"}
+,{"stream_name":"stdout","time":198.657865703,"data":"335 checks passed, 0 failed\n"}
+,{"stream_name":"stdout","time":198.657872902,"data":"REAL-DATA SAMPLE 50 source clients [0, 16, 33, 49] test rows 1024\n"}
+,{"stream_name":"stdout","time":198.742612448,"data":"[cps] {'d': 256, 'K': 16, 's': 50, 'compression_rate': 0.8046875, 'overlap_min': 0, 'overlap_max': 10, 'overlap_mean': 7.275, 'overlap_random_expectation': 9.765625, 'overlap_search_target': 10, 'hamming_min': 80, 'hamming_max': 100, 'hamming_mean': 85.45, 'dims_used': 256, 'dim_usage_min': 2, 'dim_usage_max': 4}\n"}
+,{"stream_name":"stdout","time":198.742645873,"data":"[resume] starting at round 1 of 3 (fingerprint e88bb2aa717e5d1f)\n"}
+,{"stream_name":"stdout","time":198.894883889,"data":"[setup] workers ready; compile: [{'enabled': True, 'max_abs_dlogit': 3.5762786865234375e-07, 'decisive_rows': 489, 'disagreements': 0, 'decisive_frac': 0.9551, 'amp_max_abs_dlogit': 0.000732421875, 'amp_decisive_rows': 489, 'amp_disagreements': 0, 'amp_decisive_frac': 0.9551}, {'enabled': True, 'max_abs_dlogit': 3.2782554626464844e-07, 'decisive_rows': 471, 'disagreements': 0, 'decisive_frac': 0.9199, 'amp_max_abs_dlogit': 0.00048828125, 'amp_decisive_rows': 472, 'amp_disagreements': 0, 'amp_decisive_frac': 0.9219}]\n"}
+,{"stream_name":"stdout","time":198.894911944,"data":"[aps] mu[inv_mean_nij] = [0.0001220703125, 0.0001220703125, 0.0001220703125, 0.0001220703125] ...\n"}
+,{"stream_name":"stdout","time":198.894917609,"data":"[comm] 3,400 params/round (0.0034 M), 5.1x below dense FedProto\n"}
+,{"stream_name":"stdout","time":198.894921731,"data":"[resume] client state restored from round 2\n"}
+,{"stream_name":"stdout","time":198.894925541,"data":"[budget] worst observed round so far 1s\n"}
+,{"stream_name":"stdout","time":198.894929303,"data":"[round 003] ce 0.0001 reg 0.1757 | proto acc 0.0107 F1m 0.0013 | clf acc 0.0107 F1m 0.0013 | 1.1s (train 0.7s eval 0.1s) peak 0.34GB\n"}
+,{"stream_name":"stdout","time":198.894933476,"data":"run       : /kaggle/working/runs/review_real_20\n"}
+,{"stream_name":"stdout","time":198.894937203,"data":"scenario  : 20client-sample  clients=4  s=50  d=256  rounds=3\n"}
+,{"stream_name":"stdout","time":198.89494109,"data":"completed : 3 rounds [1, 2, 3]\n"}
+,{"stream_name":"stdout","time":198.894944831,"data":"\n"}
+,{"stream_name":"stdout","time":198.894948455,"data":"335 checks passed, 0 failed\n"}
+,{"stream_name":"stdout","time":198.894952155,"data":"REAL-DATA SAMPLE 50 source clients [0, 16, 33, 49] test rows 1024\n"}
+,{"stream_name":"stdout","time":198.894955921,"data":"[cps] {'d': 256, 'K': 16, 's': 50, 'compression_rate': 0.8046875, 'overlap_min': 0, 'overlap_max': 10, 'overlap_mean': 7.275, 'overlap_random_expectation': 9.765625, 'overlap_search_target': 10, 'hamming_min': 80, 'hamming_max': 100, 'hamming_mean': 85.45, 'dims_used': 256, 'dim_usage_min': 2, 'dim_usage_max': 4}\n"}
+,{"stream_name":"stdout","time":198.894970966,"data":"[resume] starting at round 1 of 3 (fingerprint e88bb2aa717e5d1f)\n"}
+,{"stream_name":"stdout","time":201.582439661,"data":"[r0]    decoded 1/2 clients, 8,192 rows, 0s\n"}
+,{"stream_name":"stdout","time":201.592714948,"data":"[r1]    decoded 1/2 clients, 8,192 rows, 0s\n"}
+,{"stream_name":"stdout","time":201.600898752,"data":"[r0]    decoded 2/2 clients, 16,384 rows, 0s\n"}
+,{"stream_name":"stdout","time":201.610109998,"data":"[r1]    decoded 2/2 clients, 16,384 rows, 0s\n"}
+,{"stream_name":"stdout","time":201.666656758,"data":"[r0] data resident: train (16384, 66) test (1024, 66) (0.00 GiB) in 0s\n"}
+,{"stream_name":"stdout","time":201.673042025,"data":"[r1] data resident: train (16384, 66) test (1024, 66) (0.00 GiB) in 0s\n"}
+,{"stream_name":"stdout","time":201.785374088,"data":"[r0]    decoded 1/2 clients, 8,192 rows, 0s\n"}
+,{"stream_name":"stdout","time":201.785424846,"data":"[r1]    decoded 1/2 clients, 8,192 rows, 0s\n"}
+,{"stream_name":"stdout","time":201.785430689,"data":"[r0]    decoded 2/2 clients, 16,384 rows, 0s\n"}
+,{"stream_name":"stdout","time":201.785434503,"data":"[r1]    decoded 2/2 clients, 16,384 rows, 0s\n"}
+,{"stream_name":"stdout","time":201.785438174,"data":"[r0] data resident: train (16384, 66) test (1024, 66) (0.00 GiB) in 0s\n"}
+,{"stream_name":"stdout","time":201.785442071,"data":"[r1] data resident: train (16384, 66) test (1024, 66) (0.00 GiB) in 0s\n"}
+,{"stream_name":"stdout","time":215.637366967,"data":"[r0] compile: {'enabled': True, 'max_abs_dlogit': 3.8743019104003906e-07, 'decisive_rows': 476, 'disagreements': 0, 'decisive_frac': 0.9297, 'amp_max_abs_dlogit': 0.0006103515625, 'amp_decisive_rows': 478, 'amp_disagreements': 0, 'amp_decisive_frac': 0.9336}\n"}
+,{"stream_name":"stdout","time":215.683301941,"data":"[r1] compile: {'enabled': True, 'max_abs_dlogit': 3.5762786865234375e-07, 'decisive_rows': 473, 'disagreements': 0, 'decisive_frac': 0.9238, 'amp_max_abs_dlogit': 0.00048828125, 'amp_decisive_rows': 474, 'amp_disagreements': 0, 'amp_decisive_frac': 0.9258}\n"}
+,{"stream_name":"stdout","time":215.84006006,"data":"[r0] compile: {'enabled': True, 'max_abs_dlogit': 3.8743019104003906e-07, 'decisive_rows': 476, 'disagreements': 0, 'decisive_frac': 0.9297, 'amp_max_abs_dlogit': 0.0006103515625, 'amp_decisive_rows': 478, 'amp_disagreements': 0, 'amp_decisive_frac': 0.9336}\n"}
+,{"stream_name":"stdout","time":215.840116417,"data":"[r1] compile: {'enabled': True, 'max_abs_dlogit': 3.5762786865234375e-07, 'decisive_rows': 473, 'disagreements': 0, 'decisive_frac': 0.9238, 'amp_max_abs_dlogit': 0.00048828125, 'amp_decisive_rows': 474, 'amp_disagreements': 0, 'amp_decisive_frac': 0.9258}\n"}
+,{"stream_name":"stdout","time":230.374886599,"data":"[setup] workers ready; compile: [{'enabled': True, 'max_abs_dlogit': 3.8743019104003906e-07, 'decisive_rows': 476, 'disagreements': 0, 'decisive_frac': 0.9297, 'amp_max_abs_dlogit': 0.0006103515625, 'amp_decisive_rows': 478, 'amp_disagreements': 0, 'amp_decisive_frac': 0.9336}, {'enabled': True, 'max_abs_dlogit': 3.5762786865234375e-07, 'decisive_rows': 473, 'disagreements': 0, 'decisive_frac': 0.9238, 'amp_max_abs_dlogit': 0.00048828125, 'amp_decisive_rows': 474, 'amp_disagreements': 0, 'amp_decisive_frac': 0.9258}]\n"}
+,{"stream_name":"stdout","time":230.374920992,"data":"[aps] mu[inv_mean_nij] = [0.000213623046875, 0.000213623046875, 0.000213623046875, 0.000213623046875] ...\n"}
+,{"stream_name":"stdout","time":230.374927192,"data":"[comm] 3,550 params/round (0.0036 M), 5.1x below dense FedProto\n"}
+,{"stream_name":"stdout","time":230.374932096,"data":"[round 001] ce 0.5718 reg 0.0000 | proto acc 0.0547 F1m 0.0105 | clf acc 0.1216 F1m 0.0125 | 1.1s (train 0.7s eval 0.1s) peak 0.34GB\n"}
+,{"stream_name":"stdout","time":230.374945405,"data":"[round 002] ce 0.0224 reg 0.7088 | proto acc 0.1018 F1m 0.0150 | clf acc 0.1218 F1m 0.0125 | 0.4s (train 0.3s eval 0.0s) peak 0.34GB\n"}
+,{"stream_name":"stdout","time":230.374949077,"data":"[round 003] ce 0.0125 reg 0.2007 | proto acc 0.1086 F1m 0.0151 | clf acc 0.1216 F1m 0.0126 | 0.4s (train 0.3s eval 0.0s) peak 0.34GB\n"}
+,{"stream_name":"stdout","time":230.374952914,"data":"run       : /kaggle/working/runs/review_real_50\n"}
+,{"stream_name":"stdout","time":230.374956462,"data":"scenario  : 50client-sample  clients=4  s=50  d=256  rounds=3\n"}
+,{"stream_name":"stdout","time":230.374959966,"data":"completed : 3 rounds [1, 2, 3]\n"}
+,{"stream_name":"stdout","time":230.374963451,"data":"\n"}
+,{"stream_name":"stdout","time":230.374966713,"data":"335 checks passed, 0 failed\n"}
+,{"stream_name":"stdout","time":230.374970113,"data":"REAL-DATA SAMPLE 100 source clients [0, 33, 66, 99] test rows 1024\n"}
+,{"stream_name":"stdout","time":230.525386353,"data":"[cps] {'d': 256, 'K': 16, 's': 50, 'compression_rate': 0.8046875, 'overlap_min': 0, 'overlap_max': 10, 'overlap_mean': 7.275, 'overlap_random_expectation': 9.765625, 'overlap_search_target': 10, 'hamming_min': 80, 'hamming_max': 100, 'hamming_mean': 85.45, 'dims_used': 256, 'dim_usage_min': 2, 'dim_usage_max': 4}\n"}
+,{"stream_name":"stdout","time":230.525417226,"data":"[resume] starting at round 1 of 3 (fingerprint aeb2faf05b6236b1)\n"}
+,{"stream_name":"stdout","time":230.592668048,"data":"[setup] workers ready; compile: [{'enabled': True, 'max_abs_dlogit': 3.8743019104003906e-07, 'decisive_rows': 476, 'disagreements': 0, 'decisive_frac': 0.9297, 'amp_max_abs_dlogit': 0.0006103515625, 'amp_decisive_rows': 478, 'amp_disagreements': 0, 'amp_decisive_frac': 0.9336}, {'enabled': True, 'max_abs_dlogit': 3.5762786865234375e-07, 'decisive_rows': 473, 'disagreements': 0, 'decisive_frac': 0.9238, 'amp_max_abs_dlogit': 0.00048828125, 'amp_decisive_rows': 474, 'amp_disagreements': 0, 'amp_decisive_frac': 0.9258}]\n"}
+,{"stream_name":"stdout","time":230.592697391,"data":"[aps] mu[inv_mean_nij] = [0.000213623046875, 0.000213623046875, 0.000213623046875, 0.000213623046875] ...\n"}
+,{"stream_name":"stdout","time":230.59270345,"data":"[comm] 3,550 params/round (0.0036 M), 5.1x below dense FedProto\n"}
+,{"stream_name":"stdout","time":230.592708026,"data":"[round 001] ce 0.5718 reg 0.0000 | proto acc 0.0547 F1m 0.0105 | clf acc 0.1216 F1m 0.0125 | 1.1s (train 0.7s eval 0.1s) peak 0.34GB\n"}
+,{"stream_name":"stdout","time":230.592712582,"data":"[round 002] ce 0.0224 reg 0.7088 | proto acc 0.1018 F1m 0.0150 | clf acc 0.1218 F1m 0.0125 | 0.4s (train 0.3s eval 0.0s) peak 0.34GB\n"}
+,{"stream_name":"stdout","time":230.592716974,"data":"[round 003] ce 0.0125 reg 0.2007 | proto acc 0.1086 F1m 0.0151 | clf acc 0.1216 F1m 0.0126 | 0.4s (train 0.3s eval 0.0s) peak 0.34GB\n"}
+,{"stream_name":"stdout","time":230.592721654,"data":"run       : /kaggle/working/runs/review_real_50\n"}
+,{"stream_name":"stdout","time":230.592725556,"data":"scenario  : 50client-sample  clients=4  s=50  d=256  rounds=3\n"}
+,{"stream_name":"stdout","time":230.592729731,"data":"completed : 3 rounds [1, 2, 3]\n"}
+,{"stream_name":"stdout","time":230.592733948,"data":"\n"}
+,{"stream_name":"stdout","time":230.592737637,"data":"335 checks passed, 0 failed\n"}
+,{"stream_name":"stdout","time":230.592741574,"data":"REAL-DATA SAMPLE 100 source clients [0, 33, 66, 99] test rows 1024\n"}
+,{"stream_name":"stdout","time":230.592745908,"data":"[cps] {'d': 256, 'K': 16, 's': 50, 'compression_rate': 0.8046875, 'overlap_min': 0, 'overlap_max': 10, 'overlap_mean': 7.275, 'overlap_random_expectation': 9.765625, 'overlap_search_target': 10, 'hamming_min': 80, 'hamming_max': 100, 'hamming_mean': 85.45, 'dims_used': 256, 'dim_usage_min': 2, 'dim_usage_max': 4}\n"}
+,{"stream_name":"stdout","time":230.592761473,"data":"[resume] starting at round 1 of 3 (fingerprint aeb2faf05b6236b1)\n"}
+,{"stream_name":"stdout","time":233.392446188,"data":"[r0]    decoded 1/2 clients, 8,192 rows, 0s\n"}
+,{"stream_name":"stdout","time":233.417151745,"data":"[r0]    decoded 2/2 clients, 16,384 rows, 0s\n"}
+,{"stream_name":"stdout","time":233.419891458,"data":"[r1]    decoded 1/2 clients, 8,192 rows, 0s\n"}
+,{"stream_name":"stdout","time":233.435882549,"data":"[r1]    decoded 2/2 clients, 16,384 rows, 0s\n"}
+,{"stream_name":"stdout","time":233.499953438,"data":"[r0] data resident: train (16384, 66) test (1024, 66) (0.00 GiB) in 0s\n"}
+,{"stream_name":"stdout","time":233.517193663,"data":"[r1] data resident: train (16384, 66) test (1024, 66) (0.00 GiB) in 0s\n"}
+,{"stream_name":"stdout","time":233.595248084,"data":"[r0]    decoded 1/2 clients, 8,192 rows, 0s\n"}
+,{"stream_name":"stdout","time":233.59531353,"data":"[r0]    decoded 2/2 clients, 16,384 rows, 0s\n"}
+,{"stream_name":"stdout","time":233.5953207,"data":"[r1]    decoded 1/2 clients, 8,192 rows, 0s\n"}
+,{"stream_name":"stdout","time":233.595324632,"data":"[r1]    decoded 2/2 clients, 16,384 rows, 0s\n"}
+,{"stream_name":"stdout","time":233.595328626,"data":"[r0] data resident: train (16384, 66) test (1024, 66) (0.00 GiB) in 0s\n"}
+,{"stream_name":"stdout","time":233.595332298,"data":"[r1] data resident: train (16384, 66) test (1024, 66) (0.00 GiB) in 0s\n"}
+,{"stream_name":"stderr","time":244.979916625,"data":"W0908 12:53:36.512000 855 torch/_inductor/utils.py:1679] [0/0] Not enough SMs to use max_autotune_gemm mode\n"}
+,{"stream_name":"stderr","time":245.182747939,"data":"W0908 12:53:36.512000 855 torch/_inductor/utils.py:1679] [0/0] Not enough SMs to use max_autotune_gemm mode\n"}
+,{"stream_name":"stderr","time":245.182784862,"data":"\n"}
+,{"stream_name":"stderr","time":245.182790703,"data":"W0908 12:53:36.512000 855 torch/_inductor/utils.py:1679] [0/0] Not enough SMs to use max_autotune_gemm mode\n"}
+,{"stream_name":"stderr","time":245.207483195,"data":"W0908 12:53:36.740000 856 torch/_inductor/utils.py:1679] [0/0] Not enough SMs to use max_autotune_gemm mode\n"}
+,{"stream_name":"stderr","time":245.410214905,"data":"W0908 12:53:36.740000 856 torch/_inductor/utils.py:1679] [0/0] Not enough SMs to use max_autotune_gemm mode\n"}
+,{"stream_name":"stderr","time":245.410251189,"data":"\n"}
+,{"stream_name":"stderr","time":245.410257408,"data":"W0908 12:53:36.740000 856 torch/_inductor/utils.py:1679] [0/0] Not enough SMs to use max_autotune_gemm mode\n"}
+,{"stream_name":"stdout","time":330.519265306,"data":"[r0] compile: {'enabled': True, 'max_abs_dlogit': 2.980232238769531e-07, 'decisive_rows': 233, 'disagreements': 0, 'decisive_frac': 0.9102, 'amp_max_abs_dlogit': 0.00048828125, 'amp_decisive_rows': 233, 'amp_disagreements': 0, 'amp_decisive_frac': 0.9102}\n"}
+,{"stream_name":"stdout","time":330.736566495,"data":"[r0] compile: {'enabled': True, 'max_abs_dlogit': 2.980232238769531e-07, 'decisive_rows': 233, 'disagreements': 0, 'decisive_frac': 0.9102, 'amp_max_abs_dlogit': 0.00048828125, 'amp_decisive_rows': 233, 'amp_disagreements': 0, 'amp_decisive_frac': 0.9102}\n"}
+,{"stream_name":"stdout","time":331.362438709,"data":"[r1] compile: {'enabled': True, 'max_abs_dlogit': 3.5762786865234375e-07, 'decisive_rows': 236, 'disagreements': 0, 'decisive_frac': 0.9219, 'amp_max_abs_dlogit': 0.00048828125, 'amp_decisive_rows': 236, 'amp_disagreements': 0, 'amp_decisive_frac': 0.9219}\n"}
+,{"stream_name":"stdout","time":331.565244779,"data":"[r1] compile: {'enabled': True, 'max_abs_dlogit': 3.5762786865234375e-07, 'decisive_rows': 236, 'disagreements': 0, 'decisive_frac': 0.9219, 'amp_max_abs_dlogit': 0.00048828125, 'amp_decisive_rows': 236, 'amp_disagreements': 0, 'amp_decisive_frac': 0.9219}\n"}
+,{"stream_name":"stdout","time":337.422530337,"data":"[setup] workers ready; compile: [{'enabled': True, 'max_abs_dlogit': 2.980232238769531e-07, 'decisive_rows': 233, 'disagreements': 0, 'decisive_frac': 0.9102, 'amp_max_abs_dlogit': 0.00048828125, 'amp_decisive_rows': 233, 'amp_disagreements': 0, 'amp_decisive_frac': 0.9102}, {'enabled': True, 'max_abs_dlogit': 3.5762786865234375e-07, 'decisive_rows': 236, 'disagreements': 0, 'decisive_frac': 0.9219, 'amp_max_abs_dlogit': 0.00048828125, 'amp_decisive_rows': 236, 'amp_disagreements': 0, 'amp_decisive_frac': 0.9219}]\n"}
+,{"stream_name":"stdout","time":337.422566617,"data":"[aps] mu[inv_mean_nij] = [0.00018310546875, 0.00018310546875, 0.00018310546875, 0.00018310546875] ...\n"}
+,{"stream_name":"stdout","time":337.422572137,"data":"[comm] 3,500 params/round (0.0035 M), 5.1x below dense FedProto\n"}
+,{"stream_name":"stdout","time":337.422577174,"data":"[round 001] ce 0.3050 reg 0.0000 | proto acc 0.0901 F1m 0.0141 | clf acc 0.0823 F1m 0.0128 | 1.1s (train 0.8s eval 0.1s) peak 0.17GB\n"}
+,{"stream_name":"stdout","time":337.422581872,"data":"[round 002] ce 0.0115 reg 0.6349 | proto acc 0.0542 F1m 0.0099 | clf acc 0.0527 F1m 0.0097 | 0.7s (train 0.5s eval 0.0s) peak 0.17GB\n"}
+,{"stream_name":"stdout","time":337.422586477,"data":"[round 003] ce 0.0059 reg 0.1044 | proto acc 0.0571 F1m 0.0098 | clf acc 0.0557 F1m 0.0095 | 0.7s (train 0.6s eval 0.0s) peak 0.17GB\n"}
+,{"stream_name":"stdout","time":337.422590974,"data":"run       : /kaggle/working/runs/review_real_100\n"}
+,{"stream_name":"stdout","time":337.422595731,"data":"scenario  : 100client-sample  clients=4  s=50  d=256  rounds=3\n"}
+,{"stream_name":"stdout","time":337.422600072,"data":"completed : 3 rounds [1, 2, 3]\n"}
+,{"stream_name":"stdout","time":337.422604333,"data":"\n"}
+,{"stream_name":"stdout","time":337.422608564,"data":"335 checks passed, 0 failed\n"}
+,{"stream_name":"stdout","time":337.422612921,"data":"REMOTE VALIDATION PASSED\n"}
+,{"stream_name":"stdout","time":337.625134326,"data":"[setup] workers ready; compile: [{'enabled': True, 'max_abs_dlogit': 2.980232238769531e-07, 'decisive_rows': 233, 'disagreements': 0, 'decisive_frac': 0.9102, 'amp_max_abs_dlogit': 0.00048828125, 'amp_decisive_rows': 233, 'amp_disagreements': 0, 'amp_decisive_frac': 0.9102}, {'enabled': True, 'max_abs_dlogit': 3.5762786865234375e-07, 'decisive_rows': 236, 'disagreements': 0, 'decisive_frac': 0.9219, 'amp_max_abs_dlogit': 0.00048828125, 'amp_decisive_rows': 236, 'amp_disagreements': 0, 'amp_decisive_frac': 0.9219}]\n"}
+,{"stream_name":"stdout","time":337.625193298,"data":"[aps] mu[inv_mean_nij] = [0.00018310546875, 0.00018310546875, 0.00018310546875, 0.00018310546875] ...\n"}
+,{"stream_name":"stdout","time":337.625199116,"data":"[comm] 3,500 params/round (0.0035 M), 5.1x below dense FedProto\n"}
+,{"stream_name":"stdout","time":337.625202738,"data":"[round 001] ce 0.3050 reg 0.0000 | proto acc 0.0901 F1m 0.0141 | clf acc 0.0823 F1m 0.0128 | 1.1s (train 0.8s eval 0.1s) peak 0.17GB\n"}
+,{"stream_name":"stdout","time":337.625206247,"data":"[round 002] ce 0.0115 reg 0.6349 | proto acc 0.0542 F1m 0.0099 | clf acc 0.0527 F1m 0.0097 | 0.7s (train 0.5s eval 0.0s) peak 0.17GB\n"}
+,{"stream_name":"stdout","time":337.625209596,"data":"[round 003] ce 0.0059 reg 0.1044 | proto acc 0.0571 F1m 0.0098 | clf acc 0.0557 F1m 0.0095 | 0.7s (train 0.6s eval 0.0s) peak 0.17GB\n"}
+,{"stream_name":"stdout","time":337.625212978,"data":"run       : /kaggle/working/runs/review_real_100\n"}
+,{"stream_name":"stdout","time":337.625216125,"data":"scenario  : 100client-sample  clients=4  s=50  d=256  rounds=3\n"}
+,{"stream_name":"stdout","time":337.625219309,"data":"completed : 3 rounds [1, 2, 3]\n"}
+,{"stream_name":"stdout","time":337.625239398,"data":"\n"}
+,{"stream_name":"stdout","time":337.625241958,"data":"335 checks passed, 0 failed\n"}
+,{"stream_name":"stdout","time":337.625244331,"data":"REMOTE VALIDATION PASSED\n"}
+,{"stream_name":"stderr","time":341.018917208,"data":"/usr/local/lib/python3.12/dist-packages/mistune.py:435: SyntaxWarning: invalid escape sequence '\\|'\n"}
+,{"stream_name":"stderr","time":341.018943478,"data":"  cells[i][c] = re.sub('\\\\\\\\\\|', '|', cell)\n"}
+,{"stream_name":"stderr","time":341.197683604,"data":"/usr/local/lib/python3.12/dist-packages/nbconvert/filters/filter_links.py:36: SyntaxWarning: invalid escape sequence '\\_'\n"}
+,{"stream_name":"stderr","time":341.197712506,"data":"  text = re.sub(r'_', '\\_', text) # Escape underscores in display text\n"}
+,{"stream_name":"stderr","time":341.85006935,"data":"[NbConvertApp] Converting notebook __notebook__.ipynb to notebook\n"}
+,{"stream_name":"stderr","time":342.192594675,"data":"[NbConvertApp] Writing 255095 bytes to __notebook__.ipynb\n"}
+,{"stream_name":"stderr","time":344.702813371,"data":"[NbConvertApp] Converting notebook __notebook__.ipynb to html\n"}
+,{"stream_name":"stderr","time":346.015048537,"data":"[NbConvertApp] Writing 1218257 bytes to __results__.html\n"}
+]

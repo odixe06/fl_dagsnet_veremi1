@@ -1,0 +1,406 @@
+[{"stream_name":"stderr","time":10.069112482,"data":"0.00s - Debugger warning: It seems that frozen modules are being used, which may\n"}
+,{"stream_name":"stderr","time":10.069178299,"data":"0.00s - make the debugger miss breakpoints. Please pass -Xfrozen_modules=off\n"}
+,{"stream_name":"stderr","time":10.069185883,"data":"0.00s - to python to disable frozen modules.\n"}
+,{"stream_name":"stderr","time":10.069189781,"data":"0.00s - Note: Debugging will proceed. Set PYDEVD_DISABLE_FILE_VALIDATION=1 to disable this validation.\n"}
+,{"stream_name":"stderr","time":10.784528288,"data":"0.00s - Debugger warning: It seems that frozen modules are being used, which may\n"}
+,{"stream_name":"stderr","time":10.784556917,"data":"0.00s - make the debugger miss breakpoints. Please pass -Xfrozen_modules=off\n"}
+,{"stream_name":"stderr","time":10.784563065,"data":"0.00s - to python to disable frozen modules.\n"}
+,{"stream_name":"stderr","time":10.784567416,"data":"0.00s - Note: Debugging will proceed. Set PYDEVD_DISABLE_FILE_VALIDATION=1 to disable this validation.\n"}
+,{"stream_name":"stdout","time":19.742380247,"data":"python 3.12.13 | torch 2.10.0+cu128 | cuda 12.8\n"}
+,{"stream_name":"stdout","time":19.742442482,"data":"GPU 0: Tesla T4 (UUID: GPU-80449a47-b157-d670-e0de-3f08ceea410d)\n"}
+,{"stream_name":"stdout","time":19.742451042,"data":"GPU 1: Tesla T4 (UUID: GPU-7b5e0ee6-7705-0802-5f75-111d7018bd57)\n"}
+,{"stream_name":"stdout","time":19.742458143,"data":"\n"}
+,{"stream_name":"stdout","time":19.748843865,"data":"  cuda:0 Tesla T4 14.6 GB sm_75 SMs 40\n"}
+,{"stream_name":"stdout","time":19.748866675,"data":"  cuda:1 Tesla T4 14.6 GB sm_75 SMs 40\n"}
+,{"stream_name":"stdout","time":19.748872399,"data":"cpu: 4 | RAM GB: 31.3 | free on /kaggle/working GB: 19.5\n"}
+,{"stream_name":"stdout","time":19.748876905,"data":"free on /kaggle/temp GB: n/a\n"}
+,{"stream_name":"stdout","time":19.748881212,"data":"\n"}
+,{"stream_name":"stdout","time":19.748908424,"data":"OK: 2 x Tesla T4 (sm_75) confirmed before any training.\n"}
+,{"stream_name":"stdout","time":19.781236792,"data":"  run_name               tinyproto_fp_musweep\n"}
+,{"stream_name":"stdout","time":19.781261268,"data":"  scenario               50client\n"}
+,{"stream_name":"stdout","time":19.781267345,"data":"  n_clients              50\n"}
+,{"stream_name":"stdout","time":19.781272239,"data":"  rounds                 4\n"}
+,{"stream_name":"stdout","time":19.781278694,"data":"  local_epochs           1\n"}
+,{"stream_name":"stdout","time":19.781286939,"data":"  lam                    1.0\n"}
+,{"stream_name":"stdout","time":19.781290102,"data":"  cps_s                  50\n"}
+,{"stream_name":"stdout","time":19.78129318,"data":"  mask_seed              42\n"}
+,{"stream_name":"stdout","time":19.781296503,"data":"  mu_kind                inv_mean_nij\n"}
+,{"stream_name":"stdout","time":19.781299691,"data":"  mu_value               1.0\n"}
+,{"stream_name":"stdout","time":19.781302759,"data":"  batch                  512\n"}
+,{"stream_name":"stdout","time":19.781305906,"data":"  eval_batch             8192\n"}
+,{"stream_name":"stdout","time":19.781308927,"data":"  lr                     0.001\n"}
+,{"stream_name":"stdout","time":19.78131203,"data":"  weight_decay           0.0001\n"}
+,{"stream_name":"stdout","time":19.781315073000002,"data":"  betas                  [0.9, 0.999]\n"}
+,{"stream_name":"stdout","time":19.781318083,"data":"  eps                    1e-08\n"}
+,{"stream_name":"stdout","time":19.78132108,"data":"  clip                   1.0\n"}
+,{"stream_name":"stdout","time":19.781324136,"data":"  amp                    True\n"}
+,{"stream_name":"stdout","time":19.781327194,"data":"  compile                True\n"}
+,{"stream_name":"stdout","time":19.781343766,"data":"  eval_group             1\n"}
+,{"stream_name":"stdout","time":19.781346551,"data":"  seed                   42\n"}
+,{"stream_name":"stdout","time":19.781348858,"data":"  num_classes            16\n"}
+,{"stream_name":"stdout","time":19.781351135,"data":"  n_features             66\n"}
+,{"stream_name":"stdout","time":19.781353481,"data":"  feature_dim            256\n"}
+,{"stream_name":"stdout","time":19.781355776,"data":"  max_hours              11.0\n"}
+,{"stream_name":"stdout","time":19.781358072,"data":"  rounds_this_session    None\n"}
+,{"stream_name":"stdout","time":19.781360684,"data":"  require_resume         False\n"}
+,{"stream_name":"stdout","time":19.781368142,"data":"  expected_round_s       600.0\n"}
+,{"stream_name":"stdout","time":19.781370508,"data":"  import_roots           ['/kaggle/input']\n"}
+,{"stream_name":"stdout","time":19.781372845,"data":"  save_preds_rounds      []\n"}
+,{"stream_name":"stdout","time":19.781375136,"data":"\n"}
+,{"stream_name":"stdout","time":19.781377418,"data":"grid: [0.03, 0.1, 0.3, 1.0, 3.0]\n"}
+,{"stream_name":"stdout","time":19.811183736,"data":"package dir: /kaggle/working/proj\n"}
+,{"stream_name":"stdout","time":19.833854723,"data":"Writing /kaggle/working/proj/model.py\n"}
+,{"stream_name":"stdout","time":19.854055049,"data":"Writing /kaggle/working/proj/cps.py\n"}
+,{"stream_name":"stdout","time":19.875445599,"data":"Writing /kaggle/working/proj/protos.py\n"}
+,{"stream_name":"stdout","time":19.897407749,"data":"Writing /kaggle/working/proj/metrics.py\n"}
+,{"stream_name":"stdout","time":19.921848842,"data":"Writing /kaggle/working/proj/data.py\n"}
+,{"stream_name":"stdout","time":19.946123642,"data":"Writing /kaggle/working/proj/ckpt.py\n"}
+,{"stream_name":"stdout","time":19.970533205,"data":"Writing /kaggle/working/proj/evaluate.py\n"}
+,{"stream_name":"stdout","time":20.0014012,"data":"Writing /kaggle/working/proj/fl_worker.py\n"}
+,{"stream_name":"stdout","time":20.029215391,"data":"Writing /kaggle/working/proj/driver.py\n"}
+,{"stream_name":"stdout","time":20.051208293,"data":"Writing /kaggle/working/proj/sweep.py\n"}
+,{"stream_name":"stdout","time":22.28892831,"data":"client root: /kaggle/input/datasets/odixe0502/veremi-fl-50client/50_client\n"}
+,{"stream_name":"stdout","time":22.288973917,"data":"test dir   : /kaggle/input/datasets/odixe0502/veremi-nextgen2026-centralized/upload/test\n"}
+,{"stream_name":"stdout","time":26.323753262,"data":"train 43,045,415 rows across 50 clients (min 199,063 max 2,630,929) | test 10,761,343 rows\n"}
+,{"stream_name":"stdout","time":26.323793328,"data":"GPU split: 25/25 clients, 21,528,552/21,516,863 rows, imbalance 0.027%\n"}
+,{"stream_name":"stdout","time":26.32379943,"data":"optimizer steps per round: 84,098  (336,392 over 4 rounds)\n"}
+,{"stream_name":"stdout","time":29.172909371,"data":"mu protocol v1 confirmed: {'grid': [0.03, 0.1, 0.3, 1.0, 3.0], 'rounds': 4, 'val_fraction': 0.02, 'val_seed': 42}\n"}
+,{"stream_name":"stdout","time":29.172938346,"data":"estimated output budget: 3.88 GiB (5 run(s) x 0.59 GiB + 0.42 GiB split cache + margin); free 19.5 GiB\n"}
+,{"stream_name":"stdout","time":29.87663202,"data":" candidate                           run_name  committed  claimed  action\n"}
+,{"stream_name":"stdout","time":29.876682743,"data":"      0.03             musweep_50client_k0p03          0        0  start fresh\n"}
+,{"stream_name":"stdout","time":29.876688561,"data":"       0.1              musweep_50client_k0p1          0        0  start fresh\n"}
+,{"stream_name":"stdout","time":29.876693292,"data":"       0.3              musweep_50client_k0p3          0        0  start fresh\n"}
+,{"stream_name":"stdout","time":29.876708292,"data":"       1.0              musweep_50client_k1p0          0        0  start fresh\n"}
+,{"stream_name":"stdout","time":29.876711865,"data":"       3.0              musweep_50client_k3p0          0        0  start fresh\n"}
+,{"stream_name":"stdout","time":31.463564327,"data":"  client 000: train 1,632,713  val  33,313\n"}
+,{"stream_name":"stdout","time":31.966916282,"data":"  client 001: train   410,732  val   8,377\n"}
+,{"stream_name":"stdout","time":33.483781522,"data":"  client 002: train 1,423,619  val  29,046\n"}
+,{"stream_name":"stdout","time":34.551888665,"data":"  client 003: train 1,009,588  val  20,594\n"}
+,{"stream_name":"stdout","time":34.850231749,"data":"  client 004: train   250,311  val   5,101\n"}
+,{"stream_name":"stdout","time":35.150796073,"data":"  client 005: train   249,167  val   5,076\n"}
+,{"stream_name":"stdout","time":36.692385236,"data":"  client 006: train 1,477,472  val  30,145\n"}
+,{"stream_name":"stdout","time":37.26019665,"data":"  client 007: train   491,904  val  10,033\n"}
+,{"stream_name":"stdout","time":38.171625561,"data":"  client 008: train   867,843  val  17,704\n"}
+,{"stream_name":"stdout","time":39.254906678,"data":"  client 009: train 1,001,767  val  20,436\n"}
+,{"stream_name":"stdout","time":40.214493974,"data":"  client 010: train   888,776  val  18,129\n"}
+,{"stream_name":"stdout","time":42.890663105,"data":"  client 011: train 2,578,316  val  52,613\n"}
+,{"stream_name":"stdout","time":43.694435666,"data":"  client 012: train   770,250  val  15,710\n"}
+,{"stream_name":"stdout","time":44.403853244,"data":"  client 013: train   673,019  val  13,728\n"}
+,{"stream_name":"stdout","time":45.087771217,"data":"  client 014: train   642,290  val  13,100\n"}
+,{"stream_name":"stdout","time":46.001868488,"data":"  client 015: train   851,962  val  17,381\n"}
+,{"stream_name":"stdout","time":46.766502238,"data":"  client 016: train   699,321  val  14,267\n"}
+,{"stream_name":"stdout","time":47.518762844,"data":"  client 017: train   698,216  val  14,240\n"}
+,{"stream_name":"stdout","time":48.14641143,"data":"  client 018: train   571,641  val  11,658\n"}
+,{"stream_name":"stdout","time":49.624061966,"data":"  client 019: train 1,477,312  val  30,140\n"}
+,{"stream_name":"stdout","time":50.577363591,"data":"  client 020: train   902,447  val  18,411\n"}
+,{"stream_name":"stdout","time":51.628365379,"data":"  client 021: train 1,042,346  val  21,267\n"}
+,{"stream_name":"stdout","time":51.996850292,"data":"  client 022: train   290,104  val   5,913\n"}
+,{"stream_name":"stdout","time":52.389852066,"data":"  client 023: train   342,865  val   6,989\n"}
+,{"stream_name":"stdout","time":53.170001303,"data":"  client 024: train   732,556  val  14,943\n"}
+,{"stream_name":"stdout","time":53.417703417,"data":"  client 025: train   195,089  val   3,974\n"}
+,{"stream_name":"stdout","time":54.43319799,"data":"  client 026: train   982,155  val  20,036\n"}
+,{"stream_name":"stdout","time":55.896991375,"data":"  client 027: train 1,438,768  val  29,353\n"}
+,{"stream_name":"stdout","time":56.491076665,"data":"  client 028: train   545,771  val  11,132\n"}
+,{"stream_name":"stdout","time":57.210169906,"data":"  client 029: train   670,679  val  13,678\n"}
+,{"stream_name":"stdout","time":57.948528249,"data":"  client 030: train   685,290  val  13,978\n"}
+,{"stream_name":"stdout","time":58.517253675,"data":"  client 031: train   519,901  val  10,602\n"}
+,{"stream_name":"stdout","time":59.092076047,"data":"  client 032: train   525,812  val  10,722\n"}
+,{"stream_name":"stdout","time":59.593361724,"data":"  client 033: train   463,603  val   9,453\n"}
+,{"stream_name":"stdout","time":60.593558,"data":"  client 034: train   949,005  val  19,360\n"}
+,{"stream_name":"stdout","time":61.395747839,"data":"  client 035: train   756,187  val  15,426\n"}
+,{"stream_name":"stdout","time":62.04374844,"data":"  client 036: train   541,306  val  11,040\n"}
+,{"stream_name":"stdout","time":62.486880002,"data":"  client 037: train   394,770  val   8,048\n"}
+,{"stream_name":"stdout","time":63.19443242,"data":"  client 038: train   648,972  val  13,235\n"}
+,{"stream_name":"stdout","time":63.939093436,"data":"  client 039: train   677,937  val  13,829\n"}
+,{"stream_name":"stdout","time":64.620154455,"data":"  client 040: train   583,048  val  11,891\n"}
+,{"stream_name":"stdout","time":66.034524899,"data":"  client 041: train 1,326,227  val  27,059\n"}
+,{"stream_name":"stdout","time":67.520770628,"data":"  client 042: train 1,366,687  val  27,885\n"}
+,{"stream_name":"stdout","time":68.891748256,"data":"  client 043: train 1,303,879  val  26,601\n"}
+,{"stream_name":"stdout","time":70.60989666,"data":"  client 044: train 1,729,247  val  35,283\n"}
+,{"stream_name":"stdout","time":72.48789959,"data":"  client 045: train 1,822,148  val  37,177\n"}
+,{"stream_name":"stdout","time":72.756683559,"data":"  client 046: train   206,370  val   4,205\n"}
+,{"stream_name":"stdout","time":73.66056763,"data":"  client 047: train   813,520  val  16,595\n"}
+,{"stream_name":"stdout","time":74.1965603,"data":"  client 048: train   483,994  val   9,871\n"}
+,{"stream_name":"stdout","time":74.824355296,"data":"  client 049: train   577,976  val  11,790\n"}
+,{"stream_name":"stdout","time":75.635548785,"data":"\n"}
+,{"stream_name":"stdout","time":75.635586038,"data":"shared validation set: 860,537 rows, 108 MiB fp16, class counts [191264, 12576, 35373, 34631, 38010, 125902, 9467, 37341, 37598, 43355, 21576, 4598, 16891, 39221, 191448, 21286]\n"}
+,{"stream_name":"stdout","time":76.618362031,"data":"\n"}
+,{"stream_name":"stdout","time":76.618400503,"data":"======================================================================\n"}
+,{"stream_name":"stdout","time":76.618404852,"data":"mu multiplier k = 0.03\n"}
+,{"stream_name":"stdout","time":76.618407982,"data":"======================================================================\n"}
+,{"stream_name":"stdout","time":76.819004149,"data":"[cps] {'d': 256, 'K': 16, 's': 50, 'compression_rate': 0.8046875, 'overlap_min': 0, 'overlap_max': 10, 'overlap_mean': 7.275, 'overlap_random_expectation': 9.765625, 'overlap_search_target': 10, 'hamming_min': 80, 'hamming_max': 100, 'hamming_mean': 85.45, 'dims_used': 256, 'dim_usage_min': 2, 'dim_usage_max': 4}\n"}
+,{"stream_name":"stdout","time":76.819035866,"data":"[resume] starting at round 1 of 4 (fingerprint 597f230753c38cb5)\n"}
+,{"stream_name":"stdout","time":86.775870085,"data":"[r1]    decoded 5/25 clients, 4,097,867 rows, 6s\n"}
+,{"stream_name":"stdout","time":86.987307493,"data":"[r1]    decoded 5/25 clients, 4,097,867 rows, 6s\n"}
+,{"stream_name":"stdout","time":87.805127315,"data":"[r0]    decoded 5/25 clients, 4,897,074 rows, 7s\n"}
+,{"stream_name":"stdout","time":88.014094863,"data":"[r0]    decoded 5/25 clients, 4,897,074 rows, 7s\n"}
+,{"stream_name":"stdout","time":91.170220504,"data":"[r1]    decoded 10/25 clients, 7,352,213 rows, 10s\n"}
+,{"stream_name":"stdout","time":91.452365506,"data":"[r1]    decoded 10/25 clients, 7,352,213 rows, 10s\n"}
+,{"stream_name":"stdout","time":95.399857153,"data":"[r0]    decoded 10/25 clients, 10,745,601 rows, 15s\n"}
+,{"stream_name":"stdout","time":95.606510406,"data":"[r0]    decoded 10/25 clients, 10,745,601 rows, 15s\n"}
+,{"stream_name":"stdout","time":97.078362193,"data":"[r1]    decoded 15/25 clients, 11,823,909 rows, 16s\n"}
+,{"stream_name":"stdout","time":97.281927356,"data":"[r1]    decoded 15/25 clients, 11,823,909 rows, 16s\n"}
+,{"stream_name":"stdout","time":100.948714316,"data":"[r0]    decoded 15/25 clients, 15,072,638 rows, 20s\n"}
+,{"stream_name":"stdout","time":101.152598916,"data":"[r0]    decoded 15/25 clients, 15,072,638 rows, 20s\n"}
+,{"stream_name":"stdout","time":102.750451252,"data":"[r1]    decoded 20/25 clients, 16,358,453 rows, 22s\n"}
+,{"stream_name":"stdout","time":102.960615155,"data":"[r1]    decoded 20/25 clients, 16,358,453 rows, 22s\n"}
+,{"stream_name":"stdout","time":104.296171802,"data":"[r0]    decoded 20/25 clients, 17,522,551 rows, 23s\n"}
+,{"stream_name":"stdout","time":104.500787837,"data":"[r0]    decoded 20/25 clients, 17,522,551 rows, 23s\n"}
+,{"stream_name":"stdout","time":109.144557801,"data":"[r1]    decoded 25/25 clients, 21,516,863 rows, 28s\n"}
+,{"stream_name":"stdout","time":109.348163257,"data":"[r1]    decoded 25/25 clients, 21,516,863 rows, 28s\n"}
+,{"stream_name":"stdout","time":109.505681968,"data":"[r0]    decoded 25/25 clients, 21,528,552 rows, 29s\n"}
+,{"stream_name":"stdout","time":109.708677596,"data":"[r0]    decoded 25/25 clients, 21,528,552 rows, 29s\n"}
+,{"stream_name":"stdout","time":110.598647346,"data":"[r1] data resident: train (21516863, 66) test (860537, 66) (2.75 GiB) in 31s\n"}
+,{"stream_name":"stdout","time":110.77028522,"data":"[r0] data resident: train (21528552, 66) test (860537, 66) (2.75 GiB) in 31s\n"}
+,{"stream_name":"stdout","time":110.80142334,"data":"[r1] data resident: train (21516863, 66) test (860537, 66) (2.75 GiB) in 31s\n"}
+,{"stream_name":"stdout","time":110.801492139,"data":"[r0] data resident: train (21528552, 66) test (860537, 66) (2.75 GiB) in 31s\n"}
+,{"stream_name":"stderr","time":134.107376648,"data":"W0908 00:00:26.569000 65 torch/_inductor/utils.py:1679] [0/0] Not enough SMs to use max_autotune_gemm mode\n"}
+,{"stream_name":"stderr","time":134.107761911,"data":"W0908 00:00:26.569000 66 torch/_inductor/utils.py:1679] [0/0] Not enough SMs to use max_autotune_gemm mode\n"}
+,{"stream_name":"stderr","time":134.328675432,"data":"W0908 00:00:26.569000 65 torch/_inductor/utils.py:1679] [0/0] Not enough SMs to use max_autotune_gemm mode\n"}
+,{"stream_name":"stderr","time":134.328700257,"data":"W0908 00:00:26.569000 66 torch/_inductor/utils.py:1679] [0/0] Not enough SMs to use max_autotune_gemm mode\n"}
+,{"stream_name":"stderr","time":134.328706573,"data":"\n"}
+,{"stream_name":"stderr","time":134.328712091,"data":"W0908 00:00:26.569000 65 torch/_inductor/utils.py:1679] [0/0] Not enough SMs to use max_autotune_gemm mode\n"}
+,{"stream_name":"stderr","time":134.328717441,"data":"W0908 00:00:26.569000 66 torch/_inductor/utils.py:1679] [0/0] Not enough SMs to use max_autotune_gemm mode\n"}
+,{"stream_name":"stdout","time":221.131535683,"data":"[r1] compile: {'enabled': True, 'max_abs_dlogit': 3.427267074584961e-07, 'decisive_rows': 510, 'disagreements': 0, 'amp_max_abs_dlogit': 0.000732421875, 'amp_decisive_rows': 486, 'amp_disagreements': 0}\n"}
+,{"stream_name":"stdout","time":221.160219576,"data":"[r0] compile: {'enabled': True, 'max_abs_dlogit': 3.5762786865234375e-07, 'decisive_rows': 507, 'disagreements': 0, 'amp_max_abs_dlogit': 0.00048828125, 'amp_decisive_rows': 498, 'amp_disagreements': 0}\n"}
+,{"stream_name":"stdout","time":221.343872104,"data":"[r1] compile: {'enabled': True, 'max_abs_dlogit': 3.427267074584961e-07, 'decisive_rows': 510, 'disagreements': 0, 'amp_max_abs_dlogit': 0.000732421875, 'amp_decisive_rows': 486, 'amp_disagreements': 0}\n"}
+,{"stream_name":"stdout","time":221.343915813,"data":"[r0] compile: {'enabled': True, 'max_abs_dlogit': 3.5762786865234375e-07, 'decisive_rows': 507, 'disagreements': 0, 'amp_max_abs_dlogit': 0.00048828125, 'amp_decisive_rows': 498, 'amp_disagreements': 0}\n"}
+,{"stream_name":"stdout","time":221.343922778,"data":"[setup] workers ready; compile: [{'enabled': True, 'max_abs_dlogit': 3.5762786865234375e-07, 'decisive_rows': 507, 'disagreements': 0, 'amp_max_abs_dlogit': 0.00048828125, 'amp_decisive_rows': 498, 'amp_disagreements': 0}, {'enabled': True, 'max_abs_dlogit': 3.427267074584961e-07, 'decisive_rows': 510, 'disagreements': 0, 'amp_max_abs_dlogit': 0.000732421875, 'amp_decisive_rows': 486, 'amp_disagreements': 0}]\n"}
+,{"stream_name":"stdout","time":221.34392825,"data":"[aps] mu[inv_mean_nij] = [5.646573163018274e-07, 5.646573163018274e-07, 5.646573163018274e-07, 5.646573163018274e-07] ...\n"}
+,{"stream_name":"stdout","time":221.343932954,"data":"[comm] 79,700 params/round (0.0797 M), 5.1x below dense FedProto\n"}
+,{"stream_name":"stdout","time":221.343936701,"data":"[budget] no local timing yet; using expected_round_s 600s\n"}
+,{"stream_name":"stdout","time":251.382683216,"data":"[r0] round 1 client 11 step 4566/5036\n"}
+,{"stream_name":"stdout","time":251.596824105,"data":"[r0] round 1 client 11 step 4566/5036\n"}
+,{"stream_name":"stdout","time":799.382334673,"data":"[round 001] ce 0.2145 reg 0.0000 | proto acc 0.5117 F1m 0.4759 | clf acc 0.4651 F1m 0.3966 | 575.2s (train 494.7s eval 78.8s) peak 3.52GB\n"}
+,{"stream_name":"stdout","time":829.185818993,"data":"[r0] round 2 client 11 step 4410/5036\n"}
+,{"stream_name":"stdout","time":829.401179993,"data":"[r0] round 2 client 11 step 4410/5036\n"}
+,{"stream_name":"stdout","time":1281.751893366,"data":"[round 002] ce 0.0868 reg 0.0309 | proto acc 0.5044 F1m 0.5027 | clf acc 0.4658 F1m 0.4063 | 479.7s (train 400.2s eval 78.2s) peak 3.52GB\n"}
+,{"stream_name":"stdout","time":1311.549539876,"data":"[r0] round 3 client 11 step 4439/5036\n"}
+,{"stream_name":"stdout","time":1311.772979958,"data":"[r0] round 3 client 11 step 4439/5036\n"}
+,{"stream_name":"stdout","time":1763.800076413,"data":"[round 003] ce 0.0559 reg 0.0035 | proto acc 0.5016 F1m 0.5051 | clf acc 0.4543 F1m 0.4021 | 479.4s (train 400.1s eval 78.0s) peak 3.52GB\n"}
+,{"stream_name":"stdout","time":1793.603223146,"data":"[r0] round 4 client 11 step 4434/5036\n"}
+,{"stream_name":"stdout","time":1793.826780635,"data":"[r0] round 4 client 11 step 4434/5036\n"}
+,{"stream_name":"stdout","time":2245.907048738,"data":"[round 004] ce 0.0429 reg 0.0026 | proto acc 0.4898 F1m 0.5021 | clf acc 0.4542 F1m 0.3995 | 479.4s (train 399.9s eval 77.9s) peak 3.52GB\n"}
+,{"stream_name":"stdout","time":2251.156496177,"data":"  -\u003e last 0.5021  best 0.5051  mu = 5.6466e-07\n"}
+,{"stream_name":"stdout","time":2251.156528731,"data":"\n"}
+,{"stream_name":"stdout","time":2251.156533223,"data":"======================================================================\n"}
+,{"stream_name":"stdout","time":2251.156536709,"data":"mu multiplier k = 0.1\n"}
+,{"stream_name":"stdout","time":2251.156575702,"data":"======================================================================\n"}
+,{"stream_name":"stdout","time":2251.352708814,"data":"[cps] {'d': 256, 'K': 16, 's': 50, 'compression_rate': 0.8046875, 'overlap_min': 0, 'overlap_max': 10, 'overlap_mean': 7.275, 'overlap_random_expectation': 9.765625, 'overlap_search_target': 10, 'hamming_min': 80, 'hamming_max': 100, 'hamming_mean': 85.45, 'dims_used': 256, 'dim_usage_min': 2, 'dim_usage_max': 4}\n"}
+,{"stream_name":"stdout","time":2251.394352255,"data":"[resume] starting at round 1 of 4 (fingerprint cce5508cccc341f7)\n"}
+,{"stream_name":"stdout","time":2261.525027439,"data":"[r1]    decoded 5/25 clients, 4,097,867 rows, 5s\n"}
+,{"stream_name":"stdout","time":2261.732855126,"data":"[r1]    decoded 5/25 clients, 4,097,867 rows, 5s\n"}
+,{"stream_name":"stdout","time":2263.002732356,"data":"[r0]    decoded 5/25 clients, 4,897,074 rows, 7s\n"}
+,{"stream_name":"stdout","time":2263.20752488,"data":"[r0]    decoded 5/25 clients, 4,897,074 rows, 7s\n"}
+,{"stream_name":"stdout","time":2266.197935343,"data":"[r1]    decoded 10/25 clients, 7,352,213 rows, 10s\n"}
+,{"stream_name":"stdout","time":2266.405508063,"data":"[r1]    decoded 10/25 clients, 7,352,213 rows, 10s\n"}
+,{"stream_name":"stdout","time":2270.638559476,"data":"[r0]    decoded 10/25 clients, 10,745,601 rows, 14s\n"}
+,{"stream_name":"stdout","time":2270.844937506,"data":"[r0]    decoded 10/25 clients, 10,745,601 rows, 14s\n"}
+,{"stream_name":"stdout","time":2272.164884957,"data":"[r1]    decoded 15/25 clients, 11,823,909 rows, 16s\n"}
+,{"stream_name":"stdout","time":2272.369346788,"data":"[r1]    decoded 15/25 clients, 11,823,909 rows, 16s\n"}
+,{"stream_name":"stdout","time":2276.315655836,"data":"[r0]    decoded 15/25 clients, 15,072,638 rows, 20s\n"}
+,{"stream_name":"stdout","time":2276.565511346,"data":"[r0]    decoded 15/25 clients, 15,072,638 rows, 20s\n"}
+,{"stream_name":"stdout","time":2277.804324718,"data":"[r1]    decoded 20/25 clients, 16,358,453 rows, 22s\n"}
+,{"stream_name":"stdout","time":2278.01129378,"data":"[r1]    decoded 20/25 clients, 16,358,453 rows, 22s\n"}
+,{"stream_name":"stdout","time":2279.524671765,"data":"[r0]    decoded 20/25 clients, 17,522,551 rows, 23s\n"}
+,{"stream_name":"stdout","time":2279.7348898,"data":"[r0]    decoded 20/25 clients, 17,522,551 rows, 23s\n"}
+,{"stream_name":"stdout","time":2284.288770883,"data":"[r1]    decoded 25/25 clients, 21,516,863 rows, 28s\n"}
+,{"stream_name":"stdout","time":2284.426999902,"data":"[r0]    decoded 25/25 clients, 21,528,552 rows, 28s\n"}
+,{"stream_name":"stdout","time":2284.491848971,"data":"[r1]    decoded 25/25 clients, 21,516,863 rows, 28s\n"}
+,{"stream_name":"stdout","time":2284.491886306,"data":"[r0]    decoded 25/25 clients, 21,528,552 rows, 28s\n"}
+,{"stream_name":"stdout","time":2285.542276012,"data":"[r1] data resident: train (21516863, 66) test (860537, 66) (2.75 GiB) in 31s\n"}
+,{"stream_name":"stdout","time":2285.669363081,"data":"[r0] data resident: train (21528552, 66) test (860537, 66) (2.75 GiB) in 31s\n"}
+,{"stream_name":"stdout","time":2285.744852719,"data":"[r1] data resident: train (21516863, 66) test (860537, 66) (2.75 GiB) in 31s\n"}
+,{"stream_name":"stdout","time":2285.744905469,"data":"[r0] data resident: train (21528552, 66) test (860537, 66) (2.75 GiB) in 31s\n"}
+,{"stream_name":"stdout","time":2298.479814791,"data":"[r0] compile: {'enabled': True, 'max_abs_dlogit': 4.172325134277344e-07, 'decisive_rows': 507, 'disagreements': 0, 'amp_max_abs_dlogit': 0.00048828125, 'amp_decisive_rows': 498, 'amp_disagreements': 0}\n"}
+,{"stream_name":"stdout","time":2298.61034755,"data":"[r1] compile: {'enabled': True, 'max_abs_dlogit': 3.8743019104003906e-07, 'decisive_rows': 510, 'disagreements': 0, 'amp_max_abs_dlogit': 0.00048828125, 'amp_decisive_rows': 497, 'amp_disagreements': 0}\n"}
+,{"stream_name":"stdout","time":2298.68273303,"data":"[r0] compile: {'enabled': True, 'max_abs_dlogit': 4.172325134277344e-07, 'decisive_rows': 507, 'disagreements': 0, 'amp_max_abs_dlogit': 0.00048828125, 'amp_decisive_rows': 498, 'amp_disagreements': 0}\n"}
+,{"stream_name":"stdout","time":2298.682790298,"data":"[r1] compile: {'enabled': True, 'max_abs_dlogit': 3.8743019104003906e-07, 'decisive_rows': 510, 'disagreements': 0, 'amp_max_abs_dlogit': 0.00048828125, 'amp_decisive_rows': 497, 'amp_disagreements': 0}\n"}
+,{"stream_name":"stdout","time":2298.682798535,"data":"[setup] workers ready; compile: [{'enabled': True, 'max_abs_dlogit': 4.172325134277344e-07, 'decisive_rows': 507, 'disagreements': 0, 'amp_max_abs_dlogit': 0.00048828125, 'amp_decisive_rows': 498, 'amp_disagreements': 0}, {'enabled': True, 'max_abs_dlogit': 3.8743019104003906e-07, 'decisive_rows': 510, 'disagreements': 0, 'amp_max_abs_dlogit': 0.00048828125, 'amp_decisive_rows': 497, 'amp_disagreements': 0}]\n"}
+,{"stream_name":"stdout","time":2298.682819966,"data":"[aps] mu[inv_mean_nij] = [1.8821910543394248e-06, 1.8821910543394248e-06, 1.8821910543394248e-06, 1.8821910543394248e-06] ...\n"}
+,{"stream_name":"stdout","time":2298.682824504,"data":"[comm] 79,700 params/round (0.0797 M), 5.1x below dense FedProto\n"}
+,{"stream_name":"stdout","time":2298.682828596,"data":"[budget] no local timing yet; using expected_round_s 600s\n"}
+,{"stream_name":"stdout","time":2328.656056684,"data":"[r0] round 1 client 11 step 4418/5036\n"}
+,{"stream_name":"stdout","time":2328.881212708,"data":"[r0] round 1 client 11 step 4418/5036\n"}
+,{"stream_name":"stdout","time":2873.817606227,"data":"[round 001] ce 0.2146 reg 0.0000 | proto acc 0.5110 F1m 0.4768 | clf acc 0.4651 F1m 0.3983 | 572.2s (train 492.2s eval 78.8s) peak 3.52GB\n"}
+,{"stream_name":"stdout","time":2903.621173107,"data":"[r0] round 2 client 11 step 4437/5036\n"}
+,{"stream_name":"stdout","time":2903.834480223,"data":"[r0] round 2 client 11 step 4437/5036\n"}
+,{"stream_name":"stdout","time":3356.816498961,"data":"[round 002] ce 0.0854 reg 0.0840 | proto acc 0.5106 F1m 0.5045 | clf acc 0.4662 F1m 0.4089 | 480.2s (train 400.6s eval 78.5s) peak 3.52GB\n"}
+,{"stream_name":"stdout","time":3386.616976422,"data":"[r0] round 3 client 11 step 4446/5036\n"}
+,{"stream_name":"stdout","time":3386.832567184,"data":"[r0] round 3 client 11 step 4446/5036\n"}
+,{"stream_name":"stdout","time":3839.076863118,"data":"[round 003] ce 0.0558 reg 0.0077 | proto acc 0.5009 F1m 0.5027 | clf acc 0.4583 F1m 0.4051 | 479.6s (train 400.2s eval 78.3s) peak 3.52GB\n"}
+,{"stream_name":"stdout","time":3868.873984778,"data":"[r0] round 4 client 11 step 4461/5036\n"}
+,{"stream_name":"stdout","time":3869.076615144,"data":"[r0] round 4 client 11 step 4461/5036\n"}
+,{"stream_name":"stdout","time":4321.276533078,"data":"[round 004] ce 0.0428 reg 0.0028 | proto acc 0.4988 F1m 0.5045 | clf acc 0.4548 F1m 0.4007 | 479.5s (train 400.2s eval 78.0s) peak 3.52GB\n"}
+,{"stream_name":"stdout","time":4322.598494004,"data":"  -\u003e last 0.5045  best 0.5045  mu = 1.8822e-06\n"}
+,{"stream_name":"stdout","time":4322.598535691,"data":"\n"}
+,{"stream_name":"stdout","time":4322.598541832,"data":"======================================================================\n"}
+,{"stream_name":"stdout","time":4322.598547787,"data":"mu multiplier k = 0.3\n"}
+,{"stream_name":"stdout","time":4322.598552575,"data":"======================================================================\n"}
+,{"stream_name":"stdout","time":4322.792944556,"data":"[cps] {'d': 256, 'K': 16, 's': 50, 'compression_rate': 0.8046875, 'overlap_min': 0, 'overlap_max': 10, 'overlap_mean': 7.275, 'overlap_random_expectation': 9.765625, 'overlap_search_target': 10, 'hamming_min': 80, 'hamming_max': 100, 'hamming_mean': 85.45, 'dims_used': 256, 'dim_usage_min': 2, 'dim_usage_max': 4}\n"}
+,{"stream_name":"stdout","time":4322.808329047,"data":"[resume] starting at round 1 of 4 (fingerprint 4512041861ef90e2)\n"}
+,{"stream_name":"stdout","time":4333.147301612,"data":"[r1]    decoded 5/25 clients, 4,097,867 rows, 6s\n"}
+,{"stream_name":"stdout","time":4333.354754298,"data":"[r1]    decoded 5/25 clients, 4,097,867 rows, 6s\n"}
+,{"stream_name":"stdout","time":4334.041844681,"data":"[r0]    decoded 5/25 clients, 4,897,074 rows, 7s\n"}
+,{"stream_name":"stdout","time":4334.251040831,"data":"[r0]    decoded 5/25 clients, 4,897,074 rows, 7s\n"}
+,{"stream_name":"stdout","time":4337.555360918,"data":"[r1]    decoded 10/25 clients, 7,352,213 rows, 10s\n"}
+,{"stream_name":"stdout","time":4337.760947668,"data":"[r1]    decoded 10/25 clients, 7,352,213 rows, 10s\n"}
+,{"stream_name":"stdout","time":4341.745297388,"data":"[r0]    decoded 10/25 clients, 10,745,601 rows, 14s\n"}
+,{"stream_name":"stdout","time":4341.950566246,"data":"[r0]    decoded 10/25 clients, 10,745,601 rows, 14s\n"}
+,{"stream_name":"stdout","time":4343.408319847,"data":"[r1]    decoded 15/25 clients, 11,823,909 rows, 16s\n"}
+,{"stream_name":"stdout","time":4343.613898177,"data":"[r1]    decoded 15/25 clients, 11,823,909 rows, 16s\n"}
+,{"stream_name":"stdout","time":4347.249179752,"data":"[r0]    decoded 15/25 clients, 15,072,638 rows, 20s\n"}
+,{"stream_name":"stdout","time":4347.455432579,"data":"[r0]    decoded 15/25 clients, 15,072,638 rows, 20s\n"}
+,{"stream_name":"stdout","time":4349.06401534,"data":"[r1]    decoded 20/25 clients, 16,358,453 rows, 22s\n"}
+,{"stream_name":"stdout","time":4349.26904557,"data":"[r1]    decoded 20/25 clients, 16,358,453 rows, 22s\n"}
+,{"stream_name":"stdout","time":4350.55963845,"data":"[r0]    decoded 20/25 clients, 17,522,551 rows, 23s\n"}
+,{"stream_name":"stdout","time":4350.767530018,"data":"[r0]    decoded 20/25 clients, 17,522,551 rows, 23s\n"}
+,{"stream_name":"stdout","time":4355.558887724,"data":"[r1]    decoded 25/25 clients, 21,516,863 rows, 28s\n"}
+,{"stream_name":"stdout","time":4355.582582164,"data":"[r0]    decoded 25/25 clients, 21,528,552 rows, 28s\n"}
+,{"stream_name":"stdout","time":4355.784360526,"data":"[r1]    decoded 25/25 clients, 21,516,863 rows, 28s\n"}
+,{"stream_name":"stdout","time":4355.784393784,"data":"[r0]    decoded 25/25 clients, 21,528,552 rows, 28s\n"}
+,{"stream_name":"stdout","time":4356.801299042,"data":"[r1] data resident: train (21516863, 66) test (860537, 66) (2.75 GiB) in 31s\n"}
+,{"stream_name":"stdout","time":4356.825467451,"data":"[r0] data resident: train (21528552, 66) test (860537, 66) (2.75 GiB) in 31s\n"}
+,{"stream_name":"stdout","time":4357.003824212,"data":"[r1] data resident: train (21516863, 66) test (860537, 66) (2.75 GiB) in 31s\n"}
+,{"stream_name":"stdout","time":4357.003855577,"data":"[r0] data resident: train (21528552, 66) test (860537, 66) (2.75 GiB) in 31s\n"}
+,{"stream_name":"stdout","time":4369.8878802,"data":"[r0] compile: {'enabled': True, 'max_abs_dlogit': 3.7997961044311523e-07, 'decisive_rows': 507, 'disagreements': 0, 'amp_max_abs_dlogit': 0.00048828125, 'amp_decisive_rows': 498, 'amp_disagreements': 0}\n"}
+,{"stream_name":"stdout","time":4370.029951822,"data":"[r1] compile: {'enabled': True, 'max_abs_dlogit': 3.8743019104003906e-07, 'decisive_rows': 510, 'disagreements': 0, 'amp_max_abs_dlogit': 0.00048828125, 'amp_decisive_rows': 497, 'amp_disagreements': 0}\n"}
+,{"stream_name":"stdout","time":4370.090156345,"data":"[r0] compile: {'enabled': True, 'max_abs_dlogit': 3.7997961044311523e-07, 'decisive_rows': 507, 'disagreements': 0, 'amp_max_abs_dlogit': 0.00048828125, 'amp_decisive_rows': 498, 'amp_disagreements': 0}\n"}
+,{"stream_name":"stdout","time":4370.090187028,"data":"[r1] compile: {'enabled': True, 'max_abs_dlogit': 3.8743019104003906e-07, 'decisive_rows': 510, 'disagreements': 0, 'amp_max_abs_dlogit': 0.00048828125, 'amp_decisive_rows': 497, 'amp_disagreements': 0}\n"}
+,{"stream_name":"stdout","time":4370.090200272,"data":"[setup] workers ready; compile: [{'enabled': True, 'max_abs_dlogit': 3.7997961044311523e-07, 'decisive_rows': 507, 'disagreements': 0, 'amp_max_abs_dlogit': 0.00048828125, 'amp_decisive_rows': 498, 'amp_disagreements': 0}, {'enabled': True, 'max_abs_dlogit': 3.8743019104003906e-07, 'decisive_rows': 510, 'disagreements': 0, 'amp_max_abs_dlogit': 0.00048828125, 'amp_decisive_rows': 497, 'amp_disagreements': 0}]\n"}
+,{"stream_name":"stdout","time":4370.090218318,"data":"[aps] mu[inv_mean_nij] = [5.646573163018274e-06, 5.646573163018274e-06, 5.646573163018274e-06, 5.646573163018274e-06] ...\n"}
+,{"stream_name":"stdout","time":4370.090221149,"data":"[comm] 79,700 params/round (0.0797 M), 5.1x below dense FedProto\n"}
+,{"stream_name":"stdout","time":4370.090223414,"data":"[budget] no local timing yet; using expected_round_s 600s\n"}
+,{"stream_name":"stdout","time":4400.078584549,"data":"[r0] round 1 client 11 step 4412/5036\n"}
+,{"stream_name":"stdout","time":4400.294142532,"data":"[r0] round 1 client 11 step 4412/5036\n"}
+,{"stream_name":"stdout","time":4946.225939019,"data":"[round 001] ce 0.2147 reg 0.0000 | proto acc 0.5112 F1m 0.4750 | clf acc 0.4641 F1m 0.3955 | 573.2s (train 492.7s eval 79.3s) peak 3.52GB\n"}
+,{"stream_name":"stdout","time":4976.02598854,"data":"[r0] round 2 client 11 step 4449/5036\n"}
+,{"stream_name":"stdout","time":4976.24556487,"data":"[r0] round 2 client 11 step 4449/5036\n"}
+,{"stream_name":"stdout","time":5428.952465997,"data":"[round 002] ce 0.0851 reg 0.0905 | proto acc 0.5354 F1m 0.5120 | clf acc 0.4731 F1m 0.4136 | 479.9s (train 400.3s eval 78.4s) peak 3.52GB\n"}
+,{"stream_name":"stdout","time":5458.754334002,"data":"[r0] round 3 client 11 step 4451/5036\n"}
+,{"stream_name":"stdout","time":5458.970853273,"data":"[r0] round 3 client 11 step 4451/5036\n"}
+,{"stream_name":"stdout","time":5911.122561359,"data":"[round 003] ce 0.0553 reg 0.0175 | proto acc 0.5307 F1m 0.5157 | clf acc 0.4612 F1m 0.4090 | 479.5s (train 399.8s eval 78.5s) peak 3.52GB\n"}
+,{"stream_name":"stdout","time":5940.924833304,"data":"[r0] round 4 client 11 step 4431/5036\n"}
+,{"stream_name":"stdout","time":5941.144162806,"data":"[r0] round 4 client 11 step 4431/5036\n"}
+,{"stream_name":"stdout","time":6392.658533056,"data":"[round 004] ce 0.0422 reg 0.0125 | proto acc 0.5254 F1m 0.5162 | clf acc 0.4598 F1m 0.4074 | 478.9s (train 399.2s eval 78.3s) peak 3.52GB\n"}
+,{"stream_name":"stdout","time":6393.901899694,"data":"  -\u003e last 0.5162  best 0.5162  mu = 5.6466e-06\n"}
+,{"stream_name":"stdout","time":6393.901930432,"data":"\n"}
+,{"stream_name":"stdout","time":6393.90194206,"data":"======================================================================\n"}
+,{"stream_name":"stdout","time":6393.901945794,"data":"mu multiplier k = 1.0\n"}
+,{"stream_name":"stdout","time":6393.901948829,"data":"======================================================================\n"}
+,{"stream_name":"stdout","time":6394.07465847,"data":"[cps] {'d': 256, 'K': 16, 's': 50, 'compression_rate': 0.8046875, 'overlap_min': 0, 'overlap_max': 10, 'overlap_mean': 7.275, 'overlap_random_expectation': 9.765625, 'overlap_search_target': 10, 'hamming_min': 80, 'hamming_max': 100, 'hamming_mean': 85.45, 'dims_used': 256, 'dim_usage_min': 2, 'dim_usage_max': 4}\n"}
+,{"stream_name":"stdout","time":6394.074684367,"data":"[resume] starting at round 1 of 4 (fingerprint fa08222b8edcfb60)\n"}
+,{"stream_name":"stdout","time":6404.169234307,"data":"[r1]    decoded 5/25 clients, 4,097,867 rows, 6s\n"}
+,{"stream_name":"stdout","time":6404.375245754,"data":"[r1]    decoded 5/25 clients, 4,097,867 rows, 6s\n"}
+,{"stream_name":"stdout","time":6405.044195079,"data":"[r0]    decoded 5/25 clients, 4,897,074 rows, 7s\n"}
+,{"stream_name":"stdout","time":6405.243036977,"data":"[r0]    decoded 5/25 clients, 4,897,074 rows, 7s\n"}
+,{"stream_name":"stdout","time":6408.391260277,"data":"[r1]    decoded 10/25 clients, 7,352,213 rows, 10s\n"}
+,{"stream_name":"stdout","time":6408.599075325,"data":"[r1]    decoded 10/25 clients, 7,352,213 rows, 10s\n"}
+,{"stream_name":"stdout","time":6412.701326217,"data":"[r0]    decoded 10/25 clients, 10,745,601 rows, 14s\n"}
+,{"stream_name":"stdout","time":6412.906656466,"data":"[r0]    decoded 10/25 clients, 10,745,601 rows, 14s\n"}
+,{"stream_name":"stdout","time":6414.2215437,"data":"[r1]    decoded 15/25 clients, 11,823,909 rows, 16s\n"}
+,{"stream_name":"stdout","time":6414.429040985,"data":"[r1]    decoded 15/25 clients, 11,823,909 rows, 16s\n"}
+,{"stream_name":"stdout","time":6418.080479969,"data":"[r0]    decoded 15/25 clients, 15,072,638 rows, 20s\n"}
+,{"stream_name":"stdout","time":6418.288963727,"data":"[r0]    decoded 15/25 clients, 15,072,638 rows, 20s\n"}
+,{"stream_name":"stdout","time":6419.691585579,"data":"[r1]    decoded 20/25 clients, 16,358,453 rows, 21s\n"}
+,{"stream_name":"stdout","time":6419.893604648,"data":"[r1]    decoded 20/25 clients, 16,358,453 rows, 21s\n"}
+,{"stream_name":"stdout","time":6421.430205965,"data":"[r0]    decoded 20/25 clients, 17,522,551 rows, 23s\n"}
+,{"stream_name":"stdout","time":6421.63657655,"data":"[r0]    decoded 20/25 clients, 17,522,551 rows, 23s\n"}
+,{"stream_name":"stdout","time":6426.114704978,"data":"[r1]    decoded 25/25 clients, 21,516,863 rows, 28s\n"}
+,{"stream_name":"stdout","time":6426.341463891,"data":"[r1]    decoded 25/25 clients, 21,516,863 rows, 28s\n"}
+,{"stream_name":"stdout","time":6426.478322535,"data":"[r0]    decoded 25/25 clients, 21,528,552 rows, 28s\n"}
+,{"stream_name":"stdout","time":6426.681483041,"data":"[r0]    decoded 25/25 clients, 21,528,552 rows, 28s\n"}
+,{"stream_name":"stdout","time":6427.384294417,"data":"[r1] data resident: train (21516863, 66) test (860537, 66) (2.75 GiB) in 30s\n"}
+,{"stream_name":"stdout","time":6427.587035488,"data":"[r1] data resident: train (21516863, 66) test (860537, 66) (2.75 GiB) in 30s\n"}
+,{"stream_name":"stdout","time":6427.734107376,"data":"[r0] data resident: train (21528552, 66) test (860537, 66) (2.75 GiB) in 31s\n"}
+,{"stream_name":"stdout","time":6427.936620081,"data":"[r0] data resident: train (21528552, 66) test (860537, 66) (2.75 GiB) in 31s\n"}
+,{"stream_name":"stdout","time":6440.284263215,"data":"[r1] compile: {'enabled': True, 'max_abs_dlogit': 3.5762786865234375e-07, 'decisive_rows': 510, 'disagreements': 0, 'amp_max_abs_dlogit': 0.00048828125, 'amp_decisive_rows': 497, 'amp_disagreements': 0}\n"}
+,{"stream_name":"stdout","time":6440.486648693,"data":"[r1] compile: {'enabled': True, 'max_abs_dlogit': 3.5762786865234375e-07, 'decisive_rows': 510, 'disagreements': 0, 'amp_max_abs_dlogit': 0.00048828125, 'amp_decisive_rows': 497, 'amp_disagreements': 0}\n"}
+,{"stream_name":"stdout","time":6440.695235862,"data":"[r0] compile: {'enabled': True, 'max_abs_dlogit': 4.172325134277344e-07, 'decisive_rows': 507, 'disagreements': 0, 'amp_max_abs_dlogit': 0.00048828125, 'amp_decisive_rows': 498, 'amp_disagreements': 0}\n"}
+,{"stream_name":"stdout","time":6440.898044491,"data":"[r0] compile: {'enabled': True, 'max_abs_dlogit': 4.172325134277344e-07, 'decisive_rows': 507, 'disagreements': 0, 'amp_max_abs_dlogit': 0.00048828125, 'amp_decisive_rows': 498, 'amp_disagreements': 0}\n"}
+,{"stream_name":"stdout","time":6440.898089203,"data":"[setup] workers ready; compile: [{'enabled': True, 'max_abs_dlogit': 4.172325134277344e-07, 'decisive_rows': 507, 'disagreements': 0, 'amp_max_abs_dlogit': 0.00048828125, 'amp_decisive_rows': 498, 'amp_disagreements': 0}, {'enabled': True, 'max_abs_dlogit': 3.5762786865234375e-07, 'decisive_rows': 510, 'disagreements': 0, 'amp_max_abs_dlogit': 0.00048828125, 'amp_decisive_rows': 497, 'amp_disagreements': 0}]\n"}
+,{"stream_name":"stdout","time":6440.898097605,"data":"[aps] mu[inv_mean_nij] = [1.8821910543394246e-05, 1.8821910543394246e-05, 1.8821910543394246e-05, 1.8821910543394246e-05] ...\n"}
+,{"stream_name":"stdout","time":6440.898103579,"data":"[comm] 79,700 params/round (0.0797 M), 5.1x below dense FedProto\n"}
+,{"stream_name":"stdout","time":6440.898126778,"data":"[budget] no local timing yet; using expected_round_s 600s\n"}
+,{"stream_name":"stdout","time":6470.741138133,"data":"[r0] round 1 client 11 step 4419/5036\n"}
+,{"stream_name":"stdout","time":6470.958162448,"data":"[r0] round 1 client 11 step 4419/5036\n"}
+,{"stream_name":"stdout","time":7018.848086318,"data":"[round 001] ce 0.2146 reg 0.0000 | proto acc 0.5133 F1m 0.4768 | clf acc 0.4644 F1m 0.3977 | 575.0s (train 494.2s eval 79.5s) peak 3.52GB\n"}
+,{"stream_name":"stdout","time":7048.639512824,"data":"[r0] round 2 client 11 step 4440/5036\n"}
+,{"stream_name":"stdout","time":7048.842477203,"data":"[r0] round 2 client 11 step 4440/5036\n"}
+,{"stream_name":"stdout","time":7503.968330352,"data":"[round 002] ce 0.0959 reg 0.2108 | proto acc 0.5200 F1m 0.4830 | clf acc 0.4754 F1m 0.4194 | 482.3s (train 402.2s eval 78.9s) peak 3.52GB\n"}
+,{"stream_name":"stdout","time":7533.772643528,"data":"[r0] round 3 client 11 step 4459/5036\n"}
+,{"stream_name":"stdout","time":7533.989997198,"data":"[r0] round 3 client 11 step 4459/5036\n"}
+,{"stream_name":"stdout","time":7986.253579021,"data":"[round 003] ce 0.0837 reg 0.9383 | proto acc 0.4538 F1m 0.3797 | clf acc 0.4620 F1m 0.4124 | 479.6s (train 400.9s eval 77.6s) peak 3.52GB\n"}
+,{"stream_name":"stdout","time":8016.050832247,"data":"[r0] round 4 client 11 step 4436/5036\n"}
+,{"stream_name":"stdout","time":8016.279516742,"data":"[r0] round 4 client 11 step 4436/5036\n"}
+,{"stream_name":"stdout","time":8468.45328302,"data":"[round 004] ce 0.1165 reg 11.5712 | proto acc 0.3894 F1m 0.2736 | clf acc 0.4536 F1m 0.4012 | 479.5s (train 400.0s eval 78.2s) peak 3.52GB\n"}
+,{"stream_name":"stdout","time":8469.719125057,"data":"  -\u003e last 0.2736  best 0.4830  mu = 1.8822e-05\n"}
+,{"stream_name":"stdout","time":8469.719156732,"data":"\n"}
+,{"stream_name":"stdout","time":8469.719162734,"data":"======================================================================\n"}
+,{"stream_name":"stdout","time":8469.719170556,"data":"mu multiplier k = 3.0\n"}
+,{"stream_name":"stdout","time":8469.719173833,"data":"======================================================================\n"}
+,{"stream_name":"stdout","time":8469.906137911,"data":"[cps] {'d': 256, 'K': 16, 's': 50, 'compression_rate': 0.8046875, 'overlap_min': 0, 'overlap_max': 10, 'overlap_mean': 7.275, 'overlap_random_expectation': 9.765625, 'overlap_search_target': 10, 'hamming_min': 80, 'hamming_max': 100, 'hamming_mean': 85.45, 'dims_used': 256, 'dim_usage_min': 2, 'dim_usage_max': 4}\n"}
+,{"stream_name":"stdout","time":8469.906164777,"data":"[resume] starting at round 1 of 4 (fingerprint 8aed07c0c1cb6505)\n"}
+,{"stream_name":"stdout","time":8480.155698944,"data":"[r1]    decoded 5/25 clients, 4,097,867 rows, 6s\n"}
+,{"stream_name":"stdout","time":8480.361486406,"data":"[r1]    decoded 5/25 clients, 4,097,867 rows, 6s\n"}
+,{"stream_name":"stdout","time":8480.759134231,"data":"[r0]    decoded 5/25 clients, 4,897,074 rows, 6s\n"}
+,{"stream_name":"stdout","time":8480.962886322,"data":"[r0]    decoded 5/25 clients, 4,897,074 rows, 6s\n"}
+,{"stream_name":"stdout","time":8484.54514506,"data":"[r1]    decoded 10/25 clients, 7,352,213 rows, 10s\n"}
+,{"stream_name":"stdout","time":8484.750765922,"data":"[r1]    decoded 10/25 clients, 7,352,213 rows, 10s\n"}
+,{"stream_name":"stdout","time":8488.139636603,"data":"[r0]    decoded 10/25 clients, 10,745,601 rows, 14s\n"}
+,{"stream_name":"stdout","time":8488.347384299,"data":"[r0]    decoded 10/25 clients, 10,745,601 rows, 14s\n"}
+,{"stream_name":"stdout","time":8490.432335706,"data":"[r1]    decoded 15/25 clients, 11,823,909 rows, 16s\n"}
+,{"stream_name":"stdout","time":8490.637847977,"data":"[r1]    decoded 15/25 clients, 11,823,909 rows, 16s\n"}
+,{"stream_name":"stdout","time":8493.539054017,"data":"[r0]    decoded 15/25 clients, 15,072,638 rows, 19s\n"}
+,{"stream_name":"stdout","time":8493.741294343,"data":"[r0]    decoded 15/25 clients, 15,072,638 rows, 19s\n"}
+,{"stream_name":"stdout","time":8496.098016669,"data":"[r1]    decoded 20/25 clients, 16,358,453 rows, 22s\n"}
+,{"stream_name":"stdout","time":8496.302633807,"data":"[r1]    decoded 20/25 clients, 16,358,453 rows, 22s\n"}
+,{"stream_name":"stdout","time":8496.675259101,"data":"[r0]    decoded 20/25 clients, 17,522,551 rows, 22s\n"}
+,{"stream_name":"stdout","time":8496.878614598,"data":"[r0]    decoded 20/25 clients, 17,522,551 rows, 22s\n"}
+,{"stream_name":"stdout","time":8501.452871363,"data":"[r0]    decoded 25/25 clients, 21,528,552 rows, 27s\n"}
+,{"stream_name":"stdout","time":8501.685462056,"data":"[r0]    decoded 25/25 clients, 21,528,552 rows, 27s\n"}
+,{"stream_name":"stdout","time":8502.399718816,"data":"[r1]    decoded 25/25 clients, 21,516,863 rows, 28s\n"}
+,{"stream_name":"stdout","time":8502.602914769,"data":"[r1]    decoded 25/25 clients, 21,516,863 rows, 28s\n"}
+,{"stream_name":"stdout","time":8502.813977951,"data":"[r0] data resident: train (21528552, 66) test (860537, 66) (2.75 GiB) in 30s\n"}
+,{"stream_name":"stdout","time":8503.016840203,"data":"[r0] data resident: train (21528552, 66) test (860537, 66) (2.75 GiB) in 30s\n"}
+,{"stream_name":"stdout","time":8503.650884003,"data":"[r1] data resident: train (21516863, 66) test (860537, 66) (2.75 GiB) in 31s\n"}
+,{"stream_name":"stdout","time":8503.85351684,"data":"[r1] data resident: train (21516863, 66) test (860537, 66) (2.75 GiB) in 31s\n"}
+,{"stream_name":"stdout","time":8516.017168845,"data":"[r0] compile: {'enabled': True, 'max_abs_dlogit': 3.427267074584961e-07, 'decisive_rows': 507, 'disagreements': 0, 'amp_max_abs_dlogit': 0.00048828125, 'amp_decisive_rows': 498, 'amp_disagreements': 0}\n"}
+,{"stream_name":"stdout","time":8516.219390808,"data":"[r0] compile: {'enabled': True, 'max_abs_dlogit': 3.427267074584961e-07, 'decisive_rows': 507, 'disagreements': 0, 'amp_max_abs_dlogit': 0.00048828125, 'amp_decisive_rows': 498, 'amp_disagreements': 0}\n"}
+,{"stream_name":"stdout","time":8516.603955431,"data":"[r1] compile: {'enabled': True, 'max_abs_dlogit': 3.5762786865234375e-07, 'decisive_rows': 510, 'disagreements': 0, 'amp_max_abs_dlogit': 0.00048828125, 'amp_decisive_rows': 497, 'amp_disagreements': 0}\n"}
+,{"stream_name":"stdout","time":8516.807022082,"data":"[r1] compile: {'enabled': True, 'max_abs_dlogit': 3.5762786865234375e-07, 'decisive_rows': 510, 'disagreements': 0, 'amp_max_abs_dlogit': 0.00048828125, 'amp_decisive_rows': 497, 'amp_disagreements': 0}\n"}
+,{"stream_name":"stdout","time":8516.807071121,"data":"[setup] workers ready; compile: [{'enabled': True, 'max_abs_dlogit': 3.427267074584961e-07, 'decisive_rows': 507, 'disagreements': 0, 'amp_max_abs_dlogit': 0.00048828125, 'amp_decisive_rows': 498, 'amp_disagreements': 0}, {'enabled': True, 'max_abs_dlogit': 3.5762786865234375e-07, 'decisive_rows': 510, 'disagreements': 0, 'amp_max_abs_dlogit': 0.00048828125, 'amp_decisive_rows': 497, 'amp_disagreements': 0}]\n"}
+,{"stream_name":"stdout","time":8516.807080042,"data":"[aps] mu[inv_mean_nij] = [5.646573163018274e-05, 5.646573163018274e-05, 5.646573163018274e-05, 5.646573163018274e-05] ...\n"}
+,{"stream_name":"stdout","time":8516.80708671,"data":"[comm] 79,700 params/round (0.0797 M), 5.1x below dense FedProto\n"}
+,{"stream_name":"stdout","time":8516.807091329,"data":"[budget] no local timing yet; using expected_round_s 600s\n"}
+,{"stream_name":"stdout","time":8546.648317505,"data":"[r0] round 1 client 11 step 4432/5036\n"}
+,{"stream_name":"stdout","time":8546.867216239,"data":"[r0] round 1 client 11 step 4432/5036\n"}
+,{"stream_name":"stdout","time":9094.408705156,"data":"[round 001] ce 0.2146 reg 0.0000 | proto acc 0.5108 F1m 0.4762 | clf acc 0.4632 F1m 0.3957 | 574.7s (train 494.0s eval 79.5s) peak 3.52GB\n"}
+,{"stream_name":"stdout","time":9124.203026612,"data":"[r0] round 2 client 11 step 4442/5036\n"}
+,{"stream_name":"stdout","time":9124.405524611,"data":"[r0] round 2 client 11 step 4442/5036\n"}
+,{"stream_name":"stdout","time":9578.404297595,"data":"[round 002] ce 0.1507 reg 1.6321 | proto acc 0.4855 F1m 0.4218 | clf acc 0.4788 F1m 0.4232 | 481.1s (train 401.4s eval 78.5s) peak 3.52GB\n"}
+,{"stream_name":"stdout","time":9608.204838619,"data":"[r0] round 3 client 11 step 4427/5036\n"}
+,{"stream_name":"stdout","time":9608.426387247,"data":"[r0] round 3 client 11 step 4427/5036\n"}
+,{"stream_name":"stdout","time":10061.432028096,"data":"[round 003] ce 0.3995 reg 229.2171 | proto acc 0.3896 F1m 0.2598 | clf acc 0.4561 F1m 0.3808 | 480.4s (train 400.6s eval 78.6s) peak 3.52GB\n"}
+,{"stream_name":"stdout","time":10091.226850061,"data":"[r0] round 4 client 11 step 4447/5036\n"}
+,{"stream_name":"stdout","time":10091.42954111,"data":"[r0] round 4 client 11 step 4447/5036\n"}
+,{"stream_name":"stdout","time":10544.228759998,"data":"[round 004] ce 3.7513 reg 107406.9770 | proto acc 0.3356 F1m 0.1926 | clf acc 0.4178 F1m 0.2598 | 480.1s (train 400.4s eval 78.3s) peak 3.52GB\n"}
+,{"stream_name":"stdout","time":10545.462461376,"data":"  -\u003e last 0.1926  best 0.4762  mu = 5.6466e-05\n"}
+,{"stream_name":"stdout","time":10545.462488157,"data":"Winner for this scenario only: {'k': 0.3, 'mu_absolute': 5.646573163018274e-06, 'criterion': 'mean-over-clients proto f1_macro at the last sweep round'}\n"}
+,{"stream_name":"stdout","time":10545.462494087,"data":"wrote /kaggle/working/mu_sweep.json\n"}
+,{"stream_name":"stdout","time":10545.973760283,"data":"\n"}
+,{"stream_name":"stdout","time":10545.973795653,"data":"winner k=0.3  mu_absolute=5.646573e-06\n"}
+,{"stream_name":"stdout","time":10545.973802374,"data":"Do NOT copy that number into the production notebook. Attach THIS kernel's output\n"}
+,{"stream_name":"stdout","time":10545.973808028,"data":"as a kernel source of tinyproto-fp-train-50client; the config cell reads the\n"}
+,{"stream_name":"stdout","time":10545.973813182,"data":"winner from mu_sweep.json and verifies the selection signature before training.\n"}
+,{"stream_name":"stderr","time":10551.035671464,"data":"/usr/local/lib/python3.12/dist-packages/mistune.py:435: SyntaxWarning: invalid escape sequence '\\|'\n"}
+,{"stream_name":"stderr","time":10551.035704263,"data":"  cells[i][c] = re.sub('\\\\\\\\\\|', '|', cell)\n"}
+,{"stream_name":"stderr","time":10551.249062643,"data":"/usr/local/lib/python3.12/dist-packages/nbconvert/filters/filter_links.py:36: SyntaxWarning: invalid escape sequence '\\_'\n"}
+,{"stream_name":"stderr","time":10551.24910442,"data":"  text = re.sub(r'_', '\\_', text) # Escape underscores in display text\n"}
+,{"stream_name":"stderr","time":10551.964453338,"data":"[NbConvertApp] Converting notebook __notebook__.ipynb to notebook\n"}
+,{"stream_name":"stderr","time":10552.306855414,"data":"[NbConvertApp] Writing 284279 bytes to __notebook__.ipynb\n"}
+,{"stream_name":"stderr","time":10554.59022791,"data":"[NbConvertApp] Converting notebook __notebook__.ipynb to html\n"}
+,{"stream_name":"stderr","time":10555.840502108,"data":"[NbConvertApp] Support files will be in __results___files/\n"}
+,{"stream_name":"stderr","time":10555.840527401,"data":"[NbConvertApp] Making directory __results___files\n"}
+,{"stream_name":"stderr","time":10555.840850694,"data":"[NbConvertApp] Writing 1097972 bytes to __results__.html\n"}
+]

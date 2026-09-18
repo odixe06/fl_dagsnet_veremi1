@@ -1,0 +1,5 @@
+run       : /tmp/tp_review_sim/runs/sim_20client
+scenario  : 20client  clients=4  s=50  d=256  rounds=2
+completed : 2 rounds [1, 2]
+
+237 checks passed, 0 failed

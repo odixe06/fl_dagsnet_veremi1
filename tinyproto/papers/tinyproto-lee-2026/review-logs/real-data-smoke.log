@@ -1,0 +1,6 @@
+Local memory guard: tree RSS <= 3000 MiB; keep 1536 MiB available.
+20 clients: 64 real rows; CE + prototype regularizer forward/backward PASS
+50 clients: 64 real rows; CE + prototype regularizer forward/backward PASS
+100 clients: 64 real rows; CE + prototype regularizer forward/backward PASS
+Remote test sample: rows 1024 raw f_snd_spd mean 7.599473476409912
+Peak test-tree RSS: 932 MiB; exit 0

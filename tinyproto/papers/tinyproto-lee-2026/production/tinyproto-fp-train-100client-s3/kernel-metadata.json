@@ -1,0 +1,21 @@
+{
+  "id": "minhtrit06/tinyproto-fp-train-100client-s3",
+  "title": "TinyProto FP train 100client s3",
+  "code_file": "tinyproto-fp-train-100client-s3.ipynb",
+  "language": "python",
+  "kernel_type": "notebook",
+  "is_private": true,
+  "enable_gpu": true,
+  "enable_internet": true,
+  "machine_shape": "NvidiaTeslaT4",
+  "dataset_sources": [
+    "odixe0502/veremi-fl-100client",
+    "odixe0502/veremi-nextgen2026-centralized",
+    "odixe0502/tinyproto-fp-mu-100client"
+  ],
+  "competition_sources": [],
+  "kernel_sources": [
+    "minhtrit06/tinyproto-fp-train-100client-s2"
+  ],
+  "docker_image": "gcr.io/kaggle-private-byod/python@sha256:37c64f7dd9c54116ecd1bcc88817c5469b88387388fade02bfa8bf3fc647d461"
+}

@@ -1,0 +1,7 @@
+Local memory guard: tree RSS <= 3000 MiB; keep 1536 MiB available.
+....................
+----------------------------------------------------------------------
+Ran 20 tests in 2.316s
+
+OK
+Peak test-tree RSS: 620 MiB; exit 0

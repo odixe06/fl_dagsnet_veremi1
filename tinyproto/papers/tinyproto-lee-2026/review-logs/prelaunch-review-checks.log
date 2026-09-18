@@ -1,0 +1,22 @@
+Local memory guard: tree RSS <= 2886 MiB; keep 1536 MiB available.
+PASS exact generated cells, embedded modules, runtime, sources: tinyproto-fp-calibration
+PASS exact generated cells, embedded modules, runtime, sources: tinyproto-fp-mu-sweep
+PASS exact generated cells, embedded modules, runtime, sources: tinyproto-fp-mu-sweep-100client
+PASS exact generated cells, embedded modules, runtime, sources: tinyproto-fp-mu-sweep-50client
+PASS exact generated cells, embedded modules, runtime, sources: tinyproto-fp-train-100client
+PASS exact generated cells, embedded modules, runtime, sources: tinyproto-fp-train-20client
+PASS exact generated cells, embedded modules, runtime, sources: tinyproto-fp-train-50client
+OBSERVED selected_mu accepts: only 1 sweep round
+OBSERVED selected_mu accepts: only 1 grid candidate
+OBSERVED selected_mu accepts: no candidate results
+OBSERVED selected_mu accepts: different validation fraction
+OBSERVED selected_mu accepts: different validation seed
+OBSERVED selected_mu accepts: winner not in grid
+OBSERVED selection signature does not cover scaler
+OBSERVED SWEEP_RESUME any-started gate accepts partial attachment; missing previous candidate 0.03 will be scheduled fresh
+OBSERVED current validator accepts missing docker_image AND notebook GPU metadata
+MEASURED sidecar assignment: 20 clients/GPU= [10, 10] eval factor vs perfect half= 1.0
+MEASURED sidecar assignment: 50 clients/GPU= [25, 25] eval factor vs perfect half= 1.0
+MEASURED sidecar assignment: 100 clients/GPU= [50, 50] eval factor vs perfect half= 1.0
+AUDIT CHECKS COMPLETE; observations above are remaining review gaps, not fixed code.
+Peak test-tree RSS: 5 MiB; exit 0

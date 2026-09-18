@@ -1,0 +1,3 @@
+Local memory guard: tree RSS <= 3000 MiB; keep 1536 MiB available.
+/home/odixe/nckh/tinyproto/papers/tinyproto-lee-2026/validation/tinyproto-fp-2t4-validation
+Peak test-tree RSS: 4 MiB; exit 0

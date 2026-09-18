@@ -1,0 +1,41 @@
+[{"stream_name":"stderr","time":8.266334887,"data":"0.00s - Debugger warning: It seems that frozen modules are being used, which may\n"}
+,{"stream_name":"stderr","time":8.267276764,"data":"0.00s - make the debugger miss breakpoints. Please pass -Xfrozen_modules=off\n"}
+,{"stream_name":"stderr","time":8.267284921,"data":"0.00s - to python to disable frozen modules.\n"}
+,{"stream_name":"stderr","time":8.267289109,"data":"0.00s - Note: Debugging will proceed. Set PYDEVD_DISABLE_FILE_VALIDATION=1 to disable this validation.\n"}
+,{"stream_name":"stderr","time":9.013594312,"data":"0.00s - Debugger warning: It seems that frozen modules are being used, which may\n"}
+,{"stream_name":"stderr","time":9.013635747,"data":"0.00s - make the debugger miss breakpoints. Please pass -Xfrozen_modules=off\n"}
+,{"stream_name":"stderr","time":9.013641444,"data":"0.00s - to python to disable frozen modules.\n"}
+,{"stream_name":"stderr","time":9.013645471,"data":"0.00s - Note: Debugging will proceed. Set PYDEVD_DISABLE_FILE_VALIDATION=1 to disable this validation.\n"}
+,{"stream_name":"stdout","time":15.591515373,"data":"python 3.12.13 | torch 2.10.0+cu128 | cuda 12.8\n"}
+,{"stream_name":"stdout","time":15.5915831,"data":"nvidia-smi probe: FileNotFoundError\n"}
+,{"stream_name":"stdout","time":15.591589738,"data":"cpu: 4 | RAM GB: 31.3 | free on /kaggle/working GB: 19.5\n"}
+,{"stream_name":"stdout","time":15.591594806,"data":"free on /kaggle/temp GB: n/a\n"}
+,{"stream_name":"stderr","time":18.499945591,"data":"Traceback (most recent call last):\n"}
+,{"stream_name":"stderr","time":18.499980818,"data":"  File \"\u003cstring\u003e\", line 1, in \u003cmodule\u003e\n"}
+,{"stream_name":"stderr","time":18.499987845,"data":"  File \"/usr/local/lib/python3.12/dist-packages/papermill/execute.py\", line 131, in execute_notebook\n"}
+,{"stream_name":"stderr","time":18.500085985,"data":"    raise_for_execution_errors(nb, output_path)\n"}
+,{"stream_name":"stderr","time":18.500097776,"data":"  File \"/usr/local/lib/python3.12/dist-packages/papermill/execute.py\", line 251, in raise_for_execution_errors\n"}
+,{"stream_name":"stderr","time":18.500282475,"data":"    raise error\n"}
+,{"stream_name":"stderr","time":18.500400276,"data":"papermill.exceptions.PapermillExecutionError: \n"}
+,{"stream_name":"stderr","time":18.500410288,"data":"---------------------------------------------------------------------------\n"}
+,{"stream_name":"stderr","time":18.500415205,"data":"Exception encountered at \"In [1]\":\n"}
+,{"stream_name":"stderr","time":18.500420019,"data":"---------------------------------------------------------------------------\n"}
+,{"stream_name":"stderr","time":18.500424782,"data":"AssertionError                            Traceback (most recent call last)\n"}
+,{"stream_name":"stderr","time":18.500428959,"data":"/tmp/ipykernel_16/395304383.py in \u003ccell line: 0\u003e()\n"}
+,{"stream_name":"stderr","time":18.500433568,"data":"     23 # An invalid machine_shape is silently coerced to a single P100 -- no error, no warning. This\n"}
+,{"stream_name":"stderr","time":18.50043799,"data":"     24 # assert is the cheap failure; a run that proceeds on an unconfirmed accelerator is not.\n"}
+,{"stream_name":"stderr","time":18.500443284,"data":"---\u003e 25 assert n == 2, f\"expected 2 GPUs, got {n}. Set machine_shape=NvidiaTeslaT4.\"\n"}
+,{"stream_name":"stderr","time":18.500447887,"data":"     26 assert all(\"T4\" in x for x in names), f\"expected Tesla T4, got {names}\"\n"}
+,{"stream_name":"stderr","time":18.500453355,"data":"     27 assert all(c == (7, 5) for c in caps), f\"expected sm_75, got {caps}\"\n"}
+,{"stream_name":"stderr","time":18.500457736,"data":"\n"}
+,{"stream_name":"stderr","time":18.500462012,"data":"AssertionError: expected 2 GPUs, got 0. Set machine_shape=NvidiaTeslaT4.\n"}
+,{"stream_name":"stderr","time":18.500482988,"data":"\n"}
+,{"stream_name":"stderr","time":21.248853213,"data":"/usr/local/lib/python3.12/dist-packages/mistune.py:435: SyntaxWarning: invalid escape sequence '\\|'\n"}
+,{"stream_name":"stderr","time":21.24890213,"data":"  cells[i][c] = re.sub('\\\\\\\\\\|', '|', cell)\n"}
+,{"stream_name":"stderr","time":21.433931334,"data":"/usr/local/lib/python3.12/dist-packages/nbconvert/filters/filter_links.py:36: SyntaxWarning: invalid escape sequence '\\_'\n"}
+,{"stream_name":"stderr","time":21.433961583,"data":"  text = re.sub(r'_', '\\_', text) # Escape underscores in display text\n"}
+,{"stream_name":"stderr","time":22.131745552,"data":"[NbConvertApp] Converting notebook __notebook__.ipynb to notebook\n"}
+,{"stream_name":"stderr","time":22.513260361,"data":"[NbConvertApp] Writing 221415 bytes to __notebook__.ipynb\n"}
+,{"stream_name":"stderr","time":25.480600938,"data":"[NbConvertApp] Converting notebook __notebook__.ipynb to html\n"}
+,{"stream_name":"stderr","time":26.983487748,"data":"[NbConvertApp] Writing 1154970 bytes to __results__.html\n"}
+]

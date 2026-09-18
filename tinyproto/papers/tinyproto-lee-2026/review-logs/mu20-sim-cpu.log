@@ -1,0 +1,112 @@
+Local memory guard: tree RSS <= 3000 MiB; keep 1536 MiB available.
+simulating tinyproto-fp-mu-sweep: 17 code cells, 4 clients x 2048 rows, 2 rounds
+
+  [skip] cell 0: 2 x T4 probe (cannot pass on one local GPU)
+  [exec] cell 1: # --- the grid -------------------------------------------------------------
+  run_name               tinyproto_fp_musweep
+  scenario               20client
+  n_clients              4
+  rounds                 2
+  local_epochs           1
+  lam                    1.0
+  cps_s                  50
+  mask_seed              42
+  mu_kind                inv_mean_nij
+  mu_value               1.0
+  batch                  64
+  eval_batch             512
+  lr                     0.001
+  weight_decay           0.0001
+  betas                  [0.9, 0.999]
+  eps                    1e-08
+  clip                   1.0
+  amp                    False
+  compile                False
+  eval_group             1
+  seed                   42
+  num_classes            16
+  n_features             66
+  feature_dim            256
+  max_hours              10.5
+  rounds_this_session    None
+  require_resume         False
+  import_roots           []
+  save_preds_rounds      []
+
+grid: [0.1, 1.0]
+  [exec] cell 2: import pathlib, sys
+package dir: /tmp/tp_review_mu/proj
+  [write] cell 3: model.py
+  [write] cell 4: cps.py
+  [write] cell 5: protos.py
+  [write] cell 6: metrics.py
+  [write] cell 7: data.py
+  [write] cell 8: ckpt.py
+  [write] cell 9: evaluate.py
+  [write] cell 10: fl_worker.py
+  [write] cell 11: driver.py
+  [write] cell 12: sweep.py
+  [exec] cell 13: EXPECTED_FEATURES = ['f_rcv_pos_noise_x', 'f_rcv_pos_noise_y', 'f_rcv_spd', 
+client root: /tmp/tinyproto_fixture
+test dir   : /tmp/tinyproto_fixture/test
+train 8,192 rows across 4 clients (min 2,048 max 2,048) | test 1,024 rows
+GPU split: 2/2 clients, 4,096/4,096 rows, imbalance 0.000%
+optimizer steps per round: 128  (256 over 2 rounds)
+  [exec] cell 14: cfg = dict(CFG)
+estimated output budget: 0.54 GiB (weights, predictions, resume, margin)
+  [exec] cell 15: """Grid search for μ, selected on a TRAIN-side validation split.
+  client 000: train     2,008  val      40
+  client 001: train     2,007  val      41
+  client 002: train     2,009  val      39
+  client 003: train     2,006  val      42
+
+shared validation set: 162 rows, 0 MiB fp16, class counts [10, 13, 9, 12, 11, 8, 16, 13, 20, 15, 5, 5, 5, 8, 5, 7]
+
+======================================================================
+mu multiplier k = 0.1
+======================================================================
+[cps] {'d': 256, 'K': 16, 's': 50, 'compression_rate': 0.8046875, 'overlap_min': 0, 'overlap_max': 10, 'overlap_mean': 7.275, 'overlap_random_expectation': 9.765625, 'overlap_balanced_floor': 10, 'hamming_min': 80, 'hamming_max': 100, 'hamming_mean': 85.45, 'dims_used': 256, 'dim_usage_min': 2, 'dim_usage_max': 4}
+[resume] starting at round 1 of 2 (fingerprint ac9260da724f18fc)
+[r0]    decoded 1/4 clients, 2,048 rows, 0s
+[r0]    decoded 2/4 clients, 4,096 rows, 0s
+[r0]    decoded 3/4 clients, 6,144 rows, 0s
+[r0]    decoded 4/4 clients, 8,192 rows, 0s
+[r0] data resident: train (8192, 66) test (162, 66) (0.00 GiB) in 0s
+[r0] compile: {'enabled': False, 'reason': 'disabled by config'}
+[setup] workers ready; compile: [{'enabled': False, 'reason': 'disabled by config'}]
+[aps] mu[inv_mean_nij] = [0.0007347447073474472, 0.0007347447073474472, 0.0007347447073474472, 0.0007347447073474472] ...
+[comm] 6,150 params/round (0.0062 M), 5.1x below dense FedProto
+[round 001] ce 0.3081 reg 0.0000 | proto acc 0.8086 F1m 0.7745 | clf acc 0.6960 F1m 0.6214 | 6.9s (train 6.8s eval 0.1s) peak 0.0GB
+[round 002] ce 0.0174 reg 0.2587 | proto acc 0.8873 F1m 0.8483 | clf acc 0.7963 F1m 0.7411 | 5.3s (train 5.2s eval 0.1s) peak 0.0GB
+  -> last 0.8483  best 0.8483  mu = 7.3474e-04
+
+======================================================================
+mu multiplier k = 1.0
+======================================================================
+[cps] {'d': 256, 'K': 16, 's': 50, 'compression_rate': 0.8046875, 'overlap_min': 0, 'overlap_max': 10, 'overlap_mean': 7.275, 'overlap_random_expectation': 9.765625, 'overlap_balanced_floor': 10, 'hamming_min': 80, 'hamming_max': 100, 'hamming_mean': 85.45, 'dims_used': 256, 'dim_usage_min': 2, 'dim_usage_max': 4}
+[resume] starting at round 1 of 2 (fingerprint f56706a7957585a9)
+[r0]    decoded 1/4 clients, 2,048 rows, 0s
+[r0]    decoded 2/4 clients, 4,096 rows, 0s
+[r0]    decoded 3/4 clients, 6,144 rows, 0s
+[r0]    decoded 4/4 clients, 8,192 rows, 0s
+[r0] data resident: train (8192, 66) test (162, 66) (0.00 GiB) in 0s
+[r0] compile: {'enabled': False, 'reason': 'disabled by config'}
+[setup] workers ready; compile: [{'enabled': False, 'reason': 'disabled by config'}]
+[aps] mu[inv_mean_nij] = [0.007347447073474471, 0.007347447073474471, 0.007347447073474471, 0.007347447073474471] ...
+[comm] 6,150 params/round (0.0062 M), 5.1x below dense FedProto
+[round 001] ce 0.3081 reg 0.0000 | proto acc 0.8086 F1m 0.7745 | clf acc 0.6960 F1m 0.6214 | 5.9s (train 5.8s eval 0.1s) peak 0.0GB
+[round 002] ce 0.0082 reg 0.2810 | proto acc 0.8704 F1m 0.8337 | clf acc 0.7762 F1m 0.7383 | 5.2s (train 5.0s eval 0.1s) peak 0.0GB
+  -> last 0.8337  best 0.8337  mu = 7.3474e-03
+Winner for this scenario only: {'k': 0.1, 'mu_absolute': 0.0007347447073474472, 'criterion': 'mean-over-clients proto f1_macro at the last sweep round'}
+wrote /tmp/tp_review_mu/mu_sweep.json
+  [exec] cell 16: import pandas as pd
+     k  best_proto_f1_macro  last_proto_f1_macro  rounds
+0  0.1             0.848328             0.848328       2
+1  1.0             0.833692             0.833692       2
+
+Use in the production notebooks:
+    "mu_kind": "absolute",
+    "mu_value": 7.347447e-04,
+
+notebook simulation completed with no error
+Peak test-tree RSS: 1571 MiB; exit 0

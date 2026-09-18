@@ -1,0 +1,123 @@
+Local memory guard: tree RSS <= 3000 MiB; keep 1536 MiB available.
+simulating tinyproto-fp-calibration: 18 code cells, 4 clients x 2048 rows, 2 rounds
+
+  [skip] cell 0: 2 x T4 probe (cannot pass on one local GPU)
+  [exec] cell 1: CFG = {
+  run_name               tinyproto_fp_calib
+  scenario               20client
+  n_clients              4
+  rounds                 2
+  local_epochs           1
+  lam                    1.0
+  cps_s                  50
+  mask_seed              42
+  mu_kind                inv_mean_nij
+  mu_value               1.0
+  batch                  64
+  eval_batch             512
+  lr                     0.001
+  weight_decay           0.0001
+  betas                  [0.9, 0.999]
+  eps                    1e-08
+  clip                   1.0
+  amp                    False
+  compile                False
+  eval_group             1
+  seed                   42
+  num_classes            16
+  n_features             66
+  feature_dim            256
+  max_hours              10.0
+  rounds_this_session    None
+  require_resume         False
+  import_roots           []
+  save_preds_rounds      []
+  [exec] cell 2: import pathlib, sys
+package dir: /tmp/tp_calib_final/proj
+  [write] cell 3: model.py
+  [write] cell 4: cps.py
+  [write] cell 5: protos.py
+  [write] cell 6: metrics.py
+  [write] cell 7: data.py
+  [write] cell 8: ckpt.py
+  [write] cell 9: evaluate.py
+  [write] cell 10: fl_worker.py
+  [write] cell 11: driver.py
+  [write] cell 12: sweep.py
+  [exec] cell 13: EXPECTED_FEATURES = ['f_rcv_pos_noise_x', 'f_rcv_pos_noise_y', 'f_rcv_spd', 
+client root: /tmp/tinyproto_fixture
+test dir   : /tmp/tinyproto_fixture/test
+train 8,192 rows across 4 clients (min 2,048 max 2,048) | test 1,024 rows
+GPU split: 2/2 clients, 4,096/4,096 rows, imbalance 0.000%
+optimizer steps per round: 128  (256 over 2 rounds)
+  [exec] cell 14: cfg = dict(CFG)
+estimated output budget: 0.54 GiB (weights, predictions, resume, margin)
+  [skip] cell 15: micro-benchmarks (pass --run-bench for a smoke run)
+  [exec] cell 16: if BENCH_ONLY:
+[cps] {'d': 256, 'K': 16, 's': 50, 'compression_rate': 0.8046875, 'overlap_min': 0, 'overlap_max': 10, 'overlap_mean': 7.275, 'overlap_random_expectation': 9.765625, 'overlap_search_target': 10, 'hamming_min': 80, 'hamming_max': 100, 'hamming_mean': 85.45, 'dims_used': 256, 'dim_usage_min': 2, 'dim_usage_max': 4}
+[resume] starting at round 1 of 2 (fingerprint 570707f131e23af6)
+[r0]    decoded 1/4 clients, 2,048 rows, 0s
+[r0]    decoded 2/4 clients, 4,096 rows, 0s
+[r0]    decoded 3/4 clients, 6,144 rows, 0s
+[r0]    decoded 4/4 clients, 8,192 rows, 0s
+[r0] data resident: train (8192, 66) test (1024, 66) (0.00 GiB) in 0s
+[r0] compile: {'enabled': False, 'reason': 'disabled by config'}
+[setup] workers ready; compile: [{'enabled': False, 'reason': 'disabled by config'}]
+[aps] mu[inv_mean_nij] = [0.0072021484375, 0.0072021484375, 0.0072021484375, 0.0072021484375] ...
+[comm] 6,150 params/round (0.0062 M), 5.1x below dense FedProto
+[round 001] ce 0.3028 reg 0.0000 | proto acc 0.5676 F1m 0.4970 | clf acc 0.6692 F1m 0.6065 | 7.2s (train 6.8s eval 0.4s) peak 0.0GB
+[round 002] ce 0.0075 reg 0.2812 | proto acc 0.6960 F1m 0.6591 | clf acc 0.8330 F1m 0.7828 | 5.6s (train 5.1s eval 0.4s) peak 0.0GB
+{
+  "last_round": 2,
+  "run_dir": "/tmp/tp_calib_final/runs/tinyproto_fp_calib"
+} 
+total 16s
+
+real round times (including checkpoint commit; setup/compile excluded):
+  round 1:     7.3s (train     6.8s eval    0.4s) proto f1_macro 0.4970
+  round 2:     5.7s (train     5.1s eval    0.4s) proto f1_macro 0.6591
+
+steady-state round: 6s -> 50 rounds = 0.08 h (round 1: 7s; add measured setup/compile per session)
+  [exec] cell 17: import pandas as pd
+Completed 2/2 rounds
+
+=== rule: proto  (mean over all 4 clients, full test set) ===
+   round  proto_accuracy  proto_precision_macro  proto_precision_micro  proto_precision_weighted  proto_recall_macro  proto_recall_micro  proto_recall_weighted  proto_f1_macro  proto_f1_micro  proto_f1_weighted
+0      1        0.567627               0.626485               0.567627                  0.629294            0.566485            0.567627               0.567627        0.497044        0.567627           0.498755
+1      2        0.696045               0.789106               0.696045                  0.789853            0.693467            0.696045               0.696045        0.659106        0.696045           0.661719
+
+=== rule: clf  (mean over all 4 clients, full test set) ===
+   round  clf_accuracy  clf_precision_macro  clf_precision_micro  clf_precision_weighted  clf_recall_macro  clf_recall_micro  clf_recall_weighted  clf_f1_macro  clf_f1_micro  clf_f1_weighted
+0      1      0.669189             0.663708             0.669189                0.667381          0.668482          0.669189             0.669189      0.606505      0.669189         0.607815
+1      2      0.833008             0.797968             0.833008                0.794060          0.830871          0.833008             0.833008      0.782759      0.833008         0.782874
+
+last completed round (primary report): 2
+
+--- per-class, round 2, rule=proto (pooled over clients) ---
+                         class  support  precision  recall      f1
+0                       benign      272     1.0000  0.3603  0.5297
+1   accelerationMultiplication      308     0.9545  0.7500  0.8400
+2       constantPositionOffset      268     0.2971  0.7537  0.4262
+3          constantSpeedOffset      236     0.9945  0.7712  0.8687
+4                   dataReplay      228     0.6036  0.7281  0.6600
+5                    dosAttack      236     1.0000  0.9873  0.9936
+6               feignedBraking      284     0.9907  0.7535  0.8560
+7            positionMirroring      244     0.6246  0.8115  0.7059
+8         randomPositionOffset      240     1.0000  0.4125  0.5841
+9            randomSpeedOffset      248     1.0000  0.4879  0.6558
+10             reversedHeading      236     0.6728  0.9237  0.7786
+11         suddenConstantSpeed      260     0.5222  0.9962  0.6852
+12                  suddenStop      240     1.0000  0.1167  0.2090
+13             timeDelayAttack      224     1.0000  0.6607  0.7957
+14      trafficCongestionSybil      268     0.6147  0.7500  0.6756
+15             zeroSpeedReport      304     0.8188  0.8322  0.8254
+
+--- spread across clients, round 2 ---
+  proto f1_macro mean 0.6591 std 0.1165 min 0.4861 max 0.7702 | pooled 0.6931
+  clf   f1_macro mean 0.7828 std 0.0734 min 0.6718 max 0.8693 | pooled 0.8232
+
+communication: 6,150 params/round (5.12x below dense FedProto)
+
+notebook simulation completed with no error
+committed rounds: ['round_001.done', 'round_002.done']
+Peak test-tree RSS: 1547 MiB; exit 0

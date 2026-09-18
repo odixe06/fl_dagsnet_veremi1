@@ -1,0 +1,21 @@
+clean run: exit 0  430 checks passed, 0 failed
+  [CAUGHT ] history.csv accuracy               exit 1
+             FAIL  round 1/proto: history.csv accuracy disagrees with round JSON
+  [CAUGHT ] NaN in one weight                  exit 1
+             FAIL  artifact integrity failed: weights/round_004.pt
+  [CAUGHT ] duplicated client log row          exit 1
+             FAIL  artifact integrity failed: client_log/round_004.csv
+  [CAUGHT ] altered local prototype            exit 1
+             FAIL  artifact integrity failed: protos/round_004.pt
+  [CAUGHT ] altered resume global prototype    exit 1
+             FAIL  artifact integrity failed: resume/round_004.pt
+  [CAUGHT ] altered confusion count            exit 1
+             FAIL  artifact integrity failed: confusion/round_004.npz
+  [CAUGHT ] altered per-client metric          exit 1
+             FAIL  artifact integrity failed: metrics/round_004.json
+  [CAUGHT ] deleted weights file               exit 1
+             FAIL  artifact integrity failed: weights/round_004.pt
+  [CAUGHT ] stale resume blob left behind      exit 1
+             FAIL  superseded resume blobs were not pruned: ['round_001.pt']
+
+ALL TAMPERS CAUGHT

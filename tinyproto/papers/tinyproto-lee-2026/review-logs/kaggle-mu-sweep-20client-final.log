@@ -1,0 +1,656 @@
+[{"stream_name":"stderr","time":6.153563058,"data":"0.00s - Debugger warning: It seems that frozen modules are being used, which may\n"}
+,{"stream_name":"stderr","time":6.15361716,"data":"0.00s - make the debugger miss breakpoints. Please pass -Xfrozen_modules=off\n"}
+,{"stream_name":"stderr","time":6.153622715,"data":"0.00s - to python to disable frozen modules.\n"}
+,{"stream_name":"stderr","time":6.153626449,"data":"0.00s - Note: Debugging will proceed. Set PYDEVD_DISABLE_FILE_VALIDATION=1 to disable this validation.\n"}
+,{"stream_name":"stderr","time":6.717756284,"data":"0.00s - Debugger warning: It seems that frozen modules are being used, which may\n"}
+,{"stream_name":"stderr","time":6.717786824,"data":"0.00s - make the debugger miss breakpoints. Please pass -Xfrozen_modules=off\n"}
+,{"stream_name":"stderr","time":6.717791631,"data":"0.00s - to python to disable frozen modules.\n"}
+,{"stream_name":"stderr","time":6.717795608,"data":"0.00s - Note: Debugging will proceed. Set PYDEVD_DISABLE_FILE_VALIDATION=1 to disable this validation.\n"}
+,{"stream_name":"stdout","time":11.895924085,"data":"python 3.12.13 | torch 2.10.0+cu128 | cuda 12.8\n"}
+,{"stream_name":"stdout","time":11.895982018,"data":"GPU 0: Tesla T4 (UUID: GPU-fcb16405-600f-d992-52f4-63bd652c55b0)\n"}
+,{"stream_name":"stdout","time":11.895990143,"data":"GPU 1: Tesla T4 (UUID: GPU-a81601bf-cb60-ce04-de0e-4ef6accad375)\n"}
+,{"stream_name":"stdout","time":11.895996711,"data":"\n"}
+,{"stream_name":"stdout","time":11.90493807,"data":"  cuda:0 Tesla T4 14.6 GB sm_75 SMs 40\n"}
+,{"stream_name":"stdout","time":11.904962302,"data":"  cuda:1 Tesla T4 14.6 GB sm_75 SMs 40\n"}
+,{"stream_name":"stdout","time":11.904967821,"data":"cpu: 4 | RAM GB: 31.3 | free on /kaggle/working GB: 19.5\n"}
+,{"stream_name":"stdout","time":11.90497212,"data":"free on /kaggle/temp GB: n/a\n"}
+,{"stream_name":"stdout","time":11.90497617,"data":"\n"}
+,{"stream_name":"stdout","time":11.904981107,"data":"OK: 2 x Tesla T4 (sm_75) confirmed before any training.\n"}
+,{"stream_name":"stdout","time":11.937550625,"data":"  run_name               tinyproto_fp_musweep\n"}
+,{"stream_name":"stdout","time":11.937576548,"data":"  scenario               20client\n"}
+,{"stream_name":"stdout","time":11.937582672,"data":"  n_clients              20\n"}
+,{"stream_name":"stdout","time":11.937587102,"data":"  rounds                 4\n"}
+,{"stream_name":"stdout","time":11.937591285,"data":"  local_epochs           1\n"}
+,{"stream_name":"stdout","time":11.937595474,"data":"  lam                    1.0\n"}
+,{"stream_name":"stdout","time":11.937599872,"data":"  cps_s                  50\n"}
+,{"stream_name":"stdout","time":11.937604364,"data":"  mask_seed              42\n"}
+,{"stream_name":"stdout","time":11.937608545,"data":"  mu_kind                inv_mean_nij\n"}
+,{"stream_name":"stdout","time":11.937612812,"data":"  mu_value               1.0\n"}
+,{"stream_name":"stdout","time":11.937616938,"data":"  batch                  512\n"}
+,{"stream_name":"stdout","time":11.937621178,"data":"  eval_batch             8192\n"}
+,{"stream_name":"stdout","time":11.937625339,"data":"  lr                     0.001\n"}
+,{"stream_name":"stdout","time":11.937629596,"data":"  weight_decay           0.0001\n"}
+,{"stream_name":"stdout","time":11.937633834,"data":"  betas                  [0.9, 0.999]\n"}
+,{"stream_name":"stdout","time":11.937638199,"data":"  eps                    1e-08\n"}
+,{"stream_name":"stdout","time":11.937644051,"data":"  clip                   1.0\n"}
+,{"stream_name":"stdout","time":11.937652757,"data":"  amp                    True\n"}
+,{"stream_name":"stdout","time":11.937655987,"data":"  compile                True\n"}
+,{"stream_name":"stdout","time":11.937685132,"data":"  eval_group             1\n"}
+,{"stream_name":"stdout","time":11.937689445,"data":"  seed                   42\n"}
+,{"stream_name":"stdout","time":11.937693082,"data":"  num_classes            16\n"}
+,{"stream_name":"stdout","time":11.937696897,"data":"  n_features             66\n"}
+,{"stream_name":"stdout","time":11.937700792,"data":"  feature_dim            256\n"}
+,{"stream_name":"stdout","time":11.9377046,"data":"  max_hours              11.0\n"}
+,{"stream_name":"stdout","time":11.937709091,"data":"  rounds_this_session    None\n"}
+,{"stream_name":"stdout","time":11.937713149,"data":"  require_resume         False\n"}
+,{"stream_name":"stdout","time":11.937716597,"data":"  expected_round_s       600.0\n"}
+,{"stream_name":"stdout","time":11.937719842,"data":"  import_roots           ['/kaggle/input']\n"}
+,{"stream_name":"stdout","time":11.937723829,"data":"  save_preds_rounds      []\n"}
+,{"stream_name":"stdout","time":11.937728109,"data":"\n"}
+,{"stream_name":"stdout","time":11.937732079,"data":"grid: [0.03, 0.1, 0.3, 1.0, 3.0]\n"}
+,{"stream_name":"stdout","time":11.965986663,"data":"package dir: /kaggle/working/proj\n"}
+,{"stream_name":"stdout","time":11.988950469,"data":"Writing /kaggle/working/proj/model.py\n"}
+,{"stream_name":"stdout","time":12.009322736,"data":"Writing /kaggle/working/proj/cps.py\n"}
+,{"stream_name":"stdout","time":12.031151671,"data":"Writing /kaggle/working/proj/protos.py\n"}
+,{"stream_name":"stdout","time":12.055541459,"data":"Writing /kaggle/working/proj/metrics.py\n"}
+,{"stream_name":"stdout","time":12.090108129,"data":"Writing /kaggle/working/proj/data.py\n"}
+,{"stream_name":"stdout","time":12.117918544,"data":"Writing /kaggle/working/proj/ckpt.py\n"}
+,{"stream_name":"stdout","time":12.143588399,"data":"Writing /kaggle/working/proj/evaluate.py\n"}
+,{"stream_name":"stdout","time":12.174133198,"data":"Writing /kaggle/working/proj/fl_worker.py\n"}
+,{"stream_name":"stdout","time":12.202270945,"data":"Writing /kaggle/working/proj/driver.py\n"}
+,{"stream_name":"stdout","time":12.223977367,"data":"Writing /kaggle/working/proj/sweep.py\n"}
+,{"stream_name":"stdout","time":13.471629081,"data":"client root: /kaggle/input/datasets/odixe0502/veremi-fl-20client/20_client\n"}
+,{"stream_name":"stdout","time":13.471659218,"data":"test dir   : /kaggle/input/datasets/odixe0502/veremi-nextgen2026-centralized/upload/test\n"}
+,{"stream_name":"stdout","time":15.024729058,"data":"train 43,045,415 rows across 20 clients (min 870,217 max 5,890,990) | test 10,761,343 rows\n"}
+,{"stream_name":"stdout","time":15.024769878,"data":"GPU split: 10/10 clients, 21,945,288/21,100,127 rows, imbalance 1.963%\n"}
+,{"stream_name":"stdout","time":15.024775089,"data":"optimizer steps per round: 84,083  (336,332 over 4 rounds)\n"}
+,{"stream_name":"stdout","time":16.147451318,"data":"mu protocol v1 confirmed: {'grid': [0.03, 0.1, 0.3, 1.0, 3.0], 'rounds': 4, 'val_fraction': 0.02, 'val_seed': 42}\n"}
+,{"stream_name":"stdout","time":16.147479693,"data":"estimated output budget: 2.10 GiB (5 run(s) x 0.24 GiB + 0.42 GiB split cache + margin); free 19.5 GiB\n"}
+,{"stream_name":"stdout","time":16.603453614,"data":" candidate                           run_name  committed  claimed  action\n"}
+,{"stream_name":"stdout","time":16.603491373,"data":"      0.03             musweep_20client_k0p03          0        0  start fresh\n"}
+,{"stream_name":"stdout","time":16.603495694,"data":"       0.1              musweep_20client_k0p1          0        0  start fresh\n"}
+,{"stream_name":"stdout","time":16.603512845,"data":"       0.3              musweep_20client_k0p3          0        0  start fresh\n"}
+,{"stream_name":"stdout","time":16.603531912,"data":"       1.0              musweep_20client_k1p0          0        0  start fresh\n"}
+,{"stream_name":"stdout","time":16.603536875,"data":"       3.0              musweep_20client_k3p0          0        0  start fresh\n"}
+,{"stream_name":"stdout","time":20.018012683,"data":"  client 000: train 3,285,704  val  67,044\n"}
+,{"stream_name":"stdout","time":21.851792777,"data":"  client 001: train 1,748,200  val  35,672\n"}
+,{"stream_name":"stdout","time":24.625028286,"data":"  client 002: train 2,599,771  val  53,048\n"}
+,{"stream_name":"stdout","time":26.182910352,"data":"  client 003: train 1,426,460  val  29,106\n"}
+,{"stream_name":"stdout","time":28.119123868,"data":"  client 004: train 1,827,250  val  37,284\n"}
+,{"stream_name":"stdout","time":30.152331904,"data":"  client 005: train 1,893,602  val  38,636\n"}
+,{"stream_name":"stdout","time":33.552423424,"data":"  client 006: train 3,305,144  val  67,443\n"}
+,{"stream_name":"stdout","time":35.176966859,"data":"  client 007: train 1,442,766  val  29,437\n"}
+,{"stream_name":"stdout","time":38.223732279,"data":"  client 008: train 2,788,723  val  56,903\n"}
+,{"stream_name":"stdout","time":39.569841273,"data":"  client 009: train 1,216,032  val  24,809\n"}
+,{"stream_name":"stdout","time":42.354361059,"data":"  client 010: train 2,617,944  val  53,422\n"}
+,{"stream_name":"stdout","time":44.334232856,"data":"  client 011: train 1,814,032  val  37,014\n"}
+,{"stream_name":"stdout","time":46.190823734,"data":"  client 012: train 1,466,048  val  29,912\n"}
+,{"stream_name":"stdout","time":48.130747241,"data":"  client 013: train 1,744,060  val  35,585\n"}
+,{"stream_name":"stdout","time":51.236831206,"data":"  client 014: train 3,002,328  val  61,266\n"}
+,{"stream_name":"stdout","time":52.595381775999996,"data":"  client 015: train 1,188,708  val  24,249\n"}
+,{"stream_name":"stdout","time":53.662621032,"data":"  client 016: train   852,820  val  17,397\n"}
+,{"stream_name":"stdout","time":59.623672364,"data":"  client 017: train 5,773,177  val 117,813\n"}
+,{"stream_name":"stdout","time":60.838544912,"data":"  client 018: train 1,042,197  val  21,261\n"}
+,{"stream_name":"stdout","time":62.136204879,"data":"  client 019: train 1,149,692  val  23,456\n"}
+,{"stream_name":"stdout","time":62.972388547,"data":"\n"}
+,{"stream_name":"stdout","time":62.972425581,"data":"shared validation set: 860,757 rows, 108 MiB fp16, class counts [191281, 12588, 35388, 34645, 38022, 125917, 9480, 37356, 37610, 43365, 21591, 4610, 16909, 39236, 191459, 21300]\n"}
+,{"stream_name":"stdout","time":63.967994323,"data":"\n"}
+,{"stream_name":"stdout","time":63.968035772,"data":"======================================================================\n"}
+,{"stream_name":"stdout","time":63.96804085,"data":"mu multiplier k = 0.03\n"}
+,{"stream_name":"stdout","time":63.968060566,"data":"======================================================================\n"}
+,{"stream_name":"stdout","time":64.168980604,"data":"[cps] {'d': 256, 'K': 16, 's': 50, 'compression_rate': 0.8046875, 'overlap_min': 0, 'overlap_max': 10, 'overlap_mean': 7.275, 'overlap_random_expectation': 9.765625, 'overlap_search_target': 10, 'hamming_min': 80, 'hamming_max': 100, 'hamming_mean': 85.45, 'dims_used': 256, 'dim_usage_min': 2, 'dim_usage_max': 4}\n"}
+,{"stream_name":"stdout","time":64.169017184,"data":"[resume] starting at round 1 of 4 (fingerprint 6f2746772650004f)\n"}
+,{"stream_name":"stdout","time":72.691343744,"data":"[r0]    decoded 2/10 clients, 3,404,441 rows, 5s\n"}
+,{"stream_name":"stdout","time":72.899899127,"data":"[r0]    decoded 2/10 clients, 3,404,441 rows, 5s\n"}
+,{"stream_name":"stdout","time":75.489029497,"data":"[r1]    decoded 2/10 clients, 5,136,620 rows, 8s\n"}
+,{"stream_name":"stdout","time":75.693351195,"data":"[r1]    decoded 2/10 clients, 5,136,620 rows, 8s\n"}
+,{"stream_name":"stdout","time":77.906830121,"data":"[r0]    decoded 4/10 clients, 7,316,648 rows, 10s\n"}
+,{"stream_name":"stdout","time":78.14066716,"data":"[r0]    decoded 4/10 clients, 7,316,648 rows, 10s\n"}
+,{"stream_name":"stdout","time":81.086966809,"data":"[r1]    decoded 4/10 clients, 9,245,005 rows, 13s\n"}
+,{"stream_name":"stdout","time":81.291024315,"data":"[r1]    decoded 4/10 clients, 9,245,005 rows, 13s\n"}
+,{"stream_name":"stdout","time":82.716153709,"data":"[r0]    decoded 6/10 clients, 10,947,339 rows, 15s\n"}
+,{"stream_name":"stdout","time":82.921754628,"data":"[r0]    decoded 6/10 clients, 10,947,339 rows, 15s\n"}
+,{"stream_name":"stdout","time":87.788403288,"data":"[r0]    decoded 8/10 clients, 14,881,150 rows, 20s\n"}
+,{"stream_name":"stdout","time":87.788843733,"data":"[r1]    decoded 6/10 clients, 14,482,126 rows, 20s\n"}
+,{"stream_name":"stdout","time":87.999007284,"data":"[r0]    decoded 8/10 clients, 14,881,150 rows, 20s\n"}
+,{"stream_name":"stdout","time":88.000305478,"data":"[r1]    decoded 6/10 clients, 14,482,126 rows, 20s\n"}
+,{"stream_name":"stdout","time":94.139649209,"data":"[r1]    decoded 8/10 clients, 18,823,712 rows, 26s\n"}
+,{"stream_name":"stdout","time":94.343561223,"data":"[r1]    decoded 8/10 clients, 18,823,712 rows, 26s\n"}
+,{"stream_name":"stdout","time":96.961973349,"data":"[r1]    decoded 10/10 clients, 21,100,127 rows, 29s\n"}
+,{"stream_name":"stdout","time":97.165340245,"data":"[r1]    decoded 10/10 clients, 21,100,127 rows, 29s\n"}
+,{"stream_name":"stdout","time":97.436483619,"data":"[r0]    decoded 10/10 clients, 21,945,288 rows, 30s\n"}
+,{"stream_name":"stdout","time":97.639450603,"data":"[r0]    decoded 10/10 clients, 21,945,288 rows, 30s\n"}
+,{"stream_name":"stdout","time":98.289702494,"data":"[r1] data resident: train (21100127, 66) test (860757, 66) (2.70 GiB) in 31s\n"}
+,{"stream_name":"stdout","time":98.49245226,"data":"[r1] data resident: train (21100127, 66) test (860757, 66) (2.70 GiB) in 31s\n"}
+,{"stream_name":"stdout","time":98.754563812,"data":"[r0] data resident: train (21945288, 66) test (860757, 66) (2.80 GiB) in 32s\n"}
+,{"stream_name":"stdout","time":98.957472385,"data":"[r0] data resident: train (21945288, 66) test (860757, 66) (2.80 GiB) in 32s\n"}
+,{"stream_name":"stderr","time":116.842928655,"data":"W0907 23:59:59.368000 67 torch/_inductor/utils.py:1679] [0/0] Not enough SMs to use max_autotune_gemm mode\n"}
+,{"stream_name":"stderr","time":116.847652839,"data":"W0907 23:59:59.373000 66 torch/_inductor/utils.py:1679] [0/0] Not enough SMs to use max_autotune_gemm mode\n"}
+,{"stream_name":"stderr","time":117.058309513,"data":"W0907 23:59:59.368000 67 torch/_inductor/utils.py:1679] [0/0] Not enough SMs to use max_autotune_gemm mode\n"}
+,{"stream_name":"stderr","time":117.058335394,"data":"W0907 23:59:59.373000 66 torch/_inductor/utils.py:1679] [0/0] Not enough SMs to use max_autotune_gemm mode\n"}
+,{"stream_name":"stderr","time":117.058340576,"data":"\n"}
+,{"stream_name":"stderr","time":117.058688251,"data":"W0907 23:59:59.368000 67 torch/_inductor/utils.py:1679] [0/0] Not enough SMs to use max_autotune_gemm mode\n"}
+,{"stream_name":"stderr","time":117.058702068,"data":"W0907 23:59:59.373000 66 torch/_inductor/utils.py:1679] [0/0] Not enough SMs to use max_autotune_gemm mode\n"}
+,{"stream_name":"stdout","time":201.45782317,"data":"[r1] compile: {'enabled': True, 'max_abs_dlogit': 4.172325134277344e-07, 'decisive_rows': 511, 'disagreements': 0, 'amp_max_abs_dlogit': 0.000732421875, 'amp_decisive_rows': 497, 'amp_disagreements': 0}\n"}
+,{"stream_name":"stdout","time":201.668892235,"data":"[r1] compile: {'enabled': True, 'max_abs_dlogit': 4.172325134277344e-07, 'decisive_rows': 511, 'disagreements': 0, 'amp_max_abs_dlogit': 0.000732421875, 'amp_decisive_rows': 497, 'amp_disagreements': 0}\n"}
+,{"stream_name":"stdout","time":201.844785264,"data":"[r0] compile: {'enabled': True, 'max_abs_dlogit': 3.5762786865234375e-07, 'decisive_rows': 508, 'disagreements': 0, 'amp_max_abs_dlogit': 0.00048828125, 'amp_decisive_rows': 502, 'amp_disagreements': 0}\n"}
+,{"stream_name":"stdout","time":202.047568675,"data":"[r0] compile: {'enabled': True, 'max_abs_dlogit': 3.5762786865234375e-07, 'decisive_rows': 508, 'disagreements': 0, 'amp_max_abs_dlogit': 0.00048828125, 'amp_decisive_rows': 502, 'amp_disagreements': 0}\n"}
+,{"stream_name":"stdout","time":202.047643608,"data":"[setup] workers ready; compile: [{'enabled': True, 'max_abs_dlogit': 3.5762786865234375e-07, 'decisive_rows': 508, 'disagreements': 0, 'amp_max_abs_dlogit': 0.00048828125, 'amp_decisive_rows': 502, 'amp_disagreements': 0}, {'enabled': True, 'max_abs_dlogit': 4.172325134277344e-07, 'decisive_rows': 511, 'disagreements': 0, 'amp_max_abs_dlogit': 0.000732421875, 'amp_decisive_rows': 497, 'amp_disagreements': 0}]\n"}
+,{"stream_name":"stdout","time":202.047650578,"data":"[aps] mu[inv_mean_nij] = [2.2757088607901005e-07, 2.2757088607901005e-07, 2.2757088607901005e-07, 2.2757088607901005e-07] ...\n"}
+,{"stream_name":"stdout","time":202.047654326,"data":"[comm] 32,000 params/round (0.0320 M), 5.1x below dense FedProto\n"}
+,{"stream_name":"stdout","time":202.047657901,"data":"[budget] no local timing yet; using expected_round_s 600s\n"}
+,{"stream_name":"stdout","time":231.928472871,"data":"[r1] round 1 client 6 step 4689/6456\n"}
+,{"stream_name":"stdout","time":231.934186199,"data":"[r0] round 1 client 17 step 4578/11276\n"}
+,{"stream_name":"stdout","time":232.144805495,"data":"[r1] round 1 client 6 step 4689/6456\n"}
+,{"stream_name":"stdout","time":232.144832068,"data":"[r0] round 1 client 17 step 4578/11276\n"}
+,{"stream_name":"stdout","time":261.938721148,"data":"[r0] round 1 client 17 step 8948/11276\n"}
+,{"stream_name":"stdout","time":262.141206619,"data":"[r0] round 1 client 17 step 8948/11276\n"}
+,{"stream_name":"stdout","time":294.151935089,"data":"[r1] round 1 client 0 step 4510/6418\n"}
+,{"stream_name":"stdout","time":294.366341905,"data":"[r1] round 1 client 0 step 4510/6418\n"}
+,{"stream_name":"stdout","time":341.645344076,"data":"[r0] round 1 client 14 step 4450/5864\n"}
+,{"stream_name":"stdout","time":341.862996701,"data":"[r0] round 1 client 14 step 4450/5864\n"}
+,{"stream_name":"stdout","time":356.130393619,"data":"[r1] round 1 client 8 step 4516/5447\n"}
+,{"stream_name":"stdout","time":356.333449769,"data":"[r1] round 1 client 8 step 4516/5447\n"}
+,{"stream_name":"stdout","time":400.812900155,"data":"[r0] round 1 client 10 step 4477/5114\n"}
+,{"stream_name":"stdout","time":401.027464197,"data":"[r0] round 1 client 10 step 4477/5114\n"}
+,{"stream_name":"stdout","time":409.715738373,"data":"[r1] round 1 client 2 step 4546/5078\n"}
+,{"stream_name":"stdout","time":409.918296597,"data":"[r1] round 1 client 2 step 4546/5078\n"}
+,{"stream_name":"stdout","time":668.052432948,"data":"[round 001] ce 0.1932 reg 0.0000 | proto acc 0.6013 F1m 0.5890 | clf acc 0.5352 F1m 0.4890 | 464.7s (train 431.0s eval 32.7s) peak 3.5GB\n"}
+,{"stream_name":"stdout","time":697.854032664,"data":"[r1] round 2 client 6 step 4484/6456\n"}
+,{"stream_name":"stdout","time":697.856007195,"data":"[r0] round 2 client 17 step 4271/11276\n"}
+,{"stream_name":"stdout","time":698.069526137,"data":"[r1] round 2 client 6 step 4484/6456\n"}
+,{"stream_name":"stdout","time":698.069552333,"data":"[r0] round 2 client 17 step 4271/11276\n"}
+,{"stream_name":"stdout","time":727.859581117,"data":"[r0] round 2 client 17 step 8610/11276\n"}
+,{"stream_name":"stdout","time":728.062265747,"data":"[r0] round 2 client 17 step 8610/11276\n"}
+,{"stream_name":"stdout","time":756.86771881,"data":"[r1] round 2 client 0 step 4473/6418\n"}
+,{"stream_name":"stdout","time":757.081575844,"data":"[r1] round 2 client 0 step 4473/6418\n"}
+,{"stream_name":"stdout","time":805.827421183,"data":"[r0] round 2 client 14 step 4410/5864\n"}
+,{"stream_name":"stdout","time":806.042374062,"data":"[r0] round 2 client 14 step 4410/5864\n"}
+,{"stream_name":"stdout","time":815.695307037,"data":"[r1] round 2 client 8 step 4497/5447\n"}
+,{"stream_name":"stdout","time":815.897955716,"data":"[r1] round 2 client 8 step 4497/5447\n"}
+,{"stream_name":"stdout","time":861.085251732,"data":"[r0] round 2 client 10 step 4417/5114\n"}
+,{"stream_name":"stdout","time":861.30106971,"data":"[r0] round 2 client 10 step 4417/5114\n"}
+,{"stream_name":"stdout","time":865.622827013,"data":"[r1] round 2 client 2 step 4487/5078\n"}
+,{"stream_name":"stdout","time":865.825222924,"data":"[r1] round 2 client 2 step 4487/5078\n"}
+,{"stream_name":"stdout","time":1098.308694424,"data":"[round 002] ce 0.0946 reg 0.0203 | proto acc 0.6090 F1m 0.6242 | clf acc 0.5466 F1m 0.5155 | 429.3s (train 396.9s eval 31.9s) peak 3.5GB\n"}
+,{"stream_name":"stdout","time":1128.116763149,"data":"[r1] round 3 client 6 step 4468/6456\n"}
+,{"stream_name":"stdout","time":1128.119934025,"data":"[r0] round 3 client 17 step 4252/11276\n"}
+,{"stream_name":"stdout","time":1128.332213402,"data":"[r1] round 3 client 6 step 4468/6456\n"}
+,{"stream_name":"stdout","time":1128.332290752,"data":"[r0] round 3 client 17 step 4252/11276\n"}
+,{"stream_name":"stdout","time":1158.125443129,"data":"[r0] round 3 client 17 step 8557/11276\n"}
+,{"stream_name":"stdout","time":1158.32779139,"data":"[r0] round 3 client 17 step 8557/11276\n"}
+,{"stream_name":"stdout","time":1187.224339381,"data":"[r1] round 3 client 0 step 4470/6418\n"}
+,{"stream_name":"stdout","time":1187.447260795,"data":"[r1] round 3 client 0 step 4470/6418\n"}
+,{"stream_name":"stdout","time":1236.402362696,"data":"[r0] round 3 client 14 step 4411/5864\n"}
+,{"stream_name":"stdout","time":1236.617230873,"data":"[r0] round 3 client 14 step 4411/5864\n"}
+,{"stream_name":"stdout","time":1246.277063391,"data":"[r1] round 3 client 8 step 4504/5447\n"}
+,{"stream_name":"stdout","time":1246.48032911,"data":"[r1] round 3 client 8 step 4504/5447\n"}
+,{"stream_name":"stdout","time":1291.534185712,"data":"[r0] round 3 client 10 step 4417/5114\n"}
+,{"stream_name":"stdout","time":1291.751223422,"data":"[r0] round 3 client 10 step 4417/5114\n"}
+,{"stream_name":"stdout","time":1296.300647115,"data":"[r1] round 3 client 2 step 4493/5078\n"}
+,{"stream_name":"stdout","time":1296.503661852,"data":"[r1] round 3 client 2 step 4493/5078\n"}
+,{"stream_name":"stdout","time":1528.725883365,"data":"[round 003] ce 0.0669 reg 0.0026 | proto acc 0.6036 F1m 0.6263 | clf acc 0.5407 F1m 0.5103 | 429.4s (train 397.2s eval 31.7s) peak 3.5GB\n"}
+,{"stream_name":"stdout","time":1558.529547933,"data":"[r0] round 4 client 17 step 4249/11276\n"}
+,{"stream_name":"stdout","time":1558.531560039,"data":"[r1] round 4 client 6 step 4473/6456\n"}
+,{"stream_name":"stdout","time":1558.744431322,"data":"[r0] round 4 client 17 step 4249/11276\n"}
+,{"stream_name":"stdout","time":1558.744458098,"data":"[r1] round 4 client 6 step 4473/6456\n"}
+,{"stream_name":"stdout","time":1588.536609482,"data":"[r0] round 4 client 17 step 8577/11276\n"}
+,{"stream_name":"stdout","time":1588.73962473,"data":"[r0] round 4 client 17 step 8577/11276\n"}
+,{"stream_name":"stdout","time":1617.639318935,"data":"[r1] round 4 client 0 step 4478/6418\n"}
+,{"stream_name":"stdout","time":1617.852651711,"data":"[r1] round 4 client 0 step 4478/6418\n"}
+,{"stream_name":"stdout","time":1666.762857419,"data":"[r0] round 4 client 14 step 4403/5864\n"}
+,{"stream_name":"stdout","time":1666.979773933,"data":"[r0] round 4 client 14 step 4403/5864\n"}
+,{"stream_name":"stdout","time":1676.443333428,"data":"[r1] round 4 client 8 step 4504/5447\n"}
+,{"stream_name":"stdout","time":1676.645929761,"data":"[r1] round 4 client 8 step 4504/5447\n"}
+,{"stream_name":"stdout","time":1722.003116749,"data":"[r0] round 4 client 10 step 4427/5114\n"}
+,{"stream_name":"stdout","time":1722.218598193,"data":"[r0] round 4 client 10 step 4427/5114\n"}
+,{"stream_name":"stdout","time":1726.214310634,"data":"[r1] round 4 client 2 step 4502/5078\n"}
+,{"stream_name":"stdout","time":1726.416626917,"data":"[r1] round 4 client 2 step 4502/5078\n"}
+,{"stream_name":"stdout","time":1958.633428171,"data":"[round 004] ce 0.0539 reg 0.0020 | proto acc 0.6066 F1m 0.6302 | clf acc 0.5417 F1m 0.5174 | 428.9s (train 396.8s eval 31.6s) peak 3.5GB\n"}
+,{"stream_name":"stdout","time":1962.071043198,"data":"  -\u003e last 0.6302  best 0.6302  mu = 2.2757e-07\n"}
+,{"stream_name":"stdout","time":1962.071068771,"data":"\n"}
+,{"stream_name":"stdout","time":1962.071074811,"data":"======================================================================\n"}
+,{"stream_name":"stdout","time":1962.071080059,"data":"mu multiplier k = 0.1\n"}
+,{"stream_name":"stdout","time":1962.071084737,"data":"======================================================================\n"}
+,{"stream_name":"stdout","time":1962.191587702,"data":"[cps] {'d': 256, 'K': 16, 's': 50, 'compression_rate': 0.8046875, 'overlap_min': 0, 'overlap_max': 10, 'overlap_mean': 7.275, 'overlap_random_expectation': 9.765625, 'overlap_search_target': 10, 'hamming_min': 80, 'hamming_max': 100, 'hamming_mean': 85.45, 'dims_used': 256, 'dim_usage_min': 2, 'dim_usage_max': 4}\n"}
+,{"stream_name":"stdout","time":1962.191613625,"data":"[resume] starting at round 1 of 4 (fingerprint a54f804e5b9f2f92)\n"}
+,{"stream_name":"stdout","time":1970.931676002,"data":"[r0]    decoded 2/10 clients, 3,404,441 rows, 5s\n"}
+,{"stream_name":"stdout","time":1971.136973473,"data":"[r0]    decoded 2/10 clients, 3,404,441 rows, 5s\n"}
+,{"stream_name":"stdout","time":1972.461333255,"data":"[r1]    decoded 2/10 clients, 5,136,620 rows, 7s\n"}
+,{"stream_name":"stdout","time":1972.668715783,"data":"[r1]    decoded 2/10 clients, 5,136,620 rows, 7s\n"}
+,{"stream_name":"stdout","time":1976.04683377,"data":"[r0]    decoded 4/10 clients, 7,316,648 rows, 10s\n"}
+,{"stream_name":"stdout","time":1976.253662294,"data":"[r0]    decoded 4/10 clients, 7,316,648 rows, 10s\n"}
+,{"stream_name":"stdout","time":1978.248705037,"data":"[r1]    decoded 4/10 clients, 9,245,005 rows, 13s\n"}
+,{"stream_name":"stdout","time":1978.453416804,"data":"[r1]    decoded 4/10 clients, 9,245,005 rows, 13s\n"}
+,{"stream_name":"stdout","time":1981.02752208,"data":"[r0]    decoded 6/10 clients, 10,947,339 rows, 15s\n"}
+,{"stream_name":"stdout","time":1981.238850049,"data":"[r0]    decoded 6/10 clients, 10,947,339 rows, 15s\n"}
+,{"stream_name":"stdout","time":1985.409586893,"data":"[r1]    decoded 6/10 clients, 14,482,126 rows, 20s\n"}
+,{"stream_name":"stdout","time":1985.615081357,"data":"[r1]    decoded 6/10 clients, 14,482,126 rows, 20s\n"}
+,{"stream_name":"stdout","time":1986.75048051,"data":"[r0]    decoded 8/10 clients, 14,881,150 rows, 21s\n"}
+,{"stream_name":"stdout","time":1986.956332832,"data":"[r0]    decoded 8/10 clients, 14,881,150 rows, 21s\n"}
+,{"stream_name":"stdout","time":1991.773875192,"data":"[r1]    decoded 8/10 clients, 18,823,712 rows, 26s\n"}
+,{"stream_name":"stdout","time":1992.087493182,"data":"[r1]    decoded 8/10 clients, 18,823,712 rows, 26s\n"}
+,{"stream_name":"stdout","time":1994.700231758,"data":"[r1]    decoded 10/10 clients, 21,100,127 rows, 29s\n"}
+,{"stream_name":"stdout","time":1994.902658804,"data":"[r1]    decoded 10/10 clients, 21,100,127 rows, 29s\n"}
+,{"stream_name":"stdout","time":1995.62669018,"data":"[r0]    decoded 10/10 clients, 21,945,288 rows, 30s\n"}
+,{"stream_name":"stdout","time":1995.830037113,"data":"[r0]    decoded 10/10 clients, 21,945,288 rows, 30s\n"}
+,{"stream_name":"stdout","time":1995.938181967,"data":"[r1] data resident: train (21100127, 66) test (860757, 66) (2.70 GiB) in 31s\n"}
+,{"stream_name":"stdout","time":1996.14122879,"data":"[r1] data resident: train (21100127, 66) test (860757, 66) (2.70 GiB) in 31s\n"}
+,{"stream_name":"stdout","time":1996.940962326,"data":"[r0] data resident: train (21945288, 66) test (860757, 66) (2.80 GiB) in 32s\n"}
+,{"stream_name":"stdout","time":1997.143305082,"data":"[r0] data resident: train (21945288, 66) test (860757, 66) (2.80 GiB) in 32s\n"}
+,{"stream_name":"stdout","time":2008.970131966,"data":"[r1] compile: {'enabled': True, 'max_abs_dlogit': 3.5762786865234375e-07, 'decisive_rows': 511, 'disagreements': 0, 'amp_max_abs_dlogit': 0.000732421875, 'amp_decisive_rows': 497, 'amp_disagreements': 0}\n"}
+,{"stream_name":"stdout","time":2009.172351712,"data":"[r1] compile: {'enabled': True, 'max_abs_dlogit': 3.5762786865234375e-07, 'decisive_rows': 511, 'disagreements': 0, 'amp_max_abs_dlogit': 0.000732421875, 'amp_decisive_rows': 497, 'amp_disagreements': 0}\n"}
+,{"stream_name":"stdout","time":2009.969572924,"data":"[r0] compile: {'enabled': True, 'max_abs_dlogit': 3.5762786865234375e-07, 'decisive_rows': 508, 'disagreements': 0, 'amp_max_abs_dlogit': 0.00048828125, 'amp_decisive_rows': 502, 'amp_disagreements': 0}\n"}
+,{"stream_name":"stdout","time":2010.172336006,"data":"[r0] compile: {'enabled': True, 'max_abs_dlogit': 3.5762786865234375e-07, 'decisive_rows': 508, 'disagreements': 0, 'amp_max_abs_dlogit': 0.00048828125, 'amp_decisive_rows': 502, 'amp_disagreements': 0}\n"}
+,{"stream_name":"stdout","time":2010.172392753,"data":"[setup] workers ready; compile: [{'enabled': True, 'max_abs_dlogit': 3.5762786865234375e-07, 'decisive_rows': 508, 'disagreements': 0, 'amp_max_abs_dlogit': 0.00048828125, 'amp_decisive_rows': 502, 'amp_disagreements': 0}, {'enabled': True, 'max_abs_dlogit': 3.5762786865234375e-07, 'decisive_rows': 511, 'disagreements': 0, 'amp_max_abs_dlogit': 0.000732421875, 'amp_decisive_rows': 497, 'amp_disagreements': 0}]\n"}
+,{"stream_name":"stdout","time":2010.17240182,"data":"[aps] mu[inv_mean_nij] = [7.585696202633669e-07, 7.585696202633669e-07, 7.585696202633669e-07, 7.585696202633669e-07] ...\n"}
+,{"stream_name":"stdout","time":2010.172408211,"data":"[comm] 32,000 params/round (0.0320 M), 5.1x below dense FedProto\n"}
+,{"stream_name":"stdout","time":2010.172414493,"data":"[budget] no local timing yet; using expected_round_s 600s\n"}
+,{"stream_name":"stdout","time":2040.016605067,"data":"[r1] round 1 client 6 step 4532/6456\n"}
+,{"stream_name":"stdout","time":2040.021369454,"data":"[r0] round 1 client 17 step 4269/11276\n"}
+,{"stream_name":"stdout","time":2040.231980426,"data":"[r1] round 1 client 6 step 4532/6456\n"}
+,{"stream_name":"stdout","time":2040.232046749,"data":"[r0] round 1 client 17 step 4269/11276\n"}
+,{"stream_name":"stdout","time":2070.022615549,"data":"[r0] round 1 client 17 step 8576/11276\n"}
+,{"stream_name":"stdout","time":2070.225737996,"data":"[r0] round 1 client 17 step 8576/11276\n"}
+,{"stream_name":"stdout","time":2103.438298598,"data":"[r1] round 1 client 0 step 4582/6418\n"}
+,{"stream_name":"stdout","time":2103.663354296,"data":"[r1] round 1 client 0 step 4582/6418\n"}
+,{"stream_name":"stdout","time":2152.041996953,"data":"[r0] round 1 client 14 step 4437/5864\n"}
+,{"stream_name":"stdout","time":2152.259625814,"data":"[r0] round 1 client 14 step 4437/5864\n"}
+,{"stream_name":"stdout","time":2165.068344844,"data":"[r1] round 1 client 8 step 4542/5447\n"}
+,{"stream_name":"stdout","time":2165.270897037,"data":"[r1] round 1 client 8 step 4542/5447\n"}
+,{"stream_name":"stdout","time":2210.957128403,"data":"[r0] round 1 client 10 step 4479/5114\n"}
+,{"stream_name":"stdout","time":2211.174631093,"data":"[r0] round 1 client 10 step 4479/5114\n"}
+,{"stream_name":"stdout","time":2218.205196084,"data":"[r1] round 1 client 2 step 4560/5078\n"}
+,{"stream_name":"stdout","time":2218.407870019,"data":"[r1] round 1 client 2 step 4560/5078\n"}
+,{"stream_name":"stdout","time":2475.502978313,"data":"[round 001] ce 0.1936 reg 0.0000 | proto acc 0.5983 F1m 0.5864 | clf acc 0.5371 F1m 0.4940 | 464.3s (train 431.7s eval 31.9s) peak 3.5GB\n"}
+,{"stream_name":"stdout","time":2505.301418482,"data":"[r1] round 2 client 6 step 4457/6456\n"}
+,{"stream_name":"stdout","time":2505.302607638,"data":"[r0] round 2 client 17 step 4253/11276\n"}
+,{"stream_name":"stdout","time":2505.52100863,"data":"[r1] round 2 client 6 step 4457/6456\n"}
+,{"stream_name":"stdout","time":2505.521034517,"data":"[r0] round 2 client 17 step 4253/11276\n"}
+,{"stream_name":"stdout","time":2535.306041479,"data":"[r0] round 2 client 17 step 8636/11276\n"}
+,{"stream_name":"stdout","time":2535.508631741,"data":"[r0] round 2 client 17 step 8636/11276\n"}
+,{"stream_name":"stdout","time":2564.400981711,"data":"[r1] round 2 client 0 step 4501/6418\n"}
+,{"stream_name":"stdout","time":2564.626352195,"data":"[r1] round 2 client 0 step 4501/6418\n"}
+,{"stream_name":"stdout","time":2612.77076647,"data":"[r0] round 2 client 14 step 4426/5864\n"}
+,{"stream_name":"stdout","time":2612.988863041,"data":"[r0] round 2 client 14 step 4426/5864\n"}
+,{"stream_name":"stdout","time":2623.02484108,"data":"[r1] round 2 client 8 step 4504/5447\n"}
+,{"stream_name":"stdout","time":2623.226942678,"data":"[r1] round 2 client 8 step 4504/5447\n"}
+,{"stream_name":"stdout","time":2667.78580783,"data":"[r0] round 2 client 10 step 4458/5114\n"}
+,{"stream_name":"stdout","time":2668.003197889,"data":"[r0] round 2 client 10 step 4458/5114\n"}
+,{"stream_name":"stdout","time":2672.782642961,"data":"[r1] round 2 client 2 step 4521/5078\n"}
+,{"stream_name":"stdout","time":2672.98516444,"data":"[r1] round 2 client 2 step 4521/5078\n"}
+,{"stream_name":"stdout","time":2902.656804246,"data":"[round 002] ce 0.0945 reg 0.0703 | proto acc 0.6210 F1m 0.6268 | clf acc 0.5453 F1m 0.5135 | 426.1s (train 394.4s eval 31.3s) peak 3.5GB\n"}
+,{"stream_name":"stdout","time":2932.459257446,"data":"[r0] round 3 client 17 step 4240/11276\n"}
+,{"stream_name":"stdout","time":2932.460840311,"data":"[r1] round 3 client 6 step 4464/6456\n"}
+,{"stream_name":"stdout","time":2932.679400095,"data":"[r0] round 3 client 17 step 4240/11276\n"}
+,{"stream_name":"stdout","time":2932.679422975,"data":"[r1] round 3 client 6 step 4464/6456\n"}
+,{"stream_name":"stdout","time":2962.461137168,"data":"[r0] round 3 client 17 step 8612/11276\n"}
+,{"stream_name":"stdout","time":2962.663815118,"data":"[r0] round 3 client 17 step 8612/11276\n"}
+,{"stream_name":"stdout","time":2991.463455263,"data":"[r1] round 3 client 0 step 4521/6418\n"}
+,{"stream_name":"stdout","time":2991.681608501,"data":"[r1] round 3 client 0 step 4521/6418\n"}
+,{"stream_name":"stdout","time":3040.085473574,"data":"[r0] round 3 client 14 step 4434/5864\n"}
+,{"stream_name":"stdout","time":3040.304405933,"data":"[r0] round 3 client 14 step 4434/5864\n"}
+,{"stream_name":"stdout","time":3050.115908081,"data":"[r1] round 3 client 8 step 4501/5447\n"}
+,{"stream_name":"stdout","time":3050.318734068,"data":"[r1] round 3 client 8 step 4501/5447\n"}
+,{"stream_name":"stdout","time":3095.001343389,"data":"[r0] round 3 client 10 step 4474/5114\n"}
+,{"stream_name":"stdout","time":3095.219203099,"data":"[r0] round 3 client 10 step 4474/5114\n"}
+,{"stream_name":"stdout","time":3099.878847865,"data":"[r1] round 3 client 2 step 4519/5078\n"}
+,{"stream_name":"stdout","time":3100.081631187,"data":"[r1] round 3 client 2 step 4519/5078\n"}
+,{"stream_name":"stdout","time":3329.399099151,"data":"[round 003] ce 0.0668 reg 0.0054 | proto acc 0.6121 F1m 0.6270 | clf acc 0.5411 F1m 0.5105 | 425.7s (train 394.1s eval 31.2s) peak 3.5GB\n"}
+,{"stream_name":"stdout","time":3359.203359918,"data":"[r0] round 4 client 17 step 4232/11276\n"}
+,{"stream_name":"stdout","time":3359.206544432,"data":"[r1] round 4 client 6 step 4475/6456\n"}
+,{"stream_name":"stdout","time":3359.422592981,"data":"[r0] round 4 client 17 step 4232/11276\n"}
+,{"stream_name":"stdout","time":3359.422623058,"data":"[r1] round 4 client 6 step 4475/6456\n"}
+,{"stream_name":"stdout","time":3389.208690091,"data":"[r0] round 4 client 17 step 8611/11276\n"}
+,{"stream_name":"stdout","time":3389.411352743,"data":"[r0] round 4 client 17 step 8611/11276\n"}
+,{"stream_name":"stdout","time":3418.199565381,"data":"[r1] round 4 client 0 step 4522/6418\n"}
+,{"stream_name":"stdout","time":3418.426769307,"data":"[r1] round 4 client 0 step 4522/6418\n"}
+,{"stream_name":"stdout","time":3466.709064786,"data":"[r0] round 4 client 14 step 4431/5864\n"}
+,{"stream_name":"stdout","time":3466.92870116,"data":"[r0] round 4 client 14 step 4431/5864\n"}
+,{"stream_name":"stdout","time":3476.763357578,"data":"[r1] round 4 client 8 step 4506/5447\n"}
+,{"stream_name":"stdout","time":3476.965805297,"data":"[r1] round 4 client 8 step 4506/5447\n"}
+,{"stream_name":"stdout","time":3521.665883336,"data":"[r0] round 4 client 10 step 4473/5114\n"}
+,{"stream_name":"stdout","time":3521.885370618,"data":"[r0] round 4 client 10 step 4473/5114\n"}
+,{"stream_name":"stdout","time":3526.455374614,"data":"[r1] round 4 client 2 step 4528/5078\n"}
+,{"stream_name":"stdout","time":3526.658035728,"data":"[r1] round 4 client 2 step 4528/5078\n"}
+,{"stream_name":"stdout","time":3756.528397345,"data":"[round 004] ce 0.0537 reg 0.0023 | proto acc 0.6135 F1m 0.6331 | clf acc 0.5426 F1m 0.5165 | 425.9s (train 394.1s eval 31.4s) peak 3.5GB\n"}
+,{"stream_name":"stdout","time":3757.796208337,"data":"  -\u003e last 0.6331  best 0.6331  mu = 7.5857e-07\n"}
+,{"stream_name":"stdout","time":3757.796250226,"data":"\n"}
+,{"stream_name":"stdout","time":3757.796258674,"data":"======================================================================\n"}
+,{"stream_name":"stdout","time":3757.796263456,"data":"mu multiplier k = 0.3\n"}
+,{"stream_name":"stdout","time":3757.796267836,"data":"======================================================================\n"}
+,{"stream_name":"stdout","time":3757.911682012,"data":"[cps] {'d': 256, 'K': 16, 's': 50, 'compression_rate': 0.8046875, 'overlap_min': 0, 'overlap_max': 10, 'overlap_mean': 7.275, 'overlap_random_expectation': 9.765625, 'overlap_search_target': 10, 'hamming_min': 80, 'hamming_max': 100, 'hamming_mean': 85.45, 'dims_used': 256, 'dim_usage_min': 2, 'dim_usage_max': 4}\n"}
+,{"stream_name":"stdout","time":3757.911707613,"data":"[resume] starting at round 1 of 4 (fingerprint ef77b0232af999b5)\n"}
+,{"stream_name":"stdout","time":3766.138549718,"data":"[r0]    decoded 2/10 clients, 3,404,441 rows, 5s\n"}
+,{"stream_name":"stdout","time":3766.354459272,"data":"[r0]    decoded 2/10 clients, 3,404,441 rows, 5s\n"}
+,{"stream_name":"stdout","time":3768.87234845,"data":"[r1]    decoded 2/10 clients, 5,136,620 rows, 7s\n"}
+,{"stream_name":"stdout","time":3769.082843649,"data":"[r1]    decoded 2/10 clients, 5,136,620 rows, 7s\n"}
+,{"stream_name":"stdout","time":3771.499126337,"data":"[r0]    decoded 4/10 clients, 7,316,648 rows, 10s\n"}
+,{"stream_name":"stdout","time":3771.70875091,"data":"[r0]    decoded 4/10 clients, 7,316,648 rows, 10s\n"}
+,{"stream_name":"stdout","time":3774.19634255,"data":"[r1]    decoded 4/10 clients, 9,245,005 rows, 13s\n"}
+,{"stream_name":"stdout","time":3774.398641203,"data":"[r1]    decoded 4/10 clients, 9,245,005 rows, 13s\n"}
+,{"stream_name":"stdout","time":3776.449977814,"data":"[r0]    decoded 6/10 clients, 10,947,339 rows, 15s\n"}
+,{"stream_name":"stdout","time":3776.660343858,"data":"[r0]    decoded 6/10 clients, 10,947,339 rows, 15s\n"}
+,{"stream_name":"stdout","time":3781.010950447,"data":"[r1]    decoded 6/10 clients, 14,482,126 rows, 20s\n"}
+,{"stream_name":"stdout","time":3781.218389817,"data":"[r1]    decoded 6/10 clients, 14,482,126 rows, 20s\n"}
+,{"stream_name":"stdout","time":3782.037680399,"data":"[r0]    decoded 8/10 clients, 14,881,150 rows, 21s\n"}
+,{"stream_name":"stdout","time":3782.242818477,"data":"[r0]    decoded 8/10 clients, 14,881,150 rows, 21s\n"}
+,{"stream_name":"stdout","time":3787.02330311,"data":"[r1]    decoded 8/10 clients, 18,823,712 rows, 26s\n"}
+,{"stream_name":"stdout","time":3787.295354858,"data":"[r1]    decoded 8/10 clients, 18,823,712 rows, 26s\n"}
+,{"stream_name":"stdout","time":3789.873288342,"data":"[r1]    decoded 10/10 clients, 21,100,127 rows, 28s\n"}
+,{"stream_name":"stdout","time":3790.076071912,"data":"[r1]    decoded 10/10 clients, 21,100,127 rows, 28s\n"}
+,{"stream_name":"stdout","time":3790.606334076,"data":"[r0]    decoded 10/10 clients, 21,945,288 rows, 29s\n"}
+,{"stream_name":"stdout","time":3790.809498099,"data":"[r0]    decoded 10/10 clients, 21,945,288 rows, 29s\n"}
+,{"stream_name":"stdout","time":3791.117439372,"data":"[r1] data resident: train (21100127, 66) test (860757, 66) (2.70 GiB) in 30s\n"}
+,{"stream_name":"stdout","time":3791.319909141,"data":"[r1] data resident: train (21100127, 66) test (860757, 66) (2.70 GiB) in 30s\n"}
+,{"stream_name":"stdout","time":3791.908890195,"data":"[r0] data resident: train (21945288, 66) test (860757, 66) (2.80 GiB) in 31s\n"}
+,{"stream_name":"stdout","time":3792.111483322,"data":"[r0] data resident: train (21945288, 66) test (860757, 66) (2.80 GiB) in 31s\n"}
+,{"stream_name":"stdout","time":3804.202517099,"data":"[r1] compile: {'enabled': True, 'max_abs_dlogit': 4.172325134277344e-07, 'decisive_rows': 511, 'disagreements': 0, 'amp_max_abs_dlogit': 0.000732421875, 'amp_decisive_rows': 497, 'amp_disagreements': 0}\n"}
+,{"stream_name":"stdout","time":3804.405194547,"data":"[r1] compile: {'enabled': True, 'max_abs_dlogit': 4.172325134277344e-07, 'decisive_rows': 511, 'disagreements': 0, 'amp_max_abs_dlogit': 0.000732421875, 'amp_decisive_rows': 497, 'amp_disagreements': 0}\n"}
+,{"stream_name":"stdout","time":3804.905310206,"data":"[r0] compile: {'enabled': True, 'max_abs_dlogit': 3.725290298461914e-07, 'decisive_rows': 508, 'disagreements': 0, 'amp_max_abs_dlogit': 0.00048828125, 'amp_decisive_rows': 502, 'amp_disagreements': 0}\n"}
+,{"stream_name":"stdout","time":3805.107460904,"data":"[r0] compile: {'enabled': True, 'max_abs_dlogit': 3.725290298461914e-07, 'decisive_rows': 508, 'disagreements': 0, 'amp_max_abs_dlogit': 0.00048828125, 'amp_decisive_rows': 502, 'amp_disagreements': 0}\n"}
+,{"stream_name":"stdout","time":3805.107531559,"data":"[setup] workers ready; compile: [{'enabled': True, 'max_abs_dlogit': 3.725290298461914e-07, 'decisive_rows': 508, 'disagreements': 0, 'amp_max_abs_dlogit': 0.00048828125, 'amp_decisive_rows': 502, 'amp_disagreements': 0}, {'enabled': True, 'max_abs_dlogit': 4.172325134277344e-07, 'decisive_rows': 511, 'disagreements': 0, 'amp_max_abs_dlogit': 0.000732421875, 'amp_decisive_rows': 497, 'amp_disagreements': 0}]\n"}
+,{"stream_name":"stdout","time":3805.107539932,"data":"[aps] mu[inv_mean_nij] = [2.2757088607901005e-06, 2.2757088607901005e-06, 2.2757088607901005e-06, 2.2757088607901005e-06] ...\n"}
+,{"stream_name":"stdout","time":3805.107543746,"data":"[comm] 32,000 params/round (0.0320 M), 5.1x below dense FedProto\n"}
+,{"stream_name":"stdout","time":3805.107547092,"data":"[budget] no local timing yet; using expected_round_s 600s\n"}
+,{"stream_name":"stdout","time":3834.955683816,"data":"[r1] round 1 client 6 step 4513/6456\n"}
+,{"stream_name":"stdout","time":3834.95689077,"data":"[r0] round 1 client 17 step 4266/11276\n"}
+,{"stream_name":"stdout","time":3835.174989695,"data":"[r1] round 1 client 6 step 4513/6456\n"}
+,{"stream_name":"stdout","time":3835.175017431,"data":"[r0] round 1 client 17 step 4266/11276\n"}
+,{"stream_name":"stdout","time":3864.959288662,"data":"[r0] round 1 client 17 step 8605/11276\n"}
+,{"stream_name":"stdout","time":3865.163160368,"data":"[r0] round 1 client 17 step 8605/11276\n"}
+,{"stream_name":"stdout","time":3897.884162516,"data":"[r1] round 1 client 0 step 4575/6418\n"}
+,{"stream_name":"stdout","time":3898.102815501,"data":"[r1] round 1 client 0 step 4575/6418\n"}
+,{"stream_name":"stdout","time":3946.689611285,"data":"[r0] round 1 client 14 step 4455/5864\n"}
+,{"stream_name":"stdout","time":3946.909144172,"data":"[r0] round 1 client 14 step 4455/5864\n"}
+,{"stream_name":"stdout","time":3959.643849875,"data":"[r1] round 1 client 8 step 4534/5447\n"}
+,{"stream_name":"stdout","time":3959.846751558,"data":"[r1] round 1 client 8 step 4534/5447\n"}
+,{"stream_name":"stdout","time":4005.454038782,"data":"[r0] round 1 client 10 step 4479/5114\n"}
+,{"stream_name":"stdout","time":4005.673307879,"data":"[r0] round 1 client 10 step 4479/5114\n"}
+,{"stream_name":"stdout","time":4012.845310113,"data":"[r1] round 1 client 2 step 4559/5078\n"}
+,{"stream_name":"stdout","time":4013.048268954,"data":"[r1] round 1 client 2 step 4559/5078\n"}
+,{"stream_name":"stdout","time":4269.870790469,"data":"[round 001] ce 0.1935 reg 0.0000 | proto acc 0.5990 F1m 0.5884 | clf acc 0.5354 F1m 0.4920 | 463.7s (train 431.1s eval 31.9s) peak 3.5GB\n"}
+,{"stream_name":"stdout","time":4299.67033876,"data":"[r0] round 2 client 17 step 4247/11276\n"}
+,{"stream_name":"stdout","time":4299.671721713,"data":"[r1] round 2 client 6 step 4450/6456\n"}
+,{"stream_name":"stdout","time":4299.889418518,"data":"[r0] round 2 client 17 step 4247/11276\n"}
+,{"stream_name":"stdout","time":4299.889443364,"data":"[r1] round 2 client 6 step 4450/6456\n"}
+,{"stream_name":"stdout","time":4329.670211709,"data":"[r0] round 2 client 17 step 8628/11276\n"}
+,{"stream_name":"stdout","time":4329.873286932,"data":"[r0] round 2 client 17 step 8628/11276\n"}
+,{"stream_name":"stdout","time":4358.810359087,"data":"[r1] round 2 client 0 step 4503/6418\n"}
+,{"stream_name":"stdout","time":4359.029523551,"data":"[r1] round 2 client 0 step 4503/6418\n"}
+,{"stream_name":"stdout","time":4407.237505037,"data":"[r0] round 2 client 14 step 4442/5864\n"}
+,{"stream_name":"stdout","time":4407.457281553,"data":"[r0] round 2 client 14 step 4442/5864\n"}
+,{"stream_name":"stdout","time":4417.485869255,"data":"[r1] round 2 client 8 step 4492/5447\n"}
+,{"stream_name":"stdout","time":4417.688907346,"data":"[r1] round 2 client 8 step 4492/5447\n"}
+,{"stream_name":"stdout","time":4462.133015351,"data":"[r0] round 2 client 10 step 4459/5114\n"}
+,{"stream_name":"stdout","time":4462.355806285,"data":"[r0] round 2 client 10 step 4459/5114\n"}
+,{"stream_name":"stdout","time":4467.311120329,"data":"[r1] round 2 client 2 step 4503/5078\n"}
+,{"stream_name":"stdout","time":4467.51417825,"data":"[r1] round 2 client 2 step 4503/5078\n"}
+,{"stream_name":"stdout","time":4696.785162843,"data":"[round 002] ce 0.0939 reg 0.0842 | proto acc 0.6380 F1m 0.6323 | clf acc 0.5532 F1m 0.5177 | 425.9s (train 394.0s eval 31.4s) peak 3.5GB\n"}
+,{"stream_name":"stdout","time":4726.580080777,"data":"[r0] round 3 client 17 step 4239/11276\n"}
+,{"stream_name":"stdout","time":4726.582065535,"data":"[r1] round 3 client 6 step 4455/6456\n"}
+,{"stream_name":"stdout","time":4726.782164582,"data":"[r0] round 3 client 17 step 4239/11276\n"}
+,{"stream_name":"stdout","time":4726.782189625,"data":"[r1] round 3 client 6 step 4455/6456\n"}
+,{"stream_name":"stdout","time":4756.586484457,"data":"[r0] round 3 client 17 step 8610/11276\n"}
+,{"stream_name":"stdout","time":4756.804394749,"data":"[r0] round 3 client 17 step 8610/11276\n"}
+,{"stream_name":"stdout","time":4785.72645127,"data":"[r1] round 3 client 0 step 4515/6418\n"}
+,{"stream_name":"stdout","time":4785.929273463,"data":"[r1] round 3 client 0 step 4515/6418\n"}
+,{"stream_name":"stdout","time":4834.059446777,"data":"[r0] round 3 client 14 step 4416/5864\n"}
+,{"stream_name":"stdout","time":4834.282180054,"data":"[r0] round 3 client 14 step 4416/5864\n"}
+,{"stream_name":"stdout","time":4844.657201099,"data":"[r1] round 3 client 8 step 4489/5447\n"}
+,{"stream_name":"stdout","time":4844.859943696,"data":"[r1] round 3 client 8 step 4489/5447\n"}
+,{"stream_name":"stdout","time":4889.060638305,"data":"[r0] round 3 client 10 step 4469/5114\n"}
+,{"stream_name":"stdout","time":4889.282083191,"data":"[r0] round 3 client 10 step 4469/5114\n"}
+,{"stream_name":"stdout","time":4894.633029465,"data":"[r1] round 3 client 2 step 4516/5078\n"}
+,{"stream_name":"stdout","time":4894.835934805,"data":"[r1] round 3 client 2 step 4516/5078\n"}
+,{"stream_name":"stdout","time":5124.046040595,"data":"[round 003] ce 0.0656 reg 0.0146 | proto acc 0.6254 F1m 0.6310 | clf acc 0.5433 F1m 0.5127 | 426.3s (train 394.2s eval 31.7s) peak 3.5GB\n"}
+,{"stream_name":"stdout","time":5153.846173007,"data":"[r1] round 4 client 6 step 4470/6456\n"}
+,{"stream_name":"stdout","time":5153.849516967,"data":"[r0] round 4 client 17 step 4251/11276\n"}
+,{"stream_name":"stdout","time":5154.066721745,"data":"[r1] round 4 client 6 step 4470/6456\n"}
+,{"stream_name":"stdout","time":5154.066768834,"data":"[r0] round 4 client 17 step 4251/11276\n"}
+,{"stream_name":"stdout","time":5183.852567853,"data":"[r0] round 4 client 17 step 8629/11276\n"}
+,{"stream_name":"stdout","time":5184.055345908,"data":"[r0] round 4 client 17 step 8629/11276\n"}
+,{"stream_name":"stdout","time":5212.886888549,"data":"[r1] round 4 client 0 step 4508/6418\n"}
+,{"stream_name":"stdout","time":5213.105170748,"data":"[r1] round 4 client 0 step 4508/6418\n"}
+,{"stream_name":"stdout","time":5261.441459745,"data":"[r0] round 4 client 14 step 4421/5864\n"}
+,{"stream_name":"stdout","time":5261.662097723,"data":"[r0] round 4 client 14 step 4421/5864\n"}
+,{"stream_name":"stdout","time":5271.486009522,"data":"[r1] round 4 client 8 step 4506/5447\n"}
+,{"stream_name":"stdout","time":5271.688870554,"data":"[r1] round 4 client 8 step 4506/5447\n"}
+,{"stream_name":"stdout","time":5316.479737888,"data":"[r0] round 4 client 10 step 4457/5114\n"}
+,{"stream_name":"stdout","time":5316.699934258,"data":"[r0] round 4 client 10 step 4457/5114\n"}
+,{"stream_name":"stdout","time":5321.436102991,"data":"[r1] round 4 client 2 step 4512/5078\n"}
+,{"stream_name":"stdout","time":5321.638841518,"data":"[r1] round 4 client 2 step 4512/5078\n"}
+,{"stream_name":"stdout","time":5552.519570669,"data":"[round 004] ce 0.0525 reg 0.0109 | proto acc 0.6203 F1m 0.6310 | clf acc 0.5459 F1m 0.5187 | 427.3s (train 395.2s eval 31.6s) peak 3.5GB\n"}
+,{"stream_name":"stdout","time":5553.780729179,"data":"  -\u003e last 0.6310  best 0.6323  mu = 2.2757e-06\n"}
+,{"stream_name":"stdout","time":5553.780762965,"data":"\n"}
+,{"stream_name":"stdout","time":5553.780767084,"data":"======================================================================\n"}
+,{"stream_name":"stdout","time":5553.780783649,"data":"mu multiplier k = 1.0\n"}
+,{"stream_name":"stdout","time":5553.780789068,"data":"======================================================================\n"}
+,{"stream_name":"stdout","time":5553.92192942,"data":"[cps] {'d': 256, 'K': 16, 's': 50, 'compression_rate': 0.8046875, 'overlap_min': 0, 'overlap_max': 10, 'overlap_mean': 7.275, 'overlap_random_expectation': 9.765625, 'overlap_search_target': 10, 'hamming_min': 80, 'hamming_max': 100, 'hamming_mean': 85.45, 'dims_used': 256, 'dim_usage_min': 2, 'dim_usage_max': 4}\n"}
+,{"stream_name":"stdout","time":5553.921956105,"data":"[resume] starting at round 1 of 4 (fingerprint 264a9b486e122dc9)\n"}
+,{"stream_name":"stdout","time":5562.35610276,"data":"[r0]    decoded 2/10 clients, 3,404,441 rows, 5s\n"}
+,{"stream_name":"stdout","time":5562.566173953,"data":"[r0]    decoded 2/10 clients, 3,404,441 rows, 5s\n"}
+,{"stream_name":"stdout","time":5564.687226158,"data":"[r1]    decoded 2/10 clients, 5,136,620 rows, 7s\n"}
+,{"stream_name":"stdout","time":5564.890149014,"data":"[r1]    decoded 2/10 clients, 5,136,620 rows, 7s\n"}
+,{"stream_name":"stdout","time":5567.408251242,"data":"[r0]    decoded 4/10 clients, 7,316,648 rows, 10s\n"}
+,{"stream_name":"stdout","time":5567.611074343,"data":"[r0]    decoded 4/10 clients, 7,316,648 rows, 10s\n"}
+,{"stream_name":"stdout","time":5569.763492412,"data":"[r1]    decoded 4/10 clients, 9,245,005 rows, 12s\n"}
+,{"stream_name":"stdout","time":5569.96991901,"data":"[r1]    decoded 4/10 clients, 9,245,005 rows, 12s\n"}
+,{"stream_name":"stdout","time":5571.949654292,"data":"[r0]    decoded 6/10 clients, 10,947,339 rows, 14s\n"}
+,{"stream_name":"stdout","time":5572.153577067,"data":"[r0]    decoded 6/10 clients, 10,947,339 rows, 14s\n"}
+,{"stream_name":"stdout","time":5576.74339423,"data":"[r1]    decoded 6/10 clients, 14,482,126 rows, 19s\n"}
+,{"stream_name":"stdout","time":5576.949013715,"data":"[r1]    decoded 6/10 clients, 14,482,126 rows, 19s\n"}
+,{"stream_name":"stdout","time":5577.535507962,"data":"[r0]    decoded 8/10 clients, 14,881,150 rows, 20s\n"}
+,{"stream_name":"stdout","time":5577.741043617,"data":"[r0]    decoded 8/10 clients, 14,881,150 rows, 20s\n"}
+,{"stream_name":"stdout","time":5582.740008458,"data":"[r1]    decoded 8/10 clients, 18,823,712 rows, 25s\n"}
+,{"stream_name":"stdout","time":5583.002306985,"data":"[r1]    decoded 8/10 clients, 18,823,712 rows, 25s\n"}
+,{"stream_name":"stdout","time":5585.446440182,"data":"[r1]    decoded 10/10 clients, 21,100,127 rows, 28s\n"}
+,{"stream_name":"stdout","time":5585.646792333,"data":"[r1]    decoded 10/10 clients, 21,100,127 rows, 28s\n"}
+,{"stream_name":"stdout","time":5586.45609603,"data":"[r0]    decoded 10/10 clients, 21,945,288 rows, 29s\n"}
+,{"stream_name":"stdout","time":5586.659273314,"data":"[r0]    decoded 10/10 clients, 21,945,288 rows, 29s\n"}
+,{"stream_name":"stdout","time":5586.733466013,"data":"[r1] data resident: train (21100127, 66) test (860757, 66) (2.70 GiB) in 30s\n"}
+,{"stream_name":"stdout","time":5586.93637036,"data":"[r1] data resident: train (21100127, 66) test (860757, 66) (2.70 GiB) in 30s\n"}
+,{"stream_name":"stdout","time":5587.758247734,"data":"[r0] data resident: train (21945288, 66) test (860757, 66) (2.80 GiB) in 31s\n"}
+,{"stream_name":"stdout","time":5587.961064733,"data":"[r0] data resident: train (21945288, 66) test (860757, 66) (2.80 GiB) in 31s\n"}
+,{"stream_name":"stdout","time":5599.869263313,"data":"[r1] compile: {'enabled': True, 'max_abs_dlogit': 3.5762786865234375e-07, 'decisive_rows': 511, 'disagreements': 0, 'amp_max_abs_dlogit': 0.000732421875, 'amp_decisive_rows': 497, 'amp_disagreements': 0}\n"}
+,{"stream_name":"stdout","time":5600.071323892,"data":"[r1] compile: {'enabled': True, 'max_abs_dlogit': 3.5762786865234375e-07, 'decisive_rows': 511, 'disagreements': 0, 'amp_max_abs_dlogit': 0.000732421875, 'amp_decisive_rows': 497, 'amp_disagreements': 0}\n"}
+,{"stream_name":"stdout","time":5600.86094479,"data":"[r0] compile: {'enabled': True, 'max_abs_dlogit': 3.5762786865234375e-07, 'decisive_rows': 508, 'disagreements': 0, 'amp_max_abs_dlogit': 0.00048828125, 'amp_decisive_rows': 502, 'amp_disagreements': 0}\n"}
+,{"stream_name":"stdout","time":5601.063803542,"data":"[r0] compile: {'enabled': True, 'max_abs_dlogit': 3.5762786865234375e-07, 'decisive_rows': 508, 'disagreements': 0, 'amp_max_abs_dlogit': 0.00048828125, 'amp_decisive_rows': 502, 'amp_disagreements': 0}\n"}
+,{"stream_name":"stdout","time":5601.06383734,"data":"[setup] workers ready; compile: [{'enabled': True, 'max_abs_dlogit': 3.5762786865234375e-07, 'decisive_rows': 508, 'disagreements': 0, 'amp_max_abs_dlogit': 0.00048828125, 'amp_decisive_rows': 502, 'amp_disagreements': 0}, {'enabled': True, 'max_abs_dlogit': 3.5762786865234375e-07, 'decisive_rows': 511, 'disagreements': 0, 'amp_max_abs_dlogit': 0.000732421875, 'amp_decisive_rows': 497, 'amp_disagreements': 0}]\n"}
+,{"stream_name":"stdout","time":5601.063843536,"data":"[aps] mu[inv_mean_nij] = [7.585696202633668e-06, 7.585696202633668e-06, 7.585696202633668e-06, 7.585696202633668e-06] ...\n"}
+,{"stream_name":"stdout","time":5601.063847373,"data":"[comm] 32,000 params/round (0.0320 M), 5.1x below dense FedProto\n"}
+,{"stream_name":"stdout","time":5601.063850835,"data":"[budget] no local timing yet; using expected_round_s 600s\n"}
+,{"stream_name":"stdout","time":5630.907309983,"data":"[r1] round 1 client 6 step 4496/6456\n"}
+,{"stream_name":"stdout","time":5630.9134193,"data":"[r0] round 1 client 17 step 4205/11276\n"}
+,{"stream_name":"stdout","time":5631.128752296,"data":"[r1] round 1 client 6 step 4496/6456\n"}
+,{"stream_name":"stdout","time":5631.128943996,"data":"[r0] round 1 client 17 step 4205/11276\n"}
+,{"stream_name":"stdout","time":5660.919286844,"data":"[r0] round 1 client 17 step 8549/11276\n"}
+,{"stream_name":"stdout","time":5661.122366583,"data":"[r0] round 1 client 17 step 8549/11276\n"}
+,{"stream_name":"stdout","time":5693.958178729,"data":"[r1] round 1 client 0 step 4571/6418\n"}
+,{"stream_name":"stdout","time":5694.180061915,"data":"[r1] round 1 client 0 step 4571/6418\n"}
+,{"stream_name":"stdout","time":5743.356992833,"data":"[r0] round 1 client 14 step 4448/5864\n"}
+,{"stream_name":"stdout","time":5743.58016645,"data":"[r0] round 1 client 14 step 4448/5864\n"}
+,{"stream_name":"stdout","time":5755.815005311,"data":"[r1] round 1 client 8 step 4531/5447\n"}
+,{"stream_name":"stdout","time":5756.017325639,"data":"[r1] round 1 client 8 step 4531/5447\n"}
+,{"stream_name":"stdout","time":5802.308440626,"data":"[r0] round 1 client 10 step 4474/5114\n"}
+,{"stream_name":"stdout","time":5802.529321637,"data":"[r0] round 1 client 10 step 4474/5114\n"}
+,{"stream_name":"stdout","time":5809.118691963,"data":"[r1] round 1 client 2 step 4543/5078\n"}
+,{"stream_name":"stdout","time":5809.321645257,"data":"[r1] round 1 client 2 step 4543/5078\n"}
+,{"stream_name":"stdout","time":6068.927143215,"data":"[round 001] ce 0.1935 reg 0.0000 | proto acc 0.5999 F1m 0.5903 | clf acc 0.5400 F1m 0.4950 | 466.8s (train 433.4s eval 32.8s) peak 3.5GB\n"}
+,{"stream_name":"stdout","time":6098.722354405,"data":"[r0] round 2 client 17 step 4292/11276\n"}
+,{"stream_name":"stdout","time":6098.72315512,"data":"[r1] round 2 client 6 step 4486/6456\n"}
+,{"stream_name":"stdout","time":6098.92483162,"data":"[r0] round 2 client 17 step 4292/11276\n"}
+,{"stream_name":"stdout","time":6098.924860848,"data":"[r1] round 2 client 6 step 4486/6456\n"}
+,{"stream_name":"stdout","time":6128.72365767,"data":"[r0] round 2 client 17 step 8668/11276\n"}
+,{"stream_name":"stdout","time":6128.94568032,"data":"[r0] round 2 client 17 step 8668/11276\n"}
+,{"stream_name":"stdout","time":6157.652004707,"data":"[r1] round 2 client 0 step 4496/6418\n"}
+,{"stream_name":"stdout","time":6157.85462791,"data":"[r1] round 2 client 0 step 4496/6418\n"}
+,{"stream_name":"stdout","time":6206.244470533,"data":"[r0] round 2 client 14 step 4440/5864\n"}
+,{"stream_name":"stdout","time":6206.468302243,"data":"[r0] round 2 client 14 step 4440/5864\n"}
+,{"stream_name":"stdout","time":6216.236378149,"data":"[r1] round 2 client 8 step 4506/5447\n"}
+,{"stream_name":"stdout","time":6216.439145404,"data":"[r1] round 2 client 8 step 4506/5447\n"}
+,{"stream_name":"stdout","time":6261.163981017,"data":"[r0] round 2 client 10 step 4453/5114\n"}
+,{"stream_name":"stdout","time":6261.386814598,"data":"[r0] round 2 client 10 step 4453/5114\n"}
+,{"stream_name":"stdout","time":6266.159254327,"data":"[r1] round 2 client 2 step 4504/5078\n"}
+,{"stream_name":"stdout","time":6266.361834446,"data":"[r1] round 2 client 2 step 4504/5078\n"}
+,{"stream_name":"stdout","time":6497.062856886,"data":"[round 002] ce 0.1016 reg 0.1566 | proto acc 0.5922 F1m 0.5845 | clf acc 0.5505 F1m 0.5210 | 427.1s (train 395.1s eval 31.6s) peak 3.5GB\n"}
+,{"stream_name":"stdout","time":6526.858984341,"data":"[r0] round 3 client 17 step 4260/11276\n"}
+,{"stream_name":"stdout","time":6526.862153513,"data":"[r1] round 3 client 6 step 4480/6456\n"}
+,{"stream_name":"stdout","time":6527.061548477,"data":"[r0] round 3 client 17 step 4260/11276\n"}
+,{"stream_name":"stdout","time":6527.061579276,"data":"[r1] round 3 client 6 step 4480/6456\n"}
+,{"stream_name":"stdout","time":6556.859120945,"data":"[r0] round 3 client 17 step 8622/11276\n"}
+,{"stream_name":"stdout","time":6557.083822471,"data":"[r0] round 3 client 17 step 8622/11276\n"}
+,{"stream_name":"stdout","time":6585.788374405,"data":"[r1] round 3 client 0 step 4507/6418\n"}
+,{"stream_name":"stdout","time":6585.991184953,"data":"[r1] round 3 client 0 step 4507/6418\n"}
+,{"stream_name":"stdout","time":6634.40754038,"data":"[r0] round 3 client 14 step 4421/5864\n"}
+,{"stream_name":"stdout","time":6634.629318693,"data":"[r0] round 3 client 14 step 4421/5864\n"}
+,{"stream_name":"stdout","time":6644.517645625,"data":"[r1] round 3 client 8 step 4504/5447\n"}
+,{"stream_name":"stdout","time":6644.72047369,"data":"[r1] round 3 client 8 step 4504/5447\n"}
+,{"stream_name":"stdout","time":6689.413345617,"data":"[r0] round 3 client 10 step 4441/5114\n"}
+,{"stream_name":"stdout","time":6689.636043431,"data":"[r0] round 3 client 10 step 4441/5114\n"}
+,{"stream_name":"stdout","time":6694.136370004,"data":"[r1] round 3 client 2 step 4507/5078\n"}
+,{"stream_name":"stdout","time":6694.339346634,"data":"[r1] round 3 client 2 step 4507/5078\n"}
+,{"stream_name":"stdout","time":6924.723509123,"data":"[round 003] ce 0.0865 reg 0.6578 | proto acc 0.5122 F1m 0.4476 | clf acc 0.5424 F1m 0.5119 | 426.7s (train 394.9s eval 31.4s) peak 3.5GB\n"}
+,{"stream_name":"stdout","time":6954.5194668,"data":"[r0] round 4 client 17 step 4263/11276\n"}
+,{"stream_name":"stdout","time":6954.523813371,"data":"[r1] round 4 client 6 step 4487/6456\n"}
+,{"stream_name":"stdout","time":6954.722075959,"data":"[r0] round 4 client 17 step 4263/11276\n"}
+,{"stream_name":"stdout","time":6954.722109366,"data":"[r1] round 4 client 6 step 4487/6456\n"}
+,{"stream_name":"stdout","time":6984.521040271,"data":"[r0] round 4 client 17 step 8635/11276\n"}
+,{"stream_name":"stdout","time":6984.744623,"data":"[r0] round 4 client 17 step 8635/11276\n"}
+,{"stream_name":"stdout","time":7013.379254593,"data":"[r1] round 4 client 0 step 4494/6418\n"}
+,{"stream_name":"stdout","time":7013.582077161,"data":"[r1] round 4 client 0 step 4494/6418\n"}
+,{"stream_name":"stdout","time":7061.947845656,"data":"[r0] round 4 client 14 step 4427/5864\n"}
+,{"stream_name":"stdout","time":7062.171362574,"data":"[r0] round 4 client 14 step 4427/5864\n"}
+,{"stream_name":"stdout","time":7071.927068845,"data":"[r1] round 4 client 8 step 4510/5447\n"}
+,{"stream_name":"stdout","time":7072.129617857,"data":"[r1] round 4 client 8 step 4510/5447\n"}
+,{"stream_name":"stdout","time":7116.892914979,"data":"[r0] round 4 client 10 step 4466/5114\n"}
+,{"stream_name":"stdout","time":7117.116888717,"data":"[r0] round 4 client 10 step 4466/5114\n"}
+,{"stream_name":"stdout","time":7121.489258545,"data":"[r1] round 4 client 2 step 4510/5078\n"}
+,{"stream_name":"stdout","time":7121.692038945,"data":"[r1] round 4 client 2 step 4510/5078\n"}
+,{"stream_name":"stdout","time":7352.18902262,"data":"[round 004] ce 0.1083 reg 6.7165 | proto acc 0.4582 F1m 0.3420 | clf acc 0.5380 F1m 0.5025 | 426.3s (train 394.4s eval 31.4s) peak 3.5GB\n"}
+,{"stream_name":"stdout","time":7353.437438139,"data":"  -\u003e last 0.3420  best 0.5903  mu = 7.5857e-06\n"}
+,{"stream_name":"stdout","time":7353.437483283,"data":"\n"}
+,{"stream_name":"stdout","time":7353.437487855,"data":"======================================================================\n"}
+,{"stream_name":"stdout","time":7353.43749132,"data":"mu multiplier k = 3.0\n"}
+,{"stream_name":"stdout","time":7353.437494558,"data":"======================================================================\n"}
+,{"stream_name":"stdout","time":7353.560969044,"data":"[cps] {'d': 256, 'K': 16, 's': 50, 'compression_rate': 0.8046875, 'overlap_min': 0, 'overlap_max': 10, 'overlap_mean': 7.275, 'overlap_random_expectation': 9.765625, 'overlap_search_target': 10, 'hamming_min': 80, 'hamming_max': 100, 'hamming_mean': 85.45, 'dims_used': 256, 'dim_usage_min': 2, 'dim_usage_max': 4}\n"}
+,{"stream_name":"stdout","time":7353.560994969,"data":"[resume] starting at round 1 of 4 (fingerprint 6f61cf95ca440af1)\n"}
+,{"stream_name":"stdout","time":7361.786300517,"data":"[r0]    decoded 2/10 clients, 3,404,441 rows, 5s\n"}
+,{"stream_name":"stdout","time":7361.992810878,"data":"[r0]    decoded 2/10 clients, 3,404,441 rows, 5s\n"}
+,{"stream_name":"stdout","time":7364.45580699,"data":"[r1]    decoded 2/10 clients, 5,136,620 rows, 7s\n"}
+,{"stream_name":"stdout","time":7364.665028188,"data":"[r1]    decoded 2/10 clients, 5,136,620 rows, 7s\n"}
+,{"stream_name":"stdout","time":7367.079658498,"data":"[r0]    decoded 4/10 clients, 7,316,648 rows, 10s\n"}
+,{"stream_name":"stdout","time":7367.289020606,"data":"[r0]    decoded 4/10 clients, 7,316,648 rows, 10s\n"}
+,{"stream_name":"stdout","time":7369.859716237,"data":"[r1]    decoded 4/10 clients, 9,245,005 rows, 13s\n"}
+,{"stream_name":"stdout","time":7370.064849958,"data":"[r1]    decoded 4/10 clients, 9,245,005 rows, 13s\n"}
+,{"stream_name":"stdout","time":7371.819476221,"data":"[r0]    decoded 6/10 clients, 10,947,339 rows, 15s\n"}
+,{"stream_name":"stdout","time":7372.024743015,"data":"[r0]    decoded 6/10 clients, 10,947,339 rows, 15s\n"}
+,{"stream_name":"stdout","time":7376.470776224,"data":"[r1]    decoded 6/10 clients, 14,482,126 rows, 19s\n"}
+,{"stream_name":"stdout","time":7376.674558772,"data":"[r1]    decoded 6/10 clients, 14,482,126 rows, 19s\n"}
+,{"stream_name":"stdout","time":7377.177721954,"data":"[r0]    decoded 8/10 clients, 14,881,150 rows, 20s\n"}
+,{"stream_name":"stdout","time":7377.382679059,"data":"[r0]    decoded 8/10 clients, 14,881,150 rows, 20s\n"}
+,{"stream_name":"stdout","time":7382.644936902,"data":"[r1]    decoded 8/10 clients, 18,823,712 rows, 26s\n"}
+,{"stream_name":"stdout","time":7382.917255214,"data":"[r1]    decoded 8/10 clients, 18,823,712 rows, 26s\n"}
+,{"stream_name":"stdout","time":7385.464409004,"data":"[r1]    decoded 10/10 clients, 21,100,127 rows, 28s\n"}
+,{"stream_name":"stdout","time":7385.619006806,"data":"[r0]    decoded 10/10 clients, 21,945,288 rows, 29s\n"}
+,{"stream_name":"stdout","time":7385.6673362,"data":"[r1]    decoded 10/10 clients, 21,100,127 rows, 28s\n"}
+,{"stream_name":"stdout","time":7385.667418807,"data":"[r0]    decoded 10/10 clients, 21,945,288 rows, 29s\n"}
+,{"stream_name":"stdout","time":7386.689287442,"data":"[r1] data resident: train (21100127, 66) test (860757, 66) (2.70 GiB) in 30s\n"}
+,{"stream_name":"stdout","time":7386.878426364,"data":"[r0] data resident: train (21945288, 66) test (860757, 66) (2.80 GiB) in 30s\n"}
+,{"stream_name":"stdout","time":7386.891776124,"data":"[r1] data resident: train (21100127, 66) test (860757, 66) (2.70 GiB) in 30s\n"}
+,{"stream_name":"stdout","time":7386.891799896,"data":"[r0] data resident: train (21945288, 66) test (860757, 66) (2.80 GiB) in 30s\n"}
+,{"stream_name":"stdout","time":7399.725434615,"data":"[r1] compile: {'enabled': True, 'max_abs_dlogit': 3.5762786865234375e-07, 'decisive_rows': 511, 'disagreements': 0, 'amp_max_abs_dlogit': 0.000732421875, 'amp_decisive_rows': 497, 'amp_disagreements': 0}\n"}
+,{"stream_name":"stdout","time":7399.799088627,"data":"[r0] compile: {'enabled': True, 'max_abs_dlogit': 3.8743019104003906e-07, 'decisive_rows': 508, 'disagreements': 0, 'amp_max_abs_dlogit': 0.00048828125, 'amp_decisive_rows': 502, 'amp_disagreements': 0}\n"}
+,{"stream_name":"stdout","time":7399.928125201,"data":"[r1] compile: {'enabled': True, 'max_abs_dlogit': 3.5762786865234375e-07, 'decisive_rows': 511, 'disagreements': 0, 'amp_max_abs_dlogit': 0.000732421875, 'amp_decisive_rows': 497, 'amp_disagreements': 0}\n"}
+,{"stream_name":"stdout","time":7399.928161933,"data":"[r0] compile: {'enabled': True, 'max_abs_dlogit': 3.8743019104003906e-07, 'decisive_rows': 508, 'disagreements': 0, 'amp_max_abs_dlogit': 0.00048828125, 'amp_decisive_rows': 502, 'amp_disagreements': 0}\n"}
+,{"stream_name":"stdout","time":7399.928168552,"data":"[setup] workers ready; compile: [{'enabled': True, 'max_abs_dlogit': 3.8743019104003906e-07, 'decisive_rows': 508, 'disagreements': 0, 'amp_max_abs_dlogit': 0.00048828125, 'amp_decisive_rows': 502, 'amp_disagreements': 0}, {'enabled': True, 'max_abs_dlogit': 3.5762786865234375e-07, 'decisive_rows': 511, 'disagreements': 0, 'amp_max_abs_dlogit': 0.000732421875, 'amp_decisive_rows': 497, 'amp_disagreements': 0}]\n"}
+,{"stream_name":"stdout","time":7399.928173935,"data":"[aps] mu[inv_mean_nij] = [2.2757088607901008e-05, 2.2757088607901008e-05, 2.2757088607901008e-05, 2.2757088607901008e-05] ...\n"}
+,{"stream_name":"stdout","time":7399.928178622,"data":"[comm] 32,000 params/round (0.0320 M), 5.1x below dense FedProto\n"}
+,{"stream_name":"stdout","time":7399.928182997,"data":"[budget] no local timing yet; using expected_round_s 600s\n"}
+,{"stream_name":"stdout","time":7429.849447698,"data":"[r1] round 1 client 6 step 4501/6456\n"}
+,{"stream_name":"stdout","time":7429.855270829,"data":"[r0] round 1 client 17 step 4205/11276\n"}
+,{"stream_name":"stdout","time":7430.077371783,"data":"[r1] round 1 client 6 step 4501/6456\n"}
+,{"stream_name":"stdout","time":7430.077392004,"data":"[r0] round 1 client 17 step 4205/11276\n"}
+,{"stream_name":"stdout","time":7459.855787694,"data":"[r0] round 1 client 17 step 8551/11276\n"}
+,{"stream_name":"stdout","time":7460.05868701,"data":"[r0] round 1 client 17 step 8551/11276\n"}
+,{"stream_name":"stdout","time":7493.806284846,"data":"[r1] round 1 client 0 step 4573/6418\n"}
+,{"stream_name":"stdout","time":7494.028695535,"data":"[r1] round 1 client 0 step 4573/6418\n"}
+,{"stream_name":"stdout","time":7542.599966341,"data":"[r0] round 1 client 14 step 4470/5864\n"}
+,{"stream_name":"stdout","time":7542.828630808,"data":"[r0] round 1 client 14 step 4470/5864\n"}
+,{"stream_name":"stdout","time":7555.57379917,"data":"[r1] round 1 client 8 step 4543/5447\n"}
+,{"stream_name":"stdout","time":7555.776202724,"data":"[r1] round 1 client 8 step 4543/5447\n"}
+,{"stream_name":"stdout","time":7601.348356395,"data":"[r0] round 1 client 10 step 4477/5114\n"}
+,{"stream_name":"stdout","time":7601.57051958,"data":"[r0] round 1 client 10 step 4477/5114\n"}
+,{"stream_name":"stdout","time":7608.824256338,"data":"[r1] round 1 client 2 step 4553/5078\n"}
+,{"stream_name":"stdout","time":7609.026767749,"data":"[r1] round 1 client 2 step 4553/5078\n"}
+,{"stream_name":"stdout","time":7866.653029234,"data":"[round 001] ce 0.1935 reg 0.0000 | proto acc 0.5961 F1m 0.5878 | clf acc 0.5343 F1m 0.4923 | 465.6s (train 432.3s eval 32.7s) peak 3.5GB\n"}
+,{"stream_name":"stdout","time":7896.453816308,"data":"[r0] round 2 client 17 step 4288/11276\n"}
+,{"stream_name":"stdout","time":7896.455312934,"data":"[r1] round 2 client 6 step 4480/6456\n"}
+,{"stream_name":"stdout","time":7896.676493377,"data":"[r0] round 2 client 17 step 4288/11276\n"}
+,{"stream_name":"stdout","time":7896.676540501,"data":"[r1] round 2 client 6 step 4480/6456\n"}
+,{"stream_name":"stdout","time":7926.458476412,"data":"[r0] round 2 client 17 step 8648/11276\n"}
+,{"stream_name":"stdout","time":7926.660668726,"data":"[r0] round 2 client 17 step 8648/11276\n"}
+,{"stream_name":"stdout","time":7955.35609897,"data":"[r1] round 2 client 0 step 4489/6418\n"}
+,{"stream_name":"stdout","time":7955.577033884,"data":"[r1] round 2 client 0 step 4489/6418\n"}
+,{"stream_name":"stdout","time":8003.766329909,"data":"[r0] round 2 client 14 step 4438/5864\n"}
+,{"stream_name":"stdout","time":8003.990355272,"data":"[r0] round 2 client 14 step 4438/5864\n"}
+,{"stream_name":"stdout","time":8014.207483645,"data":"[r1] round 2 client 8 step 4515/5447\n"}
+,{"stream_name":"stdout","time":8014.410118381,"data":"[r1] round 2 client 8 step 4515/5447\n"}
+,{"stream_name":"stdout","time":8058.56687661,"data":"[r0] round 2 client 10 step 4467/5114\n"}
+,{"stream_name":"stdout","time":8058.790671074,"data":"[r0] round 2 client 10 step 4467/5114\n"}
+,{"stream_name":"stdout","time":8063.803986923,"data":"[r1] round 2 client 2 step 4508/5078\n"}
+,{"stream_name":"stdout","time":8064.006469576,"data":"[r1] round 2 client 2 step 4508/5078\n"}
+,{"stream_name":"stdout","time":8293.898105042,"data":"[round 002] ce 0.1415 reg 1.0732 | proto acc 0.5590 F1m 0.5176 | clf acc 0.5567 F1m 0.5254 | 426.3s (train 393.9s eval 31.9s) peak 3.5GB\n"}
+,{"stream_name":"stdout","time":8323.693453351,"data":"[r0] round 3 client 17 step 4264/11276\n"}
+,{"stream_name":"stdout","time":8323.696046721,"data":"[r1] round 3 client 6 step 4465/6456\n"}
+,{"stream_name":"stdout","time":8323.896781815,"data":"[r0] round 3 client 17 step 4264/11276\n"}
+,{"stream_name":"stdout","time":8323.89682131,"data":"[r1] round 3 client 6 step 4465/6456\n"}
+,{"stream_name":"stdout","time":8353.69591851,"data":"[r0] round 3 client 17 step 8610/11276\n"}
+,{"stream_name":"stdout","time":8353.920105477,"data":"[r0] round 3 client 17 step 8610/11276\n"}
+,{"stream_name":"stdout","time":8382.669325661,"data":"[r1] round 3 client 0 step 4422/6418\n"}
+,{"stream_name":"stdout","time":8382.872960435,"data":"[r1] round 3 client 0 step 4422/6418\n"}
+,{"stream_name":"stdout","time":8431.053963776,"data":"[r0] round 3 client 14 step 4456/5864\n"}
+,{"stream_name":"stdout","time":8431.279162953,"data":"[r0] round 3 client 14 step 4456/5864\n"}
+,{"stream_name":"stdout","time":8442.522657555,"data":"[r1] round 3 client 8 step 4515/5447\n"}
+,{"stream_name":"stdout","time":8442.725024978,"data":"[r1] round 3 client 8 step 4515/5447\n"}
+,{"stream_name":"stdout","time":8485.620717949,"data":"[r0] round 3 client 10 step 4464/5114\n"}
+,{"stream_name":"stdout","time":8485.841309174,"data":"[r0] round 3 client 10 step 4464/5114\n"}
+,{"stream_name":"stdout","time":8492.071297366,"data":"[r1] round 3 client 2 step 4504/5078\n"}
+,{"stream_name":"stdout","time":8492.274350125,"data":"[r1] round 3 client 2 step 4504/5078\n"}
+,{"stream_name":"stdout","time":8720.103368548,"data":"[round 003] ce 0.2348 reg 111.3290 | proto acc 0.4576 F1m 0.3337 | clf acc 0.5304 F1m 0.4812 | 425.2s (train 393.4s eval 31.3s) peak 3.5GB\n"}
+,{"stream_name":"stdout","time":8749.894054891,"data":"[r1] round 4 client 6 step 4457/6456\n"}
+,{"stream_name":"stdout","time":8749.897451077,"data":"[r0] round 4 client 17 step 4240/11276\n"}
+,{"stream_name":"stdout","time":8750.096525919,"data":"[r1] round 4 client 6 step 4457/6456\n"}
+,{"stream_name":"stdout","time":8750.096558221,"data":"[r0] round 4 client 17 step 4240/11276\n"}
+,{"stream_name":"stdout","time":8779.899762702,"data":"[r0] round 4 client 17 step 8660/11276\n"}
+,{"stream_name":"stdout","time":8780.125187347,"data":"[r0] round 4 client 17 step 8660/11276\n"}
+,{"stream_name":"stdout","time":8808.932535189,"data":"[r1] round 4 client 0 step 4491/6418\n"}
+,{"stream_name":"stdout","time":8809.135310196,"data":"[r1] round 4 client 0 step 4491/6418\n"}
+,{"stream_name":"stdout","time":8856.966971355,"data":"[r0] round 4 client 14 step 4431/5864\n"}
+,{"stream_name":"stdout","time":8857.196066801,"data":"[r0] round 4 client 14 step 4431/5864\n"}
+,{"stream_name":"stdout","time":8868.026529415,"data":"[r1] round 4 client 8 step 4501/5447\n"}
+,{"stream_name":"stdout","time":8868.228668587,"data":"[r1] round 4 client 8 step 4501/5447\n"}
+,{"stream_name":"stdout","time":8911.780624823,"data":"[r0] round 4 client 10 step 4474/5114\n"}
+,{"stream_name":"stdout","time":8912.006130608,"data":"[r0] round 4 client 10 step 4474/5114\n"}
+,{"stream_name":"stdout","time":8917.916513794,"data":"[r1] round 4 client 2 step 4514/5078\n"}
+,{"stream_name":"stdout","time":8918.118578537,"data":"[r1] round 4 client 2 step 4514/5078\n"}
+,{"stream_name":"stdout","time":9147.096782393,"data":"[round 004] ce 1.1877 reg 34661.4624 | proto acc 0.3923 F1m 0.2392 | clf acc 0.4874 F1m 0.3897 | 425.8s (train 393.8s eval 31.6s) peak 3.5GB\n"}
+,{"stream_name":"stdout","time":9148.372966742,"data":"  -\u003e last 0.2392  best 0.5878  mu = 2.2757e-05\n"}
+,{"stream_name":"stdout","time":9148.372994969,"data":"Winner for this scenario only: {'k': 0.1, 'mu_absolute': 7.585696202633669e-07, 'criterion': 'mean-over-clients proto f1_macro at the last sweep round'}\n"}
+,{"stream_name":"stdout","time":9148.373001775,"data":"wrote /kaggle/working/mu_sweep.json\n"}
+,{"stream_name":"stdout","time":9148.893474542,"data":"\n"}
+,{"stream_name":"stdout","time":9148.893511356,"data":"winner k=0.1  mu_absolute=7.585696e-07\n"}
+,{"stream_name":"stdout","time":9148.893532071,"data":"Do NOT copy that number into the production notebook. Attach THIS kernel's output\n"}
+,{"stream_name":"stdout","time":9148.893537011,"data":"as a kernel source of tinyproto-fp-train-20client; the config cell reads the\n"}
+,{"stream_name":"stdout","time":9148.893541443,"data":"winner from mu_sweep.json and verifies the selection signature before training.\n"}
+,{"stream_name":"stderr","time":9153.851829047,"data":"/usr/local/lib/python3.12/dist-packages/mistune.py:435: SyntaxWarning: invalid escape sequence '\\|'\n"}
+,{"stream_name":"stderr","time":9153.851857538,"data":"  cells[i][c] = re.sub('\\\\\\\\\\|', '|', cell)\n"}
+,{"stream_name":"stderr","time":9153.989223631,"data":"/usr/local/lib/python3.12/dist-packages/nbconvert/filters/filter_links.py:36: SyntaxWarning: invalid escape sequence '\\_'\n"}
+,{"stream_name":"stderr","time":9153.989258247,"data":"  text = re.sub(r'_', '\\_', text) # Escape underscores in display text\n"}
+,{"stream_name":"stderr","time":9154.560258683,"data":"[NbConvertApp] Converting notebook __notebook__.ipynb to notebook\n"}
+,{"stream_name":"stderr","time":9154.898306055,"data":"[NbConvertApp] Writing 290743 bytes to __notebook__.ipynb\n"}
+,{"stream_name":"stderr","time":9157.153474387,"data":"[NbConvertApp] Converting notebook __notebook__.ipynb to html\n"}
+,{"stream_name":"stderr","time":9158.359344417,"data":"[NbConvertApp] Support files will be in __results___files/\n"}
+,{"stream_name":"stderr","time":9158.359379404,"data":"[NbConvertApp] Making directory __results___files\n"}
+,{"stream_name":"stderr","time":9158.359716499,"data":"[NbConvertApp] Writing 1101892 bytes to __results__.html\n"}
+]

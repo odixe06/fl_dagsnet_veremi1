@@ -1,0 +1,72 @@
+
+CPS masks — §4.1, Def. 1 and 2
+  [PASS] s=26: every mask has exactly s ones
+  [PASS] s=26: max overlap 3 <= search target 3
+  [PASS] s=26: mean overlap 1.35 beats random 2.64
+  [PASS] s=26: decompress(compress(c)) == c ⊙ m (Eq. 7 and 8)
+  [PASS] s=26: mask_index agrees with the boolean mask
+  [PASS] s=50: every mask has exactly s ones
+  [PASS] s=50: max overlap 10 <= search target 10
+  [PASS] s=50: mean overlap 7.28 beats random 9.77
+  [PASS] s=50: decompress(compress(c)) == c ⊙ m (Eq. 7 and 8)
+  [PASS] s=50: mask_index agrees with the boolean mask
+  [PASS] s=128: every mask has exactly s ones
+  [PASS] s=128: max overlap 64 <= search target 64
+  [PASS] s=128: mean overlap 59.77 beats random 64.00
+  [PASS] s=128: decompress(compress(c)) == c ⊙ m (Eq. 7 and 8)
+  [PASS] s=128: mask_index agrees with the boolean mask
+  [PASS] mask construction is deterministic under a fixed seed
+  [PASS] different seeds give different masks
+
+APS aggregation — Eq. (10)
+  [PASS] ĉ_G equals the naive mean of n_ij ĉ_L over N_j
+  [PASS] |N_j| counts only clients holding class j
+  [PASS] unsorted uploads are rejected
+  [PASS] an absent class yields |N_j| = 0 and zeros
+
+APS scaling constant μ — Eq. (11)
+  [PASS] class 0: μ_j·ĉ_G is the sample-weighted mean prototype
+  [PASS] class 1: μ_j·ĉ_G is the sample-weighted mean prototype
+  [PASS] per-class μ makes the target the sample-weighted mean for EVERY class
+  [PASS] inv_mean_nij gives one scalar for all classes
+  [PASS] absolute uses the value verbatim
+
+Prototype regularizer — Eq. (5) and (11)
+  [PASS] R_i equals the naive per-sample masked MSE / s
+  [PASS] rows with no global prototype contribute exactly 0, not NaN
+  [PASS] with s = d and μ = 1 the term is exactly nn.MSELoss (FedProto's form)
+
+Prediction rule — Eq. (12)
+  [PASS] argmax of the score equals argmin of the L2 distance
+  [PASS] a class the client has no prototype for is never predicted
+
+Local prototypes — Eq. (3)
+  [PASS] class means and counts are exact and batch-boundary independent; absent class = 0
+
+Flat weight packing
+  [PASS] param vector is 395,024 long, got 395024
+  [PASS] round trip is bit-exact
+  [PASS] int64 BatchNorm counters survive the round trip
+  [PASS] in-place load_into matches too
+
+BatchNorm folding (evaluation path)
+  [PASS] folded logits match within fp32 noise: {'max_abs_dlogit': 4.76837158203125e-07, 'max_abs_dfeat': 9.5367431640625e-07, 'argmax_disagreements': 0}
+  [PASS] no BatchNorm survives in the folded module
+
+Validation holdout for the μ sweep
+  [PASS] train+val partition the rows exactly
+  [PASS] train and val are disjoint
+  [PASS] val is ~2% of rows (385/20000)
+  [PASS] client 0 class 0 has at least one validation row
+  [PASS] client 0 class 1 has at least one validation row
+  [PASS] client 1 class 0 has at least one validation row
+  [PASS] client 1 class 1 has at least one validation row
+  [PASS] the split is reproducible under a fixed seed
+
+10 metrics vs sklearn
+  [PASS] typical: max|Δ| vs sklearn = 1.39e-17
+  [PASS] one-class prediction: max|Δ| vs sklearn = 8.67e-19
+  [PASS] classes absent from truth: max|Δ| vs sklearn = 2.78e-17
+  [PASS] perfect: max|Δ| vs sklearn = 0.00e+00
+
+ALL UNIT TESTS PASS

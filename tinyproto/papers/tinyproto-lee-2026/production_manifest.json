@@ -1,0 +1,21 @@
+{
+  "docker_image": "gcr.io/kaggle-private-byod/python@sha256:37c64f7dd9c54116ecd1bcc88817c5469b88387388fade02bfa8bf3fc647d461",
+  "files": {
+    "papers/tinyproto-lee-2026/mu-datasets/tinyproto-fp-mu-100client/mu_sweep.json": "e4cafef4c48a00b195235a50c6e9475d3249201f4a698ad596022d444a78b9bf",
+    "papers/tinyproto-lee-2026/mu-datasets/tinyproto-fp-mu-20client/mu_sweep.json": "2b3c06d4021ecc925c4948a3214a35e4fe14b00b70ae1bff2e267e2cef3a1740",
+    "papers/tinyproto-lee-2026/mu-datasets/tinyproto-fp-mu-50client/mu_sweep.json": "f298193426d858228d2c3fd81a32a1afa2e75744d934c963b285c360b48e2d8e",
+    "scripts/gen_notebooks.py": "df5672c6bad5eb33d285366ef18079e00bc88536455c21c0f51f454107845485",
+    "src/__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "src/ckpt.py": "929086abeb9cb724772f6e87db3185e38a2f0f5588d6f5b71cb307fa99591d0e",
+    "src/cps.py": "a64c6b91dbe76f92187d8535d8c26fcd2cc3ac3a0147344b9e0ce83c0000b0e8",
+    "src/data.py": "b0b9f72aeb8cf7b4bcefa278327215aedd7e9ec989a433171d99c63d0d97a4f2",
+    "src/driver.py": "7a9dede0a8864d0c6d67c57ca56b7aa4466e7a30ac6d65349e167e05376c9f22",
+    "src/evaluate.py": "f8947c0c58a1f7309229b122230a25c34febc6499d62f820b1661b0a11addbfe",
+    "src/fl_worker.py": "7f9504f87cf1cca1df6cb56069ec7ca8bcb5e8ad347fef806f620314e1f1e9db",
+    "src/metrics.py": "d5f30ed7be4b1252bd0ee214ea1ca0b7523a5650210b219625ca22c7652d7aa1",
+    "src/model.py": "0c78b210034c12de8d1d4fe2d42008d6eec155bafbf064040de0f5b3ae163b30",
+    "src/protos.py": "5ac42bf93c0e0fdaf4ee9c29accd3b27c90e43a781f2867a8cc1a5be377e7737",
+    "src/sweep.py": "d9d230c1828e5f24869519244a4f57169971c2fda65281ccfaed63eca6e62add"
+  },
+  "n_modules": 11
+}

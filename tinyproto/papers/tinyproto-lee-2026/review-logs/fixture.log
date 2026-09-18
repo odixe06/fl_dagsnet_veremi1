@@ -1,0 +1,5 @@
+usage: make_fixture.py [-h] [--clients CLIENTS] [--rows ROWS]
+                       [--test-rows TEST_ROWS]
+                       root
+make_fixture.py: error: the following arguments are required: root
+ERROR conda.cli.main_run:execute(148): `conda run python tests/make_fixture.py` failed. (See above for error)

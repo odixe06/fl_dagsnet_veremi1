@@ -1,0 +1,212 @@
+# Kaggle kernel log, odixe0502/tinyproto-fp-2t4-validation.
+# Verbatim. Kaggle re-emits a cell's captured output when the next cell starts, so
+# consecutive identical blocks are a log-transport artifact, not double execution:
+# each run's history.csv holds exactly one row per round (checked by verify_run).
+[     7.6] stderr 0.00s - Debugger warning: It seems that frozen modules are being used, which may
+[     7.6] stderr 0.00s - make the debugger miss breakpoints. Please pass -Xfrozen_modules=off
+[     7.6] stderr 0.00s - to python to disable frozen modules.
+[     7.6] stderr 0.00s - Note: Debugging will proceed. Set PYDEVD_DISABLE_FILE_VALIDATION=1 to disable this validation.
+[     8.2] stderr 0.00s - Debugger warning: It seems that frozen modules are being used, which may
+[     8.2] stderr 0.00s - make the debugger miss breakpoints. Please pass -Xfrozen_modules=off
+[     8.2] stderr 0.00s - to python to disable frozen modules.
+[     8.2] stderr 0.00s - Note: Debugging will proceed. Set PYDEVD_DISABLE_FILE_VALIDATION=1 to disable this validation.
+[    14.2] stdout python 3.12.13 | torch 2.10.0+cu128 | cuda 12.8
+[    14.2] stdout GPU 0: Tesla T4 (UUID: GPU-94a22663-ebde-2ef9-34fe-244cbfe2ac72)
+[    14.2] stdout GPU 1: Tesla T4 (UUID: GPU-6ad4e76a-eaad-8f3f-e2cd-9951ab34b7be)
+[    14.2] stdout   cuda:0 Tesla T4 14.6 GB sm_75 SMs 40
+[    14.2] stdout   cuda:1 Tesla T4 14.6 GB sm_75 SMs 40
+[    14.2] stdout cpu: 4 | RAM GB: 31.3 | free on /kaggle/working GB: 19.5
+[    14.2] stdout free on /kaggle/temp GB: n/a
+[    14.2] stdout OK: 2 x Tesla T4 (sm_75) confirmed before any training.
+[    14.2] stdout package dir: /kaggle/working/proj
+[    14.2] stdout Writing /kaggle/working/proj/model.py
+[    14.2] stdout Writing /kaggle/working/proj/cps.py
+[    14.3] stdout Writing /kaggle/working/proj/protos.py
+[    14.3] stdout Writing /kaggle/working/proj/metrics.py
+[    14.3] stdout Writing /kaggle/working/proj/data.py
+[    14.3] stdout Writing /kaggle/working/proj/ckpt.py
+[    14.4] stdout Writing /kaggle/working/proj/evaluate.py
+[    14.4] stdout Writing /kaggle/working/proj/fl_worker.py
+[    14.4] stdout Writing /kaggle/working/proj/driver.py
+[    14.4] stdout Writing /kaggle/working/proj/sweep.py
+[    14.5] stdout Writing /kaggle/working/tests/run_e2e.py
+[    14.5] stdout Writing /kaggle/working/scripts/verify_run.py
+[    14.5] stdout Writing /kaggle/working/tests/remote_smoke.py
+[    42.0] stdout REAL-DATA SAMPLE 20 source clients [0, 6, 13, 19] test rows 1024
+[    42.1] stdout [cps] {'d': 256, 'K': 16, 's': 50, 'compression_rate': 0.8046875, 'overlap_min': 0, 'overlap_max': 10, 'overlap_mean': 7.275, 'overlap_random_expectation': 9.765625, 'overlap_search_target': 10, 'hamming_min': 80, 'hamming_max': 100, 'hamming_mean': 85.45, 'dims_used': 256, 'dim_usage_min': 2, 'dim_usage_max': 4}
+[    42.1] stdout [resume] starting at round 1 of 3 (fingerprint 21e033e51dad0417)
+[    42.2] stdout REAL-DATA SAMPLE 20 source clients [0, 6, 13, 19] test rows 1024
+[    42.2] stdout [cps] {'d': 256, 'K': 16, 's': 50, 'compression_rate': 0.8046875, 'overlap_min': 0, 'overlap_max': 10, 'overlap_mean': 7.275, 'overlap_random_expectation': 9.765625, 'overlap_search_target': 10, 'hamming_min': 80, 'hamming_max': 100, 'hamming_mean': 85.45, 'dims_used': 256, 'dim_usage_min': 2, 'dim_usage_max': 4}
+[    42.2] stdout [resume] starting at round 1 of 3 (fingerprint 21e033e51dad0417)
+[    44.9] stdout [r1]    decoded 1/2 clients, 8,192 rows, 0s
+[    44.9] stdout [r0]    decoded 1/2 clients, 8,192 rows, 0s
+[    44.9] stdout [r0]    decoded 2/2 clients, 16,384 rows, 0s
+[    44.9] stdout [r1]    decoded 2/2 clients, 16,384 rows, 0s
+[    45.1] stdout [r0] data resident: train (16384, 66) test (1024, 66) (0.00 GiB) in 0s
+[    45.1] stdout [r1] data resident: train (16384, 66) test (1024, 66) (0.00 GiB) in 0s
+[    45.1] stdout [r1]    decoded 1/2 clients, 8,192 rows, 0s
+[    45.1] stdout [r0]    decoded 1/2 clients, 8,192 rows, 0s
+[    45.1] stdout [r0]    decoded 2/2 clients, 16,384 rows, 0s
+[    45.1] stdout [r1]    decoded 2/2 clients, 16,384 rows, 0s
+[    45.1] stdout [r0] data resident: train (16384, 66) test (1024, 66) (0.00 GiB) in 0s
+[    45.1] stdout [r1] data resident: train (16384, 66) test (1024, 66) (0.00 GiB) in 0s
+[    65.8] stderr W0907 19:25:22.500000 62 torch/_inductor/utils.py:1679] [0/0] Not enough SMs to use max_autotune_gemm mode
+[    65.8] stderr W0907 19:25:22.500000 61 torch/_inductor/utils.py:1679] [0/0] Not enough SMs to use max_autotune_gemm mode
+[    66.0] stderr W0907 19:25:22.500000 62 torch/_inductor/utils.py:1679] [0/0] Not enough SMs to use max_autotune_gemm mode
+[    66.0] stderr W0907 19:25:22.500000 61 torch/_inductor/utils.py:1679] [0/0] Not enough SMs to use max_autotune_gemm mode
+[    66.0] stderr W0907 19:25:22.500000 62 torch/_inductor/utils.py:1679] [0/0] Not enough SMs to use max_autotune_gemm mode
+[    66.0] stderr W0907 19:25:22.500000 61 torch/_inductor/utils.py:1679] [0/0] Not enough SMs to use max_autotune_gemm mode
+[   139.7] stdout [r0] compile: {'enabled': True, 'max_abs_dlogit': 3.5762786865234375e-07, 'decisive_rows': 511, 'disagreements': 0}
+[   139.7] stdout [r1] compile: {'enabled': True, 'max_abs_dlogit': 3.5762786865234375e-07, 'decisive_rows': 509, 'disagreements': 0}
+[   139.9] stdout [r0] compile: {'enabled': True, 'max_abs_dlogit': 3.5762786865234375e-07, 'decisive_rows': 511, 'disagreements': 0}
+[   139.9] stdout [r1] compile: {'enabled': True, 'max_abs_dlogit': 3.5762786865234375e-07, 'decisive_rows': 509, 'disagreements': 0}
+[   146.1] stdout [setup] workers ready; compile: [{'enabled': True, 'max_abs_dlogit': 3.5762786865234375e-07, 'decisive_rows': 511, 'disagreements': 0}, {'enabled': True, 'max_abs_dlogit': 3.5762786865234375e-07, 'decisive_rows': 509, 'disagreements': 0}]
+[   146.1] stdout [aps] mu[inv_mean_nij] = [0.0001220703125, 0.0001220703125, 0.0001220703125, 0.0001220703125] ...
+[   146.1] stdout [comm] 3,400 params/round (0.0034 M), 5.1x below dense FedProto
+[   146.1] stdout [round 001] ce 0.5134 reg 0.0000 | proto acc 0.0107 F1m 0.0013 | clf acc 0.0107 F1m 0.0013 | 0.9s (train 0.7s eval 0.1s) peak 0.34GB
+[   146.1] stdout [round 002] ce 0.0005 reg 0.7913 | proto acc 0.0107 F1m 0.0013 | clf acc 0.0107 F1m 0.0013 | 0.8s (train 0.4s eval 0.0s) peak 0.34GB
+[   146.1] stdout [stop] session cap of 2 rounds reached after round 2; resume the next session from round 3
+[   146.1] stdout [cps] {'d': 256, 'K': 16, 's': 50, 'compression_rate': 0.8046875, 'overlap_min': 0, 'overlap_max': 10, 'overlap_mean': 7.275, 'overlap_random_expectation': 9.765625, 'overlap_search_target': 10, 'hamming_min': 80, 'hamming_max': 100, 'hamming_mean': 85.45, 'dims_used': 256, 'dim_usage_min': 2, 'dim_usage_max': 4}
+[   146.1] stdout [resume] starting at round 3 of 3 (fingerprint 21e033e51dad0417)
+[   146.3] stdout [setup] workers ready; compile: [{'enabled': True, 'max_abs_dlogit': 3.5762786865234375e-07, 'decisive_rows': 511, 'disagreements': 0}, {'enabled': True, 'max_abs_dlogit': 3.5762786865234375e-07, 'decisive_rows': 509, 'disagreements': 0}]
+[   146.3] stdout [aps] mu[inv_mean_nij] = [0.0001220703125, 0.0001220703125, 0.0001220703125, 0.0001220703125] ...
+[   146.3] stdout [comm] 3,400 params/round (0.0034 M), 5.1x below dense FedProto
+[   146.3] stdout [round 001] ce 0.5134 reg 0.0000 | proto acc 0.0107 F1m 0.0013 | clf acc 0.0107 F1m 0.0013 | 0.9s (train 0.7s eval 0.1s) peak 0.34GB
+[   146.3] stdout [round 002] ce 0.0005 reg 0.7913 | proto acc 0.0107 F1m 0.0013 | clf acc 0.0107 F1m 0.0013 | 0.8s (train 0.4s eval 0.0s) peak 0.34GB
+[   146.3] stdout [stop] session cap of 2 rounds reached after round 2; resume the next session from round 3
+[   146.3] stdout [cps] {'d': 256, 'K': 16, 's': 50, 'compression_rate': 0.8046875, 'overlap_min': 0, 'overlap_max': 10, 'overlap_mean': 7.275, 'overlap_random_expectation': 9.765625, 'overlap_search_target': 10, 'hamming_min': 80, 'hamming_max': 100, 'hamming_mean': 85.45, 'dims_used': 256, 'dim_usage_min': 2, 'dim_usage_max': 4}
+[   146.3] stdout [resume] starting at round 3 of 3 (fingerprint 21e033e51dad0417)
+[   148.8] stdout [r0]    decoded 1/2 clients, 8,192 rows, 0s
+[   148.8] stdout [r0]    decoded 2/2 clients, 16,384 rows, 0s
+[   148.9] stdout [r1]    decoded 1/2 clients, 8,192 rows, 0s
+[   148.9] stdout [r1]    decoded 2/2 clients, 16,384 rows, 0s
+[   148.9] stdout [r0] data resident: train (16384, 66) test (1024, 66) (0.00 GiB) in 0s
+[   148.9] stdout [r1] data resident: train (16384, 66) test (1024, 66) (0.00 GiB) in 0s
+[   149.0] stdout [r0]    decoded 1/2 clients, 8,192 rows, 0s
+[   149.0] stdout [r0]    decoded 2/2 clients, 16,384 rows, 0s
+[   149.0] stdout [r1]    decoded 1/2 clients, 8,192 rows, 0s
+[   149.0] stdout [r1]    decoded 2/2 clients, 16,384 rows, 0s
+[   149.0] stdout [r0] data resident: train (16384, 66) test (1024, 66) (0.00 GiB) in 0s
+[   149.0] stdout [r1] data resident: train (16384, 66) test (1024, 66) (0.00 GiB) in 0s
+[   161.6] stdout [r0] compile: {'enabled': True, 'max_abs_dlogit': 3.5762786865234375e-07, 'decisive_rows': 511, 'disagreements': 0}
+[   161.8] stdout [r0] compile: {'enabled': True, 'max_abs_dlogit': 3.5762786865234375e-07, 'decisive_rows': 511, 'disagreements': 0}
+[   161.9] stdout [r1] compile: {'enabled': True, 'max_abs_dlogit': 3.5762786865234375e-07, 'decisive_rows': 509, 'disagreements': 0}
+[   162.1] stdout [r1] compile: {'enabled': True, 'max_abs_dlogit': 3.5762786865234375e-07, 'decisive_rows': 509, 'disagreements': 0}
+[   175.7] stdout [setup] workers ready; compile: [{'enabled': True, 'max_abs_dlogit': 3.5762786865234375e-07, 'decisive_rows': 511, 'disagreements': 0}, {'enabled': True, 'max_abs_dlogit': 3.5762786865234375e-07, 'decisive_rows': 509, 'disagreements': 0}]
+[   175.7] stdout [aps] mu[inv_mean_nij] = [0.0001220703125, 0.0001220703125, 0.0001220703125, 0.0001220703125] ...
+[   175.7] stdout [comm] 3,400 params/round (0.0034 M), 5.1x below dense FedProto
+[   175.7] stdout [resume] client state restored from round 2
+[   175.7] stdout [round 003] ce 0.0001 reg 0.1759 | proto acc 0.0107 F1m 0.0013 | clf acc 0.0107 F1m 0.0013 | 0.9s (train 0.7s eval 0.1s) peak 0.34GB
+[   175.7] stdout run       : /kaggle/working/runs/review_real_20
+[   175.7] stdout scenario  : 20client-sample  clients=4  s=50  d=256  rounds=3
+[   175.7] stdout completed : 3 rounds [1, 2, 3]
+[   175.7] stdout 335 checks passed, 0 failed
+[   175.7] stdout REAL-DATA SAMPLE 50 source clients [0, 16, 33, 49] test rows 1024
+[   175.8] stdout [cps] {'d': 256, 'K': 16, 's': 50, 'compression_rate': 0.8046875, 'overlap_min': 0, 'overlap_max': 10, 'overlap_mean': 7.275, 'overlap_random_expectation': 9.765625, 'overlap_search_target': 10, 'hamming_min': 80, 'hamming_max': 100, 'hamming_mean': 85.45, 'dims_used': 256, 'dim_usage_min': 2, 'dim_usage_max': 4}
+[   175.8] stdout [resume] starting at round 1 of 3 (fingerprint e88bb2aa717e5d1f)
+[   175.9] stdout [setup] workers ready; compile: [{'enabled': True, 'max_abs_dlogit': 3.5762786865234375e-07, 'decisive_rows': 511, 'disagreements': 0}, {'enabled': True, 'max_abs_dlogit': 3.5762786865234375e-07, 'decisive_rows': 509, 'disagreements': 0}]
+[   175.9] stdout [aps] mu[inv_mean_nij] = [0.0001220703125, 0.0001220703125, 0.0001220703125, 0.0001220703125] ...
+[   175.9] stdout [comm] 3,400 params/round (0.0034 M), 5.1x below dense FedProto
+[   175.9] stdout [resume] client state restored from round 2
+[   175.9] stdout [round 003] ce 0.0001 reg 0.1759 | proto acc 0.0107 F1m 0.0013 | clf acc 0.0107 F1m 0.0013 | 0.9s (train 0.7s eval 0.1s) peak 0.34GB
+[   175.9] stdout run       : /kaggle/working/runs/review_real_20
+[   175.9] stdout scenario  : 20client-sample  clients=4  s=50  d=256  rounds=3
+[   175.9] stdout completed : 3 rounds [1, 2, 3]
+[   175.9] stdout 335 checks passed, 0 failed
+[   175.9] stdout REAL-DATA SAMPLE 50 source clients [0, 16, 33, 49] test rows 1024
+[   175.9] stdout [cps] {'d': 256, 'K': 16, 's': 50, 'compression_rate': 0.8046875, 'overlap_min': 0, 'overlap_max': 10, 'overlap_mean': 7.275, 'overlap_random_expectation': 9.765625, 'overlap_search_target': 10, 'hamming_min': 80, 'hamming_max': 100, 'hamming_mean': 85.45, 'dims_used': 256, 'dim_usage_min': 2, 'dim_usage_max': 4}
+[   175.9] stdout [resume] starting at round 1 of 3 (fingerprint e88bb2aa717e5d1f)
+[   178.4] stdout [r0]    decoded 1/2 clients, 8,192 rows, 0s
+[   178.5] stdout [r0]    decoded 2/2 clients, 16,384 rows, 0s
+[   178.5] stdout [r1]    decoded 1/2 clients, 8,192 rows, 0s
+[   178.5] stdout [r1]    decoded 2/2 clients, 16,384 rows, 0s
+[   178.5] stdout [r0] data resident: train (16384, 66) test (1024, 66) (0.00 GiB) in 0s
+[   178.6] stdout [r1] data resident: train (16384, 66) test (1024, 66) (0.00 GiB) in 0s
+[   178.6] stdout [r0]    decoded 1/2 clients, 8,192 rows, 0s
+[   178.6] stdout [r0]    decoded 2/2 clients, 16,384 rows, 0s
+[   178.6] stdout [r1]    decoded 1/2 clients, 8,192 rows, 0s
+[   178.6] stdout [r1]    decoded 2/2 clients, 16,384 rows, 0s
+[   178.6] stdout [r0] data resident: train (16384, 66) test (1024, 66) (0.00 GiB) in 0s
+[   178.6] stdout [r1] data resident: train (16384, 66) test (1024, 66) (0.00 GiB) in 0s
+[   191.2] stdout [r0] compile: {'enabled': True, 'max_abs_dlogit': 4.470348358154297e-07, 'decisive_rows': 507, 'disagreements': 0}
+[   191.3] stdout [r1] compile: {'enabled': True, 'max_abs_dlogit': 3.6135315895080566e-07, 'decisive_rows': 508, 'disagreements': 0}
+[   191.4] stdout [r0] compile: {'enabled': True, 'max_abs_dlogit': 4.470348358154297e-07, 'decisive_rows': 507, 'disagreements': 0}
+[   191.4] stdout [r1] compile: {'enabled': True, 'max_abs_dlogit': 3.6135315895080566e-07, 'decisive_rows': 508, 'disagreements': 0}
+[   205.0] stdout [setup] workers ready; compile: [{'enabled': True, 'max_abs_dlogit': 4.470348358154297e-07, 'decisive_rows': 507, 'disagreements': 0}, {'enabled': True, 'max_abs_dlogit': 3.6135315895080566e-07, 'decisive_rows': 508, 'disagreements': 0}]
+[   205.0] stdout [aps] mu[inv_mean_nij] = [0.000213623046875, 0.000213623046875, 0.000213623046875, 0.000213623046875] ...
+[   205.0] stdout [comm] 3,550 params/round (0.0036 M), 5.1x below dense FedProto
+[   205.0] stdout [round 001] ce 0.5718 reg 0.0000 | proto acc 0.0547 F1m 0.0105 | clf acc 0.1216 F1m 0.0125 | 0.9s (train 0.7s eval 0.1s) peak 0.34GB
+[   205.0] stdout [round 002] ce 0.0224 reg 0.7098 | proto acc 0.1028 F1m 0.0151 | clf acc 0.1218 F1m 0.0125 | 0.4s (train 0.3s eval 0.0s) peak 0.34GB
+[   205.0] stdout [round 003] ce 0.0125 reg 0.2016 | proto acc 0.1089 F1m 0.0151 | clf acc 0.1218 F1m 0.0128 | 0.4s (train 0.3s eval 0.0s) peak 0.34GB
+[   205.0] stdout run       : /kaggle/working/runs/review_real_50
+[   205.0] stdout scenario  : 50client-sample  clients=4  s=50  d=256  rounds=3
+[   205.0] stdout completed : 3 rounds [1, 2, 3]
+[   205.0] stdout 335 checks passed, 0 failed
+[   205.0] stdout REAL-DATA SAMPLE 100 source clients [0, 33, 66, 99] test rows 1024
+[   205.1] stdout [cps] {'d': 256, 'K': 16, 's': 50, 'compression_rate': 0.8046875, 'overlap_min': 0, 'overlap_max': 10, 'overlap_mean': 7.275, 'overlap_random_expectation': 9.765625, 'overlap_search_target': 10, 'hamming_min': 80, 'hamming_max': 100, 'hamming_mean': 85.45, 'dims_used': 256, 'dim_usage_min': 2, 'dim_usage_max': 4}
+[   205.1] stdout [resume] starting at round 1 of 3 (fingerprint aeb2faf05b6236b1)
+[   205.2] stdout [setup] workers ready; compile: [{'enabled': True, 'max_abs_dlogit': 4.470348358154297e-07, 'decisive_rows': 507, 'disagreements': 0}, {'enabled': True, 'max_abs_dlogit': 3.6135315895080566e-07, 'decisive_rows': 508, 'disagreements': 0}]
+[   205.2] stdout [aps] mu[inv_mean_nij] = [0.000213623046875, 0.000213623046875, 0.000213623046875, 0.000213623046875] ...
+[   205.2] stdout [comm] 3,550 params/round (0.0036 M), 5.1x below dense FedProto
+[   205.2] stdout [round 001] ce 0.5718 reg 0.0000 | proto acc 0.0547 F1m 0.0105 | clf acc 0.1216 F1m 0.0125 | 0.9s (train 0.7s eval 0.1s) peak 0.34GB
+[   205.2] stdout [round 002] ce 0.0224 reg 0.7098 | proto acc 0.1028 F1m 0.0151 | clf acc 0.1218 F1m 0.0125 | 0.4s (train 0.3s eval 0.0s) peak 0.34GB
+[   205.2] stdout [round 003] ce 0.0125 reg 0.2016 | proto acc 0.1089 F1m 0.0151 | clf acc 0.1218 F1m 0.0128 | 0.4s (train 0.3s eval 0.0s) peak 0.34GB
+[   205.2] stdout run       : /kaggle/working/runs/review_real_50
+[   205.2] stdout scenario  : 50client-sample  clients=4  s=50  d=256  rounds=3
+[   205.2] stdout completed : 3 rounds [1, 2, 3]
+[   205.2] stdout 335 checks passed, 0 failed
+[   205.2] stdout REAL-DATA SAMPLE 100 source clients [0, 33, 66, 99] test rows 1024
+[   205.2] stdout [cps] {'d': 256, 'K': 16, 's': 50, 'compression_rate': 0.8046875, 'overlap_min': 0, 'overlap_max': 10, 'overlap_mean': 7.275, 'overlap_random_expectation': 9.765625, 'overlap_search_target': 10, 'hamming_min': 80, 'hamming_max': 100, 'hamming_mean': 85.45, 'dims_used': 256, 'dim_usage_min': 2, 'dim_usage_max': 4}
+[   205.2] stdout [resume] starting at round 1 of 3 (fingerprint aeb2faf05b6236b1)
+[   207.9] stdout [r1]    decoded 1/2 clients, 8,192 rows, 0s
+[   207.9] stdout [r1]    decoded 2/2 clients, 16,384 rows, 0s
+[   207.9] stdout [r0]    decoded 1/2 clients, 8,192 rows, 0s
+[   207.9] stdout [r0]    decoded 2/2 clients, 16,384 rows, 0s
+[   208.0] stdout [r1] data resident: train (16384, 66) test (1024, 66) (0.00 GiB) in 0s
+[   208.0] stdout [r0] data resident: train (16384, 66) test (1024, 66) (0.00 GiB) in 0s
+[   208.1] stdout [r1]    decoded 1/2 clients, 8,192 rows, 0s
+[   208.1] stdout [r1]    decoded 2/2 clients, 16,384 rows, 0s
+[   208.1] stdout [r0]    decoded 1/2 clients, 8,192 rows, 0s
+[   208.1] stdout [r0]    decoded 2/2 clients, 16,384 rows, 0s
+[   208.1] stdout [r1] data resident: train (16384, 66) test (1024, 66) (0.00 GiB) in 0s
+[   208.1] stdout [r0] data resident: train (16384, 66) test (1024, 66) (0.00 GiB) in 0s
+[   219.5] stderr W0907 19:27:56.268000 722 torch/_inductor/utils.py:1679] [0/0] Not enough SMs to use max_autotune_gemm mode
+[   219.7] stderr W0907 19:27:56.451000 721 torch/_inductor/utils.py:1679] [0/0] Not enough SMs to use max_autotune_gemm mode
+[   219.7] stderr W0907 19:27:56.268000 722 torch/_inductor/utils.py:1679] [0/0] Not enough SMs to use max_autotune_gemm mode
+[   219.7] stderr W0907 19:27:56.451000 721 torch/_inductor/utils.py:1679] [0/0] Not enough SMs to use max_autotune_gemm mode
+[   219.7] stderr W0907 19:27:56.268000 722 torch/_inductor/utils.py:1679] [0/0] Not enough SMs to use max_autotune_gemm mode
+[   219.7] stderr W0907 19:27:56.451000 721 torch/_inductor/utils.py:1679] [0/0] Not enough SMs to use max_autotune_gemm mode
+[   286.4] stdout [r1] compile: {'enabled': True, 'max_abs_dlogit': 2.980232238769531e-07, 'decisive_rows': 255, 'disagreements': 0}
+[   286.6] stdout [r1] compile: {'enabled': True, 'max_abs_dlogit': 2.980232238769531e-07, 'decisive_rows': 255, 'disagreements': 0}
+[   287.0] stdout [r0] compile: {'enabled': True, 'max_abs_dlogit': 3.8743019104003906e-07, 'decisive_rows': 253, 'disagreements': 0}
+[   287.2] stdout [r0] compile: {'enabled': True, 'max_abs_dlogit': 3.8743019104003906e-07, 'decisive_rows': 253, 'disagreements': 0}
+[   292.9] stdout [setup] workers ready; compile: [{'enabled': True, 'max_abs_dlogit': 3.8743019104003906e-07, 'decisive_rows': 253, 'disagreements': 0}, {'enabled': True, 'max_abs_dlogit': 2.980232238769531e-07, 'decisive_rows': 255, 'disagreements': 0}]
+[   292.9] stdout [aps] mu[inv_mean_nij] = [0.00018310546875, 0.00018310546875, 0.00018310546875, 0.00018310546875] ...
+[   292.9] stdout [comm] 3,500 params/round (0.0035 M), 5.1x below dense FedProto
+[   292.9] stdout [round 001] ce 0.3052 reg 0.0000 | proto acc 0.0911 F1m 0.0142 | clf acc 0.0830 F1m 0.0129 | 1.4s (train 0.8s eval 0.1s) peak 0.17GB
+[   292.9] stdout [round 002] ce 0.0118 reg 0.6372 | proto acc 0.0537 F1m 0.0096 | clf acc 0.0525 F1m 0.0095 | 0.6s (train 0.5s eval 0.0s) peak 0.17GB
+[   292.9] stdout [round 003] ce 0.0056 reg 0.1067 | proto acc 0.0574 F1m 0.0098 | clf acc 0.0571 F1m 0.0100 | 0.6s (train 0.5s eval 0.0s) peak 0.17GB
+[   292.9] stdout run       : /kaggle/working/runs/review_real_100
+[   292.9] stdout scenario  : 100client-sample  clients=4  s=50  d=256  rounds=3
+[   292.9] stdout completed : 3 rounds [1, 2, 3]
+[   292.9] stdout 335 checks passed, 0 failed
+[   292.9] stdout REMOTE VALIDATION PASSED
+[   293.1] stdout [setup] workers ready; compile: [{'enabled': True, 'max_abs_dlogit': 3.8743019104003906e-07, 'decisive_rows': 253, 'disagreements': 0}, {'enabled': True, 'max_abs_dlogit': 2.980232238769531e-07, 'decisive_rows': 255, 'disagreements': 0}]
+[   293.1] stdout [aps] mu[inv_mean_nij] = [0.00018310546875, 0.00018310546875, 0.00018310546875, 0.00018310546875] ...
+[   293.1] stdout [comm] 3,500 params/round (0.0035 M), 5.1x below dense FedProto
+[   293.1] stdout [round 001] ce 0.3052 reg 0.0000 | proto acc 0.0911 F1m 0.0142 | clf acc 0.0830 F1m 0.0129 | 1.4s (train 0.8s eval 0.1s) peak 0.17GB
+[   293.1] stdout [round 002] ce 0.0118 reg 0.6372 | proto acc 0.0537 F1m 0.0096 | clf acc 0.0525 F1m 0.0095 | 0.6s (train 0.5s eval 0.0s) peak 0.17GB
+[   293.1] stdout [round 003] ce 0.0056 reg 0.1067 | proto acc 0.0574 F1m 0.0098 | clf acc 0.0571 F1m 0.0100 | 0.6s (train 0.5s eval 0.0s) peak 0.17GB
+[   293.1] stdout run       : /kaggle/working/runs/review_real_100
+[   293.1] stdout scenario  : 100client-sample  clients=4  s=50  d=256  rounds=3
+[   293.1] stdout completed : 3 rounds [1, 2, 3]
+[   293.1] stdout 335 checks passed, 0 failed
+[   293.1] stdout REMOTE VALIDATION PASSED
+[   296.2] stderr /usr/local/lib/python3.12/dist-packages/mistune.py:435: SyntaxWarning: invalid escape sequence '\|'
+[   296.2] stderr   cells[i][c] = re.sub('\\\\\|', '|', cell)
+[   296.4] stderr /usr/local/lib/python3.12/dist-packages/nbconvert/filters/filter_links.py:36: SyntaxWarning: invalid escape sequence '\_'
+[   296.4] stderr   text = re.sub(r'_', '\_', text) # Escape underscores in display text
+[   297.1] stderr [NbConvertApp] Converting notebook __notebook__.ipynb to notebook
+[   297.4] stderr [NbConvertApp] Writing 236439 bytes to __notebook__.ipynb
+[   299.8] stderr [NbConvertApp] Converting notebook __notebook__.ipynb to html
+[   301.1] stderr [NbConvertApp] Writing 1166642 bytes to __results__.html

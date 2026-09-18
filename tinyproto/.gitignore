@@ -1,0 +1,19 @@
+# Generated notebooks carry an embedded W&B key (private Kaggle notebooks only).
+# Never commit or share these; rebuild them with scripts/gen_notebooks.py.
+papers/tinyproto-lee-2026/notebook/**/*.ipynb
+papers/tinyproto-lee-2026/validation/**/*.ipynb
+# production/ was missing here until 2026-09-09. All 7 session notebooks carry the key in the
+# same _INLINE_WANDB_KEY cell, so the omission would have committed it the moment git is init'd.
+# The executed copies pulled back from Kaggle (notebook/*.executed.*.ipynb) carry it too; they
+# are already covered by the notebook/ line above.
+papers/tinyproto-lee-2026/production/**/*.ipynb
+
+# Pulled run artifacts and the checkpoint datasets built from them: gigabytes of weights,
+# not source. resume-datasets/ is hardlinked to runs/, so it costs no extra disk.
+papers/tinyproto-lee-2026/runs/
+papers/tinyproto-lee-2026/resume-datasets/
+__pycache__/
+
+# Local MCP configs carry a Kaggle bearer token — never commit.
+.mcp.json
+.vscode/mcp.json

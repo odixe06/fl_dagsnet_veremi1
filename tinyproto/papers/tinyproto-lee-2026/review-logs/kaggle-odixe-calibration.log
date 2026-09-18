@@ -1,0 +1,214 @@
+# Kaggle kernel log, odixe0502/tinyproto-fp-calibration (2026-09-08), verbatim.
+# Full-data 20-client calibration: micro-benchmarks then 3 real rounds on 43,045,415 train
+# rows and the whole 10,761,343-row test set. Kaggle re-emits a cell's output when the next
+# cell starts, so consecutive identical blocks are a log artifact, not double execution.
+[     7.6] stderr 0.00s - Debugger warning: It seems that frozen modules are being used, which may
+[     7.6] stderr 0.00s - make the debugger miss breakpoints. Please pass -Xfrozen_modules=off
+[     7.6] stderr 0.00s - to python to disable frozen modules.
+[     7.6] stderr 0.00s - Note: Debugging will proceed. Set PYDEVD_DISABLE_FILE_VALIDATION=1 to disable this validation.
+[     8.2] stderr 0.00s - Debugger warning: It seems that frozen modules are being used, which may
+[     8.2] stderr 0.00s - make the debugger miss breakpoints. Please pass -Xfrozen_modules=off
+[     8.2] stderr 0.00s - to python to disable frozen modules.
+[     8.2] stderr 0.00s - Note: Debugging will proceed. Set PYDEVD_DISABLE_FILE_VALIDATION=1 to disable this validation.
+[    14.3] stdout python 3.12.13 | torch 2.10.0+cu128 | cuda 12.8
+[    14.3] stdout GPU 0: Tesla T4 (UUID: GPU-04b7ed94-11a9-47ed-50c9-eaaa1a41422b)
+[    14.3] stdout GPU 1: Tesla T4 (UUID: GPU-a53f5509-8df2-fd6e-c633-81abf51de662)
+[    14.3] stdout   cuda:0 Tesla T4 14.6 GB sm_75 SMs 40
+[    14.3] stdout   cuda:1 Tesla T4 14.6 GB sm_75 SMs 40
+[    14.3] stdout cpu: 4 | RAM GB: 31.3 | free on /kaggle/working GB: 19.5
+[    14.3] stdout free on /kaggle/temp GB: n/a
+[    14.3] stdout OK: 2 x Tesla T4 (sm_75) confirmed before any training.
+[    14.4] stdout   run_name               tinyproto_fp_calib
+[    14.4] stdout   scenario               20client
+[    14.4] stdout   n_clients              20
+[    14.4] stdout   rounds                 3
+[    14.4] stdout   local_epochs           1
+[    14.4] stdout   lam                    1.0
+[    14.4] stdout   cps_s                  50
+[    14.4] stdout   mask_seed              42
+[    14.4] stdout   mu_kind                inv_mean_nij
+[    14.4] stdout   mu_value               1.0
+[    14.4] stdout   batch                  512
+[    14.4] stdout   eval_batch             16384
+[    14.4] stdout   lr                     0.001
+[    14.4] stdout   weight_decay           0.0001
+[    14.4] stdout   betas                  [0.9, 0.999]
+[    14.4] stdout   eps                    1e-08
+[    14.4] stdout   clip                   1.0
+[    14.4] stdout   amp                    True
+[    14.4] stdout   compile                True
+[    14.4] stdout   eval_group             1
+[    14.4] stdout   seed                   42
+[    14.4] stdout   num_classes            16
+[    14.4] stdout   n_features             66
+[    14.4] stdout   feature_dim            256
+[    14.4] stdout   max_hours              10.0
+[    14.4] stdout   rounds_this_session    None
+[    14.4] stdout   require_resume         False
+[    14.4] stdout   import_roots           []
+[    14.4] stdout   save_preds_rounds      []
+[    14.4] stdout package dir: /kaggle/working/proj
+[    14.4] stdout Writing /kaggle/working/proj/model.py
+[    14.5] stdout Writing /kaggle/working/proj/cps.py
+[    14.5] stdout Writing /kaggle/working/proj/protos.py
+[    14.5] stdout Writing /kaggle/working/proj/metrics.py
+[    14.5] stdout Writing /kaggle/working/proj/data.py
+[    14.5] stdout Writing /kaggle/working/proj/ckpt.py
+[    14.6] stdout Writing /kaggle/working/proj/evaluate.py
+[    14.6] stdout Writing /kaggle/working/proj/fl_worker.py
+[    14.6] stdout Writing /kaggle/working/proj/driver.py
+[    14.6] stdout Writing /kaggle/working/proj/sweep.py
+[    16.1] stdout client root: /kaggle/input/datasets/odixe0502/veremi-fl-20client/20_client
+[    16.1] stdout test dir   : /kaggle/input/datasets/odixe0502/veremi-nextgen2026-centralized/upload/test
+[    19.8] stdout train 43,045,415 rows across 20 clients (min 870,217 max 5,890,990) | test 10,761,343 rows
+[    19.8] stdout GPU split: 10/10 clients, 21,945,288/21,100,127 rows, imbalance 1.963%
+[    19.8] stdout optimizer steps per round: 84,083  (252,249 over 3 rounds)
+[    21.1] stdout estimated output budget: 0.71 GiB (weights, predictions, resume, margin)
+[    27.1] stdout prepack: {'clients': 3, 'rows': 4645282, 'seconds': 5.7, 'rows_per_s': 818144, 'abs_max': 535.5153198242188, 'fp16_safe': True}
+[    27.1] stdout   -> whole train set would take ~53s per worker
+[    42.0] stdout test prepack: {'rows': 10761343, 'seconds': 14.9, 'raw_mean_f_snd_spd': 7.44930016435294, 'abs_max': 570.4353637695312}
+[    42.7] stdout resident GiB: 1.89
+[    42.7] stdout  batch             mode  AMP   ms/step    samples/s
+[    56.1] stdout    512            eager True    18.010       28,428
+[    58.5] stdout    512            eager False    13.427       38,132
+[    72.8] stderr W0907 19:26:56.816000 23 torch/_inductor/utils.py:1679] [0/0] Not enough SMs to use max_autotune_gemm mode
+[    72.8] stderr W0907 19:26:56.816000 23 torch/_inductor/utils.py:1679] [0/0] Not enough SMs to use max_autotune_gemm mode
+[   123.1] stdout    512  reduce-overhead True     6.213       82,412
+[   172.1] stdout    512  reduce-overhead False     9.651       53,049
+[   178.6] stdout    256            eager True    19.441       13,168
+[   180.8] stdout    256            eager False    14.528       17,621
+[   243.4] stdout    256  reduce-overhead True     5.727       44,703
+[   299.8] stdout    256  reduce-overhead False     5.733       44,653
+[   301.0] stdout BN fold exactness: {'max_abs_dlogit': 4.76837158203125e-07, 'max_abs_dfeat': 1.430511474609375e-06, 'argmax_disagreements': 0}
+[   383.4] stdout    unfolded bs   8192:  82.47s       194,003 client-rows/s
+[   436.0] stdout      folded bs   8192:  52.56s       304,397 client-rows/s
+[   520.2] stdout    unfolded bs  16384:  84.17s       190,083 client-rows/s
+[   574.0] stdout      folded bs  16384:  53.82s       297,289 client-rows/s
+[   658.4] stdout    unfolded bs  32768:  84.40s       189,582 client-rows/s
+[   712.5] stdout      folded bs  32768:  54.12s       295,629 client-rows/s
+[   820.4] stdout   vmap G= 2 bs  65536: 107.83s       148,376 client-rows/s  0.50x  proto mismatch 4546
+[   904.8] stdout   vmap G= 4 bs  32768:  84.31s       189,785 client-rows/s  0.64x  proto mismatch 4554
+[   991.3] stdout   vmap G= 8 bs  16384:  86.66s       184,632 client-rows/s  0.62x  proto mismatch 4554
+[   991.3] stdout  20 clients: train    261s + protos    72s + eval    362s =    696s/round -> 9.7 h for 50 rounds
+[   991.3] stdout  50 clients: train    261s + protos    72s + eval    905s =   1239s/round -> 17.2 h for 50 rounds
+[   991.3] stdout 100 clients: train    482s + protos    72s + eval   1810s =   2364s/round -> 32.8 h for 50 rounds
+[   991.3] stdout wrote /kaggle/working/calibration.json
+[   991.5] stdout [cps] {'d': 256, 'K': 16, 's': 50, 'compression_rate': 0.8046875, 'overlap_min': 0, 'overlap_max': 10, 'overlap_mean': 7.275, 'overlap_random_expectation': 9.765625, 'overlap_search_target': 10, 'hamming_min': 80, 'hamming_max': 100, 'hamming_mean': 85.45, 'dims_used': 256, 'dim_usage_min': 2, 'dim_usage_max': 4}
+[   991.5] stdout [resume] starting at round 1 of 3 (fingerprint 147a844f5803d682)
+[  1000.3] stdout [r0]    decoded 2/10 clients, 3,404,441 rows, 5s
+[  1000.5] stdout [r0]    decoded 2/10 clients, 3,404,441 rows, 5s
+[  1002.7] stdout [r1]    decoded 2/10 clients, 5,136,620 rows, 8s
+[  1002.9] stdout [r1]    decoded 2/10 clients, 5,136,620 rows, 8s
+[  1006.1] stdout [r0]    decoded 4/10 clients, 7,316,648 rows, 11s
+[  1006.3] stdout [r0]    decoded 4/10 clients, 7,316,648 rows, 11s
+[  1008.9] stdout [r1]    decoded 4/10 clients, 9,245,005 rows, 14s
+[  1009.1] stdout [r1]    decoded 4/10 clients, 9,245,005 rows, 14s
+[  1011.6] stdout [r0]    decoded 6/10 clients, 10,947,339 rows, 17s
+[  1011.8] stdout [r0]    decoded 6/10 clients, 10,947,339 rows, 17s
+[  1016.9] stdout [r1]    decoded 6/10 clients, 14,482,126 rows, 22s
+[  1017.1] stdout [r1]    decoded 6/10 clients, 14,482,126 rows, 22s
+[  1018.2] stdout [r0]    decoded 8/10 clients, 14,881,150 rows, 23s
+[  1018.4] stdout [r0]    decoded 8/10 clients, 14,881,150 rows, 23s
+[  1024.1] stdout [r1]    decoded 8/10 clients, 18,823,712 rows, 29s
+[  1024.4] stdout [r1]    decoded 8/10 clients, 18,823,712 rows, 29s
+[  1027.4] stdout [r1]    decoded 10/10 clients, 21,100,127 rows, 33s
+[  1027.6] stdout [r1]    decoded 10/10 clients, 21,100,127 rows, 33s
+[  1028.1] stdout [r0]    decoded 10/10 clients, 21,945,288 rows, 33s
+[  1028.4] stdout [r0]    decoded 10/10 clients, 21,945,288 rows, 33s
+[  1047.9] stdout [r0] data resident: train (21945288, 66) test (10761343, 66) (4.02 GiB) in 54s
+[  1048.1] stdout [r0] data resident: train (21945288, 66) test (10761343, 66) (4.02 GiB) in 54s
+[  1048.3] stdout [r1] data resident: train (21100127, 66) test (10761343, 66) (3.92 GiB) in 54s
+[  1048.5] stdout [r1] data resident: train (21100127, 66) test (10761343, 66) (3.92 GiB) in 54s
+[  1059.4] stderr W0907 19:43:23.454000 667 torch/_inductor/utils.py:1679] [0/0] Not enough SMs to use max_autotune_gemm mode
+[  1059.6] stderr W0907 19:43:23.454000 667 torch/_inductor/utils.py:1679] [0/0] Not enough SMs to use max_autotune_gemm mode
+[  1059.6] stderr W0907 19:43:23.454000 667 torch/_inductor/utils.py:1679] [0/0] Not enough SMs to use max_autotune_gemm mode
+[  1062.4] stderr W0907 19:43:26.470000 666 torch/_inductor/utils.py:1679] [0/1] Not enough SMs to use max_autotune_gemm mode
+[  1062.6] stderr W0907 19:43:26.470000 666 torch/_inductor/utils.py:1679] [0/1] Not enough SMs to use max_autotune_gemm mode
+[  1062.6] stderr W0907 19:43:26.470000 666 torch/_inductor/utils.py:1679] [0/1] Not enough SMs to use max_autotune_gemm mode
+[  1074.0] stdout [r0] compile: {'enabled': True, 'max_abs_dlogit': 4.172325134277344e-07, 'decisive_rows': 508, 'disagreements': 0}
+[  1074.2] stdout [r0] compile: {'enabled': True, 'max_abs_dlogit': 4.172325134277344e-07, 'decisive_rows': 508, 'disagreements': 0}
+[  1091.5] stdout [r1] compile: {'enabled': True, 'max_abs_dlogit': 3.2782554626464844e-07, 'decisive_rows': 511, 'disagreements': 0}
+[  1091.7] stdout [r1] compile: {'enabled': True, 'max_abs_dlogit': 3.2782554626464844e-07, 'decisive_rows': 511, 'disagreements': 0}
+[  1091.7] stdout [setup] workers ready; compile: [{'enabled': True, 'max_abs_dlogit': 4.172325134277344e-07, 'decisive_rows': 508, 'disagreements': 0}, {'enabled': True, 'max_abs_dlogit': 3.2782554626464844e-07, 'decisive_rows': 511, 'disagreements': 0}]
+[  1091.7] stdout [aps] mu[inv_mean_nij] = [7.4340089414865675e-06, 7.4340089414865675e-06, 7.4340089414865675e-06, 7.4340089414865675e-06] ...
+[  1091.7] stdout [comm] 32,000 params/round (0.0320 M), 5.1x below dense FedProto
+[  1121.6] stdout [r1] round 1 client 6 step 4794/6588
+[  1121.6] stdout [r0] round 1 client 17 step 4259/11506
+[  1121.8] stdout [r1] round 1 client 6 step 4794/6588
+[  1121.8] stdout [r0] round 1 client 17 step 4259/11506
+[  1151.6] stdout [r0] round 1 client 17 step 8511/11506
+[  1151.8] stdout [r0] round 1 client 17 step 8511/11506
+[  1183.4] stdout [r1] round 1 client 0 step 4710/6549
+[  1183.6] stdout [r1] round 1 client 0 step 4710/6549
+[  1237.5] stdout [r0] round 1 client 14 step 4263/5984
+[  1237.7] stdout [r0] round 1 client 14 step 4263/5984
+[  1245.2] stdout [r1] round 1 client 8 step 4588/5558
+[  1245.4] stdout [r1] round 1 client 8 step 4588/5558
+[  1299.2] stdout [r1] round 1 client 2 step 4512/5182
+[  1299.3] stdout [r0] round 1 client 10 step 4278/5218
+[  1299.4] stdout [r1] round 1 client 2 step 4512/5182
+[  1299.4] stdout [r0] round 1 client 10 step 4278/5218
+[  1902.5] stdout [round 001] ce 0.1918 reg 0.0000 | proto acc 0.6200 F1m 0.5960 | clf acc 0.5599 F1m 0.5020 | 809.6s (train 453.2s eval 353.9s) peak 4.75GB
+[  1932.3] stdout [r0] round 2 client 17 step 4186/11506
+[  1932.3] stdout [r1] round 2 client 6 step 4472/6588
+[  1932.5] stdout [r0] round 2 client 17 step 4186/11506
+[  1932.5] stdout [r1] round 2 client 6 step 4472/6588
+[  1962.3] stdout [r0] round 2 client 17 step 8478/11506
+[  1962.5] stdout [r0] round 2 client 17 step 8478/11506
+[  1992.6] stdout [r1] round 2 client 0 step 4445/6549
+[  1992.9] stdout [r1] round 2 client 0 step 4445/6549
+[  2043.4] stdout [r0] round 2 client 14 step 4273/5984
+[  2043.6] stdout [r0] round 2 client 14 step 4273/5984
+[  2053.2] stdout [r1] round 2 client 8 step 4479/5558
+[  2053.4] stdout [r1] round 2 client 8 step 4479/5558
+[  2100.6] stdout [r0] round 2 client 10 step 4355/5218
+[  2100.8] stdout [r0] round 2 client 10 step 4355/5218
+[  2104.2] stdout [r1] round 2 client 2 step 4479/5182
+[  2104.4] stdout [r1] round 2 client 2 step 4479/5182
+[  2665.3] stdout [round 002] ce 0.1013 reg 0.1655 | proto acc 0.6126 F1m 0.5937 | clf acc 0.5688 F1m 0.5299 | 761.8s (train 408.9s eval 350.5s) peak 4.75GB
+[  2695.1] stdout [r1] round 3 client 6 step 4478/6588
+[  2695.1] stdout [r0] round 3 client 17 step 4188/11506
+[  2695.3] stdout [r1] round 3 client 6 step 4478/6588
+[  2695.3] stdout [r0] round 3 client 17 step 4188/11506
+[  2725.1] stdout [r0] round 3 client 17 step 8410/11506
+[  2725.3] stdout [r0] round 3 client 17 step 8410/11506
+[  2755.4] stdout [r1] round 3 client 0 step 4469/6549
+[  2755.6] stdout [r1] round 3 client 0 step 4469/6549
+[  2806.5] stdout [r0] round 3 client 14 step 4342/5984
+[  2806.7] stdout [r0] round 3 client 14 step 4342/5984
+[  2815.9] stdout [r1] round 3 client 8 step 4482/5558
+[  2816.1] stdout [r1] round 3 client 8 step 4482/5558
+[  2863.4] stdout [r0] round 3 client 10 step 4352/5218
+[  2863.6] stdout [r0] round 3 client 10 step 4352/5218
+[  2866.9] stdout [r1] round 3 client 2 step 4479/5182
+[  2867.1] stdout [r1] round 3 client 2 step 4479/5182
+[  3426.2] stdout [round 003] ce 0.0874 reg 0.7101 | proto acc 0.5302 F1m 0.4575 | clf acc 0.5647 F1m 0.5307 | 759.9s (train 408.7s eval 348.8s) peak 4.75GB
+[  3429.6] stdout {
+[  3429.6] stdout   "last_round": 3,
+[  3429.6] stdout   "run_dir": "/kaggle/working/runs/tinyproto_fp_calib"
+[  3429.6] stdout } 
+[  3429.6] stdout total 2438s
+[  3429.6] stdout real round times (including checkpoint commit; setup/compile excluded):
+[  3429.6] stdout   round 1:   810.8s (train   453.2s eval  353.9s) proto f1_macro 0.5960
+[  3429.6] stdout   round 2:   762.8s (train   408.9s eval  350.5s) proto f1_macro 0.5937
+[  3429.6] stdout   round 3:   760.9s (train   408.7s eval  348.8s) proto f1_macro 0.4575
+[  3429.6] stdout steady-state round: 763s -> 50 rounds = 10.59 h (round 1: 811s; add measured setup/compile per session)
+[  3429.7] stdout Completed 3/3 rounds
+[  3429.7] stdout === rule: proto  (mean over all 20 clients, full test set) ===
+[  3429.7] stdout === rule: clf  (mean over all 20 clients, full test set) ===
+[  3429.8] stdout last completed round (primary report): 3
+[  3429.8] stdout --- per-class, round 3, rule=proto (pooled over clients) ---
+[  3429.8] stdout --- spread across clients, round 3 ---
+[  3429.8] stdout   proto f1_macro mean 0.4575 std 0.0618 min 0.3449 max 0.5726 | pooled 0.4652
+[  3429.8] stdout   clf   f1_macro mean 0.5307 std 0.1004 min 0.3167 max 0.6861 | pooled 0.5517
+[  3429.8] stdout communication: 32,000 params/round (5.12x below dense FedProto)
+[  3435.4] stderr /usr/local/lib/python3.12/dist-packages/mistune.py:435: SyntaxWarning: invalid escape sequence '\|'
+[  3435.4] stderr   cells[i][c] = re.sub('\\\\\|', '|', cell)
+[  3435.6] stderr /usr/local/lib/python3.12/dist-packages/nbconvert/filters/filter_links.py:36: SyntaxWarning: invalid escape sequence '\_'
+[  3435.6] stderr   text = re.sub(r'_', '\_', text) # Escape underscores in display text
+[  3436.2] stderr [NbConvertApp] Converting notebook __notebook__.ipynb to notebook
+[  3436.5] stderr [NbConvertApp] Writing 288553 bytes to __notebook__.ipynb
+[  3438.9] stderr [NbConvertApp] Converting notebook __notebook__.ipynb to html
+[  3440.2] stderr [NbConvertApp] Support files will be in __results___files/
+[  3440.2] stderr [NbConvertApp] Making directory __results___files
+[  3440.2] stderr [NbConvertApp] Writing 1076685 bytes to __results__.html

@@ -1,0 +1,24 @@
+{
+  "id": "khanhngoc0304/tinyproto-fp-2t4-validation",
+  "id_no": 133466493,
+  "title": "TinyProto FP 2T4 validation",
+  "code_file": "tinyproto-fp-2t4-validation.ipynb",
+  "language": "python",
+  "kernel_type": "notebook",
+  "is_private": true,
+  "enable_gpu": true,
+  "enable_tpu": false,
+  "enable_internet": true,
+  "keywords": [],
+  "dataset_sources": [
+    "odixe0502/veremi-fl-100client",
+    "odixe0502/veremi-fl-20client",
+    "odixe0502/veremi-fl-50client",
+    "odixe0502/veremi-nextgen2026-centralized"
+  ],
+  "kernel_sources": [],
+  "competition_sources": [],
+  "model_sources": [],
+  "docker_image": "gcr.io/kaggle-images/python@sha256:dafd4ce5668bbf1ad422e4c109e0f18c9623c3a7c7f48b0235f13142755c40b9",
+  "machine_shape": "NvidiaTeslaT4"
+}

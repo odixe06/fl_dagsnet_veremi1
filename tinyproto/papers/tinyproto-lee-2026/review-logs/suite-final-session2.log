@@ -1,0 +1,33 @@
+Local memory guard: tree RSS <= 2861 MiB; keep 1536 MiB available.
+START fixture-final
+PASS fixture-final
+START unit-final
+PASS unit-final
+START regressions-final
+PASS regressions-final
+START generate-final
+PASS generate-final
+START validate-final
+PASS validate-final
+START tinyproto-fp-calibration-final
+PASS tinyproto-fp-calibration-final
+START tinyproto-fp-mu-sweep-final
+PASS tinyproto-fp-mu-sweep-final
+START tinyproto-fp-mu-sweep-50client-final
+PASS tinyproto-fp-mu-sweep-50client-final
+START tinyproto-fp-mu-sweep-100client-final
+PASS tinyproto-fp-mu-sweep-100client-final
+START tinyproto-fp-train-20client-final
+PASS tinyproto-fp-train-20client-final
+START tinyproto-fp-train-50client-final
+PASS tinyproto-fp-train-50client-final
+START tinyproto-fp-train-100client-final
+PASS tinyproto-fp-train-100client-final
+START verify-final
+PASS verify-final
+START resume-final
+PASS resume-final
+START tamper-final
+PASS tamper-final
+REVIEW SUITE PASSED
+Peak test-tree RSS: 2075 MiB; exit 0

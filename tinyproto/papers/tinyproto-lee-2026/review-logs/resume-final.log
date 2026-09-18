@@ -1,0 +1,40 @@
+
+1. resume after a clean stop
+  [PASS] 2 rounds committed, got [1, 2]
+  [PASS] resumed at round 3
+  [PASS] 4 rounds committed, got [1, 2, 3, 4]
+  [PASS] history has no duplicates: [1, 2, 3, 4]
+  [PASS] verifier passes after resume
+  [PASS] --require-complete passes at 4/4
+  [PASS] continuous vs resumed: params are bitwise equal
+  [PASS] continuous vs resumed: buffers are bitwise equal
+  [PASS] continuous vs resumed: int_buffers are bitwise equal
+
+2. crash between artifacts and marker
+  [PASS] ignored the unmarked round-3 leftovers
+  [PASS] round-3 weights were retrained, not the copied round-2 placeholder
+  [PASS] the corrupt round-3 metrics file was replaced
+  [PASS] no duplicate history row: [1, 2, 3]
+  [PASS] verifier passes after redoing the crashed round
+
+
+3. cross-session import (read-only source, like /kaggle/input)
+  [PASS] no import configured -> fresh start
+  [PASS] imported the previous session's 3 rounds
+  [PASS] nothing left to do after importing a complete run
+  [PASS] 3 rounds present, got [1, 2, 3]
+  [PASS] imported files are writable (copyfile + chmod, not copy2)
+  [PASS] verifier passes on the merged run
+
+
+4. --require-resume gate
+  [PASS] failed with the require_resume message
+  [PASS] died before training anything
+
+5. fingerprint guard
+  [PASS] changing the CPS dimension refuses to resume the old run
+
+6. marker with no resume state
+  [PASS] refused instead of silently restarting
+
+ALL RESUME TESTS PASS

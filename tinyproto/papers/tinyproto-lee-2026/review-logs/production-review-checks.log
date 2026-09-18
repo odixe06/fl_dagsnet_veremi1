@@ -1,0 +1,67 @@
+Local memory guard: tree RSS <= 3000 MiB; keep 1536 MiB available.
+NOTEBOOK odixe0502/tinyproto-fp-calibration problems= []
+NOTEBOOK odixe0502/tinyproto-fp-mu-sweep problems= []
+NOTEBOOK odixe0502/tinyproto-fp-mu-sweep-100client problems= []
+NOTEBOOK odixe0502/tinyproto-fp-mu-sweep-50client problems= []
+NOTEBOOK odixe0502/tinyproto-fp-train-100client problems= []
+  config {'rounds': 50, 'batch': 256, 'max_hours': 11.0, 'rounds_this_session': None, 'require_resume': False, 'require_mu_selection': True}
+  dataset_sources= ['odixe0502/veremi-fl-100client', 'odixe0502/veremi-nextgen2026-centralized'] kernel_sources= ['odixe0502/tinyproto-fp-mu-sweep-100client']
+NOTEBOOK odixe0502/tinyproto-fp-train-20client problems= []
+  config {'rounds': 50, 'batch': 512, 'max_hours': 11.0, 'rounds_this_session': None, 'require_resume': False, 'require_mu_selection': True}
+  dataset_sources= ['odixe0502/veremi-fl-20client', 'odixe0502/veremi-nextgen2026-centralized'] kernel_sources= ['odixe0502/tinyproto-fp-mu-sweep']
+NOTEBOOK odixe0502/tinyproto-fp-train-50client problems= []
+  config {'rounds': 50, 'batch': 512, 'max_hours': 11.0, 'rounds_this_session': None, 'require_resume': False, 'require_mu_selection': True}
+  dataset_sources= ['odixe0502/veremi-fl-50client', 'odixe0502/veremi-nextgen2026-centralized'] kernel_sources= ['odixe0502/tinyproto-fp-mu-sweep-50client']
+NOTEBOOK khanhmay0304/tinyproto-fp-train-100client-s1 problems= []
+  config {'rounds': 50, 'batch': 256, 'max_hours': 11.0, 'rounds_this_session': None, 'require_resume': False, 'require_mu_selection': True}
+  dataset_sources= ['odixe0502/veremi-fl-100client', 'odixe0502/veremi-nextgen2026-centralized', 'odixe0502/tinyproto-fp-mu-100client'] kernel_sources= []
+NOTEBOOK khanhmay0304/tinyproto-fp-train-100client-s2 problems= []
+  config {'rounds': 50, 'batch': 256, 'max_hours': 11.0, 'rounds_this_session': None, 'require_resume': True, 'require_mu_selection': True}
+  dataset_sources= ['odixe0502/veremi-fl-100client', 'odixe0502/veremi-nextgen2026-centralized', 'odixe0502/tinyproto-fp-mu-100client'] kernel_sources= ['khanhmay0304/tinyproto-fp-train-100client-s1']
+NOTEBOOK khanhmay0304/tinyproto-fp-train-100client-s3 problems= []
+  config {'rounds': 50, 'batch': 256, 'max_hours': 8.0, 'rounds_this_session': None, 'require_resume': True, 'require_mu_selection': True}
+  dataset_sources= ['odixe0502/veremi-fl-100client', 'odixe0502/veremi-nextgen2026-centralized', 'odixe0502/tinyproto-fp-mu-100client'] kernel_sources= ['khanhmay0304/tinyproto-fp-train-100client-s2']
+NOTEBOOK minhtrit06/tinyproto-fp-train-100client-s4 problems= []
+  config {'rounds': 50, 'batch': 256, 'max_hours': 11.0, 'rounds_this_session': None, 'require_resume': True, 'require_mu_selection': True}
+  dataset_sources= ['odixe0502/veremi-fl-100client', 'odixe0502/veremi-nextgen2026-centralized', 'odixe0502/tinyproto-fp-mu-100client'] kernel_sources= ['khanhmay0304/tinyproto-fp-train-100client-s3']
+NOTEBOOK minhtran0601/tinyproto-fp-train-20client-s1 problems= []
+  config {'rounds': 50, 'batch': 512, 'max_hours': 11.0, 'rounds_this_session': None, 'require_resume': False, 'require_mu_selection': True}
+  dataset_sources= ['odixe0502/veremi-fl-20client', 'odixe0502/veremi-nextgen2026-centralized', 'odixe0502/tinyproto-fp-mu-20client'] kernel_sources= []
+NOTEBOOK odixe0502/tinyproto-fp-train-50client-s1 problems= []
+  config {'rounds': 50, 'batch': 512, 'max_hours': 11.0, 'rounds_this_session': None, 'require_resume': False, 'require_mu_selection': True}
+  dataset_sources= ['odixe0502/veremi-fl-50client', 'odixe0502/veremi-nextgen2026-centralized', 'odixe0502/tinyproto-fp-mu-50client'] kernel_sources= []
+NOTEBOOK odixe0502/tinyproto-fp-train-50client-s2 problems= []
+  config {'rounds': 50, 'batch': 512, 'max_hours': 7.5, 'rounds_this_session': None, 'require_resume': True, 'require_mu_selection': True}
+  dataset_sources= ['odixe0502/veremi-fl-50client', 'odixe0502/veremi-nextgen2026-centralized', 'odixe0502/tinyproto-fp-mu-50client'] kernel_sources= ['odixe0502/tinyproto-fp-train-50client-s1']
+PRODUCTION CHAIN PASS 20 owners/budgets/attachments/glue/source/clean outputs
+PRODUCTION CHAIN PASS 50 owners/budgets/attachments/glue/source/clean outputs
+PRODUCTION CHAIN PASS 100 owners/budgets/attachments/glue/source/clean outputs
+MU dataset JSON matches saved summary: 20 (byte-identical: False )
+MU PASS 20 k= 0.1 absolute= 7.585696202633669e-07 runner_up_gap= 0.0021371155500956585 round1_range= 0.003910590119351354
+  resume fingerprint stable across session budget: c87c9a7c2c3ee03d
+  actual session mu + fingerprint PASS: tinyproto-fp-train-20client-s1
+  5 downloaded configs and round-4 metrics match summary
+MU dataset JSON matches saved summary: 50 (byte-identical: False )
+MU PASS 50 k= 0.3 absolute= 5.646573163018274e-06 runner_up_gap= 0.01169105954975258 round1_range= 0.0018695870576255769
+  resume fingerprint stable across session budget: 8407e5651a74f9f3
+  actual session mu + fingerprint PASS: tinyproto-fp-train-50client-s1
+  actual session mu + fingerprint PASS: tinyproto-fp-train-50client-s2
+  5 downloaded configs and round-4 metrics match summary
+MU dataset JSON matches saved summary: 100 (byte-identical: False )
+MU PASS 100 k= 0.3 absolute= 1.1264610391688424e-05 runner_up_gap= 0.01583705907513483 round1_range= 0.0018686015383369559
+  resume fingerprint stable across session budget: 02446616190d10f6
+  actual session mu + fingerprint PASS: tinyproto-fp-train-100client-s1
+  actual session mu + fingerprint PASS: tinyproto-fp-train-100client-s2
+  actual session mu + fingerprint PASS: tinyproto-fp-train-100client-s3
+  actual session mu + fingerprint PASS: tinyproto-fp-train-100client-s4
+  5 downloaded configs and round-4 metrics match summary
+VALIDATOR GAP TinyProto FP train 100client s2 require_resume= False sources= (['odixe0502/veremi-fl-100client', 'odixe0502/veremi-nextgen2026-centralized', 'odixe0502/tinyproto-fp-mu-100client'], []) problems= []
+VALIDATOR GAP TinyProto FP train 100client s2 require_resume= True sources= (['odixe0502/veremi-fl-100client', 'odixe0502/veremi-nextgen2026-centralized', 'odixe0502/tinyproto-fp-mu-100client'], ['minhtrit06/tinyproto-fp-train-100client-s2']) problems= []
+VALIDATOR GAP TinyProto FP train 100client s2 require_resume= True sources= (['odixe0502/veremi-fl-100client', 'odixe0502/veremi-nextgen2026-centralized', 'odixe0502/tinyproto-fp-mu-100client'], ['odixe0502/tinyproto-fp-train-50client-s1']) problems= []
+VALIDATOR GAP TinyProto FP train 100client s1 require_resume= False sources= (['odixe0502/veremi-fl-100client', 'odixe0502/veremi-nextgen2026-centralized', 'odixe0502/unrelated-dataset'], []) problems= []
+BUDGET SIMULATION constant 2443s/round, setup 217s: 15 rounds/session; 30.039722222222224 hours for 44 rounds + 3 setups
+ACTUAL 100-client budget schedule, same illustrative costs: [15, 15, 11, 9] rounds, remaining= 0 (projection only)
+AMP GATE GAP wrong argmax with large finite error: delta= 1000.0 (bad, decisive)= (0, 0)
+TELEMETRY GAP: exception escapes actual driver logging block
+Review complete. GAP observations above are findings, not implemented fixes.
+Peak test-tree RSS: 645 MiB; exit 0
