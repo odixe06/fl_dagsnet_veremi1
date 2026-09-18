@@ -1,0 +1,6 @@
+{
+  "round": 22,
+  "train_loss": "nan",
+  "last_valid_round": 21,
+  "reason": "non-finite training loss"
+}

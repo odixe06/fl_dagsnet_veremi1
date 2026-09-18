@@ -1,0 +1,347 @@
+_wandb:
+    value:
+        cli_version: 0.26.1
+        e:
+            ga4beki7ty1jjj7xn0xzj8l0gquq0fk1:
+                args:
+                    - -f
+                    - /tmp/tmpiykpek7a.json
+                    - '--HistoryManager.hist_file=:memory:'
+                cpu_count: 2
+                cpu_count_logical: 4
+                cudaVersion: "13.0"
+                disk:
+                    /:
+                        total: "8656922775552"
+                        used: "7561787260928"
+                email: 24521851@gm.uit.edu.vn
+                executable: /usr/bin/python3
+                gpu: Tesla T4
+                gpu_count: 2
+                gpu_nvidia:
+                    - architecture: Turing
+                      cudaCores: 2560
+                      memoryTotal: "16106127360"
+                      name: Tesla T4
+                      uuid: GPU-db11213a-1d3d-dff9-db7c-9d89ff8eec68
+                    - architecture: Turing
+                      cudaCores: 2560
+                      memoryTotal: "16106127360"
+                      name: Tesla T4
+                      uuid: GPU-98931f43-6e2d-624c-a10d-39a5811db2b4
+                host: 2ff3301871a5
+                memory:
+                    total: "33659383808"
+                os: Linux-6.12.90+-x86_64-with-glibc2.35
+                program: <python with no main file>
+                python: CPython 3.12.13
+                root: /kaggle/working/runs/edl_cmso_v2_final
+                startedAt: "2026-09-04T00:27:08.977322Z"
+                writerId: ga4beki7ty1jjj7xn0xzj8l0gquq0fk1
+        m:
+            - "1": progress/global_step
+              "6":
+                - 3
+              "7": []
+            - "2": '*'
+              "5": 1
+              "6":
+                - 1
+              "7": []
+        python_version: 3.12.13
+        t:
+            "1":
+                - 1
+                - 5
+                - 53
+            "2":
+                - 1
+                - 5
+                - 53
+            "3":
+                - 2
+                - 7
+                - 13
+                - 14
+                - 16
+                - 61
+                - 62
+            "4": 3.12.13
+            "5": 0.26.1
+            "8":
+                - 2
+            "12": 0.26.1
+            "13": linux-x86_64
+abort_after:
+    value: 1500
+abort_logit_max:
+    value: 1e+06
+abort_skip_pct:
+    value: 60
+amp:
+    value: true
+batch_per_gpu:
+    value: 2048
+class_names:
+    value:
+        - benign
+        - accelerationMultiplication
+        - constantPositionOffset
+        - constantSpeedOffset
+        - dataReplay
+        - dosAttack
+        - feignedBraking
+        - positionMirroring
+        - randomPositionOffset
+        - randomSpeedOffset
+        - reversedHeading
+        - suddenConstantSpeed
+        - suddenStop
+        - timeDelayAttack
+        - trafficCongestionSybil
+        - zeroSpeedReport
+clip:
+    value: 1
+cmso_C1:
+    value: 0.2
+cmso_enabled:
+    value: true
+cmso_fit_rows:
+    value: 400000
+cmso_iters:
+    value: 50
+cmso_mu:
+    value: 25
+cmso_mutation:
+    value: 0.05
+cmso_pop:
+    value: 20
+cmso_sigma:
+    value: 3
+cmso_size_penalty:
+    value: 0.01
+cmso_surrogate_batch:
+    value: 8192
+cmso_surrogate_steps:
+    value: 400
+cmso_val_rows:
+    value: 100000
+compile_model:
+    value: true
+d_model:
+    value: 128
+deadline_ts:
+    value: 1.7885196983415008e+09
+dense_growth:
+    value: 32
+dense_layers:
+    value: 3
+dropout:
+    value: 0.1
+epochs_per_round:
+    value: 1
+eval_batch:
+    value: 16384
+fire_modules:
+    value: 3
+fused_dim:
+    value: 262
+gat_heads:
+    value: 4
+gat_slope:
+    value: 0.2
+grad_accum:
+    value: 1
+heartbeat_every:
+    value: 250
+incep_modules:
+    value: 2
+init_state:
+    value: /kaggle/working/runs/edl_cmso_v2_final/extractor_init.pt
+lr:
+    value: 0.001
+max_hours:
+    value: 10.65
+n_features:
+    value: 66
+n_selected:
+    value: 133
+nccl_timeout_min:
+    value: 60
+num_classes:
+    value: 16
+patch_len:
+    value: 6
+resume:
+    value: true
+rounds:
+    value: 50
+run_name:
+    value: edl_cmso_v2_final
+save_prob_every:
+    value: 0
+seed:
+    value: 42
+sel_ch:
+    value:
+        - 0
+        - 1
+        - 2
+        - 9
+        - 12
+        - 13
+        - 14
+        - 16
+        - 17
+        - 20
+        - 26
+        - 27
+        - 29
+        - 30
+        - 31
+        - 32
+        - 35
+        - 37
+        - 38
+        - 40
+        - 42
+        - 46
+        - 47
+        - 48
+        - 50
+        - 51
+        - 59
+        - 61
+        - 63
+        - 64
+        - 66
+        - 67
+        - 68
+        - 70
+        - 71
+        - 73
+        - 74
+        - 75
+        - 76
+        - 77
+        - 78
+        - 79
+        - 80
+        - 84
+        - 86
+        - 87
+        - 89
+        - 94
+        - 96
+        - 97
+        - 98
+        - 103
+        - 104
+        - 105
+        - 108
+        - 109
+        - 111
+        - 113
+        - 114
+        - 116
+        - 117
+        - 118
+        - 119
+        - 120
+        - 124
+        - 125
+        - 126
+        - 127
+        - 128
+        - 129
+        - 132
+        - 133
+        - 137
+        - 141
+        - 142
+        - 143
+        - 144
+        - 145
+        - 147
+        - 148
+        - 150
+        - 152
+        - 153
+        - 155
+        - 157
+        - 158
+        - 159
+        - 160
+        - 161
+        - 162
+        - 168
+        - 169
+        - 170
+        - 171
+        - 172
+        - 180
+        - 181
+        - 182
+        - 183
+        - 187
+        - 189
+        - 190
+        - 194
+        - 195
+        - 196
+        - 200
+        - 203
+        - 204
+        - 205
+        - 206
+        - 208
+        - 212
+        - 218
+        - 219
+        - 220
+        - 222
+        - 224
+        - 225
+        - 227
+        - 230
+        - 231
+        - 236
+        - 240
+        - 242
+        - 243
+        - 244
+        - 245
+        - 247
+        - 253
+        - 255
+        - 256
+        - 259
+        - 261
+stem_ch:
+    value: 96
+test_X:
+    value: /kaggle/temp/veremi_cache/test_X.f16.npy
+test_y:
+    value: /kaggle/temp/veremi_cache/test_y.i8.npy
+train_X:
+    value: /kaggle/temp/veremi_cache/train_X.f16.npy
+train_y:
+    value: /kaggle/temp/veremi_cache/train_y.i8.npy
+vit_heads:
+    value: 4
+vit_layers:
+    value: 2
+vit_mlp_ratio:
+    value: 2
+wandb_entity:
+    value: 21522798-uit
+wandb_project:
+    value: edl-cmso
+wandb_run_id:
+    value: edl-cmso-v2-final
+warmup_rounds:
+    value: 1
+weight_decay:
+    value: 0.05
+world_size:
+    value: 2

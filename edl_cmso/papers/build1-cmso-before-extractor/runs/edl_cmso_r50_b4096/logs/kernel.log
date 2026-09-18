@@ -1,0 +1,786 @@
+[{"stream_name":"stderr","time":5.619572358,"data":"/usr/local/lib/python3.12/dist-packages/nbformat/__init__.py:96: MissingIDFieldWarning: Cell is missing an id field, this will become a hard error in future nbformat versions. You may want to use `normalize()` on your notebooks before validations (available since nbformat 5.1.4). Previous versions of nbformat are fixing this issue transparently, and will stop doing so in the future.\n"}
+,{"stream_name":"stderr","time":5.619651835,"data":"  validate(nb)\n"}
+,{"stream_name":"stderr","time":6.355719995,"data":"0.00s - Debugger warning: It seems that frozen modules are being used, which may\n"}
+,{"stream_name":"stderr","time":6.355771962,"data":"0.00s - make the debugger miss breakpoints. Please pass -Xfrozen_modules=off\n"}
+,{"stream_name":"stderr","time":6.355810752,"data":"0.00s - to python to disable frozen modules.\n"}
+,{"stream_name":"stderr","time":6.355818764,"data":"0.00s - Note: Debugging will proceed. Set PYDEVD_DISABLE_FILE_VALIDATION=1 to disable this validation.\n"}
+,{"stream_name":"stderr","time":6.905316293,"data":"0.00s - Debugger warning: It seems that frozen modules are being used, which may\n"}
+,{"stream_name":"stderr","time":6.905346858,"data":"0.00s - make the debugger miss breakpoints. Please pass -Xfrozen_modules=off\n"}
+,{"stream_name":"stderr","time":6.905352741,"data":"0.00s - to python to disable frozen modules.\n"}
+,{"stream_name":"stderr","time":6.9053570010000005,"data":"0.00s - Note: Debugging will proceed. Set PYDEVD_DISABLE_FILE_VALIDATION=1 to disable this validation.\n"}
+,{"stream_name":"stdout","time":12.340975677,"data":"python 3.12.13 | torch 2.10.0+cu128 | cuda 12.8\n"}
+,{"stream_name":"stdout","time":12.341019371,"data":"GPUs: 2\n"}
+,{"stream_name":"stdout","time":12.343935439,"data":"  cuda:0 Tesla T4 14.6 GB sm_75\n"}
+,{"stream_name":"stdout","time":12.34396643,"data":"  cuda:1 Tesla T4 14.6 GB sm_75\n"}
+,{"stream_name":"stdout","time":12.343972984,"data":"cpu count: 4\n"}
+,{"stream_name":"stdout","time":12.343978583,"data":"RAM GB: 31.3\n"}
+,{"stream_name":"stdout","time":12.343982844,"data":"free on /kaggle/working: 19.5 GB\n"}
+,{"stream_name":"stdout","time":12.34398704,"data":"free on /kaggle/temp: 1026.8 GB\n"}
+,{"stream_name":"stdout","time":12.343991158,"data":"proj package ready\n"}
+,{"stream_name":"stdout","time":12.367296737,"data":"global batch = 2048 x 2 x 1 = 4096\n"}
+,{"stream_name":"stdout","time":12.367326023,"data":"rounds = 50  x  epochs_per_round = 1  -\u003e  50 passes over train\n"}
+,{"stream_name":"stdout","time":12.367332694,"data":"session budget = 11.0 h wall clock (Kaggle kills at 12 h)\n"}
+,{"stream_name":"stdout","time":12.41438936,"data":"-- /kaggle/input --\n"}
+,{"stream_name":"stdout","time":12.414417781,"data":"input/\n"}
+,{"stream_name":"stdout","time":12.414424196,"data":"  datasets/\n"}
+,{"stream_name":"stdout","time":12.414428897,"data":"    odixe0502/\n"}
+,{"stream_name":"stdout","time":12.414433124,"data":"      veremi-nextgen2026-centralized/\n"}
+,{"stream_name":"stdout","time":12.41443734,"data":"\n"}
+,{"stream_name":"stdout","time":12.414441655,"data":"dataset root: /kaggle/input/datasets/odixe0502/veremi-nextgen2026-centralized/upload\n"}
+,{"stream_name":"stdout","time":12.414446356,"data":"   README.md  (0.0 MiB)\n"}
+,{"stream_name":"stdout","time":12.414450699,"data":"   feature_schema.json  (0.0 MiB)\n"}
+,{"stream_name":"stdout","time":12.414455039,"data":"   label_mapping.json  (0.0 MiB)\n"}
+,{"stream_name":"stdout","time":12.414459208,"data":"   load_test.py  (0.0 MiB)\n"}
+,{"stream_name":"stdout","time":12.414463466,"data":"   manifest.json  (0.1 MiB)\n"}
+,{"stream_name":"stdout","time":12.414499199,"data":"   scaler.json  (0.0 MiB)\n"}
+,{"stream_name":"stdout","time":12.414503613,"data":"   statistics.json  (0.0 MiB)\n"}
+,{"stream_name":"stdout","time":12.414506896,"data":"   statistics.md  (0.0 MiB)\n"}
+,{"stream_name":"stdout","time":12.414510332,"data":"   test  (8 files)\n"}
+,{"stream_name":"stdout","time":12.414513646,"data":"   train  (30 files)\n"}
+,{"stream_name":"stdout","time":12.414516789,"data":"\n"}
+,{"stream_name":"stdout","time":12.414519895,"data":"-- resume probe --\n"}
+,{"stream_name":"stdout","time":12.414523178,"data":"  local last.pt      : no\n"}
+,{"stream_name":"stdout","time":12.414526944,"data":"  attached last.pt   : none\n"}
+,{"stream_name":"stdout","time":12.414530123,"data":"  local history.csv  : absent\n"}
+,{"stream_name":"stdout","time":12.414533413000001,"data":"  CMSO mask          : not yet run\n"}
+,{"stream_name":"stdout","time":13.372121605,"data":"train shards: 15   test shards: 4\n"}
+,{"stream_name":"stdout","time":13.372162542,"data":"\n"}
+,{"stream_name":"stdout","time":13.372167959,"data":"columns: 87   features (f_*): 66   dropped: 21\n"}
+,{"stream_name":"stdout","time":13.372171648,"data":"dropped as identifiers / labels / raw context / partition keys:\n"}
+,{"stream_name":"stdout","time":13.372176053,"data":"   ['receiver_id', 'sender_id', 'sender_alias', 'message_id', 'rcv_time_ns', 'send_time_ns', 'orig_split', 'source_run', 't_rel_s', 'label', 'rcv_pos_x', 'rcv_pos_y', 'snd_pos_x', 'snd_pos_y', 'rcv_hed', 'snd_hed', 'rcv_profile', 'snd_profile', 'snd_dist_road_edge', 'attack_type', 'scenario']\n"}
+,{"stream_name":"stdout","time":13.372180612,"data":"\n"}
+,{"stream_name":"stdout","time":13.372183922,"data":"feature_schema.json agrees with the f_* rule.\n"}
+,{"stream_name":"stdout","time":13.372187534,"data":"groups: {'geometry': 20, 'position': 4, 'profile': 6, 'rate': 5, 'raw': 15, 'session': 16}\n"}
+,{"stream_name":"stdout","time":13.372191119,"data":"zero-imputed session features: 13\n"}
+,{"stream_name":"stdout","time":13.372195156,"data":"label_mapping.json: all three views agree on the class axis.\n"}
+,{"stream_name":"stdout","time":13.372198849,"data":"\n"}
+,{"stream_name":"stdout","time":13.372202375,"data":"16 classes:\n"}
+,{"stream_name":"stdout","time":13.372205853,"data":"   0  benign\n"}
+,{"stream_name":"stdout","time":13.372209695,"data":"   1  accelerationMultiplication\n"}
+,{"stream_name":"stdout","time":13.372213411,"data":"   2  constantPositionOffset\n"}
+,{"stream_name":"stdout","time":13.372217087,"data":"   3  constantSpeedOffset\n"}
+,{"stream_name":"stdout","time":13.372220757000001,"data":"   4  dataReplay\n"}
+,{"stream_name":"stdout","time":13.372224674,"data":"   5  dosAttack\n"}
+,{"stream_name":"stdout","time":13.372228451,"data":"   6  feignedBraking\n"}
+,{"stream_name":"stdout","time":13.372232454,"data":"   7  positionMirroring\n"}
+,{"stream_name":"stdout","time":13.372236361,"data":"   8  randomPositionOffset\n"}
+,{"stream_name":"stdout","time":13.372240285,"data":"   9  randomSpeedOffset\n"}
+,{"stream_name":"stdout","time":13.372243678,"data":"  10  reversedHeading\n"}
+,{"stream_name":"stdout","time":13.372247109,"data":"  11  suddenConstantSpeed\n"}
+,{"stream_name":"stdout","time":13.372250382,"data":"  12  suddenStop\n"}
+,{"stream_name":"stdout","time":13.37225364,"data":"  13  timeDelayAttack\n"}
+,{"stream_name":"stdout","time":13.372257567,"data":"  14  trafficCongestionSybil\n"}
+,{"stream_name":"stdout","time":13.372261509,"data":"  15  zeroSpeedReport\n"}
+,{"stream_name":"stdout","time":13.372265022,"data":"\n"}
+,{"stream_name":"stdout","time":13.372282001,"data":"scaler.json loaded: fitted on train, applied to test only (deviation 5).\n"}
+,{"stream_name":"stdout","time":13.669898305,"data":"\n"}
+,{"stream_name":"stdout","time":13.66994067,"data":"row counts from parquet footers in 0.2s: train 43,045,415   test 10,761,343\n"}
+,{"stream_name":"stdout","time":19.966526045,"data":"    part-00000.parquet: 2,699,628/43,045,415  (6s)\n"}
+,{"stream_name":"stdout","time":27.55502408,"data":"    part-00001.parquet: 6,005,977/43,045,415  (14s)\n"}
+,{"stream_name":"stdout","time":33.640009,"data":"    part-00002.parquet: 8,690,325/43,045,415  (20s)\n"}
+,{"stream_name":"stdout","time":41.082600153,"data":"    part-00003.parquet: 11,867,417/43,045,415  (28s)\n"}
+,{"stream_name":"stdout","time":48.922158708,"data":"    part-00004.parquet: 14,762,247/43,045,415  (35s)\n"}
+,{"stream_name":"stdout","time":56.016445612,"data":"    part-00005.parquet: 17,711,932/43,045,415  (43s)\n"}
+,{"stream_name":"stdout","time":62.390770943,"data":"    part-00006.parquet: 20,529,204/43,045,415  (49s)\n"}
+,{"stream_name":"stdout","time":69.378021804,"data":"    part-00007.parquet: 23,678,200/43,045,415  (56s)\n"}
+,{"stream_name":"stdout","time":76.458155416,"data":"    part-00008.parquet: 26,868,228/43,045,415  (63s)\n"}
+,{"stream_name":"stdout","time":83.460527753,"data":"    part-00009.parquet: 30,061,006/43,045,415  (70s)\n"}
+,{"stream_name":"stdout","time":89.778488747,"data":"    part-00010.parquet: 32,930,296/43,045,415  (76s)\n"}
+,{"stream_name":"stdout","time":96.885433077,"data":"    part-00011.parquet: 35,998,013/43,045,415  (83s)\n"}
+,{"stream_name":"stdout","time":105.070471582,"data":"    part-00012.parquet: 39,312,538/43,045,415  (92s)\n"}
+,{"stream_name":"stdout","time":112.584056441,"data":"    part-00013.parquet: 42,563,468/43,045,415  (99s)\n"}
+,{"stream_name":"stdout","time":113.794653066,"data":"    part-00014.parquet: 43,045,415/43,045,415  (100s)\n"}
+,{"stream_name":"stdout","time":125.248446065,"data":"\n"}
+,{"stream_name":"stdout","time":125.248510846,"data":"========================================================================\n"}
+,{"stream_name":"stdout","time":125.248516744,"data":"TRAIN (already standardised — untouched): 43,045,415 rows x 66 features\n"}
+,{"stream_name":"stdout","time":125.248521217,"data":"========================================================================\n"}
+,{"stream_name":"stdout","time":125.248524546,"data":"                     class   count     pct\n"}
+,{"stream_name":"stdout","time":125.248527756,"data":"                    benign 9564547 22.2197\n"}
+,{"stream_name":"stdout","time":125.248530876,"data":"accelerationMultiplication  629963  1.4635\n"}
+,{"stream_name":"stdout","time":125.248534225,"data":"    constantPositionOffset 1769893  4.1117\n"}
+,{"stream_name":"stdout","time":125.248537304,"data":"       constantSpeedOffset 1732706  4.0253\n"}
+,{"stream_name":"stdout","time":125.248540318,"data":"                dataReplay 1901664  4.4178\n"}
+,{"stream_name":"stdout","time":125.248543375,"data":"                 dosAttack 6296361 14.6273\n"}
+,{"stream_name":"stdout","time":125.248546373,"data":"            feignedBraking  474418  1.1021\n"}
+,{"stream_name":"stdout","time":125.24854939,"data":"         positionMirroring 1868199  4.3401\n"}
+,{"stream_name":"stdout","time":125.248552419,"data":"      randomPositionOffset 1881029  4.3699\n"}
+,{"stream_name":"stdout","time":125.248555534,"data":"         randomSpeedOffset 2168752  5.0383\n"}
+,{"stream_name":"stdout","time":125.248558599,"data":"           reversedHeading 1079992  2.5090\n"}
+,{"stream_name":"stdout","time":125.248577108,"data":"       suddenConstantSpeed  231028  0.5367\n"}
+,{"stream_name":"stdout","time":125.248595578,"data":"                suddenStop  845778  1.9649\n"}
+,{"stream_name":"stdout","time":125.248599663,"data":"           timeDelayAttack 1962298  4.5587\n"}
+,{"stream_name":"stdout","time":125.248603249,"data":"    trafficCongestionSybil 9573355 22.2401\n"}
+,{"stream_name":"stdout","time":125.248606837,"data":"           zeroSpeedReport 1065432  2.4751\n"}
+,{"stream_name":"stdout","time":125.248610335,"data":"imbalance ratio: 41.4 : 1\n"}
+,{"stream_name":"stdout","time":125.248614378,"data":"empty classes  : none\n"}
+,{"stream_name":"stdout","time":125.248618673,"data":"NaN cells: 0   Inf cells: 0\n"}
+,{"stream_name":"stdout","time":125.248622542,"data":"feature min -535.515  max 570.435  mean(|mean|) 0.0000\n"}
+,{"stream_name":"stdout","time":125.248626982,"data":"one pass: decode + audit + write in 111.6s\n"}
+,{"stream_name":"stdout","time":133.294898633,"data":"    part-00000.parquet: 3,391,090/10,761,343  (8s)\n"}
+,{"stream_name":"stdout","time":141.434749473,"data":"    part-00001.parquet: 6,755,493/10,761,343  (16s)\n"}
+,{"stream_name":"stdout","time":149.710442581,"data":"    part-00002.parquet: 10,217,967/10,761,343  (25s)\n"}
+,{"stream_name":"stdout","time":151.08645005,"data":"    part-00003.parquet: 10,761,343/10,761,343  (26s)\n"}
+,{"stream_name":"stdout","time":156.826799043,"data":"\n"}
+,{"stream_name":"stdout","time":156.826864082,"data":"========================================================================\n"}
+,{"stream_name":"stdout","time":156.826872576,"data":"TEST  (scaler.json applied at load): 10,761,343 rows x 66 features\n"}
+,{"stream_name":"stdout","time":156.826877094,"data":"========================================================================\n"}
+,{"stream_name":"stdout","time":156.826881569,"data":"                     class   count     pct\n"}
+,{"stream_name":"stdout","time":156.826885986,"data":"                    benign 2391136 22.2197\n"}
+,{"stream_name":"stdout","time":156.826890353,"data":"accelerationMultiplication  157490  1.4635\n"}
+,{"stream_name":"stdout","time":156.826894311,"data":"    constantPositionOffset  442475  4.1117\n"}
+,{"stream_name":"stdout","time":156.826898731,"data":"       constantSpeedOffset  433177  4.0253\n"}
+,{"stream_name":"stdout","time":156.826903679,"data":"                dataReplay  475410  4.4178\n"}
+,{"stream_name":"stdout","time":156.826908808,"data":"                 dosAttack 1574090 14.6273\n"}
+,{"stream_name":"stdout","time":156.82691291,"data":"            feignedBraking  118605  1.1021\n"}
+,{"stream_name":"stdout","time":156.826917369,"data":"         positionMirroring  467049  4.3401\n"}
+,{"stream_name":"stdout","time":156.826922947,"data":"      randomPositionOffset  470279  4.3701\n"}
+,{"stream_name":"stdout","time":156.826927565,"data":"         randomSpeedOffset  542163  5.0381\n"}
+,{"stream_name":"stdout","time":156.826932357,"data":"           reversedHeading  269999  2.5090\n"}
+,{"stream_name":"stdout","time":156.826937804,"data":"       suddenConstantSpeed   57757  0.5367\n"}
+,{"stream_name":"stdout","time":156.826942129,"data":"                suddenStop  211445  1.9649\n"}
+,{"stream_name":"stdout","time":156.826947319,"data":"           timeDelayAttack  490574  4.5587\n"}
+,{"stream_name":"stdout","time":156.826951604,"data":"    trafficCongestionSybil 2393335 22.2401\n"}
+,{"stream_name":"stdout","time":156.826956303,"data":"           zeroSpeedReport  266359  2.4751\n"}
+,{"stream_name":"stdout","time":156.826960569,"data":"imbalance ratio: 41.4 : 1\n"}
+,{"stream_name":"stdout","time":156.826970882,"data":"empty classes  : none\n"}
+,{"stream_name":"stdout","time":156.827000208,"data":"NaN cells: 0   Inf cells: 0\n"}
+,{"stream_name":"stdout","time":156.827005467,"data":"feature min -204.259  max 570.435  mean(|mean|) 0.0413\n"}
+,{"stream_name":"stdout","time":156.827009367,"data":"one pass: decode + audit + write in 31.6s\n"}
+,{"stream_name":"stdout","time":156.827014659,"data":"\n"}
+,{"stream_name":"stdout","time":156.827017876,"data":"== train/test agreement ==\n"}
+,{"stream_name":"stdout","time":156.827021292,"data":"cols only in train  : none\n"}
+,{"stream_name":"stdout","time":156.827024547,"data":"cols only in test   : none\n"}
+,{"stream_name":"stdout","time":156.827027891,"data":"labels only in test : none\n"}
+,{"stream_name":"stdout","time":156.827031214,"data":"train:test ratio    : 0.8000 : 0.2000\n"}
+,{"stream_name":"stdout","time":156.84815151,"data":"frozen meta.json -\u003e /kaggle/temp/veremi_cache/meta.json\n"}
+,{"stream_name":"stdout","time":156.848180878,"data":"train X 5.29 GB   test X 1.32 GB\n"}
+,{"stream_name":"stdout","time":156.848186146,"data":"free on /kaggle/temp: 1020.1 GB\n"}
+,{"stream_name":"stdout","time":156.848190166,"data":"\n"}
+,{"stream_name":"stdout","time":156.848193633,"data":"free on /kaggle/working: 19.5 GB (50 checkpoints + 50 y_pred arrays must fit)\n"}
+,{"stream_name":"stdout","time":156.880871878,"data":"Writing /kaggle/working/proj/model.py\n"}
+,{"stream_name":"stdout","time":156.919644303,"data":"Writing /kaggle/working/proj/metrics.py\n"}
+,{"stream_name":"stdout","time":156.938686927,"data":"Writing /kaggle/working/proj/ckpt.py\n"}
+,{"stream_name":"stdout","time":156.968560351,"data":"Writing /kaggle/working/proj/cmso.py\n"}
+,{"stream_name":"stdout","time":159.678334067,"data":"[cmso] surrogate data on GPU: 0.28 GB (2,000,000 fit / 300,000 val rows, TRAIN ONLY)\n"}
+,{"stream_name":"stdout","time":198.325296759,"data":"[cmso] iter   1/50  best 0.72192  |S| 33/66  mean 0.62672  temp 27.4\n"}
+,{"stream_name":"stdout","time":215.377498713,"data":"[cmso] iter   2/50  best 0.72192  |S| 33/66  mean 0.65082  temp 25.5\n"}
+,{"stream_name":"stdout","time":232.299262192,"data":"[cmso] iter   3/50  best 0.72405  |S| 36/66  mean 0.65251  temp 21.9\n"}
+,{"stream_name":"stdout","time":249.289703096,"data":"[cmso] iter   4/50  best 0.72405  |S| 36/66  mean 0.67925  temp 30.9\n"}
+,{"stream_name":"stdout","time":266.488211458,"data":"[cmso] iter   5/50  best 0.72405  |S| 36/66  mean 0.68177  temp 30.0\n"}
+,{"stream_name":"stdout","time":283.46492615,"data":"[cmso] iter   6/50  best 0.72405  |S| 36/66  mean 0.68995  temp 31.7\n"}
+,{"stream_name":"stdout","time":300.416386381,"data":"[cmso] iter   7/50  best 0.72405  |S| 36/66  mean 0.69468  temp 30.6\n"}
+,{"stream_name":"stdout","time":317.446195348,"data":"[cmso] iter   8/50  best 0.73651  |S| 36/66  mean 0.69691  temp 25.3\n"}
+,{"stream_name":"stdout","time":333.477125339,"data":"[cmso] iter   9/50  best 0.73651  |S| 36/66  mean 0.69770  temp 28.3\n"}
+,{"stream_name":"stdout","time":350.515377629,"data":"[cmso] iter  10/50  best 0.73651  |S| 36/66  mean 0.71175  temp 34.4\n"}
+,{"stream_name":"stdout","time":367.369933376,"data":"[cmso] iter  11/50  best 0.74089  |S| 41/66  mean 0.71344  temp 20.6\n"}
+,{"stream_name":"stdout","time":384.189167466,"data":"[cmso] iter  12/50  best 0.74089  |S| 41/66  mean 0.71573  temp 33.0\n"}
+,{"stream_name":"stdout","time":401.546293297,"data":"[cmso] iter  13/50  best 0.74089  |S| 41/66  mean 0.71615  temp 22.7\n"}
+,{"stream_name":"stdout","time":417.896035292,"data":"[cmso] iter  14/50  best 0.74089  |S| 41/66  mean 0.71842  temp 20.5\n"}
+,{"stream_name":"stdout","time":434.937478593,"data":"[cmso] iter  15/50  best 0.74089  |S| 41/66  mean 0.72095  temp 30.0\n"}
+,{"stream_name":"stdout","time":450.802225974,"data":"[cmso] iter  16/50  best 0.74089  |S| 41/66  mean 0.72243  temp 25.1\n"}
+,{"stream_name":"stdout","time":467.741948001,"data":"[cmso] iter  17/50  best 0.74089  |S| 41/66  mean 0.72304  temp 31.6\n"}
+,{"stream_name":"stdout","time":484.539829518,"data":"[cmso] iter  18/50  best 0.74411  |S| 45/66  mean 0.72483  temp 20.6\n"}
+,{"stream_name":"stdout","time":501.938759076,"data":"[cmso] iter  19/50  best 0.74411  |S| 45/66  mean 0.72820  temp 32.3\n"}
+,{"stream_name":"stdout","time":518.872045009,"data":"[cmso] iter  20/50  best 0.74411  |S| 45/66  mean 0.73109  temp 32.6\n"}
+,{"stream_name":"stdout","time":535.763712491,"data":"[cmso] iter  21/50  best 0.74411  |S| 45/66  mean 0.73286  temp 35.0\n"}
+,{"stream_name":"stdout","time":552.621266695,"data":"[cmso] iter  22/50  best 0.74411  |S| 45/66  mean 0.73451  temp 30.5\n"}
+,{"stream_name":"stdout","time":569.659039977,"data":"[cmso] iter  23/50  best 0.74411  |S| 45/66  mean 0.73487  temp 21.9\n"}
+,{"stream_name":"stdout","time":586.79989829,"data":"[cmso] iter  24/50  best 0.74411  |S| 45/66  mean 0.73529  temp 33.1\n"}
+,{"stream_name":"stdout","time":603.516857868,"data":"[cmso] iter  25/50  best 0.74411  |S| 45/66  mean 0.73651  temp 31.7\n"}
+,{"stream_name":"stdout","time":618.797949314,"data":"[cmso] iter  26/50  best 0.74890  |S| 42/66  mean 0.73677  temp 27.8\n"}
+,{"stream_name":"stdout","time":635.649114351,"data":"[cmso] iter  27/50  best 0.74890  |S| 42/66  mean 0.73770  temp 33.9\n"}
+,{"stream_name":"stdout","time":652.719141351,"data":"[cmso] iter  28/50  best 0.74890  |S| 42/66  mean 0.73846  temp 33.2\n"}
+,{"stream_name":"stdout","time":669.670012983,"data":"[cmso] iter  29/50  best 0.74890  |S| 42/66  mean 0.73867  temp 20.7\n"}
+,{"stream_name":"stdout","time":686.38049256,"data":"[cmso] iter  30/50  best 0.74890  |S| 42/66  mean 0.73922  temp 33.9\n"}
+,{"stream_name":"stdout","time":703.122798663,"data":"[cmso] iter  31/50  best 0.74984  |S| 41/66  mean 0.74071  temp 30.7\n"}
+,{"stream_name":"stdout","time":718.161872714,"data":"[cmso] iter  32/50  best 0.74993  |S| 41/66  mean 0.74085  temp 25.1\n"}
+,{"stream_name":"stdout","time":735.19741161,"data":"[cmso] iter  33/50  best 0.74993  |S| 41/66  mean 0.74149  temp 33.0\n"}
+,{"stream_name":"stdout","time":752.164761084,"data":"[cmso] iter  34/50  best 0.74993  |S| 41/66  mean 0.74170  temp 20.9\n"}
+,{"stream_name":"stdout","time":767.241290238,"data":"[cmso] iter  35/50  best 0.74993  |S| 41/66  mean 0.74175  temp 34.0\n"}
+,{"stream_name":"stdout","time":784.111638212,"data":"[cmso] iter  36/50  best 0.74993  |S| 41/66  mean 0.74293  temp 31.9\n"}
+,{"stream_name":"stdout","time":800.80833533,"data":"[cmso] iter  37/50  best 0.74993  |S| 41/66  mean 0.74303  temp 27.7\n"}
+,{"stream_name":"stdout","time":817.76631773,"data":"[cmso] iter  38/50  best 0.75045  |S| 43/66  mean 0.74331  temp 34.4\n"}
+,{"stream_name":"stdout","time":833.616026675,"data":"[cmso] iter  39/50  best 0.75045  |S| 43/66  mean 0.74374  temp 31.5\n"}
+,{"stream_name":"stdout","time":849.678987042,"data":"[cmso] iter  40/50  best 0.75045  |S| 43/66  mean 0.74513  temp 30.3\n"}
+,{"stream_name":"stdout","time":864.872632969,"data":"[cmso] iter  41/50  best 0.75045  |S| 43/66  mean 0.74539  temp 34.0\n"}
+,{"stream_name":"stdout","time":880.315630799,"data":"[cmso] iter  42/50  best 0.75045  |S| 43/66  mean 0.74593  temp 29.4\n"}
+,{"stream_name":"stdout","time":893.925734239,"data":"[cmso] iter  43/50  best 0.75045  |S| 43/66  mean 0.74602  temp 28.3\n"}
+,{"stream_name":"stdout","time":909.102351645,"data":"[cmso] iter  44/50  best 0.75045  |S| 43/66  mean 0.74602  temp 28.5\n"}
+,{"stream_name":"stdout","time":924.650252459,"data":"[cmso] iter  45/50  best 0.75488  |S| 41/66  mean 0.74640  temp 20.7\n"}
+,{"stream_name":"stdout","time":939.806530279,"data":"[cmso] iter  46/50  best 0.75488  |S| 41/66  mean 0.74664  temp 22.2\n"}
+,{"stream_name":"stdout","time":955.853265883,"data":"[cmso] iter  47/50  best 0.75488  |S| 41/66  mean 0.74672  temp 33.6\n"}
+,{"stream_name":"stdout","time":972.136910775,"data":"[cmso] iter  48/50  best 0.75488  |S| 41/66  mean 0.74697  temp 28.6\n"}
+,{"stream_name":"stdout","time":988.139114043,"data":"[cmso] iter  49/50  best 0.75488  |S| 41/66  mean 0.74701  temp 34.7\n"}
+,{"stream_name":"stdout","time":1004.282238832,"data":"[cmso] iter  50/50  best 0.75488  |S| 41/66  mean 0.74721  temp 32.9\n"}
+,{"stream_name":"stdout","time":1004.283442427,"data":"[cmso] 991 unique evaluations in 845s\n"}
+,{"stream_name":"stdout","time":1004.283499427,"data":"\n"}
+,{"stream_name":"stdout","time":1004.283506601,"data":"selected 41/66 features\n"}
+,{"stream_name":"stdout","time":1004.283511927,"data":"\n"}
+,{"stream_name":"stdout","time":1004.283516924,"data":"kept per group (paper's Table 3 claims FS raises every metric):\n"}
+,{"stream_name":"stdout","time":1004.283522762,"data":"   geometry   11/20\n"}
+,{"stream_name":"stdout","time":1004.283529195,"data":"   position    3/ 4\n"}
+,{"stream_name":"stdout","time":1004.283535339,"data":"   profile     3/ 6\n"}
+,{"stream_name":"stdout","time":1004.283541098,"data":"   rate        1/ 5\n"}
+,{"stream_name":"stdout","time":1004.283546303,"data":"   raw        10/15\n"}
+,{"stream_name":"stdout","time":1004.283551635,"data":"   session    13/16\n"}
+,{"stream_name":"stdout","time":1004.283556785,"data":"\n"}
+,{"stream_name":"stdout","time":1004.283562055,"data":"dropped: ['f_rcv_pos_noise_x', 'f_rcv_spd', 'f_rcv_spd_noise', 'f_rcv_acl', 'f_snd_spd_noise', 'f_snd_y_rel', 'f_dx', 'f_dist', 'f_bearing_sin', 'f_rcv_hed_sin', 'f_rcv_hed_cos', 'f_hed_diff_cos', 'f_rcv_vy', 'f_snd_vx', 'f_rel_speed', 'f_sess_idx', 'f_sess_dt_send', 'f_sess_ddre', 'f_rx_rate_1s', 'f_rx_rate_5s', 'f_sender_rate_1s', 'f_sender_share_5s', 'f_rcv_profile_cautious', 'f_rcv_profile_aggressive', 'f_snd_profile_aggressive']\n"}
+,{"stream_name":"stdout","time":1004.325062663,"data":"Writing /kaggle/working/proj/train_worker.py\n"}
+,{"stream_name":"stdout","time":1004.361931854,"data":"prep took 16.5 min; 10.72 h of session budget left for training\n"}
+,{"stream_name":"stdout","time":1004.361954924,"data":"10,509 steps/epoch/rank x 2 ranks x 50 rounds\n"}
+,{"stream_name":"stdout","time":1004.361961368,"data":"features: 41/66   classes: 16\n"}
+,{"stream_name":"stdout","time":1004.36217953,"data":"free on /kaggle/working: 19.5 GB (50 ckpts + 50 y_pred must fit)\n"}
+,{"stream_name":"stderr","time":1015.869758784,"data":"[W831 05:39:32.779072400 socket.cpp:207] [c10d] The hostname of the client socket cannot be retrieved. err=-3\n"}
+,{"stream_name":"stderr","time":1015.912323099,"data":"[W831 05:39:32.822319130 socket.cpp:207] [c10d] The hostname of the client socket cannot be retrieved. err=-3\n"}
+,{"stream_name":"stderr","time":1015.915478377,"data":"[W831 05:39:32.825519711 Utils.hpp:137] Warning: Environment variable NCCL_ASYNC_ERROR_HANDLING is deprecated; use TORCH_NCCL_ASYNC_ERROR_HANDLING instead (function operator())\n"}
+,{"stream_name":"stderr","time":1015.921354092,"data":"[W831 05:39:32.831349822 Utils.hpp:137] Warning: Environment variable NCCL_ASYNC_ERROR_HANDLING is deprecated; use TORCH_NCCL_ASYNC_ERROR_HANDLING instead (function operator())\n"}
+,{"stream_name":"stderr","time":1016.073551351,"data":"[W831 05:39:32.779072400 socket.cpp:207] [c10d] The hostname of the client socket cannot be retrieved. err=-3\n"}
+,{"stream_name":"stderr","time":1016.073631892,"data":"[W831 05:39:32.822319130 socket.cpp:207] [c10d] The hostname of the client socket cannot be retrieved. err=-3\n"}
+,{"stream_name":"stderr","time":1016.073662788,"data":"[W831 05:39:32.825519711 Utils.hpp:137] Warning: Environment variable NCCL_ASYNC_ERROR_HANDLING is deprecated; use TORCH_NCCL_ASYNC_ERROR_HANDLING instead (function operator())\n"}
+,{"stream_name":"stderr","time":1016.073669248,"data":"[W831 05:39:32.831349822 Utils.hpp:137] Warning: Environment variable NCCL_ASYNC_ERROR_HANDLING is deprecated; use TORCH_NCCL_ASYNC_ERROR_HANDLING instead (function operator())\n"}
+,{"stream_name":"stderr","time":1016.073674117,"data":"\n"}
+,{"stream_name":"stderr","time":1016.073678477,"data":"[W831 05:39:32.779072400 socket.cpp:207] [c10d] The hostname of the client socket cannot be retrieved. err=-3\n"}
+,{"stream_name":"stderr","time":1016.073683861,"data":"[W831 05:39:32.822319130 socket.cpp:207] [c10d] The hostname of the client socket cannot be retrieved. err=-3\n"}
+,{"stream_name":"stderr","time":1016.073688534,"data":"[W831 05:39:32.825519711 Utils.hpp:137] Warning: Environment variable NCCL_ASYNC_ERROR_HANDLING is deprecated; use TORCH_NCCL_ASYNC_ERROR_HANDLING instead (function operator())\n"}
+,{"stream_name":"stderr","time":1016.073693432,"data":"[W831 05:39:32.831349822 Utils.hpp:137] Warning: Environment variable NCCL_ASYNC_ERROR_HANDLING is deprecated; use TORCH_NCCL_ASYNC_ERROR_HANDLING instead (function operator())\n"}
+,{"stream_name":"stdout","time":1024.486707523,"data":"[rank0] shard (21522707, 41) fp16 = 1.64 GB resident\n"}
+,{"stream_name":"stdout","time":1024.616333465,"data":"[rank0] params: 823,824\n"}
+,{"stream_name":"stdout","time":1024.689403414,"data":"[rank0] shard (21522707, 41) fp16 = 1.64 GB resident\n"}
+,{"stream_name":"stdout","time":1024.689433612,"data":"[rank0] params: 823,824\n"}
+,{"stream_name":"stderr","time":1026.105540889,"data":"[rank0]:[W831 05:39:42.015494123 Utils.hpp:112] Warning: Environment variable NCCL_ASYNC_ERROR_HANDLING is deprecated; use TORCH_NCCL_ASYNC_ERROR_HANDLING instead (function operator())\n"}
+,{"stream_name":"stderr","time":1026.105586493,"data":"[rank1]:[W831 05:39:42.015499662 Utils.hpp:112] Warning: Environment variable NCCL_ASYNC_ERROR_HANDLING is deprecated; use TORCH_NCCL_ASYNC_ERROR_HANDLING instead (function operator())\n"}
+,{"stream_name":"stderr","time":1026.108326853,"data":"/usr/local/lib/python3.12/dist-packages/torch/distributed/c10d_logger.py:83: UserWarning: barrier(): using the device under current context. You can specify `device_id` in `init_process_group` to mute this warning.\n"}
+,{"stream_name":"stderr","time":1026.108361247,"data":"  return func(*args, **kwargs)\n"}
+,{"stream_name":"stdout","time":1026.11092329,"data":"[resume] no checkpoint found — starting from round 0\n"}
+,{"stream_name":"stdout","time":1026.11099118,"data":"[rank0] 10,509 steps/epoch/rank  (global batch 4096)\n"}
+,{"stream_name":"stdout","time":1026.111355932,"data":"[resume] no checkpoint found — starting from round 0\n"}
+,{"stream_name":"stderr","time":1026.309604411,"data":"[rank0]:[W831 05:39:42.015494123 Utils.hpp:112] Warning: Environment variable NCCL_ASYNC_ERROR_HANDLING is deprecated; use TORCH_NCCL_ASYNC_ERROR_HANDLING instead (function operator())\n"}
+,{"stream_name":"stderr","time":1026.309641701,"data":"[rank1]:[W831 05:39:42.015499662 Utils.hpp:112] Warning: Environment variable NCCL_ASYNC_ERROR_HANDLING is deprecated; use TORCH_NCCL_ASYNC_ERROR_HANDLING instead (function operator())\n"}
+,{"stream_name":"stderr","time":1026.309646265,"data":"/usr/local/lib/python3.12/dist-packages/torch/distributed/c10d_logger.py:83: UserWarning: barrier(): using the device under current context. You can specify `device_id` in `init_process_group` to mute this warning.\n"}
+,{"stream_name":"stderr","time":1026.309651884,"data":"  return func(*args, **kwargs)\n"}
+,{"stream_name":"stderr","time":1026.309682617,"data":"\n"}
+,{"stream_name":"stderr","time":1026.309687559,"data":"[rank0]:[W831 05:39:42.015494123 Utils.hpp:112] Warning: Environment variable NCCL_ASYNC_ERROR_HANDLING is deprecated; use TORCH_NCCL_ASYNC_ERROR_HANDLING instead (function operator())\n"}
+,{"stream_name":"stderr","time":1026.309691969,"data":"[rank1]:[W831 05:39:42.015499662 Utils.hpp:112] Warning: Environment variable NCCL_ASYNC_ERROR_HANDLING is deprecated; use TORCH_NCCL_ASYNC_ERROR_HANDLING instead (function operator())\n"}
+,{"stream_name":"stderr","time":1026.309701746,"data":"/usr/local/lib/python3.12/dist-packages/torch/distributed/c10d_logger.py:83: UserWarning: barrier(): using the device under current context. You can specify `device_id` in `init_process_group` to mute this warning.\n"}
+,{"stream_name":"stderr","time":1026.309706344,"data":"  return func(*args, **kwargs)\n"}
+,{"stream_name":"stdout","time":1026.31425624,"data":"[resume] no checkpoint found — starting from round 0\n"}
+,{"stream_name":"stdout","time":1026.314287028,"data":"[rank0] 10,509 steps/epoch/rank  (global batch 4096)\n"}
+,{"stream_name":"stdout","time":1026.314290623,"data":"[resume] no checkpoint found — starting from round 0\n"}
+,{"stream_name":"stdout","time":1030.33046085,"data":"[rank0] test (10761343, 41) fp16 = 0.82 GB resident + 0.32 GB prob buffer\n"}
+,{"stream_name":"stdout","time":1030.533002568,"data":"[rank0] test (10761343, 41) fp16 = 0.82 GB resident + 0.32 GB prob buffer\n"}
+,{"stream_name":"stdout","time":1738.366343472,"data":"[round 000] loss 0.2610  acc 0.8487  F1_mac 0.8133  F1_wtd 0.8328  704.1s  61,138/s  peak 4.57GB  \u003c- best\n"}
+,{"stream_name":"stderr","time":1738.389422585,"data":"/usr/local/lib/python3.12/dist-packages/torch/distributed/c10d_logger.py:83: UserWarning: barrier(): using the device under current context. You can specify `device_id` in `init_process_group` to mute this warning.\n"}
+,{"stream_name":"stderr","time":1738.389488887,"data":"  return func(*args, **kwargs)\n"}
+,{"stream_name":"stdout","time":1738.582904508,"data":"[round 000] loss 0.2610  acc 0.8487  F1_mac 0.8133  F1_wtd 0.8328  704.1s  61,138/s  peak 4.57GB  \u003c- best\n"}
+,{"stream_name":"stderr","time":1738.591836749,"data":"/usr/local/lib/python3.12/dist-packages/torch/distributed/c10d_logger.py:83: UserWarning: barrier(): using the device under current context. You can specify `device_id` in `init_process_group` to mute this warning.\n"}
+,{"stream_name":"stderr","time":1738.591867687,"data":"  return func(*args, **kwargs)\n"}
+,{"stream_name":"stderr","time":1738.59206301,"data":"\n"}
+,{"stream_name":"stderr","time":1738.592070948,"data":"/usr/local/lib/python3.12/dist-packages/torch/distributed/c10d_logger.py:83: UserWarning: barrier(): using the device under current context. You can specify `device_id` in `init_process_group` to mute this warning.\n"}
+,{"stream_name":"stderr","time":1738.592076471,"data":"  return func(*args, **kwargs)\n"}
+,{"stream_name":"stdout","time":2442.866745751,"data":"[round 001] loss 0.1744  acc 0.8392  F1_mac 0.8087  F1_wtd 0.8266  701.2s  61,387/s  peak 4.11GB\n"}
+,{"stream_name":"stderr","time":2442.867257132,"data":"/usr/local/lib/python3.12/dist-packages/torch/distributed/c10d_logger.py:83: UserWarning: barrier(): using the device under current context. You can specify `device_id` in `init_process_group` to mute this warning.\n"}
+,{"stream_name":"stderr","time":2442.867323988,"data":"  return func(*args, **kwargs)\n"}
+,{"stream_name":"stdout","time":2443.084273715,"data":"[round 001] loss 0.1744  acc 0.8392  F1_mac 0.8087  F1_wtd 0.8266  701.2s  61,387/s  peak 4.11GB\n"}
+,{"stream_name":"stderr","time":2443.085825863,"data":"/usr/local/lib/python3.12/dist-packages/torch/distributed/c10d_logger.py:83: UserWarning: barrier(): using the device under current context. You can specify `device_id` in `init_process_group` to mute this warning.\n"}
+,{"stream_name":"stderr","time":2443.085901815,"data":"  return func(*args, **kwargs)\n"}
+,{"stream_name":"stderr","time":2443.085909275,"data":"\n"}
+,{"stream_name":"stderr","time":2443.085912652,"data":"/usr/local/lib/python3.12/dist-packages/torch/distributed/c10d_logger.py:83: UserWarning: barrier(): using the device under current context. You can specify `device_id` in `init_process_group` to mute this warning.\n"}
+,{"stream_name":"stderr","time":2443.085916408,"data":"  return func(*args, **kwargs)\n"}
+,{"stream_name":"stdout","time":3148.346141146,"data":"[round 002] loss 0.1495  acc 0.8430  F1_mac 0.8168  F1_wtd 0.8326  701.4s  61,368/s  peak 4.11GB  \u003c- best\n"}
+,{"stream_name":"stderr","time":3148.374435867,"data":"/usr/local/lib/python3.12/dist-packages/torch/distributed/c10d_logger.py:83: UserWarning: barrier(): using the device under current context. You can specify `device_id` in `init_process_group` to mute this warning.\n"}
+,{"stream_name":"stderr","time":3148.374462682,"data":"  return func(*args, **kwargs)\n"}
+,{"stream_name":"stdout","time":3148.562209566,"data":"[round 002] loss 0.1495  acc 0.8430  F1_mac 0.8168  F1_wtd 0.8326  701.4s  61,368/s  peak 4.11GB  \u003c- best\n"}
+,{"stream_name":"stderr","time":3148.577557231,"data":"/usr/local/lib/python3.12/dist-packages/torch/distributed/c10d_logger.py:83: UserWarning: barrier(): using the device under current context. You can specify `device_id` in `init_process_group` to mute this warning.\n"}
+,{"stream_name":"stderr","time":3148.577591588,"data":"  return func(*args, **kwargs)\n"}
+,{"stream_name":"stderr","time":3148.577597465,"data":"\n"}
+,{"stream_name":"stderr","time":3148.577602189,"data":"/usr/local/lib/python3.12/dist-packages/torch/distributed/c10d_logger.py:83: UserWarning: barrier(): using the device under current context. You can specify `device_id` in `init_process_group` to mute this warning.\n"}
+,{"stream_name":"stderr","time":3148.577607369,"data":"  return func(*args, **kwargs)\n"}
+,{"stream_name":"stdout","time":3852.964174147,"data":"[round 003] loss 0.1343  acc 0.8308  F1_mac 0.8109  F1_wtd 0.8210  701.3s  61,379/s  peak 4.11GB\n"}
+,{"stream_name":"stderr","time":3852.96470496,"data":"/usr/local/lib/python3.12/dist-packages/torch/distributed/c10d_logger.py:83: UserWarning: barrier(): using the device under current context. You can specify `device_id` in `init_process_group` to mute this warning.\n"}
+,{"stream_name":"stderr","time":3852.964758698,"data":"  return func(*args, **kwargs)\n"}
+,{"stream_name":"stdout","time":3853.183758163,"data":"[round 003] loss 0.1343  acc 0.8308  F1_mac 0.8109  F1_wtd 0.8210  701.3s  61,379/s  peak 4.11GB\n"}
+,{"stream_name":"stderr","time":3853.185162762,"data":"/usr/local/lib/python3.12/dist-packages/torch/distributed/c10d_logger.py:83: UserWarning: barrier(): using the device under current context. You can specify `device_id` in `init_process_group` to mute this warning.\n"}
+,{"stream_name":"stderr","time":3853.185198866,"data":"  return func(*args, **kwargs)\n"}
+,{"stream_name":"stderr","time":3853.185205377,"data":"\n"}
+,{"stream_name":"stderr","time":3853.185210461,"data":"/usr/local/lib/python3.12/dist-packages/torch/distributed/c10d_logger.py:83: UserWarning: barrier(): using the device under current context. You can specify `device_id` in `init_process_group` to mute this warning.\n"}
+,{"stream_name":"stderr","time":3853.185215248,"data":"  return func(*args, **kwargs)\n"}
+,{"stream_name":"stdout","time":4556.373446219,"data":"[round 004] loss 0.1238  acc 0.8264  F1_mac 0.8090  F1_wtd 0.8186  700.1s  61,486/s  peak 4.11GB\n"}
+,{"stream_name":"stderr","time":4556.373500408,"data":"/usr/local/lib/python3.12/dist-packages/torch/distributed/c10d_logger.py:83: UserWarning: barrier(): using the device under current context. You can specify `device_id` in `init_process_group` to mute this warning.\n"}
+,{"stream_name":"stderr","time":4556.37353032,"data":"  return func(*args, **kwargs)\n"}
+,{"stream_name":"stdout","time":4556.590564809,"data":"[round 004] loss 0.1238  acc 0.8264  F1_mac 0.8090  F1_wtd 0.8186  700.1s  61,486/s  peak 4.11GB\n"}
+,{"stream_name":"stderr","time":4556.591736034,"data":"/usr/local/lib/python3.12/dist-packages/torch/distributed/c10d_logger.py:83: UserWarning: barrier(): using the device under current context. You can specify `device_id` in `init_process_group` to mute this warning.\n"}
+,{"stream_name":"stderr","time":4556.591764517,"data":"  return func(*args, **kwargs)\n"}
+,{"stream_name":"stderr","time":4556.591788131,"data":"\n"}
+,{"stream_name":"stderr","time":4556.592256581,"data":"/usr/local/lib/python3.12/dist-packages/torch/distributed/c10d_logger.py:83: UserWarning: barrier(): using the device under current context. You can specify `device_id` in `init_process_group` to mute this warning.\n"}
+,{"stream_name":"stderr","time":4556.592272225,"data":"  return func(*args, **kwargs)\n"}
+,{"stream_name":"stdout","time":5259.643019802,"data":"[round 005] loss 0.1158  acc 0.8268  F1_mac 0.8085  F1_wtd 0.8193  700.0s  61,495/s  peak 4.11GB\n"}
+,{"stream_name":"stderr","time":5259.646094499,"data":"/usr/local/lib/python3.12/dist-packages/torch/distributed/c10d_logger.py:83: UserWarning: barrier(): using the device under current context. You can specify `device_id` in `init_process_group` to mute this warning.\n"}
+,{"stream_name":"stderr","time":5259.646321082,"data":"  return func(*args, **kwargs)\n"}
+,{"stream_name":"stdout","time":5259.859697346,"data":"[round 005] loss 0.1158  acc 0.8268  F1_mac 0.8085  F1_wtd 0.8193  700.0s  61,495/s  peak 4.11GB\n"}
+,{"stream_name":"stderr","time":5259.860825342,"data":"/usr/local/lib/python3.12/dist-packages/torch/distributed/c10d_logger.py:83: UserWarning: barrier(): using the device under current context. You can specify `device_id` in `init_process_group` to mute this warning.\n"}
+,{"stream_name":"stderr","time":5259.860850198,"data":"  return func(*args, **kwargs)\n"}
+,{"stream_name":"stderr","time":5259.860855367,"data":"\n"}
+,{"stream_name":"stderr","time":5259.860859747,"data":"/usr/local/lib/python3.12/dist-packages/torch/distributed/c10d_logger.py:83: UserWarning: barrier(): using the device under current context. You can specify `device_id` in `init_process_group` to mute this warning.\n"}
+,{"stream_name":"stderr","time":5259.860877393,"data":"  return func(*args, **kwargs)\n"}
+,{"stream_name":"stderr","time":5962.916348577,"data":"/usr/local/lib/python3.12/dist-packages/torch/distributed/c10d_logger.py:83: UserWarning: barrier(): using the device under current context. You can specify `device_id` in `init_process_group` to mute this warning.\n"}
+,{"stream_name":"stderr","time":5962.916412529,"data":"  return func(*args, **kwargs)\n"}
+,{"stream_name":"stdout","time":5962.916855931,"data":"[round 006] loss 0.1091  acc 0.8210  F1_mac 0.8037  F1_wtd 0.8126  699.9s  61,497/s  peak 4.11GB\n"}
+,{"stream_name":"stdout","time":5963.134054026,"data":"[round 006] loss 0.1091  acc 0.8210  F1_mac 0.8037  F1_wtd 0.8126  699.9s  61,497/s  peak 4.11GB\n"}
+,{"stream_name":"stderr","time":5963.135481226,"data":"/usr/local/lib/python3.12/dist-packages/torch/distributed/c10d_logger.py:83: UserWarning: barrier(): using the device under current context. You can specify `device_id` in `init_process_group` to mute this warning.\n"}
+,{"stream_name":"stderr","time":5963.135505606,"data":"  return func(*args, **kwargs)\n"}
+,{"stream_name":"stderr","time":5963.135511031,"data":"\n"}
+,{"stream_name":"stderr","time":5963.135526372,"data":"/usr/local/lib/python3.12/dist-packages/torch/distributed/c10d_logger.py:83: UserWarning: barrier(): using the device under current context. You can specify `device_id` in `init_process_group` to mute this warning.\n"}
+,{"stream_name":"stderr","time":5963.135530562,"data":"  return func(*args, **kwargs)\n"}
+,{"stream_name":"stdout","time":6666.42290577,"data":"[round 007] loss 0.1036  acc 0.8236  F1_mac 0.8015  F1_wtd 0.8144  700.2s  61,479/s  peak 4.11GB\n"}
+,{"stream_name":"stderr","time":6666.423255675,"data":"/usr/local/lib/python3.12/dist-packages/torch/distributed/c10d_logger.py:83: UserWarning: barrier(): using the device under current context. You can specify `device_id` in `init_process_group` to mute this warning.\n"}
+,{"stream_name":"stderr","time":6666.423269911,"data":"  return func(*args, **kwargs)\n"}
+,{"stream_name":"stdout","time":6666.641551225,"data":"[round 007] loss 0.1036  acc 0.8236  F1_mac 0.8015  F1_wtd 0.8144  700.2s  61,479/s  peak 4.11GB\n"}
+,{"stream_name":"stderr","time":6666.642888592,"data":"/usr/local/lib/python3.12/dist-packages/torch/distributed/c10d_logger.py:83: UserWarning: barrier(): using the device under current context. You can specify `device_id` in `init_process_group` to mute this warning.\n"}
+,{"stream_name":"stderr","time":6666.642914756,"data":"  return func(*args, **kwargs)\n"}
+,{"stream_name":"stderr","time":6666.642919977,"data":"\n"}
+,{"stream_name":"stderr","time":6666.642924521,"data":"/usr/local/lib/python3.12/dist-packages/torch/distributed/c10d_logger.py:83: UserWarning: barrier(): using the device under current context. You can specify `device_id` in `init_process_group` to mute this warning.\n"}
+,{"stream_name":"stderr","time":6666.642929355,"data":"  return func(*args, **kwargs)\n"}
+,{"stream_name":"stdout","time":7371.015865569,"data":"[round 008] loss 0.0990  acc 0.8232  F1_mac 0.8106  F1_wtd 0.8169  701.2s  61,389/s  peak 4.11GB\n"}
+,{"stream_name":"stderr","time":7371.016220503,"data":"/usr/local/lib/python3.12/dist-packages/torch/distributed/c10d_logger.py:83: UserWarning: barrier(): using the device under current context. You can specify `device_id` in `init_process_group` to mute this warning.\n"}
+,{"stream_name":"stderr","time":7371.016236987,"data":"  return func(*args, **kwargs)\n"}
+,{"stream_name":"stdout","time":7371.240058591,"data":"[round 008] loss 0.0990  acc 0.8232  F1_mac 0.8106  F1_wtd 0.8169  701.2s  61,389/s  peak 4.11GB\n"}
+,{"stream_name":"stderr","time":7371.241831618,"data":"/usr/local/lib/python3.12/dist-packages/torch/distributed/c10d_logger.py:83: UserWarning: barrier(): using the device under current context. You can specify `device_id` in `init_process_group` to mute this warning.\n"}
+,{"stream_name":"stderr","time":7371.241864294,"data":"  return func(*args, **kwargs)\n"}
+,{"stream_name":"stderr","time":7371.241870702,"data":"\n"}
+,{"stream_name":"stderr","time":7371.242228034,"data":"/usr/local/lib/python3.12/dist-packages/torch/distributed/c10d_logger.py:83: UserWarning: barrier(): using the device under current context. You can specify `device_id` in `init_process_group` to mute this warning.\n"}
+,{"stream_name":"stderr","time":7371.242247356,"data":"  return func(*args, **kwargs)\n"}
+,{"stream_name":"stdout","time":8075.947792412,"data":"[round 009] loss 0.0950  acc 0.8184  F1_mac 0.8020  F1_wtd 0.8106  701.6s  61,354/s  peak 4.11GB\n"}
+,{"stream_name":"stderr","time":8075.948356875,"data":"/usr/local/lib/python3.12/dist-packages/torch/distributed/c10d_logger.py:83: UserWarning: barrier(): using the device under current context. You can specify `device_id` in `init_process_group` to mute this warning.\n"}
+,{"stream_name":"stderr","time":8075.94837954,"data":"  return func(*args, **kwargs)\n"}
+,{"stream_name":"stdout","time":8076.164125558,"data":"[round 009] loss 0.0950  acc 0.8184  F1_mac 0.8020  F1_wtd 0.8106  701.6s  61,354/s  peak 4.11GB\n"}
+,{"stream_name":"stderr","time":8076.165353929,"data":"/usr/local/lib/python3.12/dist-packages/torch/distributed/c10d_logger.py:83: UserWarning: barrier(): using the device under current context. You can specify `device_id` in `init_process_group` to mute this warning.\n"}
+,{"stream_name":"stderr","time":8076.165379608,"data":"  return func(*args, **kwargs)\n"}
+,{"stream_name":"stderr","time":8076.165384143,"data":"\n"}
+,{"stream_name":"stderr","time":8076.165387422,"data":"/usr/local/lib/python3.12/dist-packages/torch/distributed/c10d_logger.py:83: UserWarning: barrier(): using the device under current context. You can specify `device_id` in `init_process_group` to mute this warning.\n"}
+,{"stream_name":"stderr","time":8076.165815534,"data":"  return func(*args, **kwargs)\n"}
+,{"stream_name":"stdout","time":8780.346953731,"data":"[round 010] loss 0.0915  acc 0.8146  F1_mac 0.8023  F1_wtd 0.8073  701.0s  61,406/s  peak 4.11GB\n"}
+,{"stream_name":"stderr","time":8780.347477504,"data":"/usr/local/lib/python3.12/dist-packages/torch/distributed/c10d_logger.py:83: UserWarning: barrier(): using the device under current context. You can specify `device_id` in `init_process_group` to mute this warning.\n"}
+,{"stream_name":"stderr","time":8780.347501171,"data":"  return func(*args, **kwargs)\n"}
+,{"stream_name":"stdout","time":8780.564470329,"data":"[round 010] loss 0.0915  acc 0.8146  F1_mac 0.8023  F1_wtd 0.8073  701.0s  61,406/s  peak 4.11GB\n"}
+,{"stream_name":"stderr","time":8780.565641706,"data":"/usr/local/lib/python3.12/dist-packages/torch/distributed/c10d_logger.py:83: UserWarning: barrier(): using the device under current context. You can specify `device_id` in `init_process_group` to mute this warning.\n"}
+,{"stream_name":"stderr","time":8780.565661208,"data":"  return func(*args, **kwargs)\n"}
+,{"stream_name":"stderr","time":8780.565666503,"data":"\n"}
+,{"stream_name":"stderr","time":8780.565670958,"data":"/usr/local/lib/python3.12/dist-packages/torch/distributed/c10d_logger.py:83: UserWarning: barrier(): using the device under current context. You can specify `device_id` in `init_process_group` to mute this warning.\n"}
+,{"stream_name":"stderr","time":8780.565676081,"data":"  return func(*args, **kwargs)\n"}
+,{"stream_name":"stdout","time":9484.952680321,"data":"[round 011] loss 0.0885  acc 0.8125  F1_mac 0.7985  F1_wtd 0.8038  701.2s  61,388/s  peak 4.11GB\n"}
+,{"stream_name":"stderr","time":9484.954041674,"data":"/usr/local/lib/python3.12/dist-packages/torch/distributed/c10d_logger.py:83: UserWarning: barrier(): using the device under current context. You can specify `device_id` in `init_process_group` to mute this warning.\n"}
+,{"stream_name":"stderr","time":9484.954256368,"data":"  return func(*args, **kwargs)\n"}
+,{"stream_name":"stdout","time":9485.170146593,"data":"[round 011] loss 0.0885  acc 0.8125  F1_mac 0.7985  F1_wtd 0.8038  701.2s  61,388/s  peak 4.11GB\n"}
+,{"stream_name":"stderr","time":9485.171318766,"data":"/usr/local/lib/python3.12/dist-packages/torch/distributed/c10d_logger.py:83: UserWarning: barrier(): using the device under current context. You can specify `device_id` in `init_process_group` to mute this warning.\n"}
+,{"stream_name":"stderr","time":9485.171339405,"data":"  return func(*args, **kwargs)\n"}
+,{"stream_name":"stderr","time":9485.171344712,"data":"\n"}
+,{"stream_name":"stderr","time":9485.171667874,"data":"/usr/local/lib/python3.12/dist-packages/torch/distributed/c10d_logger.py:83: UserWarning: barrier(): using the device under current context. You can specify `device_id` in `init_process_group` to mute this warning.\n"}
+,{"stream_name":"stderr","time":9485.171676304,"data":"  return func(*args, **kwargs)\n"}
+,{"stream_name":"stdout","time":10189.116732095,"data":"[round 012] loss 0.0860  acc 0.8182  F1_mac 0.8038  F1_wtd 0.8111  700.8s  61,423/s  peak 4.11GB\n"}
+,{"stream_name":"stderr","time":10189.118029452,"data":"/usr/local/lib/python3.12/dist-packages/torch/distributed/c10d_logger.py:83: UserWarning: barrier(): using the device under current context. You can specify `device_id` in `init_process_group` to mute this warning.\n"}
+,{"stream_name":"stderr","time":10189.118058131,"data":"  return func(*args, **kwargs)\n"}
+,{"stream_name":"stdout","time":10189.336145087,"data":"[round 012] loss 0.0860  acc 0.8182  F1_mac 0.8038  F1_wtd 0.8111  700.8s  61,423/s  peak 4.11GB\n"}
+,{"stream_name":"stderr","time":10189.337418116,"data":"/usr/local/lib/python3.12/dist-packages/torch/distributed/c10d_logger.py:83: UserWarning: barrier(): using the device under current context. You can specify `device_id` in `init_process_group` to mute this warning.\n"}
+,{"stream_name":"stderr","time":10189.337569252,"data":"  return func(*args, **kwargs)\n"}
+,{"stream_name":"stderr","time":10189.337586626,"data":"\n"}
+,{"stream_name":"stderr","time":10189.33759133,"data":"/usr/local/lib/python3.12/dist-packages/torch/distributed/c10d_logger.py:83: UserWarning: barrier(): using the device under current context. You can specify `device_id` in `init_process_group` to mute this warning.\n"}
+,{"stream_name":"stderr","time":10189.337595949,"data":"  return func(*args, **kwargs)\n"}
+,{"stream_name":"stdout","time":10894.313648517,"data":"[round 013] loss 0.0837  acc 0.8106  F1_mac 0.7966  F1_wtd 0.8025  701.8s  61,336/s  peak 4.11GB\n"}
+,{"stream_name":"stderr","time":10894.313943972,"data":"/usr/local/lib/python3.12/dist-packages/torch/distributed/c10d_logger.py:83: UserWarning: barrier(): using the device under current context. You can specify `device_id` in `init_process_group` to mute this warning.\n"}
+,{"stream_name":"stderr","time":10894.313961294,"data":"  return func(*args, **kwargs)\n"}
+,{"stream_name":"stdout","time":10894.531987841,"data":"[round 013] loss 0.0837  acc 0.8106  F1_mac 0.7966  F1_wtd 0.8025  701.8s  61,336/s  peak 4.11GB\n"}
+,{"stream_name":"stderr","time":10894.533089373,"data":"/usr/local/lib/python3.12/dist-packages/torch/distributed/c10d_logger.py:83: UserWarning: barrier(): using the device under current context. You can specify `device_id` in `init_process_group` to mute this warning.\n"}
+,{"stream_name":"stderr","time":10894.533115985,"data":"  return func(*args, **kwargs)\n"}
+,{"stream_name":"stderr","time":10894.533428073,"data":"\n"}
+,{"stream_name":"stderr","time":10894.533440422,"data":"/usr/local/lib/python3.12/dist-packages/torch/distributed/c10d_logger.py:83: UserWarning: barrier(): using the device under current context. You can specify `device_id` in `init_process_group` to mute this warning.\n"}
+,{"stream_name":"stderr","time":10894.533445895,"data":"  return func(*args, **kwargs)\n"}
+,{"stream_name":"stdout","time":11599.603635741,"data":"[round 014] loss 0.0818  acc 0.8147  F1_mac 0.8013  F1_wtd 0.8080  701.9s  61,327/s  peak 4.11GB\n"}
+,{"stream_name":"stderr","time":11599.603878923,"data":"/usr/local/lib/python3.12/dist-packages/torch/distributed/c10d_logger.py:83: UserWarning: barrier(): using the device under current context. You can specify `device_id` in `init_process_group` to mute this warning.\n"}
+,{"stream_name":"stderr","time":11599.603913573,"data":"  return func(*args, **kwargs)\n"}
+,{"stream_name":"stdout","time":11599.821479038,"data":"[round 014] loss 0.0818  acc 0.8147  F1_mac 0.8013  F1_wtd 0.8080  701.9s  61,327/s  peak 4.11GB\n"}
+,{"stream_name":"stderr","time":11599.822701988,"data":"/usr/local/lib/python3.12/dist-packages/torch/distributed/c10d_logger.py:83: UserWarning: barrier(): using the device under current context. You can specify `device_id` in `init_process_group` to mute this warning.\n"}
+,{"stream_name":"stderr","time":11599.822735309,"data":"  return func(*args, **kwargs)\n"}
+,{"stream_name":"stderr","time":11599.82277,"data":"\n"}
+,{"stream_name":"stderr","time":11599.822773648,"data":"/usr/local/lib/python3.12/dist-packages/torch/distributed/c10d_logger.py:83: UserWarning: barrier(): using the device under current context. You can specify `device_id` in `init_process_group` to mute this warning.\n"}
+,{"stream_name":"stderr","time":11599.822790878,"data":"  return func(*args, **kwargs)\n"}
+,{"stream_name":"stdout","time":12305.459494983,"data":"[round 015] loss 0.0800  acc 0.8158  F1_mac 0.8027  F1_wtd 0.8088  702.4s  61,282/s  peak 4.11GB\n"}
+,{"stream_name":"stderr","time":12305.459852827,"data":"/usr/local/lib/python3.12/dist-packages/torch/distributed/c10d_logger.py:83: UserWarning: barrier(): using the device under current context. You can specify `device_id` in `init_process_group` to mute this warning.\n"}
+,{"stream_name":"stderr","time":12305.459879129,"data":"  return func(*args, **kwargs)\n"}
+,{"stream_name":"stdout","time":12305.677760586,"data":"[round 015] loss 0.0800  acc 0.8158  F1_mac 0.8027  F1_wtd 0.8088  702.4s  61,282/s  peak 4.11GB\n"}
+,{"stream_name":"stderr","time":12305.679317026,"data":"/usr/local/lib/python3.12/dist-packages/torch/distributed/c10d_logger.py:83: UserWarning: barrier(): using the device under current context. You can specify `device_id` in `init_process_group` to mute this warning.\n"}
+,{"stream_name":"stderr","time":12305.679342006,"data":"  return func(*args, **kwargs)\n"}
+,{"stream_name":"stderr","time":12305.679347856,"data":"\n"}
+,{"stream_name":"stderr","time":12305.679352426,"data":"/usr/local/lib/python3.12/dist-packages/torch/distributed/c10d_logger.py:83: UserWarning: barrier(): using the device under current context. You can specify `device_id` in `init_process_group` to mute this warning.\n"}
+,{"stream_name":"stderr","time":12305.679357608,"data":"  return func(*args, **kwargs)\n"}
+,{"stream_name":"stdout","time":13010.598294311,"data":"[round 016] loss 0.0783  acc 0.8097  F1_mac 0.8019  F1_wtd 0.8035  701.7s  61,341/s  peak 4.11GB\n"}
+,{"stream_name":"stderr","time":13010.599025248,"data":"/usr/local/lib/python3.12/dist-packages/torch/distributed/c10d_logger.py:83: UserWarning: barrier(): using the device under current context. You can specify `device_id` in `init_process_group` to mute this warning.\n"}
+,{"stream_name":"stderr","time":13010.599049469,"data":"  return func(*args, **kwargs)\n"}
+,{"stream_name":"stdout","time":13010.817821764,"data":"[round 016] loss 0.0783  acc 0.8097  F1_mac 0.8019  F1_wtd 0.8035  701.7s  61,341/s  peak 4.11GB\n"}
+,{"stream_name":"stderr","time":13010.819203871,"data":"/usr/local/lib/python3.12/dist-packages/torch/distributed/c10d_logger.py:83: UserWarning: barrier(): using the device under current context. You can specify `device_id` in `init_process_group` to mute this warning.\n"}
+,{"stream_name":"stderr","time":13010.819225089,"data":"  return func(*args, **kwargs)\n"}
+,{"stream_name":"stderr","time":13010.8192302,"data":"\n"}
+,{"stream_name":"stderr","time":13010.819234568,"data":"/usr/local/lib/python3.12/dist-packages/torch/distributed/c10d_logger.py:83: UserWarning: barrier(): using the device under current context. You can specify `device_id` in `init_process_group` to mute this warning.\n"}
+,{"stream_name":"stderr","time":13010.819277396,"data":"  return func(*args, **kwargs)\n"}
+,{"stream_name":"stdout","time":13715.412971452,"data":"[round 017] loss 0.0768  acc 0.8092  F1_mac 0.8006  F1_wtd 0.8041  701.4s  61,372/s  peak 4.11GB\n"}
+,{"stream_name":"stderr","time":13715.413101437,"data":"/usr/local/lib/python3.12/dist-packages/torch/distributed/c10d_logger.py:83: UserWarning: barrier(): using the device under current context. You can specify `device_id` in `init_process_group` to mute this warning.\n"}
+,{"stream_name":"stderr","time":13715.413131713,"data":"  return func(*args, **kwargs)\n"}
+,{"stream_name":"stdout","time":13715.632631767,"data":"[round 017] loss 0.0768  acc 0.8092  F1_mac 0.8006  F1_wtd 0.8041  701.4s  61,372/s  peak 4.11GB\n"}
+,{"stream_name":"stderr","time":13715.634158114,"data":"/usr/local/lib/python3.12/dist-packages/torch/distributed/c10d_logger.py:83: UserWarning: barrier(): using the device under current context. You can specify `device_id` in `init_process_group` to mute this warning.\n"}
+,{"stream_name":"stderr","time":13715.634177721,"data":"  return func(*args, **kwargs)\n"}
+,{"stream_name":"stderr","time":13715.634181959,"data":"\n"}
+,{"stream_name":"stderr","time":13715.634185652,"data":"/usr/local/lib/python3.12/dist-packages/torch/distributed/c10d_logger.py:83: UserWarning: barrier(): using the device under current context. You can specify `device_id` in `init_process_group` to mute this warning.\n"}
+,{"stream_name":"stderr","time":13715.63418972,"data":"  return func(*args, **kwargs)\n"}
+,{"stream_name":"stdout","time":14419.435875631,"data":"[round 018] loss 0.0754  acc 0.8048  F1_mac 0.7979  F1_wtd 0.7990  700.6s  61,440/s  peak 4.11GB\n"}
+,{"stream_name":"stderr","time":14419.436132316,"data":"/usr/local/lib/python3.12/dist-packages/torch/distributed/c10d_logger.py:83: UserWarning: barrier(): using the device under current context. You can specify `device_id` in `init_process_group` to mute this warning.\n"}
+,{"stream_name":"stderr","time":14419.436156751,"data":"  return func(*args, **kwargs)\n"}
+,{"stream_name":"stdout","time":14419.654039469,"data":"[round 018] loss 0.0754  acc 0.8048  F1_mac 0.7979  F1_wtd 0.7990  700.6s  61,440/s  peak 4.11GB\n"}
+,{"stream_name":"stderr","time":14419.655400194,"data":"/usr/local/lib/python3.12/dist-packages/torch/distributed/c10d_logger.py:83: UserWarning: barrier(): using the device under current context. You can specify `device_id` in `init_process_group` to mute this warning.\n"}
+,{"stream_name":"stderr","time":14419.655422432,"data":"  return func(*args, **kwargs)\n"}
+,{"stream_name":"stderr","time":14419.655427774,"data":"\n"}
+,{"stream_name":"stderr","time":14419.655432289,"data":"/usr/local/lib/python3.12/dist-packages/torch/distributed/c10d_logger.py:83: UserWarning: barrier(): using the device under current context. You can specify `device_id` in `init_process_group` to mute this warning.\n"}
+,{"stream_name":"stderr","time":14419.6554375,"data":"  return func(*args, **kwargs)\n"}
+,{"stream_name":"stdout","time":15124.802107941,"data":"[round 019] loss 0.0740  acc 0.8031  F1_mac 0.7961  F1_wtd 0.7976  701.9s  61,329/s  peak 4.11GB\n"}
+,{"stream_name":"stderr","time":15124.802258409,"data":"/usr/local/lib/python3.12/dist-packages/torch/distributed/c10d_logger.py:83: UserWarning: barrier(): using the device under current context. You can specify `device_id` in `init_process_group` to mute this warning.\n"}
+,{"stream_name":"stderr","time":15124.802274642,"data":"  return func(*args, **kwargs)\n"}
+,{"stream_name":"stdout","time":15125.021353839,"data":"[round 019] loss 0.0740  acc 0.8031  F1_mac 0.7961  F1_wtd 0.7976  701.9s  61,329/s  peak 4.11GB\n"}
+,{"stream_name":"stderr","time":15125.022774683,"data":"/usr/local/lib/python3.12/dist-packages/torch/distributed/c10d_logger.py:83: UserWarning: barrier(): using the device under current context. You can specify `device_id` in `init_process_group` to mute this warning.\n"}
+,{"stream_name":"stderr","time":15125.022837772,"data":"  return func(*args, **kwargs)\n"}
+,{"stream_name":"stderr","time":15125.022843849,"data":"\n"}
+,{"stream_name":"stderr","time":15125.022848703,"data":"/usr/local/lib/python3.12/dist-packages/torch/distributed/c10d_logger.py:83: UserWarning: barrier(): using the device under current context. You can specify `device_id` in `init_process_group` to mute this warning.\n"}
+,{"stream_name":"stderr","time":15125.02286624,"data":"  return func(*args, **kwargs)\n"}
+,{"stream_name":"stdout","time":15829.693619891,"data":"[round 020] loss 0.0728  acc 0.8063  F1_mac 0.7999  F1_wtd 0.8007  701.4s  61,366/s  peak 4.11GB\n"}
+,{"stream_name":"stderr","time":15829.693858363,"data":"/usr/local/lib/python3.12/dist-packages/torch/distributed/c10d_logger.py:83: UserWarning: barrier(): using the device under current context. You can specify `device_id` in `init_process_group` to mute this warning.\n"}
+,{"stream_name":"stderr","time":15829.693878909,"data":"  return func(*args, **kwargs)\n"}
+,{"stream_name":"stdout","time":15829.912998573,"data":"[round 020] loss 0.0728  acc 0.8063  F1_mac 0.7999  F1_wtd 0.8007  701.4s  61,366/s  peak 4.11GB\n"}
+,{"stream_name":"stderr","time":15829.913522357,"data":"/usr/local/lib/python3.12/dist-packages/torch/distributed/c10d_logger.py:83: UserWarning: barrier(): using the device under current context. You can specify `device_id` in `init_process_group` to mute this warning.\n"}
+,{"stream_name":"stderr","time":15829.91355061,"data":"  return func(*args, **kwargs)\n"}
+,{"stream_name":"stderr","time":15829.913555762,"data":"\n"}
+,{"stream_name":"stderr","time":15829.913702168,"data":"/usr/local/lib/python3.12/dist-packages/torch/distributed/c10d_logger.py:83: UserWarning: barrier(): using the device under current context. You can specify `device_id` in `init_process_group` to mute this warning.\n"}
+,{"stream_name":"stderr","time":15829.913713998,"data":"  return func(*args, **kwargs)\n"}
+,{"stream_name":"stderr","time":16534.054421296,"data":"/usr/local/lib/python3.12/dist-packages/torch/distributed/c10d_logger.py:83: UserWarning: barrier(): using the device under current context. You can specify `device_id` in `init_process_group` to mute this warning.\n"}
+,{"stream_name":"stderr","time":16534.054461648,"data":"  return func(*args, **kwargs)\n"}
+,{"stream_name":"stdout","time":16534.054480478,"data":"[round 021] loss 0.0716  acc 0.8090  F1_mac 0.8011  F1_wtd 0.8025  700.9s  61,411/s  peak 4.11GB\n"}
+,{"stream_name":"stdout","time":16534.273769341,"data":"[round 021] loss 0.0716  acc 0.8090  F1_mac 0.8011  F1_wtd 0.8025  700.9s  61,411/s  peak 4.11GB\n"}
+,{"stream_name":"stderr","time":16534.275217339,"data":"/usr/local/lib/python3.12/dist-packages/torch/distributed/c10d_logger.py:83: UserWarning: barrier(): using the device under current context. You can specify `device_id` in `init_process_group` to mute this warning.\n"}
+,{"stream_name":"stderr","time":16534.275238204,"data":"  return func(*args, **kwargs)\n"}
+,{"stream_name":"stderr","time":16534.275243941,"data":"\n"}
+,{"stream_name":"stderr","time":16534.275387277,"data":"/usr/local/lib/python3.12/dist-packages/torch/distributed/c10d_logger.py:83: UserWarning: barrier(): using the device under current context. You can specify `device_id` in `init_process_group` to mute this warning.\n"}
+,{"stream_name":"stderr","time":16534.275398867,"data":"  return func(*args, **kwargs)\n"}
+,{"stream_name":"stdout","time":17238.877614046,"data":"[round 022] loss 0.0706  acc 0.8045  F1_mac 0.7978  F1_wtd 0.7982  701.4s  61,371/s  peak 4.11GB\n"}
+,{"stream_name":"stderr","time":17238.878006721,"data":"/usr/local/lib/python3.12/dist-packages/torch/distributed/c10d_logger.py:83: UserWarning: barrier(): using the device under current context. You can specify `device_id` in `init_process_group` to mute this warning.\n"}
+,{"stream_name":"stderr","time":17238.878030238,"data":"  return func(*args, **kwargs)\n"}
+,{"stream_name":"stdout","time":17239.096989139,"data":"[round 022] loss 0.0706  acc 0.8045  F1_mac 0.7978  F1_wtd 0.7982  701.4s  61,371/s  peak 4.11GB\n"}
+,{"stream_name":"stderr","time":17239.097953686,"data":"/usr/local/lib/python3.12/dist-packages/torch/distributed/c10d_logger.py:83: UserWarning: barrier(): using the device under current context. You can specify `device_id` in `init_process_group` to mute this warning.\n"}
+,{"stream_name":"stderr","time":17239.097992019,"data":"  return func(*args, **kwargs)\n"}
+,{"stream_name":"stderr","time":17239.097996212,"data":"\n"}
+,{"stream_name":"stderr","time":17239.097999642,"data":"/usr/local/lib/python3.12/dist-packages/torch/distributed/c10d_logger.py:83: UserWarning: barrier(): using the device under current context. You can specify `device_id` in `init_process_group` to mute this warning.\n"}
+,{"stream_name":"stderr","time":17239.098004064,"data":"  return func(*args, **kwargs)\n"}
+,{"stream_name":"stdout","time":17943.881959613,"data":"[round 023] loss 0.0696  acc 0.8051  F1_mac 0.7977  F1_wtd 0.7995  701.6s  61,357/s  peak 4.11GB\n"}
+,{"stream_name":"stderr","time":17943.882438925,"data":"/usr/local/lib/python3.12/dist-packages/torch/distributed/c10d_logger.py:83: UserWarning: barrier(): using the device under current context. You can specify `device_id` in `init_process_group` to mute this warning.\n"}
+,{"stream_name":"stderr","time":17943.882459529,"data":"  return func(*args, **kwargs)\n"}
+,{"stream_name":"stdout","time":17944.102994144,"data":"[round 023] loss 0.0696  acc 0.8051  F1_mac 0.7977  F1_wtd 0.7995  701.6s  61,357/s  peak 4.11GB\n"}
+,{"stream_name":"stderr","time":17944.10303814,"data":"/usr/local/lib/python3.12/dist-packages/torch/distributed/c10d_logger.py:83: UserWarning: barrier(): using the device under current context. You can specify `device_id` in `init_process_group` to mute this warning.\n"}
+,{"stream_name":"stderr","time":17944.103045686,"data":"  return func(*args, **kwargs)\n"}
+,{"stream_name":"stderr","time":17944.103050535,"data":"\n"}
+,{"stream_name":"stderr","time":17944.103055389,"data":"/usr/local/lib/python3.12/dist-packages/torch/distributed/c10d_logger.py:83: UserWarning: barrier(): using the device under current context. You can specify `device_id` in `init_process_group` to mute this warning.\n"}
+,{"stream_name":"stderr","time":17944.103060918,"data":"  return func(*args, **kwargs)\n"}
+,{"stream_name":"stdout","time":18648.688940716,"data":"[round 024] loss 0.0685  acc 0.8065  F1_mac 0.8026  F1_wtd 0.8013  701.4s  61,372/s  peak 4.11GB\n"}
+,{"stream_name":"stderr","time":18648.689105668,"data":"/usr/local/lib/python3.12/dist-packages/torch/distributed/c10d_logger.py:83: UserWarning: barrier(): using the device under current context. You can specify `device_id` in `init_process_group` to mute this warning.\n"}
+,{"stream_name":"stderr","time":18648.689130144,"data":"  return func(*args, **kwargs)\n"}
+,{"stream_name":"stdout","time":18648.909160229,"data":"[round 024] loss 0.0685  acc 0.8065  F1_mac 0.8026  F1_wtd 0.8013  701.4s  61,372/s  peak 4.11GB\n"}
+,{"stream_name":"stderr","time":18648.910537186,"data":"/usr/local/lib/python3.12/dist-packages/torch/distributed/c10d_logger.py:83: UserWarning: barrier(): using the device under current context. You can specify `device_id` in `init_process_group` to mute this warning.\n"}
+,{"stream_name":"stderr","time":18648.910561588,"data":"  return func(*args, **kwargs)\n"}
+,{"stream_name":"stderr","time":18648.910566996,"data":"\n"}
+,{"stream_name":"stderr","time":18648.910598259,"data":"/usr/local/lib/python3.12/dist-packages/torch/distributed/c10d_logger.py:83: UserWarning: barrier(): using the device under current context. You can specify `device_id` in `init_process_group` to mute this warning.\n"}
+,{"stream_name":"stderr","time":18648.910605044,"data":"  return func(*args, **kwargs)\n"}
+,{"stream_name":"stdout","time":19354.169711924,"data":"[round 025] loss 0.0675  acc 0.8024  F1_mac 0.7952  F1_wtd 0.7968  702.0s  61,318/s  peak 4.11GB\n"}
+,{"stream_name":"stderr","time":19354.170045842,"data":"/usr/local/lib/python3.12/dist-packages/torch/distributed/c10d_logger.py:83: UserWarning: barrier(): using the device under current context. You can specify `device_id` in `init_process_group` to mute this warning.\n"}
+,{"stream_name":"stderr","time":19354.170067822,"data":"  return func(*args, **kwargs)\n"}
+,{"stream_name":"stdout","time":19354.389074916,"data":"[round 025] loss 0.0675  acc 0.8024  F1_mac 0.7952  F1_wtd 0.7968  702.0s  61,318/s  peak 4.11GB\n"}
+,{"stream_name":"stderr","time":19354.390217885,"data":"/usr/local/lib/python3.12/dist-packages/torch/distributed/c10d_logger.py:83: UserWarning: barrier(): using the device under current context. You can specify `device_id` in `init_process_group` to mute this warning.\n"}
+,{"stream_name":"stderr","time":19354.390240067,"data":"  return func(*args, **kwargs)\n"}
+,{"stream_name":"stderr","time":19354.390244351,"data":"\n"}
+,{"stream_name":"stderr","time":19354.390247947,"data":"/usr/local/lib/python3.12/dist-packages/torch/distributed/c10d_logger.py:83: UserWarning: barrier(): using the device under current context. You can specify `device_id` in `init_process_group` to mute this warning.\n"}
+,{"stream_name":"stderr","time":19354.39027784,"data":"  return func(*args, **kwargs)\n"}
+,{"stream_name":"stdout","time":20058.871931329,"data":"[round 026] loss 0.0666  acc 0.8002  F1_mac 0.7926  F1_wtd 0.7922  701.3s  61,379/s  peak 4.11GB\n"}
+,{"stream_name":"stderr","time":20058.87200556,"data":"/usr/local/lib/python3.12/dist-packages/torch/distributed/c10d_logger.py:83: UserWarning: barrier(): using the device under current context. You can specify `device_id` in `init_process_group` to mute this warning.\n"}
+,{"stream_name":"stderr","time":20058.872014305,"data":"  return func(*args, **kwargs)\n"}
+,{"stream_name":"stdout","time":20059.091961244,"data":"[round 026] loss 0.0666  acc 0.8002  F1_mac 0.7926  F1_wtd 0.7922  701.3s  61,379/s  peak 4.11GB\n"}
+,{"stream_name":"stderr","time":20059.093586337,"data":"/usr/local/lib/python3.12/dist-packages/torch/distributed/c10d_logger.py:83: UserWarning: barrier(): using the device under current context. You can specify `device_id` in `init_process_group` to mute this warning.\n"}
+,{"stream_name":"stderr","time":20059.093612068,"data":"  return func(*args, **kwargs)\n"}
+,{"stream_name":"stderr","time":20059.093617729,"data":"\n"}
+,{"stream_name":"stderr","time":20059.093622172,"data":"/usr/local/lib/python3.12/dist-packages/torch/distributed/c10d_logger.py:83: UserWarning: barrier(): using the device under current context. You can specify `device_id` in `init_process_group` to mute this warning.\n"}
+,{"stream_name":"stderr","time":20059.093627402,"data":"  return func(*args, **kwargs)\n"}
+,{"stream_name":"stdout","time":20763.804530698,"data":"[round 027] loss 0.0657  acc 0.8049  F1_mac 0.7998  F1_wtd 0.8000  701.4s  61,367/s  peak 4.11GB\n"}
+,{"stream_name":"stderr","time":20763.805086415,"data":"/usr/local/lib/python3.12/dist-packages/torch/distributed/c10d_logger.py:83: UserWarning: barrier(): using the device under current context. You can specify `device_id` in `init_process_group` to mute this warning.\n"}
+,{"stream_name":"stderr","time":20763.805110063,"data":"  return func(*args, **kwargs)\n"}
+,{"stream_name":"stdout","time":20764.024919849,"data":"[round 027] loss 0.0657  acc 0.8049  F1_mac 0.7998  F1_wtd 0.8000  701.4s  61,367/s  peak 4.11GB\n"}
+,{"stream_name":"stderr","time":20764.026317145,"data":"/usr/local/lib/python3.12/dist-packages/torch/distributed/c10d_logger.py:83: UserWarning: barrier(): using the device under current context. You can specify `device_id` in `init_process_group` to mute this warning.\n"}
+,{"stream_name":"stderr","time":20764.026352451,"data":"  return func(*args, **kwargs)\n"}
+,{"stream_name":"stderr","time":20764.026357345,"data":"\n"}
+,{"stream_name":"stderr","time":20764.026380743,"data":"/usr/local/lib/python3.12/dist-packages/torch/distributed/c10d_logger.py:83: UserWarning: barrier(): using the device under current context. You can specify `device_id` in `init_process_group` to mute this warning.\n"}
+,{"stream_name":"stderr","time":20764.026384625,"data":"  return func(*args, **kwargs)\n"}
+,{"stream_name":"stdout","time":21469.361908724,"data":"[round 028] loss 0.0648  acc 0.8043  F1_mac 0.7986  F1_wtd 0.7982  702.2s  61,302/s  peak 4.11GB\n"}
+,{"stream_name":"stderr","time":21469.362325613,"data":"/usr/local/lib/python3.12/dist-packages/torch/distributed/c10d_logger.py:83: UserWarning: barrier(): using the device under current context. You can specify `device_id` in `init_process_group` to mute this warning.\n"}
+,{"stream_name":"stderr","time":21469.362345801,"data":"  return func(*args, **kwargs)\n"}
+,{"stream_name":"stdout","time":21469.583105194,"data":"[round 028] loss 0.0648  acc 0.8043  F1_mac 0.7986  F1_wtd 0.7982  702.2s  61,302/s  peak 4.11GB\n"}
+,{"stream_name":"stderr","time":21469.584095393,"data":"/usr/local/lib/python3.12/dist-packages/torch/distributed/c10d_logger.py:83: UserWarning: barrier(): using the device under current context. You can specify `device_id` in `init_process_group` to mute this warning.\n"}
+,{"stream_name":"stderr","time":21469.584119289,"data":"  return func(*args, **kwargs)\n"}
+,{"stream_name":"stderr","time":21469.584124768,"data":"\n"}
+,{"stream_name":"stderr","time":21469.584129125,"data":"/usr/local/lib/python3.12/dist-packages/torch/distributed/c10d_logger.py:83: UserWarning: barrier(): using the device under current context. You can specify `device_id` in `init_process_group` to mute this warning.\n"}
+,{"stream_name":"stderr","time":21469.584134248,"data":"  return func(*args, **kwargs)\n"}
+,{"stream_name":"stdout","time":22174.422861991,"data":"[round 029] loss 0.0641  acc 0.8032  F1_mac 0.7996  F1_wtd 0.7978  701.5s  61,357/s  peak 4.11GB\n"}
+,{"stream_name":"stderr","time":22174.423002825,"data":"/usr/local/lib/python3.12/dist-packages/torch/distributed/c10d_logger.py:83: UserWarning: barrier(): using the device under current context. You can specify `device_id` in `init_process_group` to mute this warning.\n"}
+,{"stream_name":"stderr","time":22174.423012992,"data":"  return func(*args, **kwargs)\n"}
+,{"stream_name":"stdout","time":22174.643617947,"data":"[round 029] loss 0.0641  acc 0.8032  F1_mac 0.7996  F1_wtd 0.7978  701.5s  61,357/s  peak 4.11GB\n"}
+,{"stream_name":"stderr","time":22174.644156737,"data":"/usr/local/lib/python3.12/dist-packages/torch/distributed/c10d_logger.py:83: UserWarning: barrier(): using the device under current context. You can specify `device_id` in `init_process_group` to mute this warning.\n"}
+,{"stream_name":"stderr","time":22174.644177528,"data":"  return func(*args, **kwargs)\n"}
+,{"stream_name":"stderr","time":22174.644194369,"data":"\n"}
+,{"stream_name":"stderr","time":22174.64419901,"data":"/usr/local/lib/python3.12/dist-packages/torch/distributed/c10d_logger.py:83: UserWarning: barrier(): using the device under current context. You can specify `device_id` in `init_process_group` to mute this warning.\n"}
+,{"stream_name":"stderr","time":22174.644204215,"data":"  return func(*args, **kwargs)\n"}
+,{"stream_name":"stdout","time":22879.813422081,"data":"[round 030] loss 0.0632  acc 0.7999  F1_mac 0.7961  F1_wtd 0.7937  701.9s  61,326/s  peak 4.11GB\n"}
+,{"stream_name":"stderr","time":22879.813707511,"data":"/usr/local/lib/python3.12/dist-packages/torch/distributed/c10d_logger.py:83: UserWarning: barrier(): using the device under current context. You can specify `device_id` in `init_process_group` to mute this warning.\n"}
+,{"stream_name":"stderr","time":22879.813726273,"data":"  return func(*args, **kwargs)\n"}
+,{"stream_name":"stdout","time":22880.035360192,"data":"[round 030] loss 0.0632  acc 0.7999  F1_mac 0.7961  F1_wtd 0.7937  701.9s  61,326/s  peak 4.11GB\n"}
+,{"stream_name":"stderr","time":22880.03536031,"data":"/usr/local/lib/python3.12/dist-packages/torch/distributed/c10d_logger.py:83: UserWarning: barrier(): using the device under current context. You can specify `device_id` in `init_process_group` to mute this warning.\n"}
+,{"stream_name":"stderr","time":22880.035397947,"data":"  return func(*args, **kwargs)\n"}
+,{"stream_name":"stderr","time":22880.03540271,"data":"\n"}
+,{"stream_name":"stderr","time":22880.035406052,"data":"/usr/local/lib/python3.12/dist-packages/torch/distributed/c10d_logger.py:83: UserWarning: barrier(): using the device under current context. You can specify `device_id` in `init_process_group` to mute this warning.\n"}
+,{"stream_name":"stderr","time":22880.035410588,"data":"  return func(*args, **kwargs)\n"}
+,{"stream_name":"stdout","time":23585.090772096,"data":"[round 031] loss 0.0626  acc 0.8016  F1_mac 0.7987  F1_wtd 0.7964  701.8s  61,335/s  peak 4.11GB\n"}
+,{"stream_name":"stderr","time":23585.0910001,"data":"/usr/local/lib/python3.12/dist-packages/torch/distributed/c10d_logger.py:83: UserWarning: barrier(): using the device under current context. You can specify `device_id` in `init_process_group` to mute this warning.\n"}
+,{"stream_name":"stderr","time":23585.091022314,"data":"  return func(*args, **kwargs)\n"}
+,{"stream_name":"stdout","time":23585.311951355,"data":"[round 031] loss 0.0626  acc 0.8016  F1_mac 0.7987  F1_wtd 0.7964  701.8s  61,335/s  peak 4.11GB\n"}
+,{"stream_name":"stderr","time":23585.313162186,"data":"/usr/local/lib/python3.12/dist-packages/torch/distributed/c10d_logger.py:83: UserWarning: barrier(): using the device under current context. You can specify `device_id` in `init_process_group` to mute this warning.\n"}
+,{"stream_name":"stderr","time":23585.313183215,"data":"  return func(*args, **kwargs)\n"}
+,{"stream_name":"stderr","time":23585.313188032,"data":"\n"}
+,{"stream_name":"stderr","time":23585.313192449,"data":"/usr/local/lib/python3.12/dist-packages/torch/distributed/c10d_logger.py:83: UserWarning: barrier(): using the device under current context. You can specify `device_id` in `init_process_group` to mute this warning.\n"}
+,{"stream_name":"stderr","time":23585.313197322,"data":"  return func(*args, **kwargs)\n"}
+,{"stream_name":"stdout","time":24290.235284689,"data":"[round 032] loss 0.0617  acc 0.8008  F1_mac 0.7944  F1_wtd 0.7935  701.8s  61,339/s  peak 4.11GB\n"}
+,{"stream_name":"stderr","time":24290.235551355,"data":"/usr/local/lib/python3.12/dist-packages/torch/distributed/c10d_logger.py:83: UserWarning: barrier(): using the device under current context. You can specify `device_id` in `init_process_group` to mute this warning.\n"}
+,{"stream_name":"stderr","time":24290.235566029,"data":"  return func(*args, **kwargs)\n"}
+,{"stream_name":"stdout","time":24290.45560555,"data":"[round 032] loss 0.0617  acc 0.8008  F1_mac 0.7944  F1_wtd 0.7935  701.8s  61,339/s  peak 4.11GB\n"}
+,{"stream_name":"stderr","time":24290.456835189,"data":"/usr/local/lib/python3.12/dist-packages/torch/distributed/c10d_logger.py:83: UserWarning: barrier(): using the device under current context. You can specify `device_id` in `init_process_group` to mute this warning.\n"}
+,{"stream_name":"stderr","time":24290.456856035,"data":"  return func(*args, **kwargs)\n"}
+,{"stream_name":"stderr","time":24290.456861298,"data":"\n"}
+,{"stream_name":"stderr","time":24290.456865426,"data":"/usr/local/lib/python3.12/dist-packages/torch/distributed/c10d_logger.py:83: UserWarning: barrier(): using the device under current context. You can specify `device_id` in `init_process_group` to mute this warning.\n"}
+,{"stream_name":"stderr","time":24290.456870557,"data":"  return func(*args, **kwargs)\n"}
+,{"stream_name":"stdout","time":24995.089497197,"data":"[round 033] loss 0.0610  acc 0.8012  F1_mac 0.7960  F1_wtd 0.7945  701.4s  61,368/s  peak 4.11GB\n"}
+,{"stream_name":"stderr","time":24995.090018984,"data":"/usr/local/lib/python3.12/dist-packages/torch/distributed/c10d_logger.py:83: UserWarning: barrier(): using the device under current context. You can specify `device_id` in `init_process_group` to mute this warning.\n"}
+,{"stream_name":"stderr","time":24995.090072464,"data":"  return func(*args, **kwargs)\n"}
+,{"stream_name":"stdout","time":24995.309474325,"data":"[round 033] loss 0.0610  acc 0.8012  F1_mac 0.7960  F1_wtd 0.7945  701.4s  61,368/s  peak 4.11GB\n"}
+,{"stream_name":"stderr","time":24995.310648582,"data":"/usr/local/lib/python3.12/dist-packages/torch/distributed/c10d_logger.py:83: UserWarning: barrier(): using the device under current context. You can specify `device_id` in `init_process_group` to mute this warning.\n"}
+,{"stream_name":"stderr","time":24995.310697126,"data":"  return func(*args, **kwargs)\n"}
+,{"stream_name":"stderr","time":24995.310703512,"data":"\n"}
+,{"stream_name":"stderr","time":24995.310707956,"data":"/usr/local/lib/python3.12/dist-packages/torch/distributed/c10d_logger.py:83: UserWarning: barrier(): using the device under current context. You can specify `device_id` in `init_process_group` to mute this warning.\n"}
+,{"stream_name":"stderr","time":24995.310713125,"data":"  return func(*args, **kwargs)\n"}
+,{"stream_name":"stdout","time":25701.04493007,"data":"[round 034] loss 0.0604  acc 0.7987  F1_mac 0.7958  F1_wtd 0.7926  702.5s  61,275/s  peak 4.11GB\n"}
+,{"stream_name":"stderr","time":25701.045268293,"data":"/usr/local/lib/python3.12/dist-packages/torch/distributed/c10d_logger.py:83: UserWarning: barrier(): using the device under current context. You can specify `device_id` in `init_process_group` to mute this warning.\n"}
+,{"stream_name":"stderr","time":25701.045286615,"data":"  return func(*args, **kwargs)\n"}
+,{"stream_name":"stdout","time":25701.276323255,"data":"[round 034] loss 0.0604  acc 0.7987  F1_mac 0.7958  F1_wtd 0.7926  702.5s  61,275/s  peak 4.11GB\n"}
+,{"stream_name":"stderr","time":25701.278961781,"data":"/usr/local/lib/python3.12/dist-packages/torch/distributed/c10d_logger.py:83: UserWarning: barrier(): using the device under current context. You can specify `device_id` in `init_process_group` to mute this warning.\n"}
+,{"stream_name":"stderr","time":25701.278981357,"data":"  return func(*args, **kwargs)\n"}
+,{"stream_name":"stderr","time":25701.278986705,"data":"\n"}
+,{"stream_name":"stderr","time":25701.278991084,"data":"/usr/local/lib/python3.12/dist-packages/torch/distributed/c10d_logger.py:83: UserWarning: barrier(): using the device under current context. You can specify `device_id` in `init_process_group` to mute this warning.\n"}
+,{"stream_name":"stderr","time":25701.278995729,"data":"  return func(*args, **kwargs)\n"}
+,{"stream_name":"stdout","time":26407.138698488,"data":"[round 035] loss 0.0598  acc 0.7957  F1_mac 0.7945  F1_wtd 0.7902  702.6s  61,262/s  peak 4.11GB\n"}
+,{"stream_name":"stderr","time":26407.139017437,"data":"/usr/local/lib/python3.12/dist-packages/torch/distributed/c10d_logger.py:83: UserWarning: barrier(): using the device under current context. You can specify `device_id` in `init_process_group` to mute this warning.\n"}
+,{"stream_name":"stderr","time":26407.139034818,"data":"  return func(*args, **kwargs)\n"}
+,{"stream_name":"stderr","time":26407.361455889,"data":"/usr/local/lib/python3.12/dist-packages/torch/distributed/c10d_logger.py:83: UserWarning: barrier(): using the device under current context. You can specify `device_id` in `init_process_group` to mute this warning.\n"}
+,{"stream_name":"stderr","time":26407.361494542,"data":"  return func(*args, **kwargs)\n"}
+,{"stream_name":"stderr","time":26407.361513065,"data":"\n"}
+,{"stream_name":"stderr","time":26407.361517167,"data":"/usr/local/lib/python3.12/dist-packages/torch/distributed/c10d_logger.py:83: UserWarning: barrier(): using the device under current context. You can specify `device_id` in `init_process_group` to mute this warning.\n"}
+,{"stream_name":"stderr","time":26407.361521447,"data":"  return func(*args, **kwargs)\n"}
+,{"stream_name":"stdout","time":26407.361481295,"data":"[round 035] loss 0.0598  acc 0.7957  F1_mac 0.7945  F1_wtd 0.7902  702.6s  61,262/s  peak 4.11GB\n"}
+,{"stream_name":"stdout","time":27113.055034473,"data":"[round 036] loss 0.0593  acc 0.7978  F1_mac 0.7946  F1_wtd 0.7914  702.4s  61,284/s  peak 4.11GB\n"}
+,{"stream_name":"stderr","time":27113.055517216,"data":"/usr/local/lib/python3.12/dist-packages/torch/distributed/c10d_logger.py:83: UserWarning: barrier(): using the device under current context. You can specify `device_id` in `init_process_group` to mute this warning.\n"}
+,{"stream_name":"stderr","time":27113.055567629,"data":"  return func(*args, **kwargs)\n"}
+,{"stream_name":"stdout","time":27113.276923198,"data":"[round 036] loss 0.0593  acc 0.7978  F1_mac 0.7946  F1_wtd 0.7914  702.4s  61,284/s  peak 4.11GB\n"}
+,{"stream_name":"stderr","time":27113.278194426,"data":"/usr/local/lib/python3.12/dist-packages/torch/distributed/c10d_logger.py:83: UserWarning: barrier(): using the device under current context. You can specify `device_id` in `init_process_group` to mute this warning.\n"}
+,{"stream_name":"stderr","time":27113.278263071,"data":"  return func(*args, **kwargs)\n"}
+,{"stream_name":"stderr","time":27113.278272279,"data":"\n"}
+,{"stream_name":"stderr","time":27113.278277708,"data":"/usr/local/lib/python3.12/dist-packages/torch/distributed/c10d_logger.py:83: UserWarning: barrier(): using the device under current context. You can specify `device_id` in `init_process_group` to mute this warning.\n"}
+,{"stream_name":"stderr","time":27113.278283768,"data":"  return func(*args, **kwargs)\n"}
+,{"stream_name":"stdout","time":27818.320292068,"data":"[round 037] loss 0.0587  acc 0.8003  F1_mac 0.7967  F1_wtd 0.7948  701.9s  61,329/s  peak 4.11GB\n"}
+,{"stream_name":"stderr","time":27818.321083189,"data":"/usr/local/lib/python3.12/dist-packages/torch/distributed/c10d_logger.py:83: UserWarning: barrier(): using the device under current context. You can specify `device_id` in `init_process_group` to mute this warning.\n"}
+,{"stream_name":"stderr","time":27818.32110768,"data":"  return func(*args, **kwargs)\n"}
+,{"stream_name":"stdout","time":27818.542555087,"data":"[round 037] loss 0.0587  acc 0.8003  F1_mac 0.7967  F1_wtd 0.7948  701.9s  61,329/s  peak 4.11GB\n"}
+,{"stream_name":"stderr","time":27818.543915064,"data":"/usr/local/lib/python3.12/dist-packages/torch/distributed/c10d_logger.py:83: UserWarning: barrier(): using the device under current context. You can specify `device_id` in `init_process_group` to mute this warning.\n"}
+,{"stream_name":"stderr","time":27818.543941839,"data":"  return func(*args, **kwargs)\n"}
+,{"stream_name":"stderr","time":27818.543947444,"data":"\n"}
+,{"stream_name":"stderr","time":27818.543952746,"data":"/usr/local/lib/python3.12/dist-packages/torch/distributed/c10d_logger.py:83: UserWarning: barrier(): using the device under current context. You can specify `device_id` in `init_process_group` to mute this warning.\n"}
+,{"stream_name":"stderr","time":27818.543957787,"data":"  return func(*args, **kwargs)\n"}
+,{"stream_name":"stdout","time":28523.464848418,"data":"[round 038] loss 0.0582  acc 0.7971  F1_mac 0.7922  F1_wtd 0.7896  701.6s  61,348/s  peak 4.11GB\n"}
+,{"stream_name":"stderr","time":28523.464995594,"data":"/usr/local/lib/python3.12/dist-packages/torch/distributed/c10d_logger.py:83: UserWarning: barrier(): using the device under current context. You can specify `device_id` in `init_process_group` to mute this warning.\n"}
+,{"stream_name":"stderr","time":28523.46502302,"data":"  return func(*args, **kwargs)\n"}
+,{"stream_name":"stdout","time":28523.685932837,"data":"[round 038] loss 0.0582  acc 0.7971  F1_mac 0.7922  F1_wtd 0.7896  701.6s  61,348/s  peak 4.11GB\n"}
+,{"stream_name":"stderr","time":28523.687090558,"data":"/usr/local/lib/python3.12/dist-packages/torch/distributed/c10d_logger.py:83: UserWarning: barrier(): using the device under current context. You can specify `device_id` in `init_process_group` to mute this warning.\n"}
+,{"stream_name":"stderr","time":28523.687110133,"data":"  return func(*args, **kwargs)\n"}
+,{"stream_name":"stderr","time":28523.687114799,"data":"\n"}
+,{"stream_name":"stderr","time":28523.687118592,"data":"/usr/local/lib/python3.12/dist-packages/torch/distributed/c10d_logger.py:83: UserWarning: barrier(): using the device under current context. You can specify `device_id` in `init_process_group` to mute this warning.\n"}
+,{"stream_name":"stderr","time":28523.687123129,"data":"  return func(*args, **kwargs)\n"}
+,{"stream_name":"stdout","time":29228.477832712,"data":"[round 039] loss 0.0577  acc 0.7966  F1_mac 0.7926  F1_wtd 0.7895  701.5s  61,358/s  peak 4.11GB\n"}
+,{"stream_name":"stderr","time":29228.478193991,"data":"/usr/local/lib/python3.12/dist-packages/torch/distributed/c10d_logger.py:83: UserWarning: barrier(): using the device under current context. You can specify `device_id` in `init_process_group` to mute this warning.\n"}
+,{"stream_name":"stderr","time":29228.478251545,"data":"  return func(*args, **kwargs)\n"}
+,{"stream_name":"stdout","time":29228.698818516,"data":"[round 039] loss 0.0577  acc 0.7966  F1_mac 0.7926  F1_wtd 0.7895  701.5s  61,358/s  peak 4.11GB\n"}
+,{"stream_name":"stderr","time":29228.700086377,"data":"/usr/local/lib/python3.12/dist-packages/torch/distributed/c10d_logger.py:83: UserWarning: barrier(): using the device under current context. You can specify `device_id` in `init_process_group` to mute this warning.\n"}
+,{"stream_name":"stderr","time":29228.700109625,"data":"  return func(*args, **kwargs)\n"}
+,{"stream_name":"stderr","time":29228.700115472,"data":"\n"}
+,{"stream_name":"stderr","time":29228.700154835,"data":"/usr/local/lib/python3.12/dist-packages/torch/distributed/c10d_logger.py:83: UserWarning: barrier(): using the device under current context. You can specify `device_id` in `init_process_group` to mute this warning.\n"}
+,{"stream_name":"stderr","time":29228.700161807,"data":"  return func(*args, **kwargs)\n"}
+,{"stream_name":"stdout","time":29933.656757597,"data":"[round 040] loss 0.0573  acc 0.7962  F1_mac 0.7947  F1_wtd 0.7907  701.7s  61,341/s  peak 4.11GB\n"}
+,{"stream_name":"stderr","time":29933.657214014,"data":"/usr/local/lib/python3.12/dist-packages/torch/distributed/c10d_logger.py:83: UserWarning: barrier(): using the device under current context. You can specify `device_id` in `init_process_group` to mute this warning.\n"}
+,{"stream_name":"stderr","time":29933.657236317,"data":"  return func(*args, **kwargs)\n"}
+,{"stream_name":"stdout","time":29933.877883984,"data":"[round 040] loss 0.0573  acc 0.7962  F1_mac 0.7947  F1_wtd 0.7907  701.7s  61,341/s  peak 4.11GB\n"}
+,{"stream_name":"stderr","time":29933.877893241,"data":"/usr/local/lib/python3.12/dist-packages/torch/distributed/c10d_logger.py:83: UserWarning: barrier(): using the device under current context. You can specify `device_id` in `init_process_group` to mute this warning.\n"}
+,{"stream_name":"stderr","time":29933.877928353,"data":"  return func(*args, **kwargs)\n"}
+,{"stream_name":"stderr","time":29933.87793218,"data":"\n"}
+,{"stream_name":"stderr","time":29933.877935263,"data":"/usr/local/lib/python3.12/dist-packages/torch/distributed/c10d_logger.py:83: UserWarning: barrier(): using the device under current context. You can specify `device_id` in `init_process_group` to mute this warning.\n"}
+,{"stream_name":"stderr","time":29933.877966395,"data":"  return func(*args, **kwargs)\n"}
+,{"stream_name":"stdout","time":30638.326838553,"data":"[round 041] loss 0.0569  acc 0.7958  F1_mac 0.7946  F1_wtd 0.7905  701.2s  61,389/s  peak 4.11GB\n"}
+,{"stream_name":"stderr","time":30638.330028602,"data":"/usr/local/lib/python3.12/dist-packages/torch/distributed/c10d_logger.py:83: UserWarning: barrier(): using the device under current context. You can specify `device_id` in `init_process_group` to mute this warning.\n"}
+,{"stream_name":"stderr","time":30638.330065052,"data":"  return func(*args, **kwargs)\n"}
+,{"stream_name":"stdout","time":30638.549931424,"data":"[round 041] loss 0.0569  acc 0.7958  F1_mac 0.7946  F1_wtd 0.7905  701.2s  61,389/s  peak 4.11GB\n"}
+,{"stream_name":"stderr","time":30638.550466037,"data":"/usr/local/lib/python3.12/dist-packages/torch/distributed/c10d_logger.py:83: UserWarning: barrier(): using the device under current context. You can specify `device_id` in `init_process_group` to mute this warning.\n"}
+,{"stream_name":"stderr","time":30638.550484724,"data":"  return func(*args, **kwargs)\n"}
+,{"stream_name":"stderr","time":30638.550490884,"data":"\n"}
+,{"stream_name":"stderr","time":30638.550738476,"data":"/usr/local/lib/python3.12/dist-packages/torch/distributed/c10d_logger.py:83: UserWarning: barrier(): using the device under current context. You can specify `device_id` in `init_process_group` to mute this warning.\n"}
+,{"stream_name":"stderr","time":30638.550841087,"data":"  return func(*args, **kwargs)\n"}
+,{"stream_name":"stdout","time":31343.645057901,"data":"[round 042] loss 0.0565  acc 0.7972  F1_mac 0.7928  F1_wtd 0.7902  701.9s  61,329/s  peak 4.11GB\n"}
+,{"stream_name":"stderr","time":31343.646024117,"data":"/usr/local/lib/python3.12/dist-packages/torch/distributed/c10d_logger.py:83: UserWarning: barrier(): using the device under current context. You can specify `device_id` in `init_process_group` to mute this warning.\n"}
+,{"stream_name":"stderr","time":31343.646050181,"data":"  return func(*args, **kwargs)\n"}
+,{"stream_name":"stdout","time":31343.866528689,"data":"[round 042] loss 0.0565  acc 0.7972  F1_mac 0.7928  F1_wtd 0.7902  701.9s  61,329/s  peak 4.11GB\n"}
+,{"stream_name":"stderr","time":31343.867983343,"data":"/usr/local/lib/python3.12/dist-packages/torch/distributed/c10d_logger.py:83: UserWarning: barrier(): using the device under current context. You can specify `device_id` in `init_process_group` to mute this warning.\n"}
+,{"stream_name":"stderr","time":31343.868004032,"data":"  return func(*args, **kwargs)\n"}
+,{"stream_name":"stderr","time":31343.868009248,"data":"\n"}
+,{"stream_name":"stderr","time":31343.868053599,"data":"/usr/local/lib/python3.12/dist-packages/torch/distributed/c10d_logger.py:83: UserWarning: barrier(): using the device under current context. You can specify `device_id` in `init_process_group` to mute this warning.\n"}
+,{"stream_name":"stderr","time":31343.868062181,"data":"  return func(*args, **kwargs)\n"}
+,{"stream_name":"stdout","time":32048.032046877,"data":"[round 043] loss 0.0563  acc 0.7964  F1_mac 0.7936  F1_wtd 0.7896  700.9s  61,411/s  peak 4.11GB\n"}
+,{"stream_name":"stderr","time":32048.032279961,"data":"/usr/local/lib/python3.12/dist-packages/torch/distributed/c10d_logger.py:83: UserWarning: barrier(): using the device under current context. You can specify `device_id` in `init_process_group` to mute this warning.\n"}
+,{"stream_name":"stderr","time":32048.03229322,"data":"  return func(*args, **kwargs)\n"}
+,{"stream_name":"stdout","time":32048.253137937,"data":"[round 043] loss 0.0563  acc 0.7964  F1_mac 0.7936  F1_wtd 0.7896  700.9s  61,411/s  peak 4.11GB\n"}
+,{"stream_name":"stderr","time":32048.254451603,"data":"/usr/local/lib/python3.12/dist-packages/torch/distributed/c10d_logger.py:83: UserWarning: barrier(): using the device under current context. You can specify `device_id` in `init_process_group` to mute this warning.\n"}
+,{"stream_name":"stderr","time":32048.254474451,"data":"  return func(*args, **kwargs)\n"}
+,{"stream_name":"stderr","time":32048.254512224,"data":"\n"}
+,{"stream_name":"stderr","time":32048.254516566,"data":"/usr/local/lib/python3.12/dist-packages/torch/distributed/c10d_logger.py:83: UserWarning: barrier(): using the device under current context. You can specify `device_id` in `init_process_group` to mute this warning.\n"}
+,{"stream_name":"stderr","time":32048.254521026,"data":"  return func(*args, **kwargs)\n"}
+,{"stream_name":"stdout","time":32752.848124471,"data":"[round 044] loss 0.0560  acc 0.7969  F1_mac 0.7924  F1_wtd 0.7896  701.4s  61,372/s  peak 4.11GB\n"}
+,{"stream_name":"stderr","time":32752.848466027,"data":"/usr/local/lib/python3.12/dist-packages/torch/distributed/c10d_logger.py:83: UserWarning: barrier(): using the device under current context. You can specify `device_id` in `init_process_group` to mute this warning.\n"}
+,{"stream_name":"stderr","time":32752.848514314,"data":"  return func(*args, **kwargs)\n"}
+,{"stream_name":"stderr","time":32753.070911016,"data":"/usr/local/lib/python3.12/dist-packages/torch/distributed/c10d_logger.py:83: UserWarning: barrier(): using the device under current context. You can specify `device_id` in `init_process_group` to mute this warning.\n"}
+,{"stream_name":"stderr","time":32753.070939892,"data":"  return func(*args, **kwargs)\n"}
+,{"stream_name":"stderr","time":32753.070945902,"data":"\n"}
+,{"stream_name":"stderr","time":32753.070950296,"data":"/usr/local/lib/python3.12/dist-packages/torch/distributed/c10d_logger.py:83: UserWarning: barrier(): using the device under current context. You can specify `device_id` in `init_process_group` to mute this warning.\n"}
+,{"stream_name":"stderr","time":32753.070967307,"data":"  return func(*args, **kwargs)\n"}
+,{"stream_name":"stdout","time":32753.070983907,"data":"[round 044] loss 0.0560  acc 0.7969  F1_mac 0.7924  F1_wtd 0.7896  701.4s  61,372/s  peak 4.11GB\n"}
+,{"stream_name":"stdout","time":33457.289063272,"data":"[round 045] loss 0.0558  acc 0.7950  F1_mac 0.7921  F1_wtd 0.7881  701.0s  61,406/s  peak 4.11GB\n"}
+,{"stream_name":"stderr","time":33457.289363331,"data":"/usr/local/lib/python3.12/dist-packages/torch/distributed/c10d_logger.py:83: UserWarning: barrier(): using the device under current context. You can specify `device_id` in `init_process_group` to mute this warning.\n"}
+,{"stream_name":"stderr","time":33457.289381491,"data":"  return func(*args, **kwargs)\n"}
+,{"stream_name":"stdout","time":33457.51109253,"data":"[round 045] loss 0.0558  acc 0.7950  F1_mac 0.7921  F1_wtd 0.7881  701.0s  61,406/s  peak 4.11GB\n"}
+,{"stream_name":"stderr","time":33457.512368683,"data":"/usr/local/lib/python3.12/dist-packages/torch/distributed/c10d_logger.py:83: UserWarning: barrier(): using the device under current context. You can specify `device_id` in `init_process_group` to mute this warning.\n"}
+,{"stream_name":"stderr","time":33457.512391344,"data":"  return func(*args, **kwargs)\n"}
+,{"stream_name":"stderr","time":33457.512396987,"data":"\n"}
+,{"stream_name":"stderr","time":33457.512401427,"data":"/usr/local/lib/python3.12/dist-packages/torch/distributed/c10d_logger.py:83: UserWarning: barrier(): using the device under current context. You can specify `device_id` in `init_process_group` to mute this warning.\n"}
+,{"stream_name":"stderr","time":33457.512407724,"data":"  return func(*args, **kwargs)\n"}
+,{"stream_name":"stdout","time":34162.958921565,"data":"[round 046] loss 0.0556  acc 0.7953  F1_mac 0.7923  F1_wtd 0.7883  702.2s  61,299/s  peak 4.11GB\n"}
+,{"stream_name":"stderr","time":34162.958979103,"data":"/usr/local/lib/python3.12/dist-packages/torch/distributed/c10d_logger.py:83: UserWarning: barrier(): using the device under current context. You can specify `device_id` in `init_process_group` to mute this warning.\n"}
+,{"stream_name":"stderr","time":34162.958998041,"data":"  return func(*args, **kwargs)\n"}
+,{"stream_name":"stdout","time":34163.185629277,"data":"[round 046] loss 0.0556  acc 0.7953  F1_mac 0.7923  F1_wtd 0.7883  702.2s  61,299/s  peak 4.11GB\n"}
+,{"stream_name":"stderr","time":34163.187211635,"data":"/usr/local/lib/python3.12/dist-packages/torch/distributed/c10d_logger.py:83: UserWarning: barrier(): using the device under current context. You can specify `device_id` in `init_process_group` to mute this warning.\n"}
+,{"stream_name":"stderr","time":34163.187233474,"data":"  return func(*args, **kwargs)\n"}
+,{"stream_name":"stderr","time":34163.187238131,"data":"\n"}
+,{"stream_name":"stderr","time":34163.187241657,"data":"/usr/local/lib/python3.12/dist-packages/torch/distributed/c10d_logger.py:83: UserWarning: barrier(): using the device under current context. You can specify `device_id` in `init_process_group` to mute this warning.\n"}
+,{"stream_name":"stderr","time":34163.18726803,"data":"  return func(*args, **kwargs)\n"}
+,{"stream_name":"stdout","time":34867.347442654,"data":"[round 047] loss 0.0556  acc 0.7957  F1_mac 0.7933  F1_wtd 0.7891  700.9s  61,412/s  peak 4.11GB\n"}
+,{"stream_name":"stderr","time":34867.347721913,"data":"/usr/local/lib/python3.12/dist-packages/torch/distributed/c10d_logger.py:83: UserWarning: barrier(): using the device under current context. You can specify `device_id` in `init_process_group` to mute this warning.\n"}
+,{"stream_name":"stderr","time":34867.347740539,"data":"  return func(*args, **kwargs)\n"}
+,{"stream_name":"stdout","time":34867.57309212,"data":"[round 047] loss 0.0556  acc 0.7957  F1_mac 0.7933  F1_wtd 0.7891  700.9s  61,412/s  peak 4.11GB\n"}
+,{"stream_name":"stderr","time":34867.574899435,"data":"/usr/local/lib/python3.12/dist-packages/torch/distributed/c10d_logger.py:83: UserWarning: barrier(): using the device under current context. You can specify `device_id` in `init_process_group` to mute this warning.\n"}
+,{"stream_name":"stderr","time":34867.574940272,"data":"  return func(*args, **kwargs)\n"}
+,{"stream_name":"stderr","time":34867.574947537,"data":"\n"}
+,{"stream_name":"stderr","time":34867.574952445,"data":"/usr/local/lib/python3.12/dist-packages/torch/distributed/c10d_logger.py:83: UserWarning: barrier(): using the device under current context. You can specify `device_id` in `init_process_group` to mute this warning.\n"}
+,{"stream_name":"stderr","time":34867.574957899,"data":"  return func(*args, **kwargs)\n"}
+,{"stream_name":"stdout","time":35572.626382939,"data":"[round 048] loss 0.0554  acc 0.7957  F1_mac 0.7935  F1_wtd 0.7892  701.8s  61,334/s  peak 4.11GB\n"}
+,{"stream_name":"stderr","time":35572.626859048,"data":"/usr/local/lib/python3.12/dist-packages/torch/distributed/c10d_logger.py:83: UserWarning: barrier(): using the device under current context. You can specify `device_id` in `init_process_group` to mute this warning.\n"}
+,{"stream_name":"stderr","time":35572.626903626,"data":"  return func(*args, **kwargs)\n"}
+,{"stream_name":"stdout","time":35572.849840387,"data":"[round 048] loss 0.0554  acc 0.7957  F1_mac 0.7935  F1_wtd 0.7892  701.8s  61,334/s  peak 4.11GB\n"}
+,{"stream_name":"stderr","time":35572.851630852,"data":"/usr/local/lib/python3.12/dist-packages/torch/distributed/c10d_logger.py:83: UserWarning: barrier(): using the device under current context. You can specify `device_id` in `init_process_group` to mute this warning.\n"}
+,{"stream_name":"stderr","time":35572.851658947,"data":"  return func(*args, **kwargs)\n"}
+,{"stream_name":"stderr","time":35572.851834002,"data":"\n"}
+,{"stream_name":"stderr","time":35572.851853355,"data":"/usr/local/lib/python3.12/dist-packages/torch/distributed/c10d_logger.py:83: UserWarning: barrier(): using the device under current context. You can specify `device_id` in `init_process_group` to mute this warning.\n"}
+,{"stream_name":"stderr","time":35572.851858524,"data":"  return func(*args, **kwargs)\n"}
+,{"stream_name":"stdout","time":36278.640531601,"data":"[round 049] loss 0.0553  acc 0.7953  F1_mac 0.7933  F1_wtd 0.7890  701.7s  61,347/s  peak 4.11GB\n"}
+,{"stream_name":"stderr","time":36278.664900523,"data":"/usr/local/lib/python3.12/dist-packages/torch/distributed/c10d_logger.py:83: UserWarning: barrier(): using the device under current context. You can specify `device_id` in `init_process_group` to mute this warning.\n"}
+,{"stream_name":"stderr","time":36278.664926053,"data":"  return func(*args, **kwargs)\n"}
+,{"stream_name":"stdout","time":36278.856189907,"data":"[round 049] loss 0.0553  acc 0.7953  F1_mac 0.7933  F1_wtd 0.7890  701.7s  61,347/s  peak 4.11GB\n"}
+,{"stream_name":"stderr","time":36278.868241502,"data":"/usr/local/lib/python3.12/dist-packages/torch/distributed/c10d_logger.py:83: UserWarning: barrier(): using the device under current context. You can specify `device_id` in `init_process_group` to mute this warning.\n"}
+,{"stream_name":"stderr","time":36278.86826234,"data":"  return func(*args, **kwargs)\n"}
+,{"stream_name":"stderr","time":36278.86826817,"data":"\n"}
+,{"stream_name":"stderr","time":36278.868272806,"data":"/usr/local/lib/python3.12/dist-packages/torch/distributed/c10d_logger.py:83: UserWarning: barrier(): using the device under current context. You can specify `device_id` in `init_process_group` to mute this warning.\n"}
+,{"stream_name":"stderr","time":36278.868278148,"data":"  return func(*args, **kwargs)\n"}
+,{"stream_name":"stdout","time":36281.46124342,"data":"\n"}
+,{"stream_name":"stdout","time":36281.461275764,"data":"all 50 rounds complete in 9.80 h\n"}
+,{"stream_name":"stdout","time":36281.54076642,"data":"50 / 50 rounds completed\n"}
+,{"stream_name":"stdout","time":36281.662824036,"data":"\n"}
+,{"stream_name":"stdout","time":36281.662867446,"data":"best round : 2  f1_macro 0.81676\n"}
+,{"stream_name":"stdout","time":36281.662874421,"data":"final round: 49  f1_macro 0.79335\n"}
+,{"stream_name":"stdout","time":36281.662879028,"data":"\n"}
+,{"stream_name":"stdout","time":36281.66288325,"data":"wall time  : 9.74 h over 50 rounds (11.7 min/round, 61,362 samples/s)\n"}
+,{"stream_name":"stdout","time":36281.662887792,"data":"\n"}
+,{"stream_name":"stdout","time":36281.662891956,"data":"========================================================================\n"}
+,{"stream_name":"stdout","time":36281.662896547,"data":"FINAL 10 METRICS (round 49)\n"}
+,{"stream_name":"stdout","time":36281.662909228,"data":"========================================================================\n"}
+,{"stream_name":"stdout","time":36281.662912363,"data":"  accuracy               0.795341\n"}
+,{"stream_name":"stdout","time":36281.662915254,"data":"  precision_macro        0.791254\n"}
+,{"stream_name":"stdout","time":36281.662918154,"data":"  precision_micro        0.795341\n"}
+,{"stream_name":"stdout","time":36281.662921016,"data":"  precision_weighted     0.810798\n"}
+,{"stream_name":"stdout","time":36281.662923931,"data":"  recall_macro           0.810740\n"}
+,{"stream_name":"stdout","time":36281.662926706,"data":"  recall_micro           0.795341\n"}
+,{"stream_name":"stdout","time":36281.662929519,"data":"  recall_weighted        0.795341\n"}
+,{"stream_name":"stdout","time":36281.662932448,"data":"  f1_macro               0.793345\n"}
+,{"stream_name":"stdout","time":36281.662935613,"data":"  f1_micro               0.795341\n"}
+,{"stream_name":"stdout","time":36281.662967288,"data":"  f1_weighted            0.788977\n"}
+,{"stream_name":"stdout","time":36281.66297221,"data":"\n"}
+,{"stream_name":"stdout","time":36281.662975696,"data":"Note: precision_micro = recall_micro = f1_micro = recall_weighted = accuracy.\n"}
+,{"stream_name":"stdout","time":36281.662979578,"data":"This identity holds for any single-label multi-class problem — it is not a bug.\n"}
+,{"stream_name":"stdout","time":36281.662983757,"data":"\n"}
+,{"stream_name":"stdout","time":36281.662986955,"data":"========================================================================\n"}
+,{"stream_name":"stdout","time":36281.662990449,"data":"PER-CLASS REPORT (round 49)\n"}
+,{"stream_name":"stdout","time":36281.662993849,"data":"========================================================================\n"}
+,{"stream_name":"stdout","time":36281.662997278,"data":"                            precision    recall  f1-score   support\n"}
+,{"stream_name":"stdout","time":36281.663000982,"data":"\n"}
+,{"stream_name":"stdout","time":36281.663004125,"data":"                    benign     0.6542    0.8603    0.7432   2391136\n"}
+,{"stream_name":"stdout","time":36281.663007485,"data":"accelerationMultiplication     0.9703    0.9771    0.9737    157490\n"}
+,{"stream_name":"stdout","time":36281.663010839,"data":"    constantPositionOffset     0.7775    0.8620    0.8176    442475\n"}
+,{"stream_name":"stdout","time":36281.663014277,"data":"       constantSpeedOffset     0.9058    0.8979    0.9019    433177\n"}
+,{"stream_name":"stdout","time":36281.663022756,"data":"                dataReplay     0.6724    0.6895    0.6809    475410\n"}
+,{"stream_name":"stdout","time":36281.663026566,"data":"                 dosAttack     0.9930    0.9925    0.9927   1574090\n"}
+,{"stream_name":"stdout","time":36281.663029479,"data":"            feignedBraking     0.9362    0.9746    0.9550    118605\n"}
+,{"stream_name":"stdout","time":36281.663031775,"data":"         positionMirroring     0.5682    0.5525    0.5602    467049\n"}
+,{"stream_name":"stdout","time":36281.663035312,"data":"      randomPositionOffset     0.7542    0.9743    0.8502    470279\n"}
+,{"stream_name":"stdout","time":36281.663049744,"data":"         randomSpeedOffset     0.9122    0.9682    0.9393    542163\n"}
+,{"stream_name":"stdout","time":36281.663053934,"data":"           reversedHeading     0.7371    0.9660    0.8362    269999\n"}
+,{"stream_name":"stdout","time":36281.663057753,"data":"       suddenConstantSpeed     0.8092    0.6413    0.7155     57757\n"}
+,{"stream_name":"stdout","time":36281.66306209,"data":"                suddenStop     0.7806    0.8306    0.8048    211445\n"}
+,{"stream_name":"stdout","time":36281.663066092,"data":"           timeDelayAttack     0.3265    0.1741    0.2271    490574\n"}
+,{"stream_name":"stdout","time":36281.663070886,"data":"    trafficCongestionSybil     0.9856    0.6313    0.7696   2393335\n"}
+,{"stream_name":"stdout","time":36281.663074382,"data":"           zeroSpeedReport     0.8771    0.9798    0.9256    266359\n"}
+,{"stream_name":"stdout","time":36281.66307784,"data":"\n"}
+,{"stream_name":"stdout","time":36281.663080986,"data":"                  accuracy                         0.7953  10761343\n"}
+,{"stream_name":"stdout","time":36281.663084348,"data":"                 macro avg     0.7913    0.8107    0.7933  10761343\n"}
+,{"stream_name":"stdout","time":36281.663087752,"data":"              weighted avg     0.8108    0.7953    0.7890  10761343\n"}
+,{"stream_name":"stdout","time":36281.66309116,"data":"\n"}
+,{"stream_name":"stdout","time":36282.311376518,"data":"trafficCongestionSybil     precision 0.9856  recall 0.6313  f1 0.7696\n"}
+,{"stream_name":"stdout","time":36282.311430044,"data":"timeDelayAttack            precision 0.3265  recall 0.1741  f1 0.2271\n"}
+,{"stream_name":"stderr","time":36287.657225821,"data":"/usr/local/lib/python3.12/dist-packages/mistune.py:435: SyntaxWarning: invalid escape sequence '\\|'\n"}
+,{"stream_name":"stderr","time":36287.657269268,"data":"  cells[i][c] = re.sub('\\\\\\\\\\|', '|', cell)\n"}
+,{"stream_name":"stderr","time":36287.816941629,"data":"/usr/local/lib/python3.12/dist-packages/nbconvert/filters/filter_links.py:36: SyntaxWarning: invalid escape sequence '\\_'\n"}
+,{"stream_name":"stderr","time":36287.816968647,"data":"  text = re.sub(r'_', '\\_', text) # Escape underscores in display text\n"}
+,{"stream_name":"stderr","time":36288.401748365,"data":"[NbConvertApp] Converting notebook __notebook__.ipynb to notebook\n"}
+,{"stream_name":"stderr","time":36288.755162792,"data":"[NbConvertApp] Writing 405319 bytes to __notebook__.ipynb\n"}
+,{"stream_name":"stderr","time":36291.137953225,"data":"[NbConvertApp] Converting notebook __notebook__.ipynb to html\n"}
+,{"stream_name":"stderr","time":36292.278114335,"data":"[NbConvertApp] Support files will be in __results___files/\n"}
+,{"stream_name":"stderr","time":36292.278153075,"data":"[NbConvertApp] Making directory __results___files\n"}
+,{"stream_name":"stderr","time":36292.278430727,"data":"[NbConvertApp] Making directory __results___files\n"}
+,{"stream_name":"stderr","time":36292.279003708,"data":"[NbConvertApp] Writing 709378 bytes to __results__.html\n"}
+]

@@ -1,0 +1,19 @@
+{
+  "accuracy": 0.8482908685282126,
+  "precision_macro": 0.8426530084408345,
+  "recall_macro": 0.8425478758607647,
+  "f1_macro": 0.8398009161963581,
+  "precision_micro": 0.8482908685282126,
+  "recall_micro": 0.8482908685282126,
+  "f1_micro": 0.8482908685282126,
+  "precision_weighted": 0.8483841734041451,
+  "recall_weighted": 0.8482908685282126,
+  "f1_weighted": 0.8454519469413231,
+  "round": 34,
+  "train_loss": 0.05291929841041565,
+  "lr": 0.0002139416699389153,
+  "seconds": 331.1,
+  "skipped_steps": 5,
+  "samples_per_sec": 130016,
+  "peak_gb": 5.6
+}

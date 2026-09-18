@@ -1,0 +1,11 @@
+{
+  "servers": {
+    "kaggle": {
+      "type": "http",
+      "url": "https://www.kaggle.com/mcp",
+      "headers": {
+        "Authorization": "Bearer KGAT_7a98cc408645acddf2177646976c9239"
+      }
+    }
+  }
+}

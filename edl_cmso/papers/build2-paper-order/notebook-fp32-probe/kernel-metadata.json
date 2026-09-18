@@ -1,0 +1,20 @@
+{
+  "id": "odixe0502/edl-cmso-veremi-fp32",
+  "title": "edl cmso veremi fp32",
+  "code_file": "edl_cmso_fp32.ipynb",
+  "language": "python",
+  "kernel_type": "notebook",
+  "is_private": true,
+  "enable_gpu": true,
+  "enable_tpu": false,
+  "enable_internet": false,
+  "machine_shape": "NvidiaTeslaT4",
+  "dataset_sources": [
+    "odixe0502/veremi-nextgen2026-centralized"
+  ],
+  "competition_sources": [],
+  "kernel_sources": [
+    "odixe0502/edl-cmso-veremi-v2"
+  ],
+  "model_sources": []
+}

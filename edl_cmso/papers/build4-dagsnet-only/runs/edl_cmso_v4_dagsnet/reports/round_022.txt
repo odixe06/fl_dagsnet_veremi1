@@ -1,0 +1,22 @@
+                            precision    recall  f1-score   support
+
+                    benign     0.7098    0.8441    0.7711   2391136
+accelerationMultiplication     0.9745    0.9760    0.9753    157490
+    constantPositionOffset     0.8320    0.9015    0.8654    442475
+       constantSpeedOffset     0.9270    0.9300    0.9285    433177
+                dataReplay     0.6512    0.7187    0.6833    475410
+                 dosAttack     0.9922    0.9933    0.9928   1574090
+            feignedBraking     0.9477    0.9761    0.9617    118605
+         positionMirroring     0.5917    0.5994    0.5955    467049
+      randomPositionOffset     0.9261    0.9736    0.9492    470279
+         randomSpeedOffset     0.9562    0.9659    0.9610    542163
+           reversedHeading     0.8602    0.9696    0.9116    269999
+       suddenConstantSpeed     0.8383    0.6952    0.7601     57757
+                suddenStop     0.9902    0.8609    0.9210    211445
+           timeDelayAttack     0.3617    0.1768    0.2375    490574
+    trafficCongestionSybil     0.9890    0.8483    0.9132   2393335
+           zeroSpeedReport     0.9348    0.9802    0.9569    266359
+
+                  accuracy                         0.8473  10761343
+                 macro avg     0.8427    0.8381    0.8365  10761343
+              weighted avg     0.8473    0.8473    0.8430  10761343
