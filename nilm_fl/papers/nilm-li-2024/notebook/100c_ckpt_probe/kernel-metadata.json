@@ -1,0 +1,15 @@
+{
+  "id": "minhtran0601/nilm-100c-ckpt-probe",
+  "title": "nilm-100c-ckpt-probe",
+  "code_file": "probe.ipynb",
+  "language": "python",
+  "kernel_type": "notebook",
+  "is_private": true,
+  "enable_gpu": false,
+  "enable_internet": false,
+  "dataset_sources": [
+    "minhtran0601/nilm-100c-ckpt-s1"
+  ],
+  "kernel_sources": [],
+  "competition_sources": []
+}

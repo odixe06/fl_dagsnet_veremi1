@@ -1,0 +1,19 @@
+{
+  "id": "minhtrit06/nilm-fl-veremi-100-clients-s3",
+  "title": "NILM-FL VeReMi 100 clients s3",
+  "code_file": "nilm_100c.ipynb",
+  "language": "python",
+  "kernel_type": "notebook",
+  "is_private": true,
+  "enable_gpu": true,
+  "enable_internet": true,
+  "machine_shape": "NvidiaTeslaT4",
+  "docker_image": "gcr.io/kaggle-private-byod/python@sha256:37c64f7dd9c54116ecd1bcc88817c5469b88387388fade02bfa8bf3fc647d461",
+  "dataset_sources": [
+    "odixe0502/veremi-fl-100client",
+    "odixe0502/veremi-nextgen2026-centralized",
+    "minhtrit06/nilm-100c-ckpt-s2"
+  ],
+  "kernel_sources": [],
+  "competition_sources": []
+}
