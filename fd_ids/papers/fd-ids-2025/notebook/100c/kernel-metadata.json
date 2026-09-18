@@ -1,0 +1,19 @@
+{
+  "id": "minhtriethihi/fd-ids-veremi-100-clients",
+  "title": "FD-IDS VeReMi 100 clients",
+  "code_file": "fdids_100c_v2.ipynb",
+  "language": "python",
+  "kernel_type": "notebook",
+  "is_private": true,
+  "enable_gpu": true,
+  "enable_internet": true,
+  "machine_shape": "NvidiaTeslaT4",
+  "docker_image": "gcr.io/kaggle-private-byod/python@sha256:37c64f7dd9c54116ecd1bcc88817c5469b88387388fade02bfa8bf3fc647d461",
+  "dataset_sources": [
+    "odixe0502/veremi-fl-100client",
+    "odixe0502/veremi-nextgen2026-centralized",
+    "minhtriethihi/fdids-100c-v2-ckpt"
+  ],
+  "kernel_sources": [],
+  "competition_sources": []
+}

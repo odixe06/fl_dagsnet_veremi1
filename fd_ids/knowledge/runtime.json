@@ -1,0 +1,18 @@
+{
+  "docker_image": "gcr.io/kaggle-private-byod/python@sha256:37c64f7dd9c54116ecd1bcc88817c5469b88387388fade02bfa8bf3fc647d461",
+  "enable_gpu": true,
+  "machine_shape": "NvidiaTeslaT4",
+  "verified_on": {
+    "kernel": "odixe0502/tinyproto-fp-2t4-validation",
+    "version": 1,
+    "date": "2026-09-07",
+    "python": "3.12.13",
+    "torch": "2.10.0+cu128",
+    "cuda": "12.8",
+    "gpus": ["Tesla T4 sm_75 14.6GB 40SM", "Tesla T4 sm_75 14.6GB 40SM"],
+    "cpu_count": 4,
+    "host_ram_gb": 31.3,
+    "working_free_gb": 19.5
+  },
+  "provenance": "Image sha first observed on minhtran0601/afpha-dagsnet-train-20client; independently confirmed to deliver 2 x T4 under odixe0502 on 2026-09-07 (see review-logs/kaggle-odixe-v1.log)."
+}
